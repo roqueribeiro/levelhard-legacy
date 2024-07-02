@@ -1,0 +1,60 @@
+#nav {
+	margin: 0;
+	padding: 0px;
+}
+
+#nav a {
+	-webkit-transition: 0.3s;
+	text-decoration: none;
+	display: block;
+	padding: 8px 20px;
+	margin: 0;	
+}
+
+#nav ul {
+	-webkit-transition: 1s; 
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+	position: absolute;
+	top: 30px;
+	left: 0px;
+	background: #FFF;
+	z-index:50;
+
+	-webkit-box-shadow: 0 0px 3px rgba(0,0,0, .3);
+	-moz-box-shadow: 	0 0px 3px rgba(0,0,0, .3);
+	box-shadow: 		0 0px 3px rgba(0,0,0, .3);
+}
+
+#nav li {
+	-webkit-transition: 1s;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	position: relative;
+	list-style: none;
+}
+
+#nav li:hover {
+	background:#E8E8E8;
+}
+
+#nav li:hover > a {
+}
+
+#nav ul ul {
+	top:0px;
+	left:100%;
+}
+
+#nav ul li {
+	float:none;
+	margin: 0px;
+}
+
+#nav li:hover > ul {
+	display: block;
+}
+

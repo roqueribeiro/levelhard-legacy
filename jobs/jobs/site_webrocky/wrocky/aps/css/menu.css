@@ -1,0 +1,50 @@
+#nav {
+	margin: 0;
+	padding: 0px;
+	cursor:pointer;
+}
+
+#nav ul {
+	position:absolute;
+	-webkit-transition: 1s; 
+	display:none;
+	top: 30px;
+	left: 0px;
+	background: #FFF;
+	z-index:50;
+
+	-webkit-box-shadow: 0 0px 10px rgba(0,0,0,0.3);
+	-moz-box-shadow: 	0 0px 3px rgba(0,0,0,0.3);
+	box-shadow: 		0 0px 3px rgba(0,0,0,0.3);
+}
+
+#nav li {
+	-webkit-transition: 600ms;
+	margin: 0px;
+	padding: 8px 25px 8px 25px;
+	float: left;
+	position: relative;
+	list-style: none;
+}
+
+#nav li:hover {
+	background:#E5E5E5;
+}
+
+#nav li:hover > a {
+}
+
+#nav ul ul {
+	top:0px;
+	left:100%;
+}
+
+#nav ul li {
+	float:none;
+	margin: 0px;
+}
+
+#nav li:hover > ul {
+	display:block;
+}
+

@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+.grass,
+.object,
+.clouds,
+.tree,
+.tree img {
+    /*background: rgba(100, 100, 100, 0.5) !important;*/
+}
+
+.controls {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    bottom: 0;
+    margin-left: -300px;
+    background: radial-gradient(at 50% bottom, transparent 40%, rgba(0, 0, 0, 0.8));
+    z-index: 100;
+}
+
+.area {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    bottom: 0;
+    margin-left: -300px;
+}
+
+.grass {
+    position: absolute;
+    width: 100%;
+    height: 664px;
+    background-image: url('./grass-texture.jpg');
+    background-repeat: repeat;
+    background-size: 64px;
+    animation: 640ms grass-animate infinite linear;
+    z-index: -1;
+}
+
+.object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100%;
+    background-color: transparent;
+    background-image: url('./aircraft.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.score {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 0px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 24px;
+    padding: 5px 15px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #FFF;
+    box-sizing: border-box;
+    z-index: 115;
+}
+
+.tree {
+    position: absolute;
+    top: -60px;
+    /*background: #CCC;*/
+}
+
+.tree img {
+    position: absolute;
+    top: -40px;
+    width: 80px;
+}
+
+.tree-left {
+    height: 30px;
+    text-align: right;
+}
+
+.tree-right {
+    height: 30px;
+    text-align: left;
+    right: 0;
+}
+
+.clouds {
+    position: absolute;
+    height: 200px;
+    top: -300px;
+    opacity: 0.4;
+    z-index: 80;
+    /*-webkit-filter: blur(5px);*/
+}
+
+.clouds:nth-child(1){
+    left: -100px;
+    opacity: 0.2;
+    animation: 16000ms cloud-animate infinite linear;
+}
+.clouds:nth-child(2){
+    right: 80px;
+    animation: 14000ms cloud-animate infinite linear;
+}
+.clouds:nth-child(3){
+    opacity: 0.2;
+    left: 20px;
+    animation: 12000ms cloud-animate infinite linear;
+}
+.clouds:nth-child(4){
+    right: -90px;
+    animation: 10000ms cloud-animate infinite linear;
+}
+
+button {
+    outline: none;
+}
+
+button[name=moveLeft] {
+    position: absolute;
+    /*background: rgba(255,0,0,0.2);*/
+    background: transparent;
+    width: 50%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+button[name=moveRight] {
+    position: absolute;
+    /*background: rgba(0,255,0,0.2);*/
+    background: transparent;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.console {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    padding: 5px 15px;
+    background: #EEE;
+    overflow: auto;
+    box-sizing: border-box;
+    z-index: 115;
+    display: none;
+}
+
+@keyframes cloud-animate {
+    to {
+        transform: translateY(1000px);
+    }
+}
+
+@keyframes grass-animate {
+    from {
+        transform: translateY(-64px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}

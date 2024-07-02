@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+/* ============ Default Theme Odontograma ============ */
+
+#odont-body								{ position:relative; width:900px; height:450px; text-align:center; }
+#odont-body								{ margin:0 auto; margin-top:0px; padding:10px 32.5px 10px 32.5px; }
+
+#odont-status							{ position:absolute; padding:10px; margin-left:5px; top:3px; display:none; }
+#odont-status li						{ display:inline-block; vertical-align:middle }
+#odont-status img						{ position:relative; padding:0 5px 0 0; top:1px; }
+#odont-status p							{ position:relative; }
+
+#odont-console 							{ position:absolute; right:40px; top:10px; z-index:120; }
+
+#odont-loading							{ position:absolute; width:100px; height:80px; background:#FFF; z-index:600; text-align:left; display:none; }
+#odont-loading							{ top:50%; left:50%; margin:-40px 0 0 -50px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.4); }
+#odont-loading img						{ position:relative; top:50%; left:50%; margin:-24px 0 0 -24px; }
+
+#odont-overlay							{ position:absolute; width:100%; height:100%; z-index:100; margin:-10px 0 0 -32.5px; display:none; }
+#odont-overlay img						{ position:absolute; top:20px; right:20px; background:#FFF; padding:15px 11px 11px 15px; border-radius:5px; }
+#odont-overlay img						{ opacity:1; cursor:pointer; box-shadow:0 1px 4px rgba(0,0,0,0.4); display:none; }
+
+#tooth-overlay							{ position:absolute; width:100%; height:100%; margin:-15px; }
+#tooth-overlay							{ display:none; z-index:90; }
+
+.od-men-hover							{ background:#F6F6F6 !important; }
+.od-men-disabled						{ color:#CCC; background:#EEE !important; }
+#odont-menu								{ position:relative; width:100%; height:auto; z-index:110; }
+#odont-menu	li							{ display:inline-block; padding:10px; cursor:pointer; background:#EEE; }
+#odont-menu	li							{ border-top-left-radius:15px; border-top-right-radius:15px; }
+#odont-menu	li:hover					{ background:#F6F6F6; }
+#odont-menu	li ul						{ position:absolute; margin:10px 0 0 -10px; box-shadow:0 1px 2px rgba(0,0,0,0.4); display:none; z-index:115; }
+#odont-menu	li ul li					{ display:block; background:#F6F6F6; border-radius:0px; padding:10px; cursor:default; }
+
+#menu-opt								{ position:relative; width:auto; height:auto; background:#F6F6F6; }
+#menu-opt div							{ display:inline-block; margin:0 0 -2px 0; }
+#menu-opt ul							{ margin:0 !important; box-shadow:none !important; }
+#menu-opt-list li						{ width:150px; cursor:pointer !important; }
+#menu-opt-list li:hover					{ background:#EEE !important; }
+#menu-opt-list li:nth-child(1n+1)		{ background:#FFF; }
+#menu-opt-list li:nth-child(2n+2)		{ background:#F6F6F6; }
+#menu-opt-list li input					{ display:none; }
+#menu-opt-list							{ position:relative; width:185px; height:204px; text-align:left; background:#FFF; overflow-x:hidden; overflow-y:scroll; }
+#menu-opt-img							{ position:relative; width:155px; height:204px; }
+#menu-opt-img p							{ margin:0px; padding:10px 10px 10px 10px; }
+#menu-opt-img div						{ position:absolute; left:0px; top:40px; }
+
+#menu-opt-tooth							{ position:absolute; background-size:100% 100%; top:70px !important; left:50% !important; }
+#menu-opt-tooth							{ margin-left:-14.5px !important; width:29px; height:69px; }
+#menu-opt-tooth	.tooth-act-image		{ margin-top:-40px !important; margin-left:0px !important; }
+
+.menu-opt-check							{ background:#DDD !important; border-left:5px #666 solid; }
+.menu-img-check							{ }
+.menu-img-check	img						{ opacity:0.3 }
+.menu-act-check							{ }
+.menu-act-check	img						{ opacity:0.3 }
+
+#menu-opt-list-img						{ position:relative; width:270px; height:240px; background:#F6F6F6; overflow-x:hidden; overflow-y:scroll; }
+#menu-opt-list-img li					{ width:auto !important; padding:2px !important; margin:2px; float:left; }
+#menu-opt-list-img li img				{ cursor:pointer !important; }
+#menu-opt-list-img li img:hover			{ opacity:0.8; }
+#menu-opt-list-img ul li input			{ display:none; }
+
+.tooth-act-image						{ position:absolute; margin-top:-70px; margin-left:5px; z-index:60; }
+
+#tooth-list								{ position:relative; width:auto; height:auto; padding:6px; background:#EEE; border-radius:10px; }
+#tooth-count							{ padding:6px 0 4px 0; z-index:5; }
+#tooth-count ul 						{ position:relative; width:100%; padding:0px !important; }
+#tooth-count li							{ margin:0 -2px 0 -2px !important;	padding:6px 6px 6px 6px !important;	}
+
+#tooth-list ul							{ padding:6px 0 6px 0; }
+#tooth-list li							{ display:inline-block;	width:40px; padding:2px 0 2px 0; margin:0 4px 0 4px; vertical-align:middle;}
+#tooth-list li							{ border:1px #CCC solid; text-align:center; }
+#tooth-list #tooth-li li				{ border-radius:5px; cursor:pointer; background:#F6F6F6; }
+#tooth-list #tooth-li li:hover			{ border:1px #999 solid; }
+#tooth-list #tooth-img					{ width:29px; height:69px; }
+
+#opt-tooth-method						{ position:absolute; width:250px; height:100%; top:0px; left:0px; background:#F6F6F6; font-size:10px; text-align:left; }
+#opt-tooth-method div					{ display:block; padding:10px !important; cursor:pointer; }
+#opt-tooth-method div:nth-child(2n+1)	{ background:#FFF; }
+#opt-tooth-method div:hover				{ background:#EEE; }
+/*
+#tooth-li li:nth-child(n+8)				{ background:#FF0 !important; }
+#tooth-li li:nth-child(-n+8)			{ background:#F00 !important; }
+#tooth-top #tooth-li 					{ border:1px #3F0 solid; }
+#tooth-bottom #tooth-li					{ border:1px #3300FF solid; }
+*/
+
+/*#tooth-li li:nth-child(-n+9) div img	{ -webkit-transform:rotate(0deg); -moz-transform:rotate(0deg); -o-transform:rotate(0deg); transform:rotate(0deg); }			/* Superior e Inferior Esquerdo na Tela */
+/*#tooth-li li:nth-child(n+9) div img	{ -webkit-transform:rotate(180deg); -moz-transform:rotate(180deg); -o-transform:rotate(180deg); transform:rotate(180deg); } /* Superior e Inferior Direito na Tela */
+#tooth-top #tooth-li div img			{ -webkit-transform:rotate(180deg); -moz-transform:rotate(180deg); -o-transform:rotate(180deg); transform:rotate(180deg); }	/* Superior Todos */
+#tooth-bottom #tooth-li	div	img			{ -webkit-transform:rotate(0deg); -moz-transform:rotate(0deg); -o-transform:rotate(0deg); transform:rotate(0deg); }			/* Inferior Todos */
+
+#tooth-circ-li li						{ border:1px rgba(0,0,0,0) solid; }
+#tooth-circ								{ position:relative; margin:0 auto;	top:6px; left:6px; width:30px; height:30px; z-index:5; }
+#tooth-circ div							{ position:absolute; cursor:pointer; background:#FFFFFF; margin:-1px; border:1px #333 solid; border-radius:5px; }
+#tooth-circ div							{ width:20px; height:20px; }
+#tooth-circ-1							{ top:-11px; }
+#tooth-circ-2							{ bottom:-1px; }
+#tooth-circ-3							{ left:-11px; }
+#tooth-circ-4							{ right:-1px; }
+#tooth-circ-5							{ }
+.tooth-circ-zoom						{ position:absolute; width:32px; height:32px; margin:-10px 0 0 -5px; padding:10px; border-radius:10px; }
+.tooth-circ-zoom						{ background:url(../image/icone/zoom-icon.png) no-repeat center #FFF; display:none; z-index:10; }
+
+#tooth-list-nav							{ position:relative; width:auto; height:30px; padding:0 25px 10px 25px; }
+#tooth-list-nav li						{ display:inline-block; }
+
+#tooth-list-nav #list-nav-pag			{ float:left; }
+#tooth-list-nav #list-nav-pag li		{ width:auto; padding:0 10px 0 10px; height:30px; margin:auto; line-height:30px; background:#EEE; }
+#tooth-list-nav #list-nav-pag li		{ border-bottom-left-radius:10px; border-bottom-right-radius:10px; cursor:pointer; }
+#list-nav-pag li:hover					{ background:#F6F6F6 !important; }
+
+#tooth-list-nav #list-nav-control		{ float:right; padding:0 2px 2px 2px; border-bottom-left-radius:10px; border-bottom-right-radius:10px; background:#EEE; }
+#tooth-list-nav #list-nav-control li	{ width:40px; height:30px; margin:0 -2px 0 -2px; cursor:pointer; }
+#tooth-list-nav #list-nav-control img 	{ position:relative; top:7px; }
+
+#tooth-list-history						{ position:absolute; width:900px; height:auto; bottom:0px; background:#EEE; z-index:120; }
+#tooth-list-history						{ border-top-left-radius:10px; border-top-right-radius:10px; box-shadow:0 -2px 3px rgba(0,0,0,0.2); }
+#tooth-list-history						{ border-top:1px #FFF solid; }
+#list-history-cab						{ padding:8px 0 8px 0; cursor:pointer; }
+#list-history							{ position:relative; text-align:left; }
+
+#list-history-ajax						{ position:relative; width:100%; height:130px; background:#FFF; overflow-y:scroll; }
+#list-history-ajax ul					{ background:#FFF; cursor:pointer; }
+#list-history-ajax ul:nth-child(2n+2)	{ background:#F6F6F6; }
+#list-history-ajax ul:hover				{ background:#DDD; }
+#list-history-ajax li					{ display:inline-block; padding:6px 8px 6px 8px; }
+#list-history-ajax li:nth-child(1)		{ width:100px; }
+#list-history-ajax li:nth-child(2)		{ width:200px; }
+#list-history-ajax li:nth-child(3)		{ width:200px; }
+#list-history-ajax li:nth-child(4)		{ width:300px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+#list-history-title						{ position:relative; background:#F5F5F5; border-bottom:1px #DDD solid; }
+#list-history-title	li					{ display:inline-block; padding:6px 8px 6px 8px; }
+#list-history-title li:nth-child(1)		{ width:100px; }
+#list-history-title li:nth-child(2)		{ width:200px; }
+#list-history-title li:nth-child(3)		{ width:200px; }
+#list-history-title li:nth-child(4)		{ width:300px; }
+
+.tooth-button li						{ text-shadow:0 1px 0 #FFF; cursor:pointer; }
+.tooth-button li						{ background:-webkit-linear-gradient(#EEE, #CCC) !important; }
+.tooth-button li						{ background:-moz-linear-gradient(#EEE, #CCC) !important; }
+.tooth-button li						{ background:-o-linear-gradient(#EEE, #CCC) !important; }
+.tooth-button li						{ border-top:1px #FFF solid !important; }
+.tooth-button li						{ border-left:1px #FFF solid !important; }
+.tooth-button li						{ border-bottom:1px #AAA solid !important; }
+.tooth-button li						{ border-right:1px #AAA solid !important; }
+
+.tooth-button li:hover					{ background:-webkit-linear-gradient(#FFF, #EEE) !important; }
+.tooth-button li:hover					{ background:-moz-linear-gradient(#FFF, #EEE) !important; }
+.tooth-button li:hover					{ background:-o-linear-gradient(#FFF, #EEE) !important; }
+
+.tooth-button li:active					{ background:-webkit-linear-gradient(#EEE, #BBB) !important; }
+.tooth-button li:active					{ background:-moz-linear-gradient(#EEE, #BBB) !important; }
+.tooth-button li:active					{ background:-o-linear-gradient(#EEE, #BBB) !important; }
+.tooth-button li:active					{ border-top:1px #AAA solid !important; }
+.tooth-button li:active					{ border-left:1px #AAA solid !important; }
+.tooth-button li:active					{ border-bottom:1px #FFF solid !important; }
+.tooth-button li:active					{ border-right:1px #FFF solid !important; }
+
+/* CSS3 Transictions Effects */
+
+#odont-menu	li, #menu-opt-list li, #menu-opt-list-img li img, #opt-tooth-method div, #list-nav-pag li, #list-history-ajax ul {
+	-webkit-transition:300ms;
+}
+
+

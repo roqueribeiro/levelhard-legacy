@@ -1,0 +1,98 @@
+﻿.gdata-notepad, .gdata-notepad:before, .gdata-notepad:after {
+    background-color: white;
+    background-image: linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-size: 1px 1px, 1px 1px, 23px 23px;
+    background-repeat: repeat-y, repeat-y, repeat;
+    background-position: 22px 0, 24px 0, 0 50px;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.gdata-notepad {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 23px 14px 35px;
+    width: 500px;
+    font: 13px 'Lucida Grande', Verdana, sans-serif;
+    color: #404040;
+    color: #666;
+    text-align: left;
+}
+
+    .gdata-notepad .gdata-notepad-body {
+        margin-bottom: 23px;
+        line-height: 23px;
+    }
+
+    .gdata-notepad :last-child {
+        margin-bottom: 0;
+    }
+
+    .gdata-notepad:before, .gdata-notepad:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 100%;
+        left: 3px;
+        right: 3px;
+        margin-top: -2px;
+        height: 4px;
+        background-size: 1px 1px, 1px 1px, 0 0;
+    }
+
+    .gdata-notepad:before {
+        z-index: -2;
+        left: 6px;
+        right: 6px;
+        height: 6px;
+        background-color: #eee;
+    }
+
+.gdata-notepad-heading {
+    position: relative;
+    margin: 0 -23px 14px -35px;
+    height: 38px;
+    background: #14466a;
+    border-radius: 2px 2px 0 0;
+    background-image: linear-gradient(to bottom, #226797, #0c3452);
+    box-shadow: inset 0 1px #2f81ad, 0 2px 1px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px black;
+}
+
+    .gdata-notepad-heading > h1 {
+        line-height: 36px;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        text-shadow: 0 -1px rgba(0, 0, 0, 0.7);
+    }
+
+    .gdata-notepad-heading:before, .gdata-notepad-heading:after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 1px;
+        right: 1px;
+        height: 0;
+        border-top: 1px dashed #617c90;
+        border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .gdata-notepad-heading:after {
+        bottom: 3px;
+        border-color: #071c2c;
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+
+@media (max-width: 767px) {
+
+    .gdata-notepad {
+        width: 350px;
+    }
+}
+
+@media (max-width: 435px) {
+
+    .gdata-notepad {
+        width: 250px;
+    }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<player>
+	<song path="music/02.mp3" title="- Lovely Laura & Tyrrell - I Remember"/>
+	<song path="music/03.mp3" title="- Lovely Laura & Tyrrell - I'm Not Alone"/>
+	<song path="music/04.mp3" title="- Lovely Laura & Tyrrell - Paris"/>
+	<song path="music/05.mp3" title="- Lovely Laura & Tyrrell - Not Over Yet"/>
+	<song path="music/06.mp3" title="- Lovely Laura & Tyrrell - Missing"/>
+	<song path="music/07.mp3" title="- Lovely Laura & Tyrrell - Kids"/>
+	<song path="music/08.mp3" title="- Lovely Laura & Tyrrell - Come With Me"/>
+	<song path="music/09.mp3" title="- Lovely Laura & Tyrrell - Why Don't You Do Right"/>
+	<song path="music/10.mp3" title="- Lovely Laura & Tyrrell - Why"/>
+	<song path="music/11.mp3" title="- Lovely Laura & Tyrrell - My Friend"/>
+</player>

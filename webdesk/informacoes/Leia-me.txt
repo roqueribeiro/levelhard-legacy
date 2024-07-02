@@ -1,0 +1,28 @@
+
+// ======== WebDesk Alpha rev2 ======== //
+
+	*Desenvolvimento e Participantes*
+	
+		* Roque Ribeiro da Silva
+		* Adriano Kiel Lima
+		* Raquel
+		* Pedro
+		
+	Instalação e Requerimentos
+	
+		* Instalação
+			
+			-> Servidor AMP "Apache", "MySQL", "PHP" ( Recomendado Zend Server )
+			-> Configurar conexão do Banco de Dados no arquivo "conexão.php" na raiz do sistema
+			-> Configurar permissões de pasta para escrita para "777" em conteudo/diretorio/upload/
+			
+		* Requerimento(Recomendado)
+			
+			-> Processador Dual Core
+			-> 2gb de memória RAM
+			-> Placa de Video dedicada
+			-> 100mb de espaço em disco
+			
+	
+	
+

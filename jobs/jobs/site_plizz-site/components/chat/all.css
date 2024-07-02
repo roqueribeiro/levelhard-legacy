@@ -1,0 +1,55 @@
+
+html		{ margin:0px; padding:0px; }
+body		{ margin:0px; padding:0px; font-family:Verdana, Geneva, sans-serif; font-size:12px; }
+div			{ margin:0px; padding:0px; }
+span		{ margin:0px; padding:0px; }
+ul			{ margin:0px; padding:0px; }
+li			{ margin:0px; padding:0px; list-style:none; }
+fieldset	{ margin:0px; padding:0px; }
+legend		{ margin:0px; padding:0px; }
+label		{ margin:0px; padding:0px; }
+form		{ margin:0px; padding:0px; }
+input		{ margin:0px; padding:0px; outline:none; }
+select		{ margin:0px; padding:0px; outline:none;}
+option		{ margin:0px; padding:0px; }
+textarea	{ margin:0px; padding:0px; outline:none;}
+table		{ margin:0px; padding:0px; }
+tr			{ margin:0px; padding:0px; }
+td			{ margin:0px; padding:0px; }
+a			{ margin:0px; padding:0px; }
+p			{ margin:0px; padding:0px; }
+h1			{ margin:0px; padding:0px; }
+h2			{ margin:0px; padding:0px; }
+h3			{ margin:0px; padding:0px; }
+img			{ margin:0px; padding:0px; border:0px; }
+
+a 			{ color:#333; text-decoration:none; }
+a:hover		{ color:#999; text-decoration:none; }
+a:active 	{ color:#333; text-decoration:none; }
+a:visited 	{ color:#333; text-decoration:none; }
+
+::-webkit-scrollbar
+{ 
+	width: 10px; 
+	height: 10px;
+	border-radius: 16px; 
+} 
+
+::-webkit-scrollbar-track-piece
+{ 
+	margin:10px 0 10px 0;
+	background-color: #EEE; 
+	border-radius: 3px; 
+} 
+::-webkit-scrollbar-thumb:vertical 
+{ 
+	height: 5px; 
+	background-color: #666; 
+	border-radius: 3px; 
+} 
+::-webkit-scrollbar-thumb:horizontal 
+{ 
+	width: 5px; 
+	background-color: #666; 
+	border-radius: 3px; 
+}

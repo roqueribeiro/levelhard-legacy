@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>WebDesk</title>
+    <!-- Chamadas CSS -->
+    <link rel="stylesheet" href="styles/default-theme.css" />
+    <link rel="stylesheet" href="styles/default-html.css" />
+    <link rel="stylesheet" href="styles/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="styles/supersized.core.css" />
+    <link rel="stylesheet" href="styles/supersized.shutter.css" />
+    <link rel="stylesheet" href="styles/webdesk-theme/jquery-ui-1.9.1.custom.css" />
+    <!-- Chamadas jQuery -->
+    <script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui-1.9.1.custom.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.mCustomScrollbar.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.form.js"></script>
+    <script type="text/javascript" src="scripts/jqClock.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.smart3d.js"></script>
+    <script type="text/javascript" src="scripts/jquery.simpleWeather-2.0.1.min.js"></script>
+    <script type="text/javascript" src="scripts/supersized.core.3.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/supersized.shutter.min.js"></script>
+    <script type="text/javascript" src="conteudo/escritor/ckeditor.js"></script>
+    <!-- Ações jQuery -->
+    <script type="text/javascript" src="init.js"></script>
+</head>
+<body>
+
+    <div id="console"></div>
+    <div id="cobertor"></div>
+    <div id="corpo">
+        <!-- Tela de Login - Formulario -->
+        <div id="tela_login">
+            <ul id="nuvens">
+                <li class="nuvem"><img src="imagens/nuvens/3.png" /></li>
+                <li class="nuvem"><img src="imagens/nuvens/2.png" /></li>
+                <li class="nuvem"><img src="imagens/nuvens/1.png" /></li>
+            </ul>
+            <div id="autentica">
+                <form name="autenticacao">
+                    <ul>
+                        <li class="titulo">
+                            <p>WebDesk</p>
+                        </li>
+                        <li class="resultado">
+                            <p>Digite seu Login e Senha</p>
+                        </li>
+                        <li>
+                            <input type="text" name="usuario" maxlength="20" placeholder="Usuario" />
+                        </li>
+                        <li>
+                            <input type="password" name="senha" maxlength="20" placeholder="Senha" />
+                        </li>
+                        <li>
+                            <input type="submit" value="Entrar" />
+                        </li>
+                        <li class="novo">
+                            <p>Não é usuario? Clique <a href="javascript:windowOpen('new_1','Novo Usuario','conteudo/controle','450px','550px',0,0);">Aqui</a></p>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div id="copyright">Desenvolvido por Roque Ribeiro 2012</div>
+        </div>
+        <!-- Tela Inicial - WebDesk -->
+        <div id="tela_inicial">
+            <div id="navegacao">
+                <!-- Menu Superior em Linha -->
+                <div id="info">
+                    <ul id="botao_usuario">
+                        <li><img src="imagens/icones/windows/businessman_w.png" /></li>
+                        <li><p>Nome do Usuario</p>
+                            <div class="submenu">
+                                <ul onclick="windowOpen('action_5','Explorar Arquivos','http://webdesktop.levelhard.com/conteudo/jogo','500px','500px',1,1);">
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Novo</p>
+                                        <div class="submenu">
+                                            <ul onclick="windowOpen('action_5','Explorar Arquivos','http://webdesktop.levelhard.com/conteudo/jogo','500px','500px',1,1);">
+                                                <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                                <li><p>Usuario</p></li>
+                                            </ul>
+                                            <ul>
+                                                <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                                <li><p>Grupo</p></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Editar</p></li>
+                                </ul>
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Informações</p></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="boao_aplicativos">
+                        <li><img src="imagens/icones/windows/download_w.png" /></li>
+                        <li><p>Aplicativos</p>
+                            <div class="submenu">
+                                <ul onclick="windowOpen('action_6','Lista Telefônica','http://webdesktop.levelhard.com/conteudo/agenda','918px','575px',1,0);">
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Agenda Telefônica</p></li>
+                                </ul>
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Editor de Texto</p></li>
+                                </ul>
+                                <ul onclick="windowOpen('action_7','Calculadora','conteudo/calculadora','250px','380px',1,0);">
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Calculadora</p></li>
+                                </ul>
+                                <ul onclick="windowOpen('action_7','Calculadora','http://webdesktop.levelhard.com/conteudo/desenho','500px','380px',1,0);">
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Tela de Pintura</p></li>
+                                </ul>
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Navegador</p></li>
+                                </ul>
+                                <ul onclick="windowOpen('action_5','Explorar Arquivos','http://webdesktop.levelhard.com/conteudo/diretorio','500px','500px',1,1);">
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Explorar Arquivos</p></li>
+                                </ul>
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Imagens</p>
+                                        <div class="submenu">
+                                            <ul onclick="windowOpen('action_5','Explorar Arquivos','http://webdesktop.levelhard.com/conteudo/jogo','500px','500px',1,1);">
+                                                <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                                <li><p>Enviar Imagens</p></li>
+                                            </ul>
+                                            <ul>
+                                                <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                                <li><p>Player de Imagens</p></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Músicas e Videos</p>
+                                        <div class="submenu">
+                                            <ul onclick="windowOpen('action_5','Explorar Arquivos','http://webdesktop.levelhard.com/conteudo/jogo','500px','500px',1,1);">
+                                                <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                                <li><p>Player de Música</p></li>
+                                            </ul>
+                                            <ul>
+                                                <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                                <li><p>Player de Video</p></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Jogos</p>
+                                        <div class="submenu">
+                                            <ul onclick="windowOpen('action_5','Explorar Arquivos','http://webdesktop.levelhard.com/conteudo/jogo','500px','500px',1,1);">
+                                                <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                                <li><p>jBarata</p></li>
+                                            </ul>
+                                            <ul>
+                                                <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                                <li><p>Canvas Rider</p></li>
+                                            </ul>
+                                            <ul>
+                                                <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                                <li><p>Jump</p></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="botao_mensagem">
+                        <li><img src="imagens/icones/windows/message_w.png" /></li>
+                        <li><p>Mensagens</p>
+                            <div class="submenu">
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Nova Mensagem</p></li>
+                                </ul>
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Caixa de Entrada</p></li>
+                                </ul>
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Rascunhos</p></li>
+                                </ul>
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Mensagens Enviadas</p></li>
+                                </ul>
+                                <ul>
+                                    <li><img src="imagens/icones/windows/right_w.png" /></li>
+                                    <li><p>Mensagens Excluídas</p></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="botao_calendario">
+                        <li><img src="imagens/icones/windows/planner_w.png" /></li>
+                        <li><p>Compromissos</p></li>
+                    </ul>
+                    <ul id="botao_relogio">
+                        <li><img src="imagens/icones/windows/watch_w.png" /></li>
+                        <li><p></p></li>
+                    </ul>
+                    <ul id="botao_sair">
+                        <li><p>Sair</p></li>
+                        <li><img src="imagens/icones/windows/delete_w.png" /></li>
+                    </ul>
+                </div>
+                <!-- Menu Superior Icones -->
+                <div id="menu">
+                    <ul>
+                        <li id="action_1">
+                            <img src="imagens/icones/siena/camera_yellow.png" alt="" onclick="windowOpen('action_1','Navegador','conteudo/controle','680px','450px',1,1);" />
+                        </li>
+                        <li id="action_2">
+                            <img src="imagens/icones/siena/monitor_green.png" alt="" onclick="windowOpen('action_2','Painel de Controle','conteudo/controle','680px','450px',1,1);" />
+                        </li>
+                        <li id="action_3">
+                            <img src="imagens/icones/siena/speaker_blue.png" alt="" onclick="windowOpen('action_3','Janela','conteudo/controle','680px','450px',1,1);" />
+                        </li>
+                        <li id="action_4">
+                            <img src="imagens/icones/siena/globe_blue.png" alt="" onclick="windowOpen('action_4','Nevegador','conteudo/navegador','680px','450px',1,1);" />
+                        </li>
+                        <li id="action_5">
+                            <img src="imagens/icones/siena/attachment_red.png" alt="" onclick="windowOpen('action_5','Janela','conteudo/controle','720px','500px',1,0);" />
+                        </li>                       
+                        <li id="action_6">
+                            <img src="imagens/icones/siena/telephone.png" alt="" onclick="windowOpen('action_6','Lista Telefonica','conteudo/controle','720px','500px',0,0);" />
+                        </li>
+                        <li id="action_7">
+                            <img src="imagens/icones/siena/calculator_red.png" alt="" onclick="windowOpen('action_7','Calculadora','conteudo/calculadora','250px','380px',1,0);" />
+                        </li>
+                        <li id="action_8">
+                            <img src="imagens/icones/siena/bookmark_red.png" alt="" onclick="windowOpen('action_8','Editor de Texto','conteudo/escritor','720px','500px',0,0);" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Conteudo -->
+            <div id="conteudo" class="content_10">
+                <div id="weather"></div>
+                <!-- Listagem de Icones -->
+                <div id="icones">
+                    <ul>
+                        <li onclick="windowOpen('action_7','Janela','conteudo/controle','680px','450px',0,0);">
+                            <img src="imagens/icones/ramotion/Preview.png" />
+                            <p>Arquivos</p>
+                        </li>
+                        <li onclick="windowOpen('action_8','Janela','conteudo/controle','680px','450px',0,0);">
+                            <img src="imagens/icones/ramotion/System_Preferences.png" />
+                            <p>Configurações</p>
+                        </li>
+                        <li onclick="windowOpen('action_9','Janela','conteudo/controle','680px','450px',0,1);">
+                            <img src="imagens/icones/ramotion/Trash.png" />
+                            <p>Lixeira</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--
+                <div id="grade">
+                    <div id="cabecalho"></div>
+                    <div id="listagem"></div>
+                    <div id="paginacao">
+                        <ul>
+                            <li><a href="#">Anterior</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">Proximo</a></li>
+                        </ul>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Droppable -->
+    <div id="drop">
+        <ul></ul>
+    </div>
+
+    <div id="cobertor_2"></div>
+
+</body>
+</html>

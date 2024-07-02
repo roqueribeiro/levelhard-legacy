@@ -1,0 +1,43 @@
+#_template_home {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+    #_template_home::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    #_template_home::-webkit-scrollbar-track {
+        background: linear-gradient(transparent 50%, rgba(255,255,255,0.2));
+    }
+
+    #_template_home::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.4);
+    }
+
+    #_template_home ._template_home_content {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+        #_template_home ._template_home_content div {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            font-size: 28px;
+            padding: 30px 30px;
+            cursor: pointer;
+        }
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 120px;
+    color: rgba(255,255,255,0.8);
+}

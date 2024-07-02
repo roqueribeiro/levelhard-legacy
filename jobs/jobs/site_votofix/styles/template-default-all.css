@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+html		{ margin:0px; padding:0px; }
+body		{ margin:0px; padding:0px; overflow-y:scroll; }
+div			{ margin:0px; padding:0px; }
+span		{ margin:0px; padding:0px; }
+ul			{ margin:0px; padding:0px; }
+li			{ margin:0px; padding:0px; list-style:none; }
+fieldset	{ margin:0px; padding:0px; }
+legend		{ margin:0px; padding:0px; }
+label		{ margin:0px; padding:0px; }
+form		{ margin:0px; padding:0px; }
+input		{ margin:0px; padding:0px; outline:none; }
+select		{ margin:0px; padding:0px; outline:none; }
+option		{ margin:0px; padding:0px; }
+textarea	{ margin:0px; padding:0px; outline:none; }
+table		{ margin:0px; padding:0px; }
+tr			{ margin:0px; padding:0px; }
+td			{ margin:0px; padding:0px; }
+a			{ margin:0px; padding:0px; }
+p			{ margin:0px; padding:0px; }
+h1			{ margin:0px; padding:0px; }
+h2			{ margin:0px; padding:0px; }
+h3			{ margin:0px; padding:0px; }
+p			{ margin:0px; padding:0px; }
+img			{ margin:0px; padding:0px; border:0px; }
+
+a			{ -webkit-transition:300ms; -moz-transition:300ms; -o-transition:300ms; }
+a:link		{ color:#333; text-decoration:none; }
+a:hover		{ color:#333; text-decoration:none; }
+a:active 	{ color:#333; text-decoration:none; }
+a:visited 	{ color:#333; text-decoration:none; }
+
+input[type='password'], input[type='text'], input[type='url']
+{
+	-webkit-transition:600ms;
+	-moz-transition:600ms;
+	-o-transition:600ms;
+	transition:600ms;
+	
+	background:rgba(255,255,255,0.5);
+	
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	
+	border:1px solid #AAA;
+	font-size:inherit;
+	padding:3px;
+}
+
+textarea
+{
+	-webkit-transition:600ms;
+	-moz-transition:600ms;
+	-o-transition:600ms;
+	transition:600ms;
+	
+	background:rgba(255,255,255,0.5);
+	
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	
+	border:1px solid #AAA;
+	font-size:inherit;
+	padding:5px;
+	
+	resize:none;
+}
+
+input[type=submit], input[type=button]
+{
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 1px 3px rgba(0,0,0,0.2);
+	box-shadow:0 1px 3px rgba(0,0,0,0.2);
+	
+	background:-webkit-linear-gradient(top, #FFF 0%, #E5E5E5 100%);
+	background:-moz-linear-gradient(top, #FFF 0%, #E5E5E5 100%);
+	background:-o-linear-gradient(top, #FFF 0%, #E5E5E5 100%);
+	
+	border:1px solid #AAA;
+	padding:3px 12px 3px 12px;
+}
+
+/* Hack Mozilla Button */
+button, input[type='submit'], input[type='button'], #x:-moz-any-link, x:default 
+{
+	padding:2px 10px 2px 10px;
+}
+
+input[type=submit]:hover, input[type=button]:hover
+{
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 1px 3px rgba(0,0,0,0.2);
+	box-shadow:0 1px 3px rgba(0,0,0,0.2);
+	
+	background:-webkit-linear-gradient(top, #FEFEFE 0%, #F8F8F8 40%, #E9E9E9 100%);
+	background:-moz-linear-gradient(top, #FEFEFE 0%, #F8F8F8 40%, #E9E9E9 100%);
+	background:-o-linear-gradient(top, #FEFEFE 0%, #F8F8F8 40%, #E9E9E9 100%);
+	
+	border-color:#999;
+	color:#222;	
+}
+
+input[type=submit]:active, input[type=button]:active
+{
+	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.3);	
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.3);
+	
+	background:-webkit-linear-gradient(top, #F4F4F4 0%, #EFEFEF 40%, #DCDCDC 100%);
+	background:-moz-linear-gradient(top, #F4F4F4 0%, #EFEFEF 40%, #DCDCDC 100%);
+	background:-o-linear-gradient(top, #F4F4F4 0%, #EFEFEF 40%, #DCDCDC 100%);
+	
+	border-color:#999;
+	color:#333;
+}
+
+input[type='password']:focus, input[type='text']:focus, input[type='url']:focus, textarea:focus
+{
+	background:rgba(255,255,255,1);
+}
+
+button[disabled], input[type='submit'][disabled], input[type='button'][disabled], 
+button[disabled]:hover, input[type='submit'][disabled]:hover, input[type='button'][disabled]:hover
+{
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	
+	background:-webkit-linear-gradient(top, #FAFAFA 0%, #F4F4F4 40%, #E5E5E5 100%);
+	background:-moz-linear-gradient(top, #FAFAFA 0%, #F4F4F4 40%, #E5E5E5 100%);
+	background:-o-linear-gradient(top, #FAFAFA 0%, #F4F4F4 40%, #E5E5E5 100%);
+	
+	border-color:#AAA;
+	color:#888;
+	
+	opacity:0.3;
+}
+
+input[type='password'][disabled], input[type='text'][disabled], input[type='url'][disabled]
+{
+	background:rgba(245,245,245,1);
+	color:#333;
+	opacity:0.3;
+}
+
+input[type='password'][readonly], input[type='text'][readonly], input[type='url'][readonly]
+{
+}
+
+select 
+{
+	-webkit-appearance:button;
+	-moz-appearance:button;
+	-o-appearance:button;
+	appearance:button;
+	
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	
+	-webkit-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow:0px 1px 3px rgba(0, 0, 0, 0.1);
+	
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-o-user-select:none;
+	
+	background-image:url(../wrocky_arrow.png), -webkit-linear-gradient(top, #FAFAFA 0%, #F4F4F4 40%, #E5E5E5 100%);
+	background-image:-moz-linear-gradient(top, #FAFAFA 0%, #F4F4F4 40%, #E5E5E5 100%);
+	background-image:-o-linear-gradient(top, #FAFAFA 0%, #F4F4F4 40%, #E5E5E5 100%);
+	
+	background-position:center right;
+	background-repeat:no-repeat;
+	
+	border:1px solid #AAA;
+	color:#555;
+	overflow:hidden;
+	padding:2px 20px 2px 5px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+select[disabled], select[disabled]:hover, select[disabled]:active	
+{
+	-webkit-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow:0px 1px 3px rgba(0, 0, 0, 0.1);
+
+	background-image:url(../wrocky_arrow_disable.png), -webkit-linear-gradient(top, #fafafa, #f4f4f4 40%, #e5e5e5);
+	background-image:-moz-linear-gradient(top, #fafafa 0%, #f4f4f4 40%, #e5e5e5 100%);
+	background-image:-o-linear-gradient(top, #fafafa 0%, #f4f4f4 40%, #e5e5e5 100%);
+	
+	color:#999;
+	opacity:0.3;
+}
+
+/* Hack Mozilla Select */
+select, #x:-moz-any-link, x:default { padding:2px 2px 2px 5px; }
+option, #x:-moz-any-link, x:default	{ padding:0px 20px 0px 2px; }
+
+select:hover 
+{
+	-webkit-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.2);
+	box-shadow:0px 1px 3px rgba(0, 0, 0, 0.2);
+	
+	background-image:url(../wrocky_arrow.png), -webkit-linear-gradient(top, #FEFEFE 0%, #F8F8F8 40%, #E9E9E9 100%);
+	background-image:-moz-linear-gradient(top, #FEFEFE 0%, #F8F8F8 40%, #E9E9E9 100%), url(../wrocky_arrow.png);
+	background-image:-o-linear-gradient(top, #FEFEFE 0%, #F8F8F8 40%, #E9E9E9 100%), url(../wrocky_arrow.png);
+	
+	color:#333;
+}
+ 
+select:active 
+{
+	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2);
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.2);
+	
+	background-image:url(../wrocky_arrow.png), -webkit-linear-gradient(top, #F4F4F4 0%, #EFEFEF 40%, #DCDCDC 100%);
+	background-image:-moz-linear-gradient(top, #F4F4F4 0%, #EFEFEF 40%, #DCDCDC 100%);
+	background-image:-o-linear-gradient(top, #F4F4F4 0%, #EFEFEF 40%, #DCDCDC 100%);
+	
+	color:#444;
+}

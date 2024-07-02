@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+body				{ font-family:verdana; font-size:10px; margin:0px; overflow:hidden;	background:url(images/piso.jpg) repeat; }
+ul,li				{ margin:0px; padding:0px; list-style:none; }
+
+#loading			{ display:none; position:absolute; top:50%; left:50%; padding:10px; margin:-55px 0 0 -55px; border-radius:5px; }
+#loading			{ background:rgba(0,0,0,0.2); z-index:1000; }
+#loading img		{ width:100px; height:100px; opacity:1; }
+
+#logo				{ position:absolute; width:100%; height:auto; top:38%; text-align:center; }
+#logo				{ font-size:96px; font-weight:bold; color:#FFF; text-shadow:-1px -2px 0 #999; opacity:0.3; }
+	
+#gradient			{ position:absolute; width:100%; height:100%; z-index:100; }
+#gradient			{ background:-webkit-radial-gradient(rgba(255,255,255,0) 60%, rgba(0,0,0,0.5)); }
+
+#wrap				{ display:none; position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.3); z-index:700; }
+
+#corpo				{ position:absolute; width:100%; height:100%; background:#CCC; }
+
+#objeto				{ position:absolute; width:10%;	height:10%;	top:0%;	left:40%; z-index:200; }
+#objeto				{ -webkit-transform:rotate(300deg); }
+#objeto img			{ margin-top:10%; margin-left:-10%;	width:120%;	height:80%; }
+
+#objetoAuto			{ position:absolute; width:100%; height:10%; top:0%; left:0%; z-index:300; }
+#objetoAuto img		{ margin-top:-2.5%; margin-left:0%; width:70%; height:150%; z-index:10; }
+
+#box				{ display:block; position:absolute; top:2%; left:-100%; padding:0; width:96%; height:96%; background:rgba(0,0,0,0.5); }
+#box				{ color:#222; font-size:12px; text-align:center; z-index:800; }	
+#box				{ border-radius:5px; box-shadow:0 0 15px rgba(0,0,0,0.8); }
+#box #cabecalho		{ font-size:24px; color:#DDD; font-weight:bold; padding:10px; text-shadow:0 0 10px #000; }
+#box #texto			{ width:96%; height:87.5%; font-size:12px; margin:2%; background:rgba(255,255,255,1); border-radius:5px; }
+#box #texto #mensagem	{ position:relative; padding:50px; font-size:16px; }
+
+#console			{ position:absolute; width:100%; top:0px; left:0px; padding:10px; height:auto; background:rgba(0,0,0,0.8); display:none; z-index:4; color:#F00; z-index:999; box-shadow:0 0 15px rgba(0,0,0,0.8); }
+#console div		{ padding:5px; }
+#console div		{ padding:5px; }
+
+#menu				{ position:absolute; right:5px; bottom:5px; z-index:500; }
+#menu img			{ width:48px; }
+
+#menu li			{ padding:10px; margin:10px; opacity:0.3; cursor:pointer; }

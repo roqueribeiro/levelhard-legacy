@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<translations>
+  <!-- Inicio Menu Superior -->
+  <translation id="home">
+    <br>Início</br>
+    <us>Home</us>
+    <es>Inicio</es>
+  </translation>
+  <translation id="solutions">
+    <br>Soluções</br>
+    <us>Solutions</us>
+    <es>Soluciones</es>
+  </translation>
+  <translation id="datahealth">
+    <br>Sistema Data Health</br>
+    <us>Data Health System</us>
+    <es>Sistema Data Health</es>
+  </translation>
+  <translation id="gdatamobile">
+    <br>GData Mobile</br>
+    <us>GData Mobile</us>
+    <es>GData Mobile</es>
+  </translation>
+  <translation id="company">
+    <br>Empresa</br>
+    <us>Company</us>
+    <es>Empresa</es>
+  </translation>
+  <translation id="media">
+    <br>Mídias</br>
+    <us>Media</us>
+    <es>Presustaciones</es>
+  </translation>
+  <translation id="contact">
+    <br>Contatos</br>
+    <us>Contacts</us>
+    <es>Contactos</es>
+  </translation>
+  <translation id="languages">
+    <br>Idiomas</br>
+    <us>Languages</us>
+    <es>Idiomas</es>
+  </translation>
+  <translation id="portuguese">
+    <br>Português</br>
+    <us>Portuguese</us>
+    <es>Portugués</es>
+  </translation>
+  <translation id="english">
+    <br>Inglês</br>
+    <us>English</us>
+    <es>Inglés</es>
+  </translation>
+  <translation id="spanish">
+    <br>Espanhol</br>
+    <us>Spanish</us>
+    <es>Español</es>
+  </translation>
+  <!-- Fim Menu Superior -->
+  <!-- Inicio Home -->
+  <translation id="cl-gdm-title">
+    <br>GData Mobile</br>
+    <us>GData Mobile</us>
+    <es>GData Mobile</es>
+  </translation>
+  <translation id="cl-ubs-title">
+    <br>Unidade de Saúde Informatizada</br>
+    <us>Computerized Health Unit</us>
+    <es>Unidad de Salud Computarizada</es>
+  </translation>
+  <translation id="cl-con-title">
+    <br>Consultorio Informatizado</br>
+    <us>Computerized Medical Office</us>
+    <es>Oficina Médica Computarizada</es>
+  </translation>
+  <translation id="cl-gdm-main">
+    <br>Atendimento Médico ágil, com os dados completos do paciente, espaço fisico do consultorio otimizado, sem prateleiras e acumulo de papeis. Acesso Seguro por Biometria Digital.</br>
+    <us>Medical Care agile, with full patient information, physical space optimized consultorio without shelves and accumulation of papers. Secure Access by Digital Biometrics.</us>
+    <es>Atención médica ágil, con información completa del paciente, el espacio físico optimizado consultorio sin estantes y la acumulación de papeles. Acceso seguro mediante biometría digitales.</es>
+  </translation>
+  <translation id="cl-ubs-main">
+    <br>Sistema de Informatização Data Health, agiliza o atendimento eliminando filas de espera até que o funcionario encontre o prontuario de papel do paciente.</br>
+    <us>Computerization of Data Health System, streamlines care by eliminating queues until the employee finds the records of the patient's role.</us>
+    <es>Informatización del Sistema de Información de Salud, agiliza la atención mediante la eliminación de las colas hasta que el empleado busca los registros de la función del paciente.</es>
+  </translation>
+  <translation id="cl-con-main">
+    <br>Atendimento Médico ágil, com os dados completos do paciente, espaço fisico do consultorio otimizado, sem prateleiras e acumulo de papeis. Acesso Seguro por Biometria Digital.</br>
+    <us>Medical Care agile, with full patient information, physical space optimized consultorio without shelves and accumulation of papers. Secure Access by Digital Biometrics.</us>
+    <es>Atención médica ágil, con información completa del paciente, el espacio físico optimizado consultorio sin estantes y la acumulación de papeles. Acceso seguro mediante biometría digitales.</es>
+  </translation>
+  <!-- Fim Home -->
+  <!-- Inicio Textos Comuns -->
+  <translation id="btn-moreinfo">
+    <br>Mais Informações</br>
+    <us>More Info</us>
+    <es>Más Información</es>
+  </translation>
+  <!-- Fim Textos Comuns -->
+</translations>

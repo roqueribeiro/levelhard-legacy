@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Desenvolvimento protótipo de aplicação mobile">
+    <meta name="author" content="Roque Ribeiro da Silva">
+    <title>AppStart</title>
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/prefixfree.min.js"></script>
+    <script type="text/javascript">
+        $('.preloader').show();
+        window.onload = function () {
+            $('.preloader').fadeOut();
+            $('.phone').fadeIn();
+        };
+    </script>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .bg {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: radial-gradient(#FFF 60%, #CCC);
+        }
+
+        .preloader {
+            position: absolute;
+            width: 128px;
+            height: 128px;
+            top: 50%;
+            left: 50%;
+            margin: -64px 0 0 -64px;
+            background: url(images/preloader.gif) center no-repeat;
+            display: none;
+        }
+
+        .phone {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            top: 50%;
+            left: 50%;
+            margin: -400px 0 0 -400px;
+            background: url(images/asus-phonepad.png);
+            background-size: cover;
+            display: none;
+        }
+
+        iframe {
+            position: absolute;
+            top: 78px;
+            left: 324px;
+            width: 366px;
+            height: 647px;
+            background: #111;
+            box-shadow: 0 1px #CCC, 0 -1px #CCC, 1px 0 #CCC, -1px 0 #CCC;
+        }
+
+        @media (max-height: 850px) {
+            .phone {
+                transform: scale(0.7);
+            }
+        }
+
+        @media (max-height: 580px) {
+            .phone {
+                transform: scale(0.5);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg">
+        <div class="preloader"></div>
+        <div class="phone">
+            <iframe src="app.html" frameborder="0"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Roque Ribeiro">
+    <meta name="description" content="">
+    <meta name="keywords" content="html, css, jquery">
+    <meta name="reply-to" content="roque.ribeiro@levelhard.com.br">
+    <!-- Mobile MetaTags -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#607D8B">
+    <title></title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100" rel="stylesheet" type="text/css">
+    <!-- Plugins Functions -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form.min.js"></script>
+    <script type="text/javascript" src="js/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+    <!-- Default Functions -->
+    <script type="text/javascript" src="js/sw-default.js"></script>
+    <!-- Plugins Styles -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <!-- Default Structure -->
+    <link rel="stylesheet" type="text/css" href="css/sw-default.css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            if ($("body").width() > 600) {
+                var defaults = {
+                    background: "#FFF",
+                    cursorcolor: "#455A64",
+                    cursorwidth: 8,
+                    cursorborder: "none",
+                    cursorborderradius: "0px",
+                    horizrailenabled: false,
+                    autohidemode: false,
+                    railpadding: { top: 0, right: 0, left: 0, bottom: 0 }
+                };
+                $("body > content > main").niceScroll(defaults);
+                $("body > content > nav ul").niceScroll(defaults);
+                $(".modal").niceScroll(defaults);
+                $("body > content > main > #sw-messages content").niceScroll(defaults);
+            }
+
+            $("#sw-attachments").click(function (e) {
+                e.preventDefault();
+                $.swOpenDynamicModal({
+                    title: "<h4>Mensagem Teste</h4>",
+                    content: "Este é apenas um teste de Modal",
+                    buttons: {
+                        cancel: {
+                            btntext: "Cancelar",
+                            btnclass: "btn-link",
+                            callback: function (element) {
+                                $.swOpenDynamicModal({
+                                     closeid: $(element).data("id")
+                                });
+                            }
+                        },
+                        confirm: {
+                            btntext: "Ok",
+                            btnclass: "btn-link",
+                            callback: function (element) {
+                                $.swOpenDynamicModal({
+                                     closeid: $(element).data("id")
+                                });
+                            }
+                        }
+                    }
+                });
+            });
+
+            $("#sw-fullscreen").swGoToFullscreen();
+            $("#sw-mainmenu").swOpenMainMenu();
+            $("#sw-navtabs").swNavTabs();
+            $("#currents tr").swNavWindows();
+            $("a").swNavWindows();
+
+        });
+    </script>
+
+</head>
+<body>
+
+    <preloader>
+        <img src="img/loading.svg" />
+    </preloader>
+
+    <content>
+        <header>
+            <a href="javascript:void();" id="sw-mainmenu" style="left: 0;"><h2><i class="fa fa-bars"></i> Speechless</h2></a>
+            <a href="javascript:void();" id="sw-openmodal" style="right: 50px;"><i class="fa fa-search"></i></a>
+            <a href="javascript:void();" id="sw-fullscreen" style="right: 0;"><i class="fa fa-expand"></i></a>
+        </header>
+        <nav>
+            <header>
+                <img src="img/user.svg" alt="" />
+                <p>Roque Ribeiro da Silva <br /><small>roque.ribeiro@hotmail.com.br</small></p>
+            </header>
+            <ul>
+                <li><a href="javascript:void();" id="sw-account"><i class="fa fa-lock"></i> Meu Perfil</a></li>
+                <li><a href="javascript:void();" id="sw-rooms"><i class="fa fa-users"></i> Salas</a></li>
+                <li><a href="javascript:void();" id="sw-peoples"><i class="fa fa-user"></i> Pessoas</a></li>
+                <li><a href="javascript:void();" id="sw-config"><i class="fa fa-cog"></i> Configurações</a></li>
+                <li><a href="javascript:void();" id="sw-logout"><i class="fa fa-sign-out"></i> Sair</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="sw-index">
+                <nav id="sw-navtabs">
+                    <ul>
+                        <li><a href="#currents">Conversas</a></li>
+                        <li><a href="#contacts">Contatos</a></li>
+                    </ul>
+                </nav>
+                <section id="currents">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2"><i class="fa fa-caret-right"></i> Online</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="sw-user-online" data-target="#sw-messages" data-current="#sw-index" data-userid="1">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                            <tr class="sw-user-occupied" data-target="#sw-messages" data-current="#sw-index" data-userid="2">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                            <tr class="sw-user-online" data-target="#sw-messages" data-current="#sw-index" data-userid="3">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                            <tr class="sw-user-online" data-target="#sw-messages" data-current="#sw-index" data-userid="4">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                            <tr class="sw-user-occupied" data-target="#sw-messages" data-current="#sw-index" data-userid="5">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                            <tr class="sw-user-online" data-target="#sw-messages" data-current="#sw-index" data-userid="6">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2"><i class="fa fa-caret-right"></i> Salas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-target="#sw-messages" data-current="#sw-index" data-userid="7">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nome da Sala <br /><small>Texto descritivo da sala</small></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2"><i class="fa fa-caret-right"></i> Offline</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-target="#sw-messages" data-current="#sw-index" data-userid="8">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="contacts">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2"><i class="fa fa-caret-right"></i> Online</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="sw-user-online">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                            <tr class="sw-user-online">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                            <tr class="sw-user-online">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                            <tr class="sw-user-online">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                            <tr class="sw-user-online">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                            <tr class="sw-user-occupied">
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2"><i class="fa fa-caret-right"></i> Offline</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="img/user.svg" /></td>
+                                <td><p>Nickname <br /><small>Texto descritivo do usuário teste Teste</small></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+            <section id="sw-messages">
+                <header>
+                    <a href="#currents" data-target="#sw-index" data-current="#sw-messages" style="left: 0px;"><i class="fa fa-chevron-left"></i> Grupo</a>
+                    <a href="#currents" id="sw-attachments" style="right: 0px;"><i class="fa fa-ellipsis-v"></i></a>
+                </header>
+                <content>
+                    <div class="sw-message-line sw-message-align-left">
+                        <div class="sw-message-box">
+                            <div class="sw-message-photo"></div>
+                            <div class="sw-message-content">
+                                <div class="sw-message-user">Usuario Nome</div>
+                                <div class="sw-message-text">Mensagem teste</div>
+                                <div class="sw-message-info">15:27</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sw-message-line sw-message-align-left">
+                        <div class="sw-message-box">
+                            <div class="sw-message-photo"></div>
+                            <div class="sw-message-content">
+                                <div class="sw-message-user">Usuario Nome</div>
+                                <div class="sw-message-text">Mensagem teste</div>
+                                <div class="sw-message-info">15:27</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sw-message-line sw-message-align-right">
+                        <div class="sw-message-box">
+                            <div class="sw-message-photo"></div>
+                            <div class="sw-message-content">
+                                <div class="sw-message-user">Usuario Nome</div>
+                                <div class="sw-message-text">Mensagem teste</div>
+                                <div class="sw-message-info">15:27</div>
+                            </div>
+                        </div>
+                    </div>
+                </content>
+                <footer>
+                    <form action="#" method="post">
+                        <button type="button" name="message-emoji"><i class="fa fa-smile-o"></i></button>
+                        <input type="text" name="message-text" placeholder="Digite uma mensagem..." />
+                        <button type="submit" name="message-send"><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </footer>
+            </section>
+            <section id="sw-rooms"></section>
+            <section id="sw-peoples"></section>
+        </main>
+        <footer></footer>
+    </content>
+
+
+</body>
+</html>

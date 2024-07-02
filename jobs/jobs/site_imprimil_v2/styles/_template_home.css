@@ -1,0 +1,95 @@
+#_template_home {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    overflow: hidden;
+}
+
+    #_template_home::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    #_template_home::-webkit-scrollbar-track {
+        background: linear-gradient(transparent 50%, rgba(255,255,255,0.2));
+    }
+
+    #_template_home::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.4);
+    }
+
+    #_template_home ._template_home_content {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        text-align: center;
+    }
+
+        #_template_home ._template_home_content ._template_home_content_menu {
+            position: relative;
+            width: 100%;
+            height: 60px;
+        }
+
+            #_template_home ._template_home_content ._template_home_content_menu div {
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                font-size: 18px;
+                padding: 0 10px 0 60px;
+                cursor: pointer;
+            }
+
+        #_template_home ._template_home_content iframe {
+            position: relative;
+            width: 100%;
+            height: calc(100% - 60px);
+            background: transparent;
+            overflow: hidden;
+            z-index: 5;
+        }
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    font-size: 24px;
+    color: rgba(255,255,255,0.8);
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #_template_home {
+        overflow: auto;
+    }
+
+        #_template_home::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #_template_home::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        #_template_home::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+
+        #_template_home ._template_home_content ._template_home_content_menu {
+            height: auto;
+            text-align: left;
+        }
+
+            #_template_home ._template_home_content ._template_home_content_menu div {
+                width: 100%;
+                text-align: left;
+                box-sizing: border-box;
+            }
+
+        #_template_home ._template_home_content iframe {
+            min-height: 100%;
+        }
+}

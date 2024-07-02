@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+input[type=button]		{ border:1px #000 solid; color:#FFF; font-weight:bold; padding:2px 10px 2px 10px; background:url(themes/default/pixel.jpg) top repeat-x #666; }
+input[type=button]:hover	{ color:#CCC; }
+input[type=button]:active	{ background:#555; }
+input[type=submit]		{ border:1px #000 solid; color:#FFF; font-weight:bold; padding:2px 10px 2px 10px; background:url(themes/default/pixel.jpg) top repeat-x #666; }
+input[type=submit]:hover	{ color:#CCC; }
+input[type=submit]:active	{ background:#555; }
+input[type=text]		{ border:1px #CCC solid; padding:2px 4px 2px 4px; }
+select					{ border:1px #CCC solid; padding:2px 2px 2px 2px; }

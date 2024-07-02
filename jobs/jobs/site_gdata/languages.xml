@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<translations>
+  <!-- Inicio Menu Superior -->
+  <translation id="home">
+    <br>Início</br>
+    <us>Home</us>
+    <es>Inicio</es>
+  </translation>
+  <translation id="solutions">
+    <br>Soluções</br>
+    <us>Solutions</us>
+    <es>Soluciones</es>
+  </translation>
+  <translation id="datahealth">
+    <br>Sistema Data Health</br>
+    <us>Data Health System</us>
+    <es>Sistema Data Health</es>
+  </translation>
+  <translation id="gdatamobile">
+    <br>ESF Móvel</br>
+    <us>ESF Mobile</us>
+    <es>ESF Móvil</es>
+  </translation>
+  <translation id="company">
+    <br>Empresa</br>
+    <us>Company</us>
+    <es>Empresa</es>
+  </translation>
+  <translation id="media">
+    <br>Mídias</br>
+    <us>Media</us>
+    <es>Presustaciones</es>
+  </translation>
+  <translation id="contact">
+    <br>Contatos</br>
+    <us>Contacts</us>
+    <es>Contactos</es>
+  </translation>
+  <translation id="languages">
+    <br>Idiomas</br>
+    <us>Languages</us>
+    <es>Idiomas</es>
+  </translation>
+  <translation id="portuguese">
+    <br>Português</br>
+    <us>Portuguese</us>
+    <es>Portugués</es>
+  </translation>
+  <translation id="english">
+    <br>Inglês</br>
+    <us>English</us>
+    <es>Inglés</es>
+  </translation>
+  <translation id="spanish">
+    <br>Espanhol</br>
+    <us>Spanish</us>
+    <es>Español</es>
+  </translation>
+  <!-- Fim Menu Superior -->
+  <!-- Inicio Home -->
+  <translation id="home-cl-gdm-title">
+    <br>Prontuário Eletrônico e Gerenciamento de Saúde</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="home-cl-ubs-title">
+    <br>Unidade de Saúde Informatizada</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="home-cl-con-title">
+    <br>Atendimento com Dispositivos Móveis</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="home-cl-gdm-main">
+    <br>Atendimento Médico ágil, com histórico de consultas, dados completos do paciente, espaço fisico do consultorio otimizado, sem prateleiras e acumulo de papeis.</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="home-cl-ubs-main">
+    <br>Sistema de Informatização Data Health, agiliza o atendimento eliminando filas de espera até que o funcionario encontre o prontuario de papel do paciente.</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="home-cl-con-main">
+    <br>Agendamento de visitas, controle dos atendimentos em tempo real, questionários e fichas ( conforme eSUS ) e cadastros de famílias.</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="home-title-desc">
+    <br>Soluções de Internet</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="home-mk1-title">
+    <br>Data Health</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="home-mk1-main">
+    <br>O Sistema Data Health tem uma arquitetura de funcionamento baseado em linguagem para Web, acesso simples, rápido e de alta tecnologia. Ferramenta segura e de alta disponibilidade.</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="home-mk2-title">
+    <br>Data Health - ESF Móvel</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="home-mk2-main">
+    <br>Atendimentos ao Programa de Saúde da Família com dispositivos móveis (Tablets), agendamento de visitas, controle dos atendimentos em tempo real, questionários e fichas ( conforme eSUS ) e cadastros de famílias.</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <!-- Fim Home -->
+  <!-- Inicio Company -->
+  <translation id="company-cl-title">
+    <br>Sobre a Global Data</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="company-cl-main">
+    <br>Saiba mais sobre a empresa...</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="company-title-desc">
+    <br>Soluções de Internet</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="company-mk1-title">
+    <br>História</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="company-mk1-main">
+    <br>A Global Data - Soluções de Internet teve início em 2003, tendo como objetivo automatizar o gerênciamento de saúde utilizando da tecnologia, investindo em diversos estudos e pesquisas na área. O principal produto desenvolvido é o Sistema Data Health - Prontuários Eletrônicos e Gerenciador de Saúde, uma aplicação como prestação de serviços com arquitetura para internet. Este projeto esteve incubado na aceleradora de empreendimentos do Instituto de Tecnologia de Software de São Paulo (ITS).</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="company-mk2-title">
+    <br>Profissionais Qualificados</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="company-mk2-main">
+    <br>
+      A empresa Global Data que tem seu foco voltado para informatização de saúde, possuí em sua diretoria profissionais com larga experiência em gestão de saúde (profissionais que já foram gestores e ou secretarios de saúde),
+      profissionais de tecnologia (Engenheiros da Computação, Analistas de Sistemas, Tecnologos, etc.) e multiprofissionais do setor da saude (Medicos, Enfermeiros, Biomedicos,etc.) com
+      especializações em varias areas de Informatica da Saúde. Gerenciamento de saúde com tecnologia exige conhecimento para desenvolvimento de aplicações especializadas.
+    </br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="company-mk3-title">
+    <br>Missão e Objetivos</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <!-- Fim Company -->
+  <!-- Inicio DataHealth -->
+  <translation id="datahealth-cl-title">
+    <br>Sistema Data Health</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="datahealth-cl-main">
+    <br>Sistema de Prontuário Eletrônico e Gerenciador de Saúde</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="datahealth-title-desc">
+    <br>Soluções de Internet</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="datahealth-mk1-title">
+    <br>Sistema Data Health</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="datahealth-mk1-main">
+    <br>
+      Aplicação para gestão de atendimentos que baseia-se em informações disponibilizadas na forma de prontuário eletrônico,
+      com certificação pelas normas da Sociedade Brasileira de Informatica para Saúde e Conselho Federal de Medicina.
+      O software possuí um fluxo eletrônico de tratamento que combina o poder das informações do prontuário eletrônico com a visão de eventos do fluxo de pacientes,
+      possibilitando que em uma única tela de consulta, o profissional (medico, enfermeira, etc.), possa avaliar rapidamente todo o histórico clínico, medicamentos, exames anteriores e registrar em tempo real,
+      a série de procedimentos realizados nos atendimentos.
+      O SISTEMA DATA HEALTH, operando totalmente na internet (CLOUD COMPUTING), possibilita que em tempo real, ocorra a portabilidade dos dados e dos atendimentos externos como SAMU ou domiciliares,
+      com tablets ou netbooks, através da tecnologia 3G de banda larga.
+    </br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="datahealth-mk2-title">
+    <br>Principais Funcionalidades</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <!-- Fim DataHealth -->
+  <!-- Inicio GDataMobile -->
+  <translation id="gdatamobile-cl-title">
+    <br>Data Health - ESF Móvel</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="gdatamobile-cl-main">
+    <br>Solução para celular, tablets e outros dipositivos móveis</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="gdatamobile-title-desc">
+    <br>Soluções de Internet</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="gdatamobile-mk1-title">
+    <br>Data Health ESF - Móvel</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="gdatamobile-mk1-main">
+    <br>
+      É uma ferramenta para captação das informações do Programa de Estratégia da Saúde da Familia.
+      A aplicação auxilia o agente comunitario através de um tablet nas visitas domiciliares, sem
+      precisar carregar blocos e prontuarios de papel dos pacientes para as anotações e preenchimentos de
+      formularios, cadastros, questionarios e agendamentos. Com tecnologia avançada o Data Health - ESF Movel,
+      funciona em equipamentos com acesso on-line ou off-line.
+      A aplicação está totalmente sincronizada com os Sistemas de Informação em Saúde do Ministério da
+      Saúde ( SIAB, E-SUS, RAAS, etc), entendendo que a qualificação da gestão da informação é fundamental para
+      ampliar a qualidade no atendimento à população.
+    </br>
+    <us></us>
+    <es></es>
+  </translation>
+  <!-- Fim GDataMobile -->
+  <!-- Inicio Media -->
+  <translation id="media-cl-title">
+    <br>Global Data Mídias</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="media-cl-mail">
+    <br>Assista as apresentações dos nossos sistemas</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="media-title-desc">
+    <br>Soluções de Internet</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="media-mk1-title">
+    <br>ESF Móvel Conferência Barcelona</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="media-mk1-main">
+    <br>Apresentação do software mobile no Intel at Mobile World Congress em Barcelona na Espanha.</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="media-mk2-title">
+    <br>Data Health. Programa Olhar Digital</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="media-mk2-main">
+    <br>Em parceria com a Intel, demonstramos os principais benefícios do nosso sistema no dia-a-dia dos médicos, pacientes e gestores.</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="media-mk3-title">
+    <br>Assinatura Digital Jornal da TV TEM</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="media-mk3-main">
+    <br>Em parceria com a Intel, demonstramos os principais benefícios do nosso sistema no dia-a-dia dos médicos, pacientes e gestores.</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="media-notice-title">
+    <br>Parceria entre as empresas Intel, Vivo e Global Data.</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="media-notice-title">
+    <br>Todos os vídeos são de propriedade Global Data</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <!-- Fim Media -->
+  <!-- Inicio Contato -->
+  <translation id="contact-cl-title">
+    <br>Global Data Contato</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-cl-main">
+    <br>Entre em contato para tirar dúvidas, orçamentos etc.</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-title-desc">
+    <br>Soluções de Internet</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-label-nome">
+    <br>Nome</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-label-telefone">
+    <br>Telefone</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-label-celular">
+    <br>Celular</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-label-email">
+    <br>E-Mail</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-label-texto">
+    <br>O que deseja?</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-btn-enviar">
+    <br>Enviar</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-info-slogan">
+    <br>Global Data Solucôes de Internet</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-info-end">
+    <br>Rua Cel. Lucio Seabra nº 483</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-info-cep">
+    <br>Centro, Cep: 18270-240</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-info-cidade">
+    <br>Tatuí - SP</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-info-tel">
+    <br>Tel.: (15) 3259-1247</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-info-email-title">
+    <br>Email para contato</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="contact-info-email-main">
+    <br>gdata@gdata.com.br</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <!-- Fim Contato -->
+  <!-- Inicio Textos Comuns -->
+  <translation id="btn-moreinfo">
+    <br>Mais Informações</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <translation id="dh-slogan">
+    <br>Sistema de Prontuário Eletrônico e Gerenciador de Saúde</br>
+    <us></us>
+    <es></es>
+  </translation>
+  <!-- Fim Textos Comuns -->
+</translations>

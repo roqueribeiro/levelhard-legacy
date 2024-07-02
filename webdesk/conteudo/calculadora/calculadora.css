@@ -1,0 +1,237 @@
+@font-face {
+	font-family: 'Porsche';
+	src: url('fonts/911.eot?#iefix') format('embedded-opentype'),
+         url('fonts/911.woff') format('woff'),
+         url('fonts/911.ttf') format('truetype'),
+         url('fonts/911.svg#911PorschaRegular') format('svg'),
+         url('fonts/911.eot') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#css3calculator a {
+	font-family: Porsche;
+	color: white;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+}
+
+@font-face {
+	font-family: 'Orbitron';
+	src: url('fonts/orbitron.eot');
+	src: url('fonts/orbitron.eot?#iefix') format('embedded-opentype'),
+         url('fonts/orbitron.woff') format('woff'),
+         url('fonts/orbitron.ttf') format('truetype'),
+         url('fonts/orbitron.svg#OrbitronLight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Label';
+	src: url('fonts/ocra.eot');
+	src: url('fonts/ocra.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ocra.woff') format('woff'),
+         url('fonts/ocra.ttf') format('truetype'),
+         url('fonts/ocra.svg#OCRAStdRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Digital';
+	src: url('fonts/digital.eot?#iefix') format('embedded-opentype'),
+         url('fonts/digital.woff') format('woff'),
+         url('fonts/digital.ttf') format('truetype'),
+         url('fonts/digital.svg#') format('svg'),
+         url('fonts/digital.eot') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+input[type=button]:hover {
+	cursor: pointer;
+}
+
+#css3calculator {
+	position:relative;
+	width:90%;
+	height:100%;
+	background:-webkit-linear-gradient(160deg,#BBB 0%, #CCC 50%,#DDD 50%, #FFF 100%);
+	background:-moz-linear-gradient(160deg,#BBB 0%, #CCC 50%,#DDD 50%, #FFF 100%);
+	background:-o-linear-gradient(160deg,#BBB 0%, #CCC 50%,#DDD 50%, #FFF 100%);
+	background:-ms-linear-gradient(160deg,#BBB 0%, #CCC 50%,#DDD 50%, #FFF 100%);
+	background:linear-gradient(160deg,#BBB 0%, #CCC 50%,#DDD 50%, #FFF 100%);
+	padding:0 5% 0 5%;
+	box-shadow:inset 0 2px #000, inset 0 0 35px rgba(255,255,255,1);
+}
+
+#calc-container {
+	position: relative;
+}
+
+#css3calculator form {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#css3calculator div {
+	padding: 5%;
+	width: 90%;
+	margin-top: 6%;
+	height: 62%;
+	border-radius:5px;
+	background: -webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.4)), url(teclado.png);
+	background: -moz-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.4)), url(teclado.png);
+	background: -o-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.4)), url(teclado.png);
+	background: -ms-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.4)), url(teclado.png);
+	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.4)), url(teclado.png);
+	box-shadow: inset 1px 1px 2px #111, 1px 1px #FFF;
+}
+
+#css3calculator hr {
+	display: block;
+	height: 1%;
+	margin-top: -1%;
+	position: relative;
+	clear: both;
+	padding: 0;
+	width: 100%;
+	border: none !important;
+}
+
+#css3calculator p {
+	font-family: Porsche;
+	display: block;
+	width: 100%;
+	clear: both;
+	font-size: 80%;
+	white-space: pre;
+	overflow: hidden;
+	text-align: right;
+	line-height: 150%;
+	padding-top: 3%;
+	margin-bottom: 3%;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	color: black;
+}
+
+#css3calculator input[type=text] {
+	width: 100%;
+	padding: 0;
+	text-indent: .4em;
+	height: 15%;
+	border: none;
+	clear: both;
+	font-family: Digital;
+	letter-spacing: .1em;
+	color: #444;
+	font-size: 200%;
+	background: #a4b29b;
+	border-radius:5px;
+	box-shadow: inset 1px 1px 2px #555, 1px 1px #FFF;
+}
+
+#css3calculator span {
+	display: block;
+	position: relative;
+	opacity: .2;
+	overflow: hidden;
+	margin-bottom: -10%;
+	text-indent: .4em;
+	top:-11%;
+	font-family: Digital;
+	letter-spacing: .1em;
+	color: #666;
+	font-size: 200%;
+	z-index: 10;
+	text-shadow: none;
+}
+
+#css3calculator input[type=button] {
+	width: 20.5%;
+	font-family: Orbitron;
+	margin-right: 6%;
+	margin-bottom: 6%;
+	height: 20%;
+	line-height: 15%;
+	text-align: center;
+	border-radius: 4px;
+	float: left;
+	font-size: 100%;
+	font-weight:normal;
+	box-sizing: normal;
+	border: 1px #222 solid;
+	background:-webkit-linear-gradient(#666,#444);
+	background:-moz-linear-gradient(#666,#444);
+	background:-o-linear-gradient(#666,#444);
+	background:-ms-linear-gradient(#666,#444);
+	background:linear-gradient(#666,#444);
+	color: #EEE;
+	box-shadow:inset 0 1px #888, inset 0 -1px 1px #222;
+	text-shadow:none;
+}
+
+#css3calculator input[type=button]:hover {
+}
+
+#css3calculator input[type=button]:active {
+	box-shadow:inset 0 -1px #666, inset 0 1px 1px #222;
+}
+
+#css3calculator input[type=button].function {
+	background:-webkit-linear-gradient(#EEE,#CCC);
+	background:-moz-linear-gradient(#EEE,#CCC);
+	background:-o-linear-gradient(#EEE,#CCC);
+	background:-ms-linear-gradient(#EEE,#CCC);
+	background:linear-gradient(#EEE,#CCC);
+	color:#444;
+	box-shadow:inset 0 1px #FFF, inset 0 -1px 1px #888;
+}
+
+#css3calculator input[type=button].function:hover {
+}
+
+#css3calculator input[type=button].function:active {
+	box-shadow:inset 0 -1px #FFF, inset 0 1px 1px #888;
+}
+
+#css3calculator input[type=button].calcButton {
+	background:-webkit-linear-gradient(#7db279, #398235);
+	background:-moz-linear-gradient(#7db279, #398235);
+	background:-o-linear-gradient(#7db279, #398235);
+	background:-ms-linear-gradient(#7db279, #398235);
+	background:linear-gradient(#7db279, #398235);
+	color:#FFF;
+	box-shadow:inset 0 1px #A4F2A4, inset 0 -1px 1px #2D3D2A;
+}
+
+#css3calculator input[type=button].calcButton:hover {
+}
+
+#css3calculator input[type=button].calcButton:active {
+	box-shadow:inset 0 -1px #A4F2A4, inset 0 1px 1px #2D3D2A;
+}
+
+#css3calculator input[type=button].clearButton {
+	background:-webkit-linear-gradient(#E50000, #990000);
+	background:-moz-linear-gradient(#E50000, #990000);
+	background:-o-linear-gradient(#E50000, #990000);
+	background:-ms-linear-gradient(#E50000, #990000);
+	background:linear-gradient(#E50000, #990000);
+	color:#FFF;
+	box-shadow:inset 0 1px #F00, inset 0 -1px 1px #660000;
+}
+
+#css3calculator input[type=button].clearButton:hover {
+}
+
+#css3calculator input[type=button].clearButton:active {
+	box-shadow:inset 0 -1px #F00, inset 0 1px 1px #660000;
+}
+
+.last {
+	margin-right: 0 !important;
+	clear: right;
+}

@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Exemplo</title>
+
+<link rel="stylesheet" href="css.css">
+
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.8.24.custom.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	var sizeXsizeY	= 3;
+	var opacity		= 1;
+	var radius		= 0;
+	var auto		= false;
+	var autoDelay	= 600;
+	
+	var red			= 0;
+	var green		= 0;
+	var blue		= 0;
+	
+	var b_red		= 255;
+	var b_green		= 255;
+	var b_blue		= 255;
+	
+	var f_blur		= 0;
+	var f_shadow	= 0;
+	var f_shadow_o	= 1;
+	
+	$('input[name=tamanho]').change(function(){ sizeXsizeY = $(this).val(); $('#tamanho').html(sizeXsizeY); });
+	$('input[name=opacity]').change(function(){ opacity = $(this).val(); $('#opacity').html(opacity); });
+	$('input[name=radius]').change(function(){ radius = $(this).val(); $('#radius').html(radius); });
+	$('input[name=auto]').change(function(){
+		
+		if($(this).is(':checked'))
+		{
+			auto = true; 
+			$('div.risco').remove();
+		}
+		else
+		{
+			auto = false;
+		}
+		
+	});
+	$('input[name=autoDelay]').change(function(){ autoDelay = $(this).val(); $('#autoDelay').html(autoDelay); });
+	
+	$('input[name=red]').change(function(){ red = $(this).val(); $('#red').html(red); });
+	$('input[name=green]').change(function(){ green = $(this).val(); $('#green').html(green); });
+	$('input[name=blue]').change(function(){ blue = $(this).val(); $('#blue').html(blue); });
+	
+	//BackgroundColor
+	$('input[name=b_red]').change(function(){ b_red = $(this).val(); $('#b_red').html(b_red); $('#draw').css('background-color','rgb('+b_red+','+b_green+','+b_blue+')'); });
+	$('input[name=b_green]').change(function(){ b_green = $(this).val(); $('#b_green').html(b_green); $('#draw').css('background-color','rgb('+b_red+','+b_green+','+b_blue+')'); });
+	$('input[name=b_blue]').change(function(){ b_blue = $(this).val(); $('#b_blue').html(b_blue); $('#draw').css('background-color','rgb('+b_red+','+b_green+','+b_blue+')'); });
+	
+	$('input[name=f_blur]').change(function(){ f_blur = $(this).val(); $('#f_blur').html(f_blur); });
+	
+	$('input[name=f_shadow]').change(function(){ f_shadow = $(this).val(); $('#f_shadow').html(f_shadow); });
+	$('input[name=f_shadow_o]').change(function(){ f_shadow_o = $(this).val(); $('#f_shadow_o').html(f_shadow_o); });
+
+	$('body').mousemove(function(e){
+				
+		html = '<div class="risco" style="'+
+			   'width:'+sizeXsizeY+'px; height:'+sizeXsizeY+'px;'+
+			   'top:'+(e.pageY-(sizeXsizeY/2))+'px; left:'+(e.pageX-(sizeXsizeY/2))+'px;'+
+			   'opacity:'+opacity+';'+
+			   'border-radius:'+radius+'px;'+
+			   'background:rgb('+red+','+green+','+blue+');'+
+			   '-webkit-filter:blur('+f_blur+'px);'+
+			   'box-shadow:0 0 '+f_shadow+'px rgba(0,0,0,'+f_shadow_o+');'+
+			   '"></div>';
+		
+		$('#draw').append(html);
+		
+		if(auto)
+			$('div.risco').fadeOut(autoDelay,function(){ $(this).remove(); }); 
+		else 
+			$('div.risco').show(); 
+			
+		$('#console').html('posY:'+e.pageY+' - posX:'+e.pageX);
+		
+	});
+	
+	$('#full').html('Active Full Screen');
+	
+	$('#full').click(function(){
+		
+		if($(this).attr('class')==0)
+		{			
+			$('#control ul').hide(600);
+						
+			$(this).attr('class','1').html('Deactive Full Screen');
+		}
+		
+		else if($(this).attr('class')==1)
+		{			
+			$('#control ul').first().show(100, function hideNext() {
+				$(this).next('ul').show(100, hideNext);
+			});
+			
+			$(this).attr('class','0').html('Active Full Screen');
+		}
+		
+				
+	});
+	
+});
+</script>
+
+</head>
+
+<body>
+
+	<div id="control">
+    
+    	<ul>
+        	<li>Size</li>
+            <li><input name="tamanho" type="range" min="1" max="100" step="1" value="3"><p id="tamanho">3</p></li>
+        </ul>
+    	<ul>
+        	<li>Opacity</li>
+            <li><input name="opacity" type="range" min="0" max="1" step="0.1" value="1"><p id="opacity">1</p></li>
+        </ul>
+    	<ul>
+        	<li>Radius</li>
+            <li><input name="radius" type="range" min="0" max="50" step="1" value="0"><p id="radius">0</p></li>
+        </ul>
+    	<ul>
+        	<li>AutoDelete</li>
+            <li><input name="auto" type="checkbox"></li>
+            <li><input name="autoDelay" type="range" min="0" max="5000" step="100" value="600"><p id="autoDelay">600</p></li>
+        </ul>
+    	<ul>
+        	<li>Color</li>
+            <li><input name="red" type="range" min="0" max="255" step="1" value="1"><p id="red">0</p></li>
+            <li><input name="green" type="range" min="0" max="255" step="1" value="1"><p id="green">0</p></li>
+            <li><input name="blue" type="range" min="0" max="255" step="1" value="1"><p id="blue">0</p></li>
+        </ul>
+    	<ul>
+        	<li>Blur</li>
+            <li><input name="f_blur" type="range" min="0" max="10" step="0.5" value="0"><p id="f_blur">0</p></li>
+        </ul>
+    	<ul>
+        	<li>Shadow</li>
+            <li><input name="f_shadow" type="range" min="0" max="100" step="1" value="0"><p id="f_shadow">0</p></li>
+            <li><input name="f_shadow_o" type="range" min="0" max="1" step="0.1" value="1"><p id="f_shadow_o">0</p></li>
+        </ul>
+    	<ul>
+        	<li>Background Color</li>
+            <li><input name="b_red" type="range" min="0" max="255" step="1" value="255"><p id="b_red">0</p></li>
+            <li><input name="b_green" type="range" min="0" max="255" step="1" value="255"><p id="b_green">0</p></li>
+            <li><input name="b_blue" type="range" min="0" max="255" step="1" value="255"><p id="b_blue">0</p></li>
+        </ul>
+        
+        <div id="full" class="0"></div>
+        
+    </div>
+        
+	<div id="draw"></div>
+    
+    <p id="console"></p>
+
+</body>
+
+</html>

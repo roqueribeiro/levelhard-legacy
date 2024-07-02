@@ -1,0 +1,651 @@
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight);
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic&subset=latin,latin-ext);
+
+#loading {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+    z-index: 100;
+}
+
+#wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/close-wrap.png);
+    cursor: pointer;
+    opacity: 1;
+    z-index: 99;
+}
+
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: -webkit-radial-gradient(transparent, #000 90%);
+    background: -moz-radial-gradient(transparent, #000);
+    background: -o-radial-gradient(transparent, #000);
+    background: -ms-radial-gradient(transparent, #000);
+    background: radial-gradient(transparent, #000);
+}
+
+
+#container #logo {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    margin: 0 0 0 0;
+    background: url(../images/logobg.jpg) center top;
+}
+
+#container #logo img {
+    position: absolute;
+    width: 496px;
+    height: 254px;
+    top: -80px;
+    left: 50%;
+    margin: 0 0 0 -248px;
+    z-index: 1;
+}
+
+#container #logo-shadow {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: -200px;
+    background: url(../images/logobg.png) repeat-x bottom;
+    z-index: 0;
+}
+
+#container #menu {
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    left: -220px;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 3;
+}
+
+#container #menu.activemenu {
+    left: 0px;
+}
+
+#container #menu span {
+    position: absolute;
+    width: 18px;
+    top: 7px;
+    right: 7px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#container #menu ul {
+    position: relative;
+    width: 100%;
+    top: 50%;
+    margin-top: -125px;
+    display: none;
+}
+
+#container #menu li {
+    padding-left: 20px;
+    height: 50px;
+    background: #000;
+    cursor: pointer;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: inset 0 -1px 0 #FFF, 0 -1px 0 #FFF;
+}
+
+#container #menu ul ul {
+    position: relative;
+    width: 0px;
+    margin-left: 180px;
+    margin-top: -75px;
+}
+
+#container #foot {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: #000;
+    bottom: 0px;
+    padding: 10px 0 10px 0;
+    border-top: 1px #111 solid;
+    z-index: 4;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#container #foot img {
+    cursor: pointer;
+}
+
+#container #foot #social {
+    position: relative;
+    padding: 10px 0 20px 0;
+    display: none;
+}
+
+#container #foot #social img {
+    margin: 0 20px 0 20px;
+    height: 72px;
+}
+
+#container #foot #social-icon {
+    position: absolute;
+    text-align: left;
+    width: 96px;
+    height: 96px;
+    right: 15px;
+    bottom: 0px;
+    z-index: 200;
+}
+
+#container #foot #social-icon img:nth-child(1) {
+    position: absolute;
+}
+
+#container #foot #social-icon img:nth-child(2) {
+    position: absolute;
+    display: none;
+}
+
+#social-likebox {
+    position: absolute;
+    right: -80px;
+    top: 10px;
+    background: #FFF;
+    padding: 10px;
+    width: 350px;
+    height: 485px;
+    z-index: 100;
+}
+
+#contato {
+    position: absolute;
+    width: 450px;
+    height: 320px;
+    top: 50%;
+    left: -250px;
+    margin-top: -197px;
+    cursor: default;
+    opacity: 0;
+    display: none;
+    background: #000;
+    border-top: 1px #FFF solid;
+    border-bottom: 1px #FFF solid;
+    z-index: 200;
+}
+
+#contato #preloader {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    background: url(../images/loading-contato.gif) center no-repeat #FFF;
+    z-index: 100;
+    display: none;
+}
+
+#contato #formulario {
+    position: relative;
+    padding: 18px 35px 18px 35px;
+}
+
+#contato #formulario ul {
+    position: relative;
+}
+
+#contato #formulario ul li {
+    display: inline-block;
+    padding: 2px;
+    vertical-align: middle;
+}
+
+#contato #formulario ul li:nth-child(1) {
+    width: 150px;
+}
+
+#contato #formulario ul:last-child {
+    text-align: center;
+    padding-top: 3px;
+}
+
+#contato #titulo {
+    position: absolute;
+    top: -32px;
+    left: -32px;
+}
+
+#contato #titulo li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#contato #titulo li:nth-child(2) {
+    padding-left: 70px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 -2px 1px #000, 0 2px 1px #000;
+}
+
+#quemsomos {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    background: #DDD;
+}
+
+#quemsomos #qs-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#quemsomos #qs-container #qs-conteudo {
+    position: absolute;
+    top: 69px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 6;
+}
+
+#quemsomos #qs-container #qs-cabecalho {
+    position: absolute;
+    width: 100%;
+    height: 65px;
+    background: url(../images/bg.png);
+    line-height: 65px;
+}
+
+#quemsomos #qs-container #qs-cabecalho {
+    font-family: "Lobster", Georgia, serif;
+    font-size: 30px;
+    top: -69px;
+    text-shadow: 0 1px 0 #000;
+    color: #FFF;
+    border-top: 4px #BF0000 solid;
+    z-index: 10;
+}
+
+#quemsomos #qs-texto {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    overflow: hidden;
+}
+
+#quemsomos #qs-texto #qs-tabulacao {
+    position: relative;
+    padding: 30px;
+    line-height: 22px;
+    text-align: left;
+    font-family: "Yanone Kaffeesatz";
+    font-size: 20px;
+}
+
+#quemsomos #qs-galeria {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    bottom: 0px;
+    background: #DDD;
+    z-index: 6;
+}
+
+#quemsomos #qs-galeria img {
+    height: 64px;
+    margin: 14px 14px 0px 14px;
+    cursor: pointer;
+    border: 4px #FFF solid;
+}
+
+#quemsomos #qs-galeria-full {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 6;
+}
+
+#portfolio {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 100%;
+    background: #DDD;
+    z-index: 9999;
+}
+
+#portfolio #port-loading {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background: #FFF;
+    padding: 20px;
+    bottom: 45px;
+    right: 15px;
+    border-radius: 10px;
+    display: none;
+    z-index: 999;
+}
+
+#portfolio #port-header {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    background: #444 url(../images/bg.png);
+    padding: 10px 0 10px 0;
+    text-align: center;
+    border-top: 4px #BF0000 solid;
+}
+
+#portfolio #port-header #port-img {
+    position: absolute;
+}
+
+#portfolio #port-header #port-text {
+    font-family: "Lobster", Georgia, serif;
+    font-size: 48px;
+    text-shadow: 1px 1px 1px #000;
+    line-height: 128px;
+}
+
+#portfolio #port-header #port-logo {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+}
+
+#portfolio #port-container {
+    position: absolute;
+    width: 960px;
+    top: 215px;
+    bottom: 50px;
+    left: 50%;
+    right: 10px;
+    margin-left: -480px;
+}
+
+#portfolio #port-exit {
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    background: #F00;
+    top: -50px;
+    right: 10px;
+    cursor: pointer;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: inset 0 -1px 2px rgba(255, 255, 255, 0.4), 0 2px 5px rgba(0, 0, 0, 0.5);
+    background: -webkit-linear-gradient(#F00, #BF0000);
+    background: -moz-linear-gradient(#F00, #BF0000);
+    background: -o-linear-gradient(#F00, #BF0000);
+    background: -ms-linear-gradient(#F00, #BF0000);
+    background: linear-gradient(#F00, #BF0000);
+}
+
+#portfolio #port-exit img {
+    position: absolute;
+    bottom: 20px;
+    left: 18px;
+}
+
+#portfolio #port-loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #DDD url(../images/port-bg.png);
+    z-index: 800;
+}
+
+#portfolio #port-loader {
+    border-top: 4px #BF0000 solid;
+    left: -100%;
+}
+
+#portfolio #port-loader #port-loader-cont {
+    position: absolute;
+    top: 10px;
+    bottom: 14px;
+    left: 10px;
+    right: 10px;
+    background: #FFF;
+}
+
+#portfolio #port-loader #port-iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px #CCC solid;
+    margin: -1px 0 0 -1px;
+}
+
+#portfolio #port-loader #port-iframe iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow-y: scroll;
+}
+
+#portfolio #port-loader #port-exit {
+    right: 30px;
+    z-index: 10;
+}
+
+#portfolio #port-loader #port-go {
+    position: absolute;
+    background: #DDD url(../images/port-bg.png);
+    font-size: 11px;
+    color: #222;
+    padding: 10px;
+    margin: -1px;
+    border-bottom-right-radius: 10px;
+    z-index: 900;
+}
+
+#portfolio #port-loader #port-go {
+    border-bottom: 1px CCC solid;
+    border-right: 1px #CCC solid;
+    cursor: pointer;
+}
+
+#portfolio #port-foot {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: #111;
+    bottom: 0px;
+    text-align: center;
+}
+
+#portfolio #port-foot span {
+    font-size: 11px;
+    line-height: 30px;
+}
+
+.filters {
+    width: 960px;
+}
+
+.filters .filter {
+    position: fixed;
+    width: 960px;
+    top: 151px;
+    float: left;
+    clear: both;
+    margin-bottom: 20px;
+    background: #FFF;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    z-index: 500;
+}
+
+.filters .title {
+    position: absolute;
+    top: -16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #DDD;
+}
+
+.filters .filter a {
+    width: 100px;
+    float: left;
+    display: block;
+    padding: 15px 0 15px 0;
+    margin-right: 0px;
+    font-size: 12px;
+    text-transform: uppercase;
+    outline: none;
+    color: #444;
+    text-align: center;
+}
+
+.filters .filter a:hover {
+    background: #DDD;
+}
+
+.filters .filter .active {
+    background: #EEE;
+    color: #000;
+}
+
+.filters .container {
+    position: relative;
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+.filters .container ul,
+.filters .container ul li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.filters .container ul li {
+    float: left;
+    width: 185px;
+    height: 185px;
+    margin: 0;
+}
+
+.filters .container img {
+    opacity: 0.4;
+    width: 185px;
+    height: 185px;
+}
+
+.filters .container img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.filters .container ul li div {
+    position: absolute;
+    width: 165px;
+    height: 0px;
+    font-family: Tahoma, Geneva, sans-serif;
+    opacity: 0;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+}
+
+.filters .container ul li div h3 {
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.filters .container ul li div p {
+    padding: 6px 0 6px 0;
+    font-size: 10px;
+}
+
+.filters .container ul li a {
+    position: absolute;
+    width: 185px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+    background: #000;
+    color: #FFF;
+    font-size: 10px;
+}
+
+#social-face {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    right: 0px;
+    top: 0px;
+    z-index: 3;
+}
+
+#social-face #social-face-loader {
+    position: absolute;
+    width: 320px;
+    background: #FFF;
+    height: 100%;
+    right: 0px;
+    display: none;
+}
+
+#social-face #social-face-active {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 10px;
+    height: 100%;
+    padding: 7px 10px 0px 10px;
+    line-height: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#social-face .fb-like {
+    padding-bottom: 5px;
+}

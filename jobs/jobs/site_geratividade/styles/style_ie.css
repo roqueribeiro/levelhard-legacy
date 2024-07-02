@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+#loading 
+{ 
+	border:1px #CCC solid\9;
+}
+
+#container	
+{ 
+	border-left:1px #CCC solid\9;
+	border-right:1px #CCC solid\9;
+	border-bottom:1px #CCC solid\9;
+}
+
+#menu
+{
+	background:#799E2D\9;
+}
+
+#menu li:hover	
+{ 
+	background:#638222\9; 
+}
+
+#menu li:active	
+{ 
+	background:#97C538\9; 
+}
+
+#content
+{
+	background:#FDF6EE\9;
+}
+
+#ajax
+{
+	background:#FFFFFF\9;
+	border:1px #CCC solid\9;
+}
+
+#gallery img			
+{
+	margin:10px 0px 10px 10px\9;
+}
+
+#gallery img   			
+{
+	border:1px #CCC solid\9;
+	filter:alpha(opacity=80)\9;
+}
+
+#gallery img:hover   	
+{
+	filter:alpha(opacity=100)\9;
+}
+
+#news p
+{
+	margin:15px\9;
+}

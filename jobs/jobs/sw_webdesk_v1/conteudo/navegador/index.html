@@ -1,0 +1,98 @@
+﻿<style type="text/css">
+    #tabs {
+        position:relative;
+        width:100%;
+        height:100%;
+        font-size:12px;
+        border:none;
+    }
+
+        #tabs iframe {
+            position:relative;
+            width:100%;
+            height:100%;
+            margin:0px;
+            padding:0px;
+            border:none;
+        }
+
+    #dialog label, #dialog input {
+        display: block;
+    }
+
+    #dialog label {
+        margin-top: 0.5em;
+    }
+
+    #dialog input, #dialog textarea {
+        width: 95%;
+    }
+
+    #tabs li .ui-icon-close {
+        float: right;
+        margin:4px 4px;
+        cursor: pointer;
+    }
+
+    #add_tab {
+        position: absolute;
+        top: 1px;
+        right: 3px;
+        cursor: pointer;
+    }
+</style>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var tabTitle = $("#tab_title"),
+            tabContent = $("#tab_content"),
+            tabTemplate = "<li><a href='#{href}'>#{label}</a> <span class='ui-icon ui-icon-close'>Remove Tab</span></li>",
+            tabCounter = 2;
+
+        var tabs = $("#tabs").tabs();
+
+        function addTab() {
+            var label = tabTitle.val() || "Tab " + tabCounter,
+                id = "tabs-" + tabCounter,
+                li = $(tabTemplate.replace(/#\{href\}/g, "#" + id).replace(/#\{label\}/g, label)),
+                tabContentHtml = tabContent.val() || "Tab " + tabCounter + " content.";
+
+            tabs.find(".ui-tabs-nav").append(li);
+            tabs.append("<div id='" + id + "'><iframe src=http://www.levelhard.com.br></iframe></div>");
+            tabs.tabs("refresh");
+            tabCounter++;
+        }
+
+        $("#add_tab")
+            .button()
+            .click(function () {
+                //dialog.dialog("open");
+                addTab();
+            });
+
+        $("#tabs span.ui-icon-close").live("click", function () {
+            var panelId = $(this).closest("li").remove().attr("aria-controls");
+            $("#" + panelId).remove();
+            tabs.tabs("refresh");
+        });
+
+    });
+
+</script>
+
+<div id="tabs">
+
+    <button id="add_tab">Novo</button>
+
+    <div>
+        <ul>
+            <li><a href="#tabs-1">Pagina 1</a> <span class="ui-icon ui-icon-close">Remove Tab</span></li>
+        </ul>
+        <div id="tabs-1" class="">
+            <iframe src="http://jobs.levelhard.com.br"></iframe>
+        </div>
+    </div>
+
+</div>

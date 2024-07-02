@@ -1,0 +1,76 @@
+﻿<ul class="nav nav-tabs nav-justified">
+    <li class="active"><a href="#person-pesr" data-toggle="tab"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Visitar</a></li>
+    <li class=""><a href="#person-add" data-toggle="tab"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Pessoas</a></li>
+    <li class=""><a href="#family-home" data-toggle="tab"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Residência</a></li>
+</ul>
+<div class="tab-content" style="padding: 30px 10px 0 10px;">
+    <div class="tab-pane fade active in" id="person-pesr">
+        <form action="#" method="post" role="form">
+            <div class="form-group">
+                <label for="">Selecione uma Pessoa</label>
+                <select name="form-family-person" class="form-control" required>
+                    <option value="0">Selecione</option>
+                    <option value="1">Maria (Adulto)</option>
+                    <option value="2">Pedro (Adulto)</option>
+                    <option value="3">Ana (Criança)</option>
+                    <option value="4">João (Criança)</option>
+                </select>
+            </div>
+        </form>
+        <div class="gdata-form-person-visit"></div>
+    </div>
+    <div class="tab-pane fade" id="person-add">
+        <form action="#" method="post" role="form">
+            <div class="form-group">
+                <label for="">Nome Completo</label>
+                <input type="text" class="form-control" placeholder="Ex. Pedro da Silva" maxlength="255" required>
+            </div>
+            <div class="form-group">
+                <label for="">Sexo</label>
+                <select class="form-control" required>
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Data de Nascimento</label>
+                <input type="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="">Formação</label>
+                <select class="form-control" required>
+                    <option>Analfabeto</option>
+                    <option>Ensino Básico</option>
+                    <option>Ensino Médio</option>
+                    <option>Ensino Superior Incompleto</option>
+                    <option>Ensino Superior Completo</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="tab-pane fade" id="family-home">
+        <form action="#" method="post" role="form">
+            <div class="form-group">
+                <label for="">CEP</label>
+                <br />
+                <input type="text" class="typeahead" id="" placeholder="Ex. 99.999-999" maxlength="10" required>
+            </div>
+            <div class="form-group">
+                <label for="">Logradouro</label>
+                <input type="text" class="form-control" id="" placeholder="Ex. Rua, Avenida etc." maxlength="255" required>
+            </div>
+            <div class="form-group">
+                <label for="">Endereço</label>
+                <input type="text" class="form-control" id="" placeholder="Ex. Juvenal de Campos" maxlength="255" required>
+            </div>
+            <div class="form-group">
+                <label for="">Número</label>
+                <input type="number" class="form-control" id="" placeholder="Ex. 999" maxlength="5" min="1" max="99999" required>
+            </div>
+            <div class="form-group">
+                <label for="">Bairro</label>
+                <input type="text" class="form-control" id="" placeholder="Ex. Doutor Laurindo" maxlength="8" required>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,162 @@
+﻿<html>
+<head>
+    <title>Programa</title>
+    <!-- Chama jQuery e Executa -->
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('input[type=button]').click(function () {
+
+                var termTE01 = 1.00;
+                var termTE02 = 1.00;
+                var fioFI01 = 2.25;
+                var tuboTU01 = 2.01;
+
+                var qtdeProd = $('input[name=qtdeProd]').val();
+                var qtdeChicote = $('input[name=qtdeChicote]').val();
+
+                var qtdeTotChicote = (qtdeProd * 8) * qtdeChicote;
+
+                var qtdeTotMat_TE01 = qtdeTotChicote * termTE01;
+                var qtdeTotMat_TE02 = qtdeTotChicote * termTE02;
+                var qtdeTotMat_FI01 = qtdeTotChicote * fioFI01;
+                var qtdeTotMat_TU01 = qtdeTotChicote * tuboTU01;
+
+				if (!qtdeProd) {
+				
+					$('input[name=qtdeProd]').focus();
+				
+				} else if (!qtdeTotChicote) {
+				
+					$('input[name=qtdeChicote]').focus();
+                    $('#resultado').html('<ul><li class="erro">Valor Inválido.</li></ul>');
+					
+                }
+                else {
+
+                    html = '<ul><li>Chicotes Produzidos: </li><li><b>' + parseInt(qtdeTotChicote) + '</b></li></ul>';
+                    html += '<ul><li>Material Terminal TE01: </li><li><b>' + parseInt(qtdeTotMat_TE01) + ' PÇ</b></li></ul>';
+                    html += '<ul><li>Material Terminal TE02: </li><li><b>' + parseInt(qtdeTotMat_TE02) + ' PÇ</b></li></ul>';
+                    html += '<ul><li>Material Fio FI01: </li><li><b>' + parseInt(qtdeTotMat_FI01) + ' M</b></li></ul>';
+                    html += '<ul><li>Material Tubo TU01: </li><li><b>' + parseInt(qtdeTotMat_TU01) + ' M</b></li></ul>';
+
+                    $('#resultado').stop(true,true).slideUp(100,function(){				
+						$(this).html(html).slideDown(300);
+					});
+                }
+
+            });
+
+        });
+    </script>
+    <!-- CSS da pagina -->
+    <style type="text/css">
+		*
+		{
+			outline: none;
+		}
+		
+        body
+        {
+            font-family: Verdana;
+            font-size: 12px;
+            background: #F5F5F5;
+        }
+
+        body, ul, li, div
+        {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        input[type=text]
+        {
+            padding: 5px;
+            border: 1px #CCC solid;
+            border-radius: 2px;
+            box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1), 1px 1px 1px #FFF;
+        }
+
+        input[type=button]
+        {
+            padding: 6px 16px 6px 16px;
+            border: 1px #CCC solid;
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            background: -webkit-linear-gradient(#FFF,#EEE);
+        }
+
+            input[type=button]:active
+            {
+                box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
+            }
+
+        #formulario
+        {
+            position: relative;
+            width: 300px;
+            height: auto;
+            background: -webkit-linear-gradient(#FFF,#F9F9F9);
+            margin: 0 auto;
+            top: 50px;
+        }
+
+        #formulario
+        {
+            border-radius: 5px;
+            box-shadow: inset -1px -1px 1px #FFF, 1px 1px 4px rgba(0,0,0,0.1);
+        }
+
+            #formulario ul
+            {
+                padding: 10px;
+            }
+
+                #formulario ul li
+                {
+                    padding: 5px;
+                }
+
+        #resultado
+        {
+            position: relative;
+            width: 250px;
+            height: auto;
+        }
+
+            #resultado li
+            {
+                display: block;
+            }
+
+                #resultado li:first-child
+                {
+                    width: 150px;
+                    font-size: 10px;
+                }
+
+        .erro
+        {
+            color: #F00;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="formulario">
+        <ul>
+            <li>Qtde. de Dias de Produção</li>
+            <li><input type="text" name="qtdeProd"></li>
+        </ul>
+        <ul>
+            <li>Qtde. de Chicotes/Hora</li>
+            <li><input type="text" name="qtdeChicote"></li>
+        </ul>
+        <ul>
+            <li><input type="button" value="Gravar"></li>
+        </ul>
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>

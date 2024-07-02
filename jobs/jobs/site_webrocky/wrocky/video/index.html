@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Video Apresentação</title>
+
+<link rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	if(!$.browser.webkit) window.location = 'http://navsupport.webrocky.com.br/index.php?a[]=1&a[]=5';
+});
+</script>
+
+</head>
+
+<body>
+
+    <div id="falsebody">
+    
+        <div id="show_video">
+            <div id="controls">
+            <p></p>
+            <input type="button" name="fullscreen" value="Maximizar" />
+            <input type="button" name="fechar" value="Fechar" />
+            </div>
+            <div id="video">
+                <video id="current_video" name="" src="" controls preload='none' poster="images/video.png"></video>
+            </div>
+        </div>
+        
+        <div id="icones_box">
+            <div id="icones_reflex">
+                <div id="icones" class="video0">
+                    <video id="video0" name="video0" src="http://www.craftymind.com/factory/html5video/BigBuckBunny_640x360.mp4"></video>
+                </div>
+                <div id="icones" class="video1">
+                    <video id="video1" name="video1" src="http://www.craftymind.com/factory/html5video/BigBuckBunny_640x360.mp4"></video>
+                </div>
+                <div id="icones" class="video3">
+                    <video id="video2" name="video2" src="http://www.craftymind.com/factory/html5video/BigBuckBunny_640x360.mp4"></video>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+</body>
+</html>

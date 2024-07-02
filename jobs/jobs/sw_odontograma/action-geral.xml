@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<geral>
+	<action>
+		<cod>c1</cod>
+		<title>image/acoes/icone01.png</title>
+		<image_1>image/acoes-geral/desenho1.png</image_1>
+		<image_2>image/acoes-geral/desenho2.png</image_2>
+		<image_3>image/acoes-geral/desenho3.png</image_3>
+		<comment>Comentário</comment>
+	</action>
+	<action>
+		<cod>c2</cod>
+		<title>image/acoes/icone02.png</title>
+		<image_1>image/acoes-geral/desenho4.png</image_1>
+		<image_2>image/acoes-geral/desenho5.png</image_2>
+		<image_3>image/acoes-geral/desenho6.png</image_3>
+		<comment>Comentário</comment>
+	</action>
+	<action>
+		<cod>c3</cod>
+		<title>image/acoes/icone03.png</title>
+		<image_1>image/acoes-geral/desenho7.png</image_1>
+		<image_2>image/acoes-geral/desenho8.png</image_2>
+		<image_3>image/acoes-geral/desenho9.png</image_3>
+		<comment>Comentário</comment>
+	</action>
+</geral>

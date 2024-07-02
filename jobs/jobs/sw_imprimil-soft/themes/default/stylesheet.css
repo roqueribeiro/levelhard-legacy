@@ -1,0 +1,62 @@
+
+/* ==================== Imprimil-Soft Default Theme ==================== */
+
+body								{ background:url(images/login-bg.jpg) #505050; }
+
+#error								{ position:absolute; width:350px; height:150px; top:50%; left:50%; margin:-75px 0 0 -185px; z-index:200; }
+#error-content						{ position:relative; padding:30px 5px 30px 5px; text-align:center; }
+#error-content li					{ display:inline-block; padding:10px; vertical-align:middle; }
+#error-content li:first-child		{ width:64px; }
+#error-content li:last-child		{ width:200px; line-height:35px; text-shadow:1px 1px 0 #DDD; }
+
+#loader								{ position:absolute; width:72px; height:72px; background:#505050 url(images/sw-loader.gif) center no-repeat; }
+#loader								{ top:50%; left:50%; margin:-36px 0 0 -46px; border-radius:72px; display:none; z-index:100; }
+#loader								{ box-shadow:inset 0 2px 4px rgba(0,0,0,0.8), 0 1px 0 #888; } 
+
+#gradient							{ position:absolute; width:100%; height:100%; z-index:0; }
+#gradient							{ background: -webkit-radial-gradient( rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100% ); }
+#gradient							{ background: -moz-radial-gradient( rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100% ); }
+#gradient							{ background: -o-radial-gradient( rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100% ); }
+#gradient							{ background: -ms-radial-gradient( rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100% ); }
+#gradient							{ background: radial-gradient( rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100% ); }
+
+#false-body							{ position:absolute; width:100%; height:100%; z-index:0; overflow:hidden; }
+
+.box								{ box-shadow:inset 0 -1px 3px #DDD, 0 4px 15px rgba(0,0,0,0.6); border-radius:10px; }
+.box								{ background: -webkit-linear-gradient( #E5E5E5 0%, #AAA 100% ); }
+.box								{ background: -moz-linear-gradient( #E5E5E5 0%, #AAA 100% ); }
+.box								{ background: -o-linear-gradient( #E5E5E5 0%, #AAA 100% ); }
+.box								{ background: -ms-linear-gradient( #E5E5E5 0%, #AAA 100% ); }
+.box								{ background: linear-gradient( #E5E5E5 0%, #AAA 100% ); }
+.box								{ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E5E5E5', endColorstr='#AAAAAA',GradientType=0 ); }
+
+#login-box							{ position:absolute; width:350px; height:350px; top:50%; left:50%; margin:-175px 0 0 -175px; }
+#login-form							{ position:relative; margin:0 auto; padding:22px; }
+#login-form	li:first-child			{ text-align:center; padding-bottom:18px; }
+#login-form	li						{ padding-bottom:10px; }
+#login-form	input[type=text]		{ width:290px; }
+#login-form	input[type=password]	{ width:290px; }
+
+#login-form	li #login-check			{ position:absolute; bottom:21px; right:22px; text-shadow:1px 1px 0 #DDD; }
+
+#form-loader						{ position:absolute; top:15px; right:15px; display:none; }
+
+#panel-content						{ position:relative; margin:0 auto; width:960px; height:100%; }
+#panel-control						{ position:absolute; width:100%; height:168px; text-align:center; }
+#panel-control						{ top:50%; margin-top:-100px; }
+#panel-control li					{ position:relative; width:160px; height:140px; padding:0 15px 0 15px; margin:20px -2px 20px -2px; }
+#panel-control li					{ display:inline-block; cursor:pointer; text-align:center; }
+#panel-control li img				{ position:relative; width:128px; }
+#panel-control li img.main-normal	{ top:-130px; z-index:12; }
+#panel-control li img.main-active	{ top:0px; opacity:0; z-index:10 }
+
+#panel-control li #title			{ position:absolute; width:160px; height:0px; background:rgba(0,0,0,0.6); bottom:0px; }
+#panel-control li #title			{ border-top-left-radius:10px; border-top-right-radius:10px; z-index:15  }
+#panel-control li #title p			{ padding:10px; color:#FFF; font-weight:bold; font-size:14px; opacity:0; }
+
+#panel-user							{ position:absolute; bottom:10px; right:10px; color:#FFF; }
+#panel-user	ul, #panel-user li		{ position:relative; display:inline-block; }
+#panel-user	ul						{ background:rgba(0,0,0,0.6); padding:4px; border-radius:10px; }
+#panel-user	li						{ vertical-align:middle;  }
+#panel-user	img						{ position:relative; cursor:pointer; padding:8px; margin:2px 2px 0 2px; background:#000; border-radius:10px; }
+#panel-user span					{ position:relative; padding:0 15px 0 10px; }

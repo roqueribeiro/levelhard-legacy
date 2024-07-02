@@ -1,0 +1,158 @@
+.AeroWindow {
+  position: absolute;
+  overflow: hidden;  
+  background:rgba(255,255,255,0.5);
+  
+  box-shadow:inset 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(0,0,0,0.3);
+  
+  border-radius:8px;
+}
+
+.AeroWindow .head
+{
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+
+	padding:15px 15px 95px 15px;
+	margin-bottom:-108px;
+	
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+}
+
+.AeroWindow .head div
+{
+	position:relative;
+	margin:0px;
+	padding:0px;
+	display:inline-block;
+}
+
+/*-----------------------------------------------------------------------------
+AeroWindow Style - Active
+-----------------------------------------------------------------------------*/
+.AeroWindow.active {
+  position: absolute;
+  z-index: 100;
+}
+.AeroWindow .table-mm-content {
+	margin:0px;
+	margin:38px 0 0 15px;
+	border:1px #CCC solid;
+	background:rgba(255,255,255,0.8);
+}  
+/*-----------------------------------------------------------------------------
+AeroWindow Title
+-----------------------------------------------------------------------------*/
+.AeroWindow .title {
+  position:relative;
+  font-size:14px;
+}
+
+/*-----------------------------------------------------------------------------
+Button Area
+-----------------------------------------------------------------------------*/
+.buttons  {
+  position: relative;
+  top:-15px;
+  float:right;
+}        
+.buttons  a {
+  text-decoration: none;
+  cursor: default;  
+}  
+/*-----------------------------------------------------------------------------
+Buttons Regular Window
+-----------------------------------------------------------------------------*/
+.AeroWindow .buttons .win-min-btn {
+  width: 27px;
+  height: 19px;
+  display: block;
+  float: left;
+  background: url(../window/inactive/btn-min.png);
+}      
+.AeroWindow .buttons .win-max-btn {
+  width: 26px;
+  height: 19px;
+  display: block;
+  float: left;
+  background: url(../window/inactive/btn-max.png);
+}      
+.AeroWindow .buttons .win-reg-btn {
+  width: 26px;
+  height: 19px;
+  display: block;
+  float: left;
+  background: url(../window/inactive/btn-reg.png);
+}      
+.AeroWindow .buttons .win-close-btn {
+  width: 46px;
+  height: 19px;
+  float: left;
+  display: block;
+  background: url(../window/inactive/btn-close.png);
+}  
+.AeroWindow .buttons .win-btn-leftedge {
+  width: 2px;
+  height: 19px;
+  float: left;
+  background: url(../window/left.png);
+}            
+.AeroWindow .buttons .win-btn-rightedge {
+  width: 2px;
+  height: 19px;
+  float: left;
+  background: url(../window/right.png);
+}            
+.AeroWindow .buttons .win-btn-spacer {
+  width: 1px;
+  height: 19px;
+  float: left;
+  background: url(../window/spacer.png);
+}            
+.AeroWindow .buttons .WinBtnSet {
+  float: left;
+}
+
+/*-----------------------------------------------------------------------------
+Buttons Active Window
+-----------------------------------------------------------------------------*/
+.AeroWindow.active .buttons .win-min-btn {
+  background: url(../window/active/btn-min.png);
+}      
+.AeroWindow.active .buttons .win-max-btn {
+  background: url(../window/active/btn-max.png);
+}      
+.AeroWindow.active .buttons .win-reg-btn {
+  background: url(../window/active/btn-reg.png);
+}      
+.AeroWindow.active .buttons .win-close-btn {
+  background: url(../window/active/btn-close.png);
+}            
+
+/*-----------------------------------------------------------------------------
+Buttons Hover Effects
+-----------------------------------------------------------------------------*/
+.AeroWindow .buttons .win-min-btn:hover {
+  background: url(../window/hover/btn-min.png);
+}      
+.AeroWindow .buttons .win-max-btn:hover {
+  background: url(../window/hover/btn-max.png);
+}      
+.AeroWindow .buttons .win-reg-btn:hover {
+  background: url(../window/hover/btn-reg.png);
+}      
+.AeroWindow .buttons .win-close-btn:hover {
+  background: url(../window/hover/btn-close.png);
+}            
+
+#iframeHelper {
+  display: none; 
+  height: 100%; 
+  width: 100%; 
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  background: url(../window/empty.gif);
+  z-index: 0;
+}

@@ -1,0 +1,137 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Video Apresentação</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="jquery.transform-0.9.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#show_video video').load();
+            $('div#icones').hover(function () {
+                $(this).animate({ 'opacity': '1' });
+            }, function () {
+                $(this).animate({ 'opacity': '0.4' });
+            });
+            $('#show_video').hover(function () {
+                if ($('#show_video video').attr('src')) $('#controls').stop().animate({ 'opacity': '1' });
+            }, function () {
+                $('#controls').stop().animate({ 'opacity': '0' });
+            });
+            $('#icones_box #icones').click(function () {
+                if (!$('#show_video video').attr('src')) {
+                    video_sel = $(this);
+                    $('#wrap').show();
+                    $(this).animate({ scale: [0] }, 600, 'easeInBack', function () {
+                        $('#show_video video').fadeIn(600, function () {
+                            $(this).attr({ 'src': $('video', video_sel).attr('src') }).load();
+                        })
+                        $('#wrap').hide();
+                    });
+                }
+            });
+            $('input[name=fullscreen]').click(function () {
+                if ($('#show_video').attr('class') == 0) {
+                    $('#wrap').show();
+                    $('#show_video video').animate({ 'opacity': '0' }, 300, function () {
+                        $('#show_video').animate({
+                            'width': '100%',
+                            'height': '100%',
+                            'top': '0%',
+                            'left': '0%'
+                        }, 600, 'easeOutBack', function () {
+                            $('#show_video video').animate({ 'opacity': '1' }, 300, function () {
+                                $('input[name=fullscreen]').attr('value', 'Minimizar');
+                                $('#show_video').attr('class', 1);
+                                $('#wrap').hide();
+                            });
+                        });
+                    });
+                }
+                else {
+                    $('#wrap').show();
+                    $('#show_video video').animate({ 'opacity': '0' }, 300, function () {
+                        $('#show_video').animate({
+                            'width': '50%',
+                            'height': '50%',
+                            'top': '15%',
+                            'left': '25%'
+                        }, 600, 'easeOutBack', function () {
+                            $('#show_video video').animate({ 'opacity': '1' }, 300, function () {
+                                $('input[name=fullscreen]').attr('value', 'Maximizar');
+                                $('#show_video').attr('class', 0);
+                                $('#wrap').hide();
+                            });
+                        });
+                    });
+                }
+            });
+            $('input[name=fechar]').click(function () {
+                if ($('#show_video video').attr('src')) {
+                    if ($('#show_video').attr('class') == 1) {
+                        $('#wrap').show();
+                        $('#show_video video').animate({ 'opacity': '0' }, 300, function () {
+                            $('#show_video').animate({
+                                'width': '50%',
+                                'height': '50%',
+                                'top': '15%',
+                                'left': '25%'
+                            }, 600, 'easeOutBack', function () {
+                                $('#show_video video').fadeOut(600, function () {
+                                    $(this).attr('src', '').load();
+                                    $('#show_video video').animate({ 'opacity': '1' }, 300, function () {
+                                        $('input[name=fullscreen]').attr('value', 'Maximizar');
+                                        $('#icones_box #icones').animate({ scale: [1] }, 600, 'easeOutBack', function () {
+                                            $('#show_video').attr('class', 0);
+                                            $('#wrap').hide();
+                                        });
+                                    });
+                                })
+                            });
+                        });
+                    }
+                    else {
+                        $('#wrap').show();
+                        $('#show_video video').fadeOut(600, function () {
+                            $(this).attr('src', '').load();
+                            $('#icones_box #icones').animate({ scale: [1] }, 600, 'easeOutBack', function () {
+                                $('#wrap').hide();
+                            });
+                        })
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap"></div>
+    <div id="falsebody">
+        <div id="show_video" class="0">
+            <div id="controls">
+                <p></p>
+                <input type="button" name="fullscreen" value="Maximizar" />
+                <input type="button" name="fechar" value="Fechar" />
+            </div>
+            <div id="video">
+                <video id="current_video" controls="controls" src=""></video>
+            </div>
+        </div>
+        <div id="icones_box">
+            <div id="icones_center">
+                <div id="icones">
+                    <video src="videos/video.webm" autoplay="autoplay" preload="metadata" muted="muted"></video>
+                </div>
+                <div id="icones">
+                    <video src="videos/video.webm" autoplay="autoplay" preload="metadata" muted="muted"></video>
+                </div>
+                <div id="icones">
+                    <video src="videos/video.webm" autoplay="autoplay" preload="metadata" muted="muted"></video>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

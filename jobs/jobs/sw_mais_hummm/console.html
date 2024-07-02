@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-paper.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/sw-structure.css" />
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="js/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="js/jquery.waitforimages.min.js"></script>
+    <script type="text/javascript" src="js/sw-console.js"></script>
+    <script type="text/javascript" src="js/sw-notification.js"></script>
+</head>
+<body>
+
+    <div id="phonegap-console">
+        <h5>App Console</h5>
+        <hr />
+        <div id="camera">
+            <button class="btn btn-default" onclick="capturePhoto();">Capture Photo</button>
+            <button class="btn btn-default" onclick="capturePhotoEdit();">Capture Editable Photo</button>
+            <button class="btn btn-default" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button>
+            <button class="btn btn-default" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button>
+            <img id="smallImage" style="display:none; max-width:100%;" src="" />
+            <img id="largeImage" style="display:none; max-width:100%;" src="" />
+        </div>
+        <hr />
+        <div id="alert">
+            <button class="btn btn-default" onclick="showAlert();">Show Alert</button>
+            <button class="btn btn-default" onclick="playBeep();">Play Beep</button>
+            <button class="btn btn-default" onclick="vibrate();">Vibrate</button>
+        </div>
+        <hr />
+        <div id="device">Retrieving device informations...</div>
+        <hr />
+        <div id="connection">Retrieving connection type...</div>
+        <hr />
+        <div id="accelerometer-element"></div>
+        <div id="accelerometer">Retrieving accelerometer positions...</div>
+        <div id="websocket">WebSocket connecting...</div>
+        <br />
+        <button class="btn btn-default" onclick="$('#accelerometer-element').show();">Play Test</button>
+        <button class="btn btn-default" onclick="$('#accelerometer-element').hide();">Stop Test</button>
+        <hr />
+        <div id="geolocation">Retrieving GPS informations...</div>
+        <hr />
+        <div id="contacts">
+            <div id="contact-search">
+                <div class="input-group">
+                    <input type="text" name="contact-name" class="form-control" placeholder="Buscar Contato">
+                    <span class="input-group-btn">
+                        <input type="button" class="btn btn-default" value="Search" onclick="searchContact($('input[name=contact-name]').val())">
+                    </span>
+                </div>
+            </div>
+            <br />
+            <div id="contact-list">Retrieving contacts list...</div>
+        </div>
+    </div>
+
+</body>
+</html>

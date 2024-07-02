@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+body							{ overflow: hidden; margin:0px; background: #EEE; font-family:"Arial Black", Gadget, sans-serif; }
+
+#esfera-nav						{ position:absolute; width:100%; height:350px; top:50%; margin-top:-175px; }
+#esfera-nav	ul					{ position:relative; width:100%; height:200px; top:75px; text-align:center; margin:0px; padding:0px; }
+#esfera-nav	li					{ display:inline-block; margin:0 20px 0 20px; padding:0px; }
+#esfera-nav li					{ position: relative; width: 200px; height: 200px; border-radius:150px; }
+#esfera-nav li 					{ background: -webkit-radial-gradient( rgba(255,255,255,1), rgba(200,200,200,0.6) ); }
+#esfera-nav li 					{ background: -moz-radial-gradient( rgba(255,255,255,1), rgba(200,200,200,0.6) ); }
+#esfera-nav li 					{ background: -o-radial-gradient( rgba(255,255,255,1), rgba(200,200,200,0.6) ); }
+#esfera-nav li 					{ background: -ms-radial-gradient( rgba(255,255,255,1), rgba(200,200,200,0.6) ); }
+#esfera-nav li 					{ background: radial-gradient( rgba(255,255,255,1), rgba(200,200,200,0.6) ); }
+#esfera-nav li 					{ box-shadow: inset 0 0 25px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.4); }
+#esfera-nav li 					{ font-size:120px; line-height:190px; color:#AAA; text-shadow:-1px -1px 1px #000, -1px -1px 1px #FFF }
+
+#esfera-nav li:before			{ position:absolute; content: ''; top:1%; left:10%; bottom:15%; right:10%; border-radius:50%; }
+#esfera-nav li:before			{ background: -webkit-linear-gradient( rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0) 50%); }
+#esfera-nav li:before			{ background: -moz-linear-gradient( rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0) 50%); }
+#esfera-nav li:before			{ background: -o-linear-gradient( rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0) 50%); }
+#esfera-nav li:before			{ background: -ms-linear-gradient( rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0) 50%); }
+#esfera-nav li:before			{ background: linear-gradient( rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0) 50%); }
+
+#esfera-nav li:after			{ position:absolute; content: ''; top:15%; left:10%; bottom:5%; right:10%; border-radius:50%; }
+#esfera-nav li:after			{ background: -webkit-linear-gradient( rgba(255,255,255,0) 80%, rgba(255,255,255,0.8) 100% ); -webkit-filter: blur(2px); }
+#esfera-nav li:after			{ background: -moz-linear-gradient( rgba(255,255,255,0) 80%, rgba(255,255,255,0.8) 100% ); -moz-filter: blur(2px);  }
+#esfera-nav li:after			{ background: -o-linear-gradient( rgba(255,255,255,0) 80%, rgba(255,255,255,0.8) 100% ); -o-filter: blur(2px);  }
+#esfera-nav li:after			{ background: -ms-linear-gradient( rgba(255,255,255,0) 80%, rgba(255,255,255,0.8) 100% ); -ms-filter: blur(2px);  }
+#esfera-nav li:after			{ background: linear-gradient( rgba(255,255,255,0) 80%, rgba(255,255,255,0.8) 100% ); filter: blur(2px);  }
+
+#esfera-nav li 					{ -webkit-transition: 600ms; }
+#esfera-nav li 					{ -moz-transition: 600ms; }
+#esfera-nav li 					{ -o-transition: 600ms; }
+#esfera-nav li 					{ -ms-transition: 600ms; }
+#esfera-nav li 					{ transition: 600ms; }
+
+#esfera-nav ul:hover > li		{ -webkit-filter: blur(15px); }
+#esfera-nav ul li:hover			{ box-shadow: inset 0 0 25px rgba(0,0,0,0.1), 0 60px 100px rgba(0,0,0,0.4); }
+#esfera-nav ul li:hover			{ -webkit-filter: blur(0px); -webkit-transform: translateY(-60px); }
+#esfera-nav ul li:hover			{ -moz-filter: blur(0px); -moz-transform: translateY(-60px); }
+#esfera-nav ul li:hover			{ -o-filter: blur(0px); -o-transform: translateY(-60px); }
+#esfera-nav ul li:hover			{ -ms-filter: blur(0px); -ms-transform: translateY(-60px); }
+#esfera-nav ul li:hover			{ filter: blur(0px); transform: translateY(-60px); }

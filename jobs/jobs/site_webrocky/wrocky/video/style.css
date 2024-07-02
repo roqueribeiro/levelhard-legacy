@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	background:url(wall/stripe.png);
+	/*
+	background:url(wall/wallpaper.jpg) no-repeat;
+	background-size:100%;
+	*/
+	width:100%;
+	margin:0px;
+	padding:0px;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	overflow:hidden;
+}
+video, img
+{
+	width:100%;
+	height:100%;
+}
+input[type=button]
+{
+	margin:0px;
+	margin-left:-5px;
+	border:0; 
+	background:rgba(100,100,100,0.8);
+	padding:6px 12px 6px 12px;
+	
+	color:#000;
+	
+	-webkit-transition:600ms;
+	-webkit-box-shadow:inset 0 -14px 0px rgba(0,0,0,0.1), 0 0 2px rgba(0,0,0,0.5); 
+}
+input[type=button]:hover
+{
+	background:rgba(255,255,255,1);
+}
+input[type=button]:active
+{
+	background:rgba(255,255,255,0.6);
+}
+
+#falsebody
+{
+	position:absolute;
+	background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.0)));
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+}
+#show_video
+{
+	position:absolute;
+	background:rgba(255,255,255,0.2);
+	
+	/*
+	width:640px;
+	height:360px;
+	top:40%;
+	left:50%;
+	margin:-180px 0 0 -320px;
+	*/
+	
+	width:50%;
+	height:50%;
+	top:15%;
+	left:25%;
+	
+	text-align:center;
+	border:1px solid rgba(255,255,255,0.5);
+	-webkit-box-shadow:inset 0 0 300px rgba(255,255,255,0.8), 0 0 20px rgba(0,0,0,1);
+	
+	z-index:100;
+	
+	-webkit-transition: 1s;
+}
+#controls
+{
+	position:absolute;
+	width:100%;
+	top:0px;
+	padding:0px;
+	text-align:right;
+	background:rgba(0,0,0,0.5);
+	opacity:0;
+	z-index:1111;
+	
+	-webkit-transition: 1s;
+}
+#controls p
+{
+	position:absolute;
+	display:none;
+	margin:3px 3px 3px 10px;
+	font-size:16px;
+	font-weight:bold;color:#FFF;	
+}
+#video
+{
+}
+#video p
+{
+	font-weight:bold;
+	font-size:20px;
+	margin-top:160px;
+	color:#FFF;
+	text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+#icones_box
+{
+	position:absolute;
+	width:100%;
+	height:100px;
+	margin:0 auto;
+	bottom:5%;
+	border-top:1px solid rgba(255,255,255,0.5);
+	text-align:center;
+	-webkit-box-shadow:inset 0 -50px 100px rgba(255,255,255,0.5), 0 0 20px rgba(0,0,0,0.5);
+}
+#icones_reflex
+{
+	-webkit-box-reflect: below -43px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.0, transparent), to(white));
+	width:auto;
+}
+#icones
+{
+	position:relative;
+	background:rgba(255,255,255,0.2);
+	width:160px;
+	height:90px;
+	bottom:20px;
+	margin-left:25px;
+	margin-right:25px;
+	display:inline-block;
+	
+	padding:0px;
+		
+	-webkit-transition: 1s;
+	-webkit-transform:perspective(500px);
+	-webkit-box-shadow:inset 0 0 80px rgba(255,255,255,1), 0 3px 5px rgba(0,0,0,0.8);
+	z-index:1;
+}

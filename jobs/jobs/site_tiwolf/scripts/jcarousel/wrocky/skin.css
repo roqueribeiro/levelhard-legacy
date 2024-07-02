@@ -1,0 +1,124 @@
+.jcarousel-skin-wrocky .jcarousel-container {
+	position:relative;
+	margin:0 auto;
+	margin-top:-30px;
+	width:800px;	
+}
+
+.jcarousel-skin-wrocky .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-wrocky .jcarousel-container-horizontal {
+}
+
+.jcarousel-skin-wrocky .jcarousel-container-vertical {
+}
+
+.jcarousel-skin-wrocky .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-wrocky .jcarousel-clip-horizontal {
+}
+
+.jcarousel-skin-wrocky .jcarousel-clip-vertical {
+}
+
+.jcarousel-skin-wrocky .jcarousel-item {
+	width:auto;
+	height:auto;
+	padding-top:60px;
+	padding-bottom:30px;
+}
+
+.jcarousel-skin-wrocky .jcarousel-item:hover,
+.jcarousel-skin-wrocky .jcarousel-item:focus {
+}
+
+.jcarousel-skin-wrocky .jcarousel-item-horizontal {
+    margin-left: 0;
+    margin-right: 7px;
+}
+
+.jcarousel-skin-wrocky .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 7px;
+	margin-right: 0;
+}
+
+.jcarousel-skin-wrocky .jcarousel-item-vertical {
+}
+
+.jcarousel-skin-wrocky .jcarousel-item-placeholder {
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-wrocky .jcarousel-next-horizontal {
+    position: absolute;
+    top: 108px;
+    right: 32px;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    background: transparent url(next-horizontal.png);
+	background-position: 0 0;
+}
+
+.jcarousel-skin-wrocky .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(prev-horizontal.gif);
+}
+
+.jcarousel-skin-wrocky .jcarousel-next-horizontal:hover,
+.jcarousel-skin-wrocky .jcarousel-next-horizontal:focus {
+    background-position: -63px 0;
+}
+
+.jcarousel-skin-wrocky .jcarousel-next-horizontal:active {
+    background-position: -256px 0;
+}
+
+.jcarousel-skin-wrocky .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-wrocky .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-wrocky .jcarousel-next-disabled-horizontal:focus,
+.jcarousel-skin-wrocky .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background-position: -191px 0;
+}
+
+.jcarousel-skin-wrocky .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 108px;
+    left: 32px;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    background: transparent url(prev-horizontal.png);
+	background-position: 0 0;
+}
+
+.jcarousel-skin-wrocky .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(next-horizontal.gif);
+}
+
+.jcarousel-skin-wrocky .jcarousel-prev-horizontal:hover,
+.jcarousel-skin-wrocky .jcarousel-prev-horizontal:focus {
+    background-position: -63px 0;
+}
+
+.jcarousel-skin-wrocky .jcarousel-prev-horizontal:active {
+    background-position: -256px 0;
+}
+
+.jcarousel-skin-wrocky .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-wrocky .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-wrocky .jcarousel-prev-disabled-horizontal:focus,
+.jcarousel-skin-wrocky .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: -191px 0;
+}

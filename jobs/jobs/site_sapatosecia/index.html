@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noodp,noydir" /> 
+<meta name="description" content="Sapatos & Cia instalada no centro de Cerquilho, na av. presidente Washington Luiz, 155, em Tietê, na Rua Rafael de Campos, 143, centro, e também em Boituva, a mais nova, localizada na Rua São João, 82, na região central." /> 
+<meta name="keywords" content="sapatos, sapatos e cia, calçados, botas, crocs, bolsas, acessorios, kipling, fom, sneaker, primavera, verão, outono, inverno, moda" />
+<title>Sapatos & Cia</title>
+<link rel="stylesheet" href="styles/default-fonts.css" media="all">
+<link rel="stylesheet" href="styles/default-html.css" media="all">
+<link rel="stylesheet" href="styles/default-theme.css" media="all">
+<link rel="stylesheet" href="styles/supersized.css" media="all">
+<link rel="stylesheet" href="styles/supersized.shutter.css" media="all">
+<link rel="stylesheet" href="styles/smoothness/jquery-ui-1.8.17.custom.css" media="all">
+<link rel="stylesheet" href="styles/imageflow.css" media="all">
+<link rel="stylesheet" href="scripts/fancybox/source/jquery.fancybox.css" media="all">
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.transform-0.9.3.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.animate-shadow-min.js"></script>
+<script type="text/javascript" src="scripts/fancybox/source/jquery.fancybox.js"></script>
+<script type="text/javascript" src="scripts/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="scripts/supersized.3.2.7.min.js"></script>
+<script type="text/javascript" src="scripts/supersized.shutter.js"></script>
+<script type="text/javascript" src="scripts/jquery.form.js"></script>
+<script type="text/javascript" src="scripts/jquery.maskedinput-1.3.min.js"></script>
+<script type="text/javascript" src="scripts/imageflow.js"></script>
+<script type="text/javascript">
+function OpenGalleryAction(gal_url,gal_name){
+		
+	var instanceOne = new ImageFlow();
+	
+	$('#menu, #social, #prevslide, #nextslide').css({'opacity':'0'});
+		
+	$('#overlay').transform({scale:[0]}).css({
+		'z-index'	:'100',
+		'opacity'	:'0',
+		'display'	:'block'
+	}).animate({'opacity':'1',scale:[1]},{
+		queue		:false,
+		duration	:1000,
+		specialEasing: {
+		  scale: 'easeOutBack'
+		},
+		complete	:function(){
+			
+			$('#overlay-close').css({
+				'z-index'	:'100',
+				'opacity'	:'0',
+				'display'	:'block'
+			}).animate({'opacity':'1'},1000);
+			
+			$('#corpo #gradient').append('<div id="conteudo"></div>');
+			
+			$.post('galeria/galeria.php',{'typeGal':gal_url,'nameGal':gal_name},function(data){
+				$('#conteudo').css({'z-index':'100'}).html(data);
+				instanceOne.init({ ImageFlowID: 'myImageFlow' });
+				$('#myImageFlow').disableSelection();
+			})
+			
+		}
+	});
+	
+	$('#overlay-close').click(function(){
+		$('#conteudo').remove();
+		$('#overlay, #overlay-close').animate({'opacity':'0'},{
+			queue		:false,
+			duration	:300,
+			complete	:function(){
+				$(this).css({'z-index':'10','display':'none'});
+				$('#menu, #social, #prevslide, #nextslide').animate({'opacity':'1'},{queue:false,duration:300});
+			}
+		});
+	});
+	
+}
+$(document).ready(function(){
+	
+	if($.browser.msie && $.browser.version != '9.0') window.location = 'http://browser.levelhard.com/?a[]=1&a[]=2&a[]=3&a[]=4&a[]=5';
+	
+	$('#menu, #overlay').disableSelection();
+	
+	$('a#fancy').fancybox({
+		type		: 'ajax',
+		margin		: 20,
+		padding		: 1,
+		helpers		: {
+			overlay	: {
+				opacity : 0.6,
+				css 	: {
+					'background-color' : '#000'
+				}
+			}
+		}
+	});
+	
+	$.supersized({
+	
+		slideshow               :   1,
+		autoplay				:	1,
+		slide_interval          :   6000,
+		transition              :   1,
+		transition_speed		:	1000,
+		keyboard_nav            :   0,
+		
+		vertical_center         :	0,
+		image_protect			:	1,
+		slide_links				:	'blank',
+		slides 					:  	[
+				{image : 'images/wallpaper/wall003.jpg'},
+				{image : 'images/wallpaper/wall002.jpg'},
+				{image : 'images/wallpaper/wall001.jpg'}
+		]
+		
+	});
+	
+    $('#corpo #gradient #menu li').hover(function(){
+		if($(this).val())
+		{
+			$('.pri',this).css('z-index','15').animate({
+				color			:'#444',
+				paddingBottom	:'15px',
+				bottom			:'0px',
+				boxShadow		:'0 -3px 25px rgba(0,0,0,0.8)'
+			},{
+				queue			:false,
+				duration		:300
+			});
+		}
+		else
+		{
+			$('ul',this).animate({
+				bottom			:'85px',
+				opacity			:'1',
+			},{
+				queue			:false,
+				duration		:300
+			});
+		}
+	},function(){
+		if($(this).val())
+		{
+			$('.pri',this).css('z-index','10').animate({
+				color			:'#000',
+				paddingBottom	:'0px',
+				bottom			:'0px',
+				boxShadow		:'none'
+			},{
+				queue			:false,
+				duration		:300
+			});
+		}
+		else
+		{
+			$('ul',this).animate({
+				bottom			:'-450px',
+				opacity			:'0',
+			},{
+				queue			:false,
+				duration		:600
+			});
+		}
+	});
+		
+	$('#corpo #gradient #menu li').click(function(){
+		
+		if($(this).val() == '1')
+		{
+			OpenGalleryAction('primaveraverao','Preview Primavera Verão');
+		}
+		if($(this).val() == '2')
+		{
+			OpenGalleryAction('sneaker','Sneaker Sapatos & Cia');
+		}
+		if($(this).val() == '3')
+		{
+			OpenGalleryAction('botas','Coleção de Botas Sapatos & Cia');
+		}
+		if($(this).val() == '4')
+		{
+			OpenGalleryAction('sapatos','Coleção de Sapatos Sapatos & Cia');
+		}
+		if($(this).val() == '5')
+		{
+			OpenGalleryAction('masculino','Masculino Sapatos & Cia');
+		}
+		if($(this).val() == '6')
+		{
+			OpenGalleryAction('bolsas','Coleção de Bolsas Sapatos & Cia');
+		}
+		if($(this).val() == '7')
+		{
+			OpenGalleryAction('kipling','Kippling Sapatos & Cia');
+		}
+		if($(this).val() == '8')
+		{
+			OpenGalleryAction('acessorios','Acessórios Sapatos & Cia');
+		}
+		if($(this).val() == '9')
+		{
+			OpenGalleryAction('fom','Fom Sapatos & Cia');
+		}
+		
+	});
+				
+				
+	$('#menu, #social').hide();
+	$('#overlay, #loader').css('z-index','999').show();
+	window.onload = function(){
+		$('#overlay, #loader').fadeOut(600,function(){
+			$(this).css('z-index','10');
+			$('#menu, #social').fadeIn(300);
+		});
+	};
+		
+});
+</script>
+</head>
+
+<body>
+
+<div id="social">
+	<a href="http://www.facebook.com/sapatosecia" target="_blank"><img src="images/social-icon/facebook.png" alt=""></a>
+    <a href="http://www.twitter.com/sapatoscia" target="_blank"><img src="images/social-icon/twitter.png" alt=""></a>
+</div>
+
+<div id="corpo">
+	<div id="gradient">
+    	<div id="overlay"><div id="overlay-close"><p>FECHAR</p></div></div>
+        <div id="loader"><img src="images/loader.gif"></div>
+        <div id="menu">
+        	<div id="alinha">
+                <div id="logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <ul>
+                    <li><div class="pri">VITRINE</div>
+                    <ul>
+                        <li value="1"><div class="sub">PRIMAVERA VERÃO</div></li>
+                        <li value="2"><div class="sub">SNEAKER</div></li>
+                        <li value="3"><div class="sub">BOTAS</div></li>
+                        <li value="4"><div class="sub">SAPATOS</div></li>
+                        <li value="5"><div class="sub">MASCULINO</div></li>
+                        <li value="6"><div class="sub">BOLSAS</div></li>
+                        <li value="7"><div class="sub">KIPLING</div></li>
+                        <li value="8"><div class="sub">ACESSORIOS</div></li>
+                        <li value="9"><div class="sub">FOM</div></li>
+                    </ul>
+                    </li>
+                    <li value="10"><a id="fancy" href="core.php?tela=empresa"><div class="pri">LOJAS</div></a></li>
+                    <li value="11"><a id="fancy" href="core.php?tela=cadastro"><div class="pri">CADASTRE-SE</div></a></li>
+                    <li value="12"><a id="fancy" href="core.php?tela=contato"><div class="pri"><div>CONTATOS</div></div></a></li>
+                </ul>
+            </div>
+            <div id="media">
+            <object data="playerMP3.swf" type="application/x-shockwave-flash" width="530" height="30" align="absmiddle">
+            <param name="quality" value="high" />
+            <param name="wmode" value="transparent" />
+            <param name="swfversion" value="8.0.35.0" />
+            <a href="http://www.adobe.com/go/getflashplayer">
+                <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="" height="30" />
+            </a>
+            </object>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a id="prevslide" class="load-item"></a>
+<a id="nextslide" class="load-item"></a>
+
+<a href="http://estudiorodapiao.com.br" target="_blank"><img id="rodapiao-selo" src="selo.png" alt=""></a>
+
+</body>
+</html>

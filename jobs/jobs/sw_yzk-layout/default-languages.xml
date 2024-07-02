@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<translations>
+	<!-- Inicio Informações -->
+	<translation id="versao">
+		<portuguese>Versão:</portuguese>
+		<english>Version:</english>
+		<spanish>Versión:</spanish>
+	</translation>
+	<!-- Fim Informações -->
+	<!-- Inicio MenuSuperior -->
+	<translation id="general">
+		<portuguese>Geral</portuguese>
+		<english>General</english>
+		<spanish>General</spanish>
+	</translation>
+		<!-- SubMenu de general -->
+		<translation id="general-edidr">
+			<portuguese>IDR</portuguese>
+			<english>IDR</english>
+			<spanish>IDR</spanish>
+		</translation>
+		<translation id="general-repci">
+			<portuguese>Relatório Contrução Inicial</portuguese>
+			<english>Initial Construction Report</english>
+			<spanish>Informe Construccion Inicial</spanish>
+		</translation>
+		<translation id="general-repce">
+			<portuguese>Relatório Alterações de Engenharia</portuguese>
+			<english>Engineering Changes Report</english>
+			<spanish>Informe Cambio de Ingenieria</spanish>
+		</translation>
+		<translation id="general-repco">
+			<portuguese>Relatório Comparativo PLM x OES</portuguese>
+			<english>Comparative Report PLM vs OES</english>
+			<spanish>Informe Comparativo PLM vs OES</spanish>
+		</translation>
+		<translation id="general-reppe">
+			<portuguese>Relatório PLM x Ewire</portuguese>
+			<english>Report PLM vs Ewire</english>
+			<spanish>Informe PLM vs EWire</spanish>
+		</translation>
+		<translation id="general-cardi">
+			<portuguese>Carregar DSI</portuguese>
+			<english>Load DSI</english>
+			<spanish>Carga DSI</spanish>
+		</translation>
+		<translation id="general-cardv">
+			<portuguese>Carregar DSI Volvo</portuguese>
+			<english>Load DSI Volvo</english>
+			<spanish>Carga DSI Volvo</spanish>
+		</translation>
+		<translation id="general-verdc">
+			<portuguese>Visualizar DSI Carregados</portuguese>
+			<english>View DSI Loaded</english>
+			<spanish>Ver DSI Cargados</spanish>
+		</translation>
+		<translation id="general-verxc">
+			<portuguese>Visualizar XML Carregados</portuguese>
+			<english>View XML Loaded</english>
+			<spanish>Ver XML Cargados</spanish>
+		</translation>
+		<translation id="general-repac">
+			<portuguese>Relatório de Atividades</portuguese>
+			<english>Report of Activities</english>
+			<spanish>Informe de Actividades</spanish>
+		</translation>
+	<translation id="edbuilder">
+		<portuguese>EDBuilder</portuguese>
+		<english>EDBuilder</english>
+		<spanish>EDBuilder</spanish>
+	</translation>
+		<!-- SubMenu de edbuilder -->
+		<translation id="edbuilder-edbui">
+			<portuguese>EDBuilder</portuguese>
+			<english>EDBuilder</english>
+			<spanish>EDBuilder</spanish>
+		</translation>
+		<translation id="edbuilder-imoes">
+			<portuguese>Importar do OES</portuguese>
+			<english>Import from OES</english>
+			<spanish>Importar de OES</spanish>
+		</translation>
+		<translation id="edbuilder-imoei">
+			<portuguese>Importar do OES (IDR)</portuguese>
+			<english>Import from OES (IDR)</english>
+			<spanish>Importar de OES (IDR)</spanish>
+		</translation>
+		<translation id="edbuilder-imedb">
+			<portuguese>Importar do EDB</portuguese>
+			<english>Import from EDB</english>
+			<spanish>Importar de EDB</spanish>
+		</translation>
+	<translation id="catalogos">
+		<portuguese>Catalogos</portuguese>
+		<english>Catalogues</english>
+		<spanish>Catalogos</spanish>
+	</translation>
+		<!-- SubMenu de catalogos -->
+		<translation id="cat-princ">
+			<portuguese>Geral</portuguese>
+			<english>General</english>
+			<spanish>General</spanish>
+		</translation>
+			<translation id="cat-princ-acces">
+				<portuguese>Acessórios</portuguese>
+				<english>Accessories</english>
+				<spanish>Accesorios</spanish>
+			</translation>
+			<translation id="cat-princ-conec">
+				<portuguese>Conectores</portuguese>
+				<english>Connectors</english>
+				<spanish>Conectores</spanish>
+			</translation>
+			<translation id="cat-princ-cinta">
+				<portuguese>Fitas</portuguese>
+				<english>Tapes</english>
+				<spanish>Cintas</spanish>
+			</translation>
+			<translation id="cat-princ-cclin">
+				<portuguese>Código de Clientes</portuguese>
+				<english>Customer Code</english>
+				<spanish>Codigo de Clientes</spanish>
+			</translation>
+			<translation id="cat-princ-pitch">
+				<portuguese>Pitch</portuguese>
+				<english>Pitch</english>
+				<spanish>Pitch</spanish>
+			</translation>
+			<translation id="cat-princ-pmedi">
+				<portuguese>Ponto de Medição</portuguese>
+				<english>Measuring Point</english>
+				<spanish>Punto de Medicion</spanish>
+			</translation>
+			<translation id="cat-princ-regio">
+				<portuguese>Peças</portuguese>
+				<english>Parts</english>
+				<spanish>Regiones</spanish>
+			</translation>
+			<translation id="cat-princ-ticac">
+				<portuguese>Tipo Bitola Cor</portuguese>
+				<english>Type Gauge Color</english>
+				<spanish>Tipo Calibre Cor</spanish>
+			</translation>
+			<translation id="cat-princ-bcomp">
+				<portuguese>Blindados Comprados</portuguese>
+				<english>Armored Purchased</english>
+				<spanish>Blindados Comprados</spanish>
+			</translation>
+			<translation id="cat-princ-pmecl">
+				<portuguese>Ponto de Medição Padrão por Cliente</portuguese>
+				<english>Point Measurement Default for Customer</english>
+				<spanish>Puntos de Medicion Default por Cliente</spanish>
+			</translation>
+			<translation id="cat-princ-cimas">
+				<portuguese>Compontentes Item Master</portuguese>
+				<english>Components Item Master</english>
+				<spanish>Componentes Item Master</spanish>
+			</translation>
+			<translation id="cat-princ-tubos">
+				<portuguese>Tubos</portuguese>
+				<english>Tubes</english>
+				<spanish>Tubos</spanish>
+			</translation>
+			<translation id="cat-princ-tubop">
+				<portuguese>Tubos Optimos</portuguese>
+				<english>Optimal Tubes</english>
+				<spanish>Tubos Optimos</spanish>
+			</translation>
+		<translation id="cat-cross">
+			<portuguese>Referência Cruzada</portuguese>
+			<english>Cross Reference</english>
+			<spanish>Referencia Cruzada</spanish>
+		</translation>
+		<translation id="cat-tipos">
+			<portuguese>Tipos</portuguese>
+			<english>Types</english>
+			<spanish>Tipos</spanish>
+		</translation>
+		<translation id="cat-admin">
+			<portuguese>Administração</portuguese>
+			<english>Administration</english>
+			<spanish>Administración</spanish>
+		</translation>
+	<translation id="ferramentas">
+		<portuguese>Ferramentas</portuguese>
+		<english>Tools</english>
+		<spanish>Herramientas</spanish>
+	</translation>
+	<translation id="cotacoes">
+		<portuguese>Cotações</portuguese>
+		<english>Quotes</english>
+		<spanish>Cotizaciones</spanish>
+	</translation>
+	<translation id="feedback">
+		<portuguese>Feedback</portuguese>
+		<english>Feedback</english>
+		<spanish>Feedback</spanish>
+	</translation>
+	<translation id="planilhas">
+		<portuguese>Planilhas</portuguese>
+		<english>Worksheet</english>
+		<spanish>Plantillas</spanish>
+	</translation>
+	<translation id="engprod">
+		<portuguese>Eng. de Prod.</portuguese>
+		<english>Prod. Eng.</english>
+		<spanish>Ing. de Prod.</spanish>
+	</translation>
+	<translation id="utilitarios">
+		<portuguese>Utilitários</portuguese>
+		<english>Utilities</english>
+		<spanish>Utilerias</spanish>
+	</translation>
+	<!-- Fim MenuSuperior -->
+	<!-- Inicio Tela Home -->
+	<translation id="home-title">
+		<portuguese>PLM - Inicio</portuguese>
+		<english>PLM - Home</english>
+		<spanish>PLM - Principal</spanish>
+	</translation>
+	<translation id="home-description">
+		<portuguese>Bem-Vindo(a) ao PLM-Catia</portuguese>
+		<english>Welcome to PLM-Catia</english>
+		<spanish>Bienvenido a PLM-Catia</spanish>
+	</translation>
+
+	<translation id="home-maiusad">
+		<portuguese>Mais Usados</portuguese>
+		<english>Most Used</english>
+		<spanish>Más Utilizado</spanish>
+	</translation>
+	<translation id="home-relator">
+		<portuguese>Relatórios</portuguese>
+		<english>Reports</english>
+		<spanish>Informes</spanish>
+	</translation>
+	<translation id="home-admini">
+		<portuguese>Administração</portuguese>
+		<english>Administration</english>
+		<spanish>Administración</spanish>
+	</translation>
+	
+	<!-- Fim Tela Home -->
+	<!-- Inicio Tela Edição de DSI -->
+	<translation id="editdsi-valida">
+		<portuguese>Validar Informações</portuguese>
+		<english>Validate Information</english>
+		<spanish>Validar la Información</spanish>
+	</translation>
+	<translation id="editdsi-grava">
+		<portuguese>Gravar Alterações</portuguese>
+		<english>Save Changes</english>
+		<spanish>Guardar Cambios</spanish>
+	</translation>
+	<translation id="editdsi-title">
+		<portuguese>Edição de Arquivos DSI</portuguese>
+		<english>Editing DSI Files</english>
+		<spanish>Edición de Archivos DSI</spanish>
+	</translation>	
+	<translation id="editdsi-esaidas">
+		<portuguese>Edição de Saídas</portuguese>
+		<english>Editing Out</english>
+		<spanish>Edición de Salidas</spanish>
+	</translation>
+	<translation id="editdsi-ecsaida">
+		<portuguese>Edição de Acessórios de Saídas</portuguese>
+		<english>Editing Accessories Outputs</english>
+		<spanish>Edición de Accesorios de Salidas</spanish>
+	</translation>
+	<translation id="editdsi-ecircui">
+		<portuguese>Edição de Circuitos</portuguese>
+		<english>Editing Circuits</english>
+		<spanish>Edición de Circuitos</spanish>
+	</translation>
+	<translation id="editdsi-eacircu">
+		<portuguese>Edição de Acessórios de Circuitos</portuguese>
+		<english>Editing Accessories Circuit</english>
+		<spanish>Edición de Accesorios de Circuitos</spanish>
+	</translation>
+	<translation id="editdsi-edtubos">
+		<portuguese>Edição de Tubos</portuguese>
+		<english>Editing Tubes</english>
+		<spanish>Edición de Tubos</spanish>
+	</translation>
+	<translation id="editdsi-ecamarr">
+		<portuguese>Edição de Fitas e Amarras</portuguese>
+		<english>Editing Tapes and Moorings</english>
+		<spanish>Edición de Cintas y Amarres</spanish>
+	</translation>
+	<translation id="inicio">
+		<portuguese>Inicio</portuguese>
+		<english>Home</english>
+		<spanish>Inicio</spanish>
+	</translation>
+	<translation id="recarregar">
+		<portuguese>Recarregar</portuguese>
+		<english>Reload</english>
+		<spanish>Recargar</spanish>
+	</translation>
+	<translation id="expandir">
+		<portuguese>Expandir</portuguese>
+		<english>Expand</english>
+		<spanish>Expandir</spanish>
+	</translation>
+	<translation id="maximizar">
+		<portuguese>Maximizar</portuguese>
+		<english>Maximize</english>
+		<spanish>Maximizar</spanish>
+	</translation>
+	<!-- Fim Tela Edição de DSI -->
+</translations>

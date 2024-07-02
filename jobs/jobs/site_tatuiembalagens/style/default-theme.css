@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+a:link						{ color:#DDD; text-decoration:underline; }
+a:hover						{ color:#DDD; text-decoration:underline; }
+a:active 					{ color:#DDD; text-decoration:underline; }
+a:visited 					{ color:#DDD; text-decoration:underline; }
+
+body						{ font-family:Verdana, Geneva, sans-serif; font-size:12px; background:url(../image/background.jpg); }
+body						{ color:#000; overflow-x:hidden; overflow-y:scroll; }
+
+#wrap						{ position:fixed; width:100%; height:100%; margin:0px; z-index:9999; background:url(scripts/fancybox/blank.gif) }
+
+#carregador					{ position:absolute; width:140px; height:80px; top:50%; left:50%; margin:-40px 0 0 -70px; display:none; z-index:9999; }
+#carregador					{ background:#FFF; box-shadow:0 0 10px rgba(0,0,0,0.2); text-align:center; }
+#carregador					{ border:1px #FFF solid; border-radius:5px; }
+#carregador p				{ position:relative; top:15px; text-shadow:0 1px 1px rgba(0,0,0,0.2); }
+#carregador img				{ position:relative; top:27px; }
+
+#topo						{ position:relative; width:960px; height:125px; left: 50%; margin-left: -480px;  border-radius:5px; margin-top: 10px;}
+#topo						{ background:#FFF url(../image/bg-topo-tatuiembalagens.jpg) center no-repeat;  }
+#topo #topo_img				{ position:relative; width:182px; height:96px; padding: 0px; float: right; bottom: -29px; right: 40px; }
+#topo #topo_img				{ background: url(../image/icon-topo-tatuiembalagens.png) center no-repeat; }
+#topo #topo_texto			{ position:absolute; width:440px; height: 70px; left: 50%; top: 50%; margin: -25px 0 0 -220px; text-align: center; font-size: 16pt; }
+#topo #topo_texto			{ color: #000066; }
+
+#logo						{ position: absolute; width: 95px; height: 113px; top: 30px; left: 50%; margin: 0 0 0 -464px; border-radius:5px; border: 1px solid #FFF; z-index: 10;}
+#logo						{ background: #FFF url(../image/logo-tatuiembalagens.png) center no-repeat; padding: 10px; box-shadow:0 3px 10px rgba(0,0,0,0.2); }
+#logo img					{ position:relative; width:auto; height:60px; top:45px; left:0px; z-index:5; }
+
+#centro						{ position:relative; width:960px; height:auto; margin:10px auto 0 auto; text-align:left; }
+#centro div					{ display: inline-block; }
+
+#lateral					{ width: 150px; height: 413px; margin-left: 0px; }
+#lateral					{ background:#FFF url(../image/batatal.jpg) bottom no-repeat; border-radius:5px;}
+
+#conteudo					{ position:relative; width:790px; height: auto; min-height: 413px; margin: 0px 0px 0px 15px; vertical-align:top; overflow-y: auto; overflow-x: hidden; }
+#conteudo					{ background:rgba(255,255,255,0.5); border-radius:5px; text-align:left;}
+
+#container					{ position:relative; margin: 5px 5px 5px 5px; width:100%; }
+#container ul				{ vertical-align:top; }
+#container li				{ vertical-align:top; }
+#container #cabecalho		{ position:relative; width:765px; padding:8px 8px 8px 5px; margin:0 0 15px 0; text-align:left; font-weight:bold; }
+#container #cabecalho		{ background:#FFF; text-shadow:0 3px 5px rgba(0,0,0,0.2); border-bottom: 1px solid #DDD; }
+#container #cabecalho img	{ position:absolute; width:26px; margin-top:-7px; margin-left:-36px; }
+#container #cabecalho li	{ vertical-align:middle; padding-top:5px; padding-bottom:5px; padding-left:40px; }
+#container #escopo			{ position:relative; width:765px; margin:0px 5px 5px 5px; text-align: left; font-size:12px; color:#000; }
+#container #escopo a		{ color: #000; }
+#container #escopo li		{ display:inline-block; }
+#container #escopo p		{ padding:2px 35px 2px 35px; }
+#container ul p 			{ padding:5px; }
+#container #tooltipAct		{ text-decoration:none; text-shadow:none; }
+#container #container-princ div	{ display:inline-block; }
+
+#rodape						{ position:relative; background:#FFF; width:960px; height:auto; margin:10px auto 15px -480px; text-align:center; left: 50%; font-size: 11px; }
+#rodape						{ background: -webkit-linear-gradient(#FFF,#DDD ); }
+#rodape						{ background: -moz-linear-gradient(#E5E5E5,#FFF); }
+#rodape						{ background: -o-linear-gradient(#E5E5E5,#FFF); }
+#rodape						{ background: -ms-linear-gradient(#E5E5E5,#FFF); }
+#rodape						{ background: linear-gradient(#E5E5E5,#FFF); }
+#rodape						{ box-shadow: inset 0 -1px 5px #EEE, 0 3px 10px rgba(0,0,0,0.2); }
+#rodape p					{ padding: 4px 0 4px 0; }
+#rodape a					{ color:#444; text-decoration:none; }
+#rodape div					{ display: inline-block; color:#000; padding:15px 55px 5px 55px; vertical-align:top;  }
+#rodape #creditos p			{ position:relative; padding: 4px 0 17px 0; left:-65px; }
+#rodape #creditos			{ position:relative; width:auto; height: auto; text-align:left; }
+#rodape #contato			{ position:relative; width:auto; height: auto; text-align:left; }
+#rodape #contato img		{ position:relative; top:8px; margin-right:5px; }
+#rodape #social				{ position:relative; width:auto; height: auto; }
+
+#galeria					{ position:relative; width:765px; margin:0 auto; padding:10px; margin-top:10px; }
+#galeria ul:nth-child(1)	{ padding:10px; font-size:12px; font-weight:normal; text-align:center; text-shadow:0 1px 1px rgba(0,0,0,0.3); }
+#galeria #cabecalho			{ text-align:left; margin-left:-8px; }
+#imagens					{ text-align:center; padding:10px; }
+#imagens li					{ display:inline-block; }
+#imagens li					{ cursor:pointer; width:80px; height:60px; border:2px #FFF solid; }
+#imagens li					{ margin:3px; box-shadow:2px 2px 3px rgba(0,0,0,0.4); opacity:0.7; }
+#imagens li					{ -webkit-transition:600ms; -moz-transition:600ms; -o-transition:600ms; -ms-transition:600ms; transition:600ms; }
+#imagens li:hover			{ opacity:1; }
+
+#conteudo #topicos			{ text-align:center; width:100%; }
+#conteudo #topicos p		{ padding:10px; text-decoration:underline; }
+#conteudo #topicos li		{ text-align:left; }
+#conteudo #topicos li li	{ display:block; }
+#conteudo #topicos li li	{ padding:3px 0 3px 25px; }
+
+#escopo #contato			{ position:relative; padding:0 10px 10px 15px; }
+#escopo #contato ul			{ padding:5px; }
+#escopo #contato ul li ul:first-child { padding:10px 0 10px 0; }

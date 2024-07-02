@@ -1,0 +1,36 @@
+#wrocky_effect_cab
+{
+	-webkit-transition:1000ms;
+	-moz-transition:1000ms;
+	-o-transition:1000ms;
+}
+#wrocky_effect_icons
+{
+	-webkit-transition:1000ms;
+	-moz-transition:1000ms;
+	-o-transition:1000ms;
+}
+#wrocky_menu img		
+{ 
+	-webkit-transition:300ms ease-in;
+	-moz-transition:300ms;
+	-o-transition:300ms;
+}
+#wrocky_menu img:hover	
+{ 
+	-webkit-transform:scale(1.3) translate(0,-30px);
+	-moz-transform:scale(1.3) translate(0,-30px);
+	-o-transform:scale(1.3) translate(0,-30px);
+	
+	-webkit-box-shadow:0 30px 20px rgba(0,0,0,0.1);
+	-moz-box-shadow:0 30px 20px rgba(0,0,0,0.1);
+	box-shadow:0 30px 20px rgba(0,0,0,0.1);
+}
+#wrocky_menu img:active	
+{ 
+	opacity:0; 
+	
+	-webkit-transform:scale(2.0);
+	-moz-transform:scale(2.0);
+	-o-transform:scale(2.0);
+}

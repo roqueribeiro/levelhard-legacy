@@ -1,0 +1,216 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    overflow: hidden;
+    background: #111 url(../img/noise.png);
+}
+
+#content
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+    #content .logo-normal
+    {
+        position: absolute;
+        width: 635px;
+        height: 162px;
+        top: 50%;
+        left: 50%;
+        margin: -110px 0 0 -317.5px;
+        background: url(../img/logo.png) no-repeat center;
+        z-index: 10;
+        display: block;
+    }
+
+    #content .logo-blur
+    {
+        position: absolute;
+        width: 635px;
+        height: 162px;
+        top: 50%;
+        left: 50%;
+        margin: -110px 0 0 -317.5px;
+        background: url(../img/logo-blur.png) no-repeat center;
+        z-index: 10;
+        display: none;
+    }
+
+    #content .bg-normal
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(../img/bg.jpg) no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        display: block;
+    }
+
+    #content .bg-blur
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(../img/bg-blur.jpg) no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        display: none;
+    }
+
+.overall
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9998;
+    display: none;
+}
+
+.modal
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgba(0,0,0,1);
+    box-shadow: 0 8px 60px rgba(0,0,0,0.9);
+    border-radius: 6px;
+    color: #FFF;
+    display: none;
+    z-index: 9999;
+}
+
+    .modal .modal-header
+    {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        display: none;
+    }
+
+        .modal .modal-header p
+        {
+            position: absolute;
+            top: 15px;
+            left: 19px;
+            font-weight: normal;
+        }
+
+        .modal .modal-header .btnclose
+        {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 40px;
+            height: 40px;
+            background: #8a0505 url(../img/icons/close.png) no-repeat center;
+            box-shadow: inset 0 1px rgba(255,255,255,0.5), inset 0 -5px rgba(0,0,0,0.2), 0 1px 5px rgba(0,0,0,0.6);
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
+    .modal .modal-body
+    {
+        position: absolute;
+        top: 45px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        padding: 23px;
+        overflow: auto;
+        display: none;
+    }
+
+        .modal .modal-body ul
+        {
+            position: relative;
+            text-align: center;
+            display: none;
+        }
+
+            .modal .modal-body ul li
+            {
+                position: relative;
+                width: 140px;
+                height: 140px;
+                float: left;
+                list-style: none;
+                padding: 20px 22px 60px 22px;
+                cursor: pointer;
+            }
+
+                .modal .modal-body ul li a
+                {
+                    position: relative;
+                    text-decoration: none;
+                    color: #FFF;
+                }
+
+                .modal .modal-body ul li img
+                {
+                    position: relative;
+                    width: 128px;
+                    height: 128px;
+                }
+
+                .modal .modal-body ul li p
+                {
+                    position: relative;
+                    margin-top: 5px;
+                }
+
+.navigation
+{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+}
+
+    .navigation .item
+    {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        margin: 60px 70px 40px 70px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+a.icon
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    cursor: pointer;
+    border-radius: 100px;
+    box-shadow: inset 0 80px 0 rgba(0,0,0,0.2), 0px -1px 1px rgba(255,255,255,0.4), inset 0 20px 40px rgba(255,255,255,0.1), inset 0 -5px 0px rgba(0,0,0,0.1), 0 4px 15px rgba(0,0,0,0.8);
+}
+
+.item
+{
+    cursor: pointer;
+}
+
+    .item p
+    {
+        margin-top: 100px;
+        color: #CCC;
+        display: none;
+    }

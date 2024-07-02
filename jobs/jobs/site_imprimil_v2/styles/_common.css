@@ -1,0 +1,97 @@
+._dropdown_menu {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+}
+
+    ._dropdown_menu a {
+        position: relative;
+        width: auto;
+        height: 50px;
+        padding: 0 22px;
+        line-height: 50px;
+        white-space: nowrap;
+        display: block;
+        text-decoration: none;
+        color: rgba(255,255,255,0.8);
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+        ._dropdown_menu a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+    ._dropdown_menu ul {
+        position: relative;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+        ._dropdown_menu ul li {
+            position: relative;
+            width: auto;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+            ._dropdown_menu ul li i {
+                position: absolute;
+                height: 100%;
+                line-height: 42px;
+                font-size: 7px;
+                right: 8px;
+            }
+
+        ._dropdown_menu ul:first-child > li {
+            display: inline-block;
+        }
+
+        ._dropdown_menu ul li > ul {
+            position: absolute;
+            background-image: url(../images/blackboard_texture.jpg);
+            background-size: 512px;
+            background-repeat: repeat;
+            background-position: center;
+            padding: 5px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            z-index: 1;
+            transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.2s;
+        }
+
+            ._dropdown_menu ul li > ul a {
+            }
+
+                ._dropdown_menu ul li > ul a:hover {
+                    background: rgba(255,255,255,0.1);
+                }
+
+            ._dropdown_menu ul li > ul i {
+            }
+
+        ._dropdown_menu ul li ul {
+            margin-top: 0%;
+            margin-left: 0%;
+        }
+
+            ._dropdown_menu ul li ul ul {
+                margin-top: -50px;
+                margin-left: 100%;
+            }
+
+    ._dropdown_menu li:hover > ul {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0%);
+        transition-delay: 0s, 0s;
+    }

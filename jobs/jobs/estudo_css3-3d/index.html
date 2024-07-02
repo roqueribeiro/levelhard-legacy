@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>CSS</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="styles/default-cube.css" />
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.10.1.custom.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.cube-nav div').click(function () {
+                $('#cube').removeClass().addClass($(this).attr('id'));
+            });
+
+            $('.cube-nav div').hover(function () {
+                $('#cube figure:nth-child(' + $(this).text() + ')').animate({
+                    backgroundColor: 'rgba(255,0,0,0.4)'
+                }, { queue: false, duration: 0 });
+            }, function () {
+                $('#cube figure:nth-child(' + $(this).text() + ')').animate({
+                    backgroundColor: 'rgba(255,255,255,0.4)'
+                }, { queue: false, duration: 300 });
+            });
+
+            $('.cube-container #cube figure').click(function () {
+
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <section class="cube-container">
+        <div id="cube">
+            <figure class="front">1</figure>
+            <figure class="back">2</figure>
+            <figure class="right">3</figure>
+            <figure class="left">4</figure>
+            <figure class="top">5</figure>
+            <figure class="bottom">6</figure>
+        </div>
+    </section>
+    <section class="cube-nav">
+        <div id="show-front">1</div>
+        <div id="show-back">2</div>
+        <div id="show-right">3</div>
+        <div id="show-left">4</div>
+        <div id="show-top">5</div>
+        <div id="show-bottom">6</div>
+    </section>
+
+</body>
+</html>

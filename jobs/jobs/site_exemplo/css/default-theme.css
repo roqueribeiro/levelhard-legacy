@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Default Theme */
+
+#header-sub									{ height:236px; background:url(../img/textures/bg-000.png); border-top:4px #C40000 solid; }
+#content-sub								{ }
+#footer-sub									{ }
+
+#container									{ }
+#container #header							{ background:url(../img/textures/bg-001.png); }
+#container #header div						{ }
+#container #header #effect					{ background:rgba(0,0,0,0.4); box-shadow:inset 0 -2px 2px rgba(0,0,0,0.2) }
+#container #header #logo					{ background:url(../img/logo-180.png) center no-repeat; background-size:70%; }
+#container #header #menu					{ background:#FFF; }
+#container #header #banner					{ background:url(../img/banner/img002.jpg) center; }
+#container #header #social					{ }
+#container #content							{ background:#EEE; }
+#container #content #ajax					{ }
+#container #footer							{ background:#FFF; }
+#container #copyright						{ font-size:10px; color:#888; }
+#container #header #menu ul					{ }
+#container #header #menu ul li				{ border-left:1px #FFF solid; border-right:1px #FFF solid; background:#FFF; }
+#container #header #menu ul ul				{ border-left:1px #AAA solid; border-right:1px #AAA solid; border-bottom:1px #AAA solid; }
+#container #header #menu ul ul li			{ border-left:0px #444 solid; border-right:none; }
+
+#container #ajax #uniquecol					{ }
+#container #ajax #multicol					{ }
+
+#container #ajax #ajax-box					{ border-radius:10px; border-bottom:1px #CCC solid;  }
+#container #ajax #cab						{ border-bottom:1px #EEE solid; }
+#container #ajax #cont						{ line-height:25px; }

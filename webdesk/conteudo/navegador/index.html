@@ -1,0 +1,84 @@
+﻿<script type="text/javascript">
+$(document).ready(function () {
+
+	$("#navegador_html").disableSelection();
+
+	var tabTitle = $("#tab_title"),
+		tabContent = $("#tab_content"),
+		tabTemplate = "<li><a href='#{href}'>#{label}</a> <span class='ui-icon ui-icon-close'>Remove Tab</span></li>",
+		tabCounter = 2;
+
+	var tabs = $("#navegador_html #tabs").tabs();
+
+	function addTab() 
+	{
+	    var html = null;
+		var label = tabTitle.val() || "Pagina",
+		id = "tabs-" + tabCounter,
+		li = $(tabTemplate.replace(/#\{href\}/g, "#" + id).replace(/#\{label\}/g, label)),
+		tabContentHtml = tabContent.val() || "Pagina " + tabCounter + " content.";
+		tabs.find(".ui-tabs-nav").append(li);
+
+		html  = '<div id="' + id + '"><div id="navegacao">';
+		html += '<ul>';
+		html += '<li id="principal"><img src="conteudo/navegador/images/monitor.png"></li>';
+		html += '<li id="atualizar"><img src="conteudo/navegador/images/sinchronize.png"></li>';
+		html += '<li><input type="text" name="urlbar" placeholder="www.nomedosite.com.br"></li>';
+		html += '<li id="executar"><img src="conteudo/navegador/images/search.png"></li>';
+		html += '</ul>';
+		html += '</div>';
+		html += '<div id="carregamento">';
+		html += '<iframe src="conteudo/navegador/inicio.html" name="' + id + '"></iframe>';
+		html += '</div></div>';
+		
+		tabs.append(html);
+		tabs.tabs("refresh");
+		tabCounter++;
+		
+		//Executar uma URL com a tecla ENTER
+		$('#' + id + ' input[name=urlbar]').keypress(function(e){
+			if(e.which==13) $('#' + id + ' #executar').click();
+		});
+		//Executar uma URL
+		$('#' + id + ' #executar').click(function () {
+			if(!$('#' + id + ' input[name=urlbar]').val())
+				return false;
+			else
+				$('iframe[name=' + id + ']').attr('src', 'http://'+$('#' + id + ' input[name=urlbar]').val());
+		});
+		//Executar Home
+		$('#' + id + ' #principal').click(function () {
+			$('iframe[name=' + id + ']').attr('src', 'conteudo/navegador/inicio.html');
+		});
+		//Executar Atualizar
+		$('#' + id + ' #atualizar').click(function () {
+			$('iframe[name=' + id + ']').attr('src', $('iframe[name=' + id + ']').attr('src'));
+		});
+		
+		$('#navegador_html #tabs').tabs('select', '#' + id);
+
+	}
+	//Adicionar Aba
+	$("#navegador_html #guia_add").click(function () {
+		if(tabs.find(".ui-tabs-nav li").length <= 5) addTab();
+	});
+	//Fechar Aba
+	$("#navegador_html #tabs span.ui-icon-close").live("click", function () {
+		var panelId = $(this).closest("li").remove().attr("aria-controls");
+		$("#" + panelId).remove();
+		tabs.tabs("refresh");
+	});
+	
+	tabs.find(".ui-tabs-nav").sortable();
+	
+	addTab();
+	
+});
+</script>
+
+<div id="navegador_html">
+    <img id="guia_add" src="conteudo/navegador/images/add_file.png">
+	<div id="tabs">
+		<ul><li></li></ul>
+	</div>
+</div>

@@ -1,0 +1,324 @@
+#table-tv {
+    -moz-perspective: 800px;
+    -ms-perspective: 800px;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+    position: absolute;
+    overflow: hidden;
+    width: 600px;
+    height: 300px;
+    left: 50%;
+    bottom: 30px;
+    margin-left: -300px;
+    background: transparent;
+    font-size: 250%;
+    z-index: 500;
+}
+
+.face {
+    background-image: url(images/table-wood-texture.jpg);
+    background-size: 100%;
+}
+
+.scene, .shape, .face, .face-wrapper, .cr {
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.scene {
+    width: 80em;
+    height: 80em;
+    top: 50%;
+    left: 50%;
+    margin: -38em 0 0 -40em;
+}
+
+.shape {
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    -moz-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    -o-transform-origin: 50%;
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+}
+
+.face, .face-wrapper {
+    overflow: hidden;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+
+html > body .face {
+    background-size: 100% 100% !important;
+    background-position: center;
+}
+
+.face-wrapper .face {
+    left: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.photon-shader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.side {
+    left: 50%;
+}
+
+.cr, .cr .side {
+    height: 100%;
+}
+
+[class*="cuboid"] .ft, [class*="cuboid"] .bk {
+    width: 100%;
+    height: 100%;
+}
+
+[class*="cuboid"] .bk {
+    left: 100%;
+}
+
+[class*="cuboid"] .rt {
+    transform: rotateY(-90deg) translateX(-50%);
+}
+
+[class*="cuboid"] .lt {
+    transform: rotateY(90deg) translateX(-50%);
+}
+
+[class*="cuboid"] .tp {
+    transform: rotateX(90deg) translateY(-50%);
+}
+
+[class*="cuboid"] .bm {
+    transform: rotateX(-90deg) translateY(-50%);
+}
+
+[class*="cuboid"] .lt {
+    left: 100%;
+}
+
+[class*="cuboid"] .bm {
+    top: 100%;
+}
+/* .cub-1 styles */
+.cub-1 {
+    -moz-transform: translate3D(0em, -5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: translate3D(0em, -5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -o-transform: translate3D(0em, -5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -webkit-transform: translate3D(0em, -5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: translate3D(0em, -5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 12em;
+    height: 0.2em;
+    margin: -0.1em 0 0 -6em;
+}
+
+    .cub-1 .ft {
+        transform: translateZ(2.625em);
+    }
+
+    .cub-1 .bk {
+        transform: translateZ(-2.625em) rotateY(180deg);
+    }
+
+    .cub-1 .rt, .cub-1 .lt {
+        width: 5.25em;
+        height: 0.2em;
+    }
+
+    .cub-1 .tp, .cub-1 .bm {
+        width: 12em;
+        height: 5.25em;
+    }
+
+    .cub-1 .face {
+        background-color: #FFFFFF;
+    }
+/* .cub-3 styles */
+.cub-3 {
+    -moz-transform: translate3D(-4.0625em, -2.5em, -2.125em) rotateX(0deg) rotateY(0deg) rotateZ(12deg);
+    -ms-transform: translate3D(-4.0625em, -2.5em, -2.125em) rotateX(0deg) rotateY(0deg) rotateZ(12deg);
+    -o-transform: translate3D(-4.0625em, -2.5em, -2.125em) rotateX(0deg) rotateY(0deg) rotateZ(12deg);
+    -webkit-transform: translate3D(-4.0625em, -2.5em, -2.125em) rotateX(0deg) rotateY(0deg) rotateZ(12deg);
+    transform: translate3D(-4.0625em, -2.5em, -2.125em) rotateX(0deg) rotateY(0deg) rotateZ(12deg);
+    opacity: 1;
+    width: 0.2em;
+    height: 5em;
+    margin: -2.5em 0 0 -0.1em;
+}
+
+    .cub-3 .ft {
+        transform: translateZ(0.1em);
+    }
+
+    .cub-3 .bk {
+        transform: translateZ(-0.1em) rotateY(180deg);
+    }
+
+    .cub-3 .rt, .cub-3 .lt {
+        width: 0.2em;
+        height: 5em;
+    }
+
+    .cub-3 .tp, .cub-3 .bm {
+        width: 0.2em;
+        height: 0.2em;
+    }
+
+    .cub-3 .face {
+        background-color: #FFFFFF;
+    }
+/* .cub-4 styles */
+.cub-4 {
+    -moz-transform: translate3D(-4.125em, -2.5em, 2.125em) rotateX(0deg) rotateY(0deg) rotateZ(12deg);
+    -ms-transform: translate3D(-4.125em, -2.5em, 2.125em) rotateX(0deg) rotateY(0deg) rotateZ(12deg);
+    -o-transform: translate3D(-4.125em, -2.5em, 2.125em) rotateX(0deg) rotateY(0deg) rotateZ(12deg);
+    -webkit-transform: translate3D(-4.125em, -2.5em, 2.125em) rotateX(0deg) rotateY(0deg) rotateZ(12deg);
+    transform: translate3D(-4.125em, -2.5em, 2.125em) rotateX(0deg) rotateY(0deg) rotateZ(12deg);
+    opacity: 1;
+    width: 0.2em;
+    height: 5em;
+    margin: -2.5em 0 0 -0.1em;
+}
+
+    .cub-4 .ft {
+        transform: translateZ(0.1em);
+    }
+
+    .cub-4 .bk {
+        transform: translateZ(-0.1em) rotateY(180deg);
+    }
+
+    .cub-4 .rt, .cub-4 .lt {
+        width: 0.2em;
+        height: 5em;
+    }
+
+    .cub-4 .tp, .cub-4 .bm {
+        width: 0.2em;
+        height: 0.2em;
+    }
+
+    .cub-4 .face {
+        background-color: #FFFFFF;
+    }
+/* .cub-5 styles */
+.cub-5 {
+    -moz-transform: translate3D(4em, -2.5em, -2.125em) rotateX(0deg) rotateY(0deg) rotateZ(-13deg);
+    -ms-transform: translate3D(4em, -2.5em, -2.125em) rotateX(0deg) rotateY(0deg) rotateZ(-13deg);
+    -o-transform: translate3D(4em, -2.5em, -2.125em) rotateX(0deg) rotateY(0deg) rotateZ(-13deg);
+    -webkit-transform: translate3D(4em, -2.5em, -2.125em) rotateX(0deg) rotateY(0deg) rotateZ(-13deg);
+    transform: translate3D(4em, -2.5em, -2.125em) rotateX(0deg) rotateY(0deg) rotateZ(-13deg);
+    opacity: 1;
+    width: 0.2em;
+    height: 5em;
+    margin: -2.5em 0 0 -0.1em;
+}
+
+    .cub-5 .ft {
+        transform: translateZ(0.1em);
+    }
+
+    .cub-5 .bk {
+        transform: translateZ(-0.1em) rotateY(180deg);
+    }
+
+    .cub-5 .rt, .cub-5 .lt {
+        width: 0.2em;
+        height: 5em;
+    }
+
+    .cub-5 .tp, .cub-5 .bm {
+        width: 0.2em;
+        height: 0.2em;
+    }
+
+    .cub-5 .face {
+        background-color: #FFFFFF;
+    }
+/* .cub-6 styles */
+.cub-6 {
+    -moz-transform: translate3D(4em, -2.5em, 2.125em) rotateX(0deg) rotateY(0deg) rotateZ(-13deg);
+    -ms-transform: translate3D(4em, -2.5em, 2.125em) rotateX(0deg) rotateY(0deg) rotateZ(-13deg);
+    -o-transform: translate3D(4em, -2.5em, 2.125em) rotateX(0deg) rotateY(0deg) rotateZ(-13deg);
+    -webkit-transform: translate3D(4em, -2.5em, 2.125em) rotateX(0deg) rotateY(0deg) rotateZ(-13deg);
+    transform: translate3D(4em, -2.5em, 2.125em) rotateX(0deg) rotateY(0deg) rotateZ(-13deg);
+    opacity: 1;
+    width: 0.2em;
+    height: 5em;
+    margin: -2.5em 0 0 -0.1em;
+}
+
+    .cub-6 .ft {
+        transform: translateZ(0.1em);
+    }
+
+    .cub-6 .bk {
+        transform: translateZ(-0.1em) rotateY(180deg);
+    }
+
+    .cub-6 .rt, .cub-6 .lt {
+        width: 0.2em;
+        height: 5em;
+    }
+
+    .cub-6 .tp, .cub-6 .bm {
+        width: 0.2em;
+        height: 0.2em;
+    }
+
+    .cub-6 .face {
+        background-color: #FFFFFF;
+    }
+/* .cub-2 styles */
+.cub-2 {
+    -moz-transform: translate3D(0em, -3.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: translate3D(0em, -3.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -o-transform: translate3D(0em, -3.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -webkit-transform: translate3D(0em, -3.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: translate3D(0em, -3.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 10em;
+    height: 0.2em;
+    margin: -0.1em 0 0 -5em;
+}
+
+    .cub-2 .ft {
+        transform: translateZ(2.625em);
+    }
+
+    .cub-2 .bk {
+        transform: translateZ(-2.625em) rotateY(180deg);
+    }
+
+    .cub-2 .rt, .cub-2 .lt {
+        width: 5.25em;
+        height: 0.2em;
+    }
+
+    .cub-2 .tp, .cub-2 .bm {
+        width: 10em;
+        height: 5.25em;
+    }
+
+    .cub-2 .face {
+        background-color: #FFFFFF;
+    }

@@ -1,0 +1,1081 @@
+﻿.gdata-house-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+#tridiv {
+    perspective: 600px;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    font-size: 100%;
+    transform: scale(0.8);
+}
+
+.scene, .shape, .face, .face-wrapper, .cr {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.scene {
+    width: 80em;
+    height: 80em;
+    top: 50%;
+    left: 50%;
+    margin: -40em 0 0 -40em;
+    /*animation: rotate 10000ms infinite linear;*/
+}
+
+.shape {
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform-origin: 50%;
+}
+
+.face, .face-wrapper {
+    overflow: hidden;
+    transform-origin: 0 0;
+    backface-visibility: hidden;
+}
+
+.face {
+    background-size: 100% 100% !important;
+    background-position: center;
+}
+
+.face-wrapper .face {
+    left: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.photon-shader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.side {
+    left: 50%;
+}
+
+.cr, .cr .side {
+    height: 100%;
+}
+
+[class*="cuboid"] .ft, [class*="cuboid"] .bk {
+    width: 100%;
+    height: 100%;
+}
+
+[class*="cuboid"] .bk {
+    left: 100%;
+}
+
+[class*="cuboid"] .rt {
+    transform: rotateY(-90deg) translateX(-50%);
+}
+
+[class*="cuboid"] .lt {
+    transform: rotateY(90deg) translateX(-50%);
+}
+
+[class*="cuboid"] .tp {
+    transform: rotateX(90deg) translateY(-50%);
+}
+
+[class*="cuboid"] .bm {
+    transform: rotateX(-90deg) translateY(-50%);
+}
+
+[class*="cuboid"] .lt {
+    left: 100%;
+}
+
+[class*="cuboid"] .bm {
+    top: 100%;
+}
+
+[class*="prism"] .ft, [class*="prism"] .bk {
+    width: 100%;
+    height: 100%;
+}
+
+[class*="prism"] .bk {
+    left: 100%;
+}
+
+[class*="prism"] .rt {
+    transform: rotateY(-90deg) translateX(-50%);
+}
+
+[class*="prism"] .lt {
+    transform: rotateY(90deg) translateX(-50%);
+}
+
+[class*="prism"] .bm {
+    transform: rotateX(-90deg) translateY(-50%);
+}
+
+[class*="prism"] .lt {
+    left: 100%;
+}
+
+[class*="prism"] .bm {
+    top: 100%;
+}
+
+[class*="prism"] .rt .face {
+    left: -100%;
+    transform-origin: 100% 0;
+}
+
+[class*="cylinder"] .tp {
+    transform: rotateX(90deg) translateY(-50%);
+}
+
+[class*="cylinder"] .bm {
+    transform: rotateX(-90deg) translateY(-50%);
+}
+
+    [class*="cylinder"] .tp, [class*="cylinder"] .bm, [class*="cylinder"] .tp .photon-shader, [class*="cylinder"] .bm .photon-shader {
+        border-radius: 50%;
+    }
+
+[class*="cylinder"] .bm {
+    top: 100%;
+}
+
+[class*="pyramid"] .face-wrapper .face {
+    transform: rotateZ(45deg) translateX(-35.35%) translateY(35.35%);
+}
+
+[class*="pyramid"] .bk {
+    left: 100%;
+}
+
+[class*="pyramid"] .bm {
+    top: 100%;
+    transform: rotateX(-90deg) translateY(-50%);
+}
+
+[class*="pyramid"] .rt, [class*="pyramid"] .lt {
+    transform-origin: 50% 0;
+}
+/* .house-base styles */
+.house-base {
+    transform: translate3D(0em, 1.1em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 10em;
+    height: 8em;
+    margin: -4em 0 0 -5em;
+}
+
+    .house-base .ft {
+        transform: translateZ(5em);
+        box-shadow: 0 1px rgba(0,0,0,0.5), inset 0 20px 10px rgba(0,0,0,0.4) !important;
+    }
+
+    .house-base .bk {
+        transform: translateZ(-5em) rotateY(180deg);
+        box-shadow: 0 1px rgba(0,0,0,0.5), inset 0 20px 10px rgba(0,0,0,0.4) !important;
+    }
+
+    .house-base .rt, .house-base .lt {
+        width: 10em;
+        height: 8em;
+        box-shadow: 0 1px rgba(0,0,0,0.5) !important;
+    }
+
+    .house-base .tp, .house-base .bm {
+        width: 10em;
+        height: 10em;
+        box-shadow: 0 1px rgba(0,0,0,0.5) !important;
+    }
+
+    .house-base .face {
+        background: url(../images/house/wall/texture-default.jpg) #faf8f8;
+        background-size: 50% !important;
+    }
+
+/* .roof-base-left styles */
+.roof-base-left {
+    transform: translate3D(0em, -5.4em, 2.5em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 10em;
+    height: 5em;
+    margin: -2.5em 0 0 -5em;
+}
+
+    .roof-base-left .rt .face {
+        transform: rotateZ(-45.00000000000001deg);
+    }
+
+    .roof-base-left .lt .face {
+        transform: rotateZ(45.00000000000001deg);
+    }
+
+    .roof-base-left .ft {
+        height: 7.0710678118654755em;
+        transform: translateZ(-2.5em) rotateX(45.00000000000001deg);
+    }
+
+    .roof-base-left .bk {
+        transform: translateZ(-2.5em) rotateY(180deg);
+    }
+
+    .roof-base-left .rt, .roof-base-left .lt {
+        width: 5em;
+        height: 5em;
+    }
+
+        .roof-base-left .rt .face, .roof-base-left .lt .face {
+            height: 7.0710678118654755em;
+        }
+
+    .roof-base-left .bm {
+        width: 10em;
+        height: 5em;
+    }
+
+    .roof-base-left .face {
+        background: url(../images/house/wall/texture-default.jpg) #faf8f8;
+        background-size: 80% !important;
+    }
+
+/* .roof-base-right styles */
+.roof-base-right {
+    transform: translate3D(0em, -5.4em, -2.5em) rotateX(-270deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 10em;
+    height: 5em;
+    margin: -2.5em 0 0 -5em;
+}
+
+    .roof-base-right .rt .face {
+        transform: rotateZ(-45.00000000000001deg);
+    }
+
+    .roof-base-right .lt .face {
+        transform: rotateZ(45.00000000000001deg);
+    }
+
+    .roof-base-right .ft {
+        height: 7.0710678118654755em;
+        transform: translateZ(-2.5em) rotateX(45.00000000000001deg);
+    }
+
+    .roof-base-right .bk {
+        transform: translateZ(-2.5em) rotateY(180deg);
+    }
+
+    .roof-base-right .rt, .roof-base-right .lt {
+        width: 5em;
+        height: 5em;
+    }
+
+        .roof-base-right .rt .face, .roof-base-right .lt .face {
+            height: 7.0710678118654755em;
+        }
+
+    .roof-base-right .bm {
+        width: 10em;
+        height: 5em;
+    }
+
+    .roof-base-right .face {
+        background: url(../images/house/wall/texture-default.jpg) #faf8f8;
+        background-size: 80% !important;
+    }
+
+/* .roof-left styles */
+.roof-left {
+    transform: translate3D(0em, -5em, 3.2em) rotateX(-45deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 11.5em;
+    height: 0.3em;
+    margin: -0.15em 0 0 -5.75em;
+}
+
+    .roof-left .ft {
+        transform: translateZ(4.25em);
+    }
+
+    .roof-left .bk {
+        transform: translateZ(-4.25em) rotateY(180deg);
+    }
+
+    .roof-left .rt, .roof-left .lt {
+        width: 8.5em;
+        height: 0.3em;
+    }
+
+    .roof-left .tp, .roof-left .bm {
+        width: 11.5em;
+        height: 8.5em;
+    }
+
+    .roof-left .face {
+        background: url(../images/house/roof/texture-default-left.jpg) #880000;
+        background-size: 50% !important;
+    }
+
+/* .roof-right styles */
+.roof-right {
+    transform: translate3D(0em, -5em, -3.1em) rotateX(-135deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 11.5em;
+    height: 0.3em;
+    margin: -0.15em 0 0 -5.75em;
+}
+
+    .roof-right .ft {
+        transform: translateZ(4.25em);
+    }
+
+    .roof-right .bk {
+        transform: translateZ(-4.25em) rotateY(180deg);
+    }
+
+    .roof-right .rt, .roof-right .lt {
+        width: 8.5em;
+        height: 0.3em;
+    }
+
+    .roof-right .tp, .roof-right .bm {
+        width: 11.5em;
+        height: 8.5em;
+    }
+
+    .roof-right .face {
+        background: url(../images/house/roof/texture-default-right.jpg) #880000;
+        background-size: 50% !important;
+    }
+
+/* .roof-top styles */
+.roof-top {
+    transform: translate3D(0em, -8.3em, 0.05em) rotateX(-45deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 11.5em;
+    height: 0.7em;
+    margin: -0.35em 0 0 -5.75em;
+}
+
+    .roof-top .ft {
+        transform: translateZ(0.35em);
+    }
+
+    .roof-top .bk {
+        transform: translateZ(-0.35em) rotateY(180deg);
+    }
+
+    .roof-top .rt, .roof-top .lt {
+        width: 0.7em;
+        height: 0.7em;
+    }
+
+    .roof-top .tp, .roof-top .bm {
+        width: 11.5em;
+        height: 0.7em;
+    }
+
+    .roof-top .face {
+        background: url(../images/house/roof/texture-default-left.jpg) #880000;
+        background-size: 50% !important;
+    }
+
+/* .floor styles */
+.floor {
+    transform: translate3D(0em, 5.2em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 20em;
+    height: 0.2em;
+    margin: -0.1em 0 0 -10em;
+}
+
+    .floor .ft {
+        transform: translateZ(10em);
+    }
+
+    .floor .bk {
+        transform: translateZ(-10em) rotateY(180deg);
+    }
+
+    .floor .rt, .floor .lt {
+        width: 20em;
+        height: 0.2em;
+    }
+
+    .floor .tp, .floor .bm {
+        width: 20em;
+        height: 20em;
+    }
+
+    .floor .face {
+        background: url(../images/house/floor/texture-default.jpg) #81ae15;
+        background-size: 40% !important;
+    }
+
+    .floor .ft {
+        width: 16em;
+        margin-left: 2em;
+    }
+
+    .floor .bk {
+        width: 16em;
+        margin-left: -2em;
+    }
+
+    .floor .rt, .floor .lt {
+        width: 16em;
+    }
+
+    .floor .tp, .floor .bm, .floor .tp .photon-shader, .floor .bm .photon-shader {
+        border-radius: 2em;
+    }
+
+    .floor .cr {
+        width: 2em;
+        left: 1em;
+    }
+
+    .floor .cr-0 {
+        transform: translate3D(16em, 0, 8em);
+    }
+
+    .floor .cr-1 {
+        transform: translate3D(16em, 0, -8em);
+    }
+
+    .floor .cr-2 {
+        transform: translate3D(0, 0, -8em);
+    }
+
+    .floor .cr-3 {
+        transform: translate3D(0, 0, 8em);
+    }
+
+    .floor .cr-0 .s0 {
+        transform: rotateY(9deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-0 .s1 {
+        transform: rotateY(27deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-0 .s2 {
+        transform: rotateY(45deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-0 .s3 {
+        transform: rotateY(63deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-0 .s4 {
+        transform: rotateY(81deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-1 .s0 {
+        transform: rotateY(99deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-1 .s1 {
+        transform: rotateY(117deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-1 .s2 {
+        transform: rotateY(135deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-1 .s3 {
+        transform: rotateY(153deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-1 .s4 {
+        transform: rotateY(171deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-2 .s0 {
+        transform: rotateY(189deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-2 .s1 {
+        transform: rotateY(207deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-2 .s2 {
+        transform: rotateY(225deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-2 .s3 {
+        transform: rotateY(243deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-2 .s4 {
+        transform: rotateY(261deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-3 .s0 {
+        transform: rotateY(279deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-3 .s1 {
+        transform: rotateY(297deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-3 .s2 {
+        transform: rotateY(315deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-3 .s3 {
+        transform: rotateY(333deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .cr-3 .s4 {
+        transform: rotateY(351deg) translate3D(-50%, 0, 1.975em);
+    }
+
+    .floor .side {
+        width: 0.6585377612981451em;
+    }
+
+/* .door styles */
+.door {
+    transform: translate3D(5.1em, 2.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 0.2em;
+    height: 5em;
+    margin: -2.5em 0 0 -0.1em;
+}
+
+    .door .ft {
+        transform: translateZ(1.5em);
+    }
+
+    .door .bk {
+        transform: translateZ(-1.5em) rotateY(180deg);
+    }
+
+    .door .rt, .door .lt {
+        width: 3em;
+        height: 5em;
+    }
+
+    .door .tp, .door .bm {
+        width: 0.2em;
+        height: 3em;
+    }
+
+    .door .lt {
+        background: url(../images/house/door/texture-default.jpg) #FFFFFF;
+    }
+
+/* .window-front styles */
+.window-front {
+    transform: translate3D(5.1em, -5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(90deg);
+    opacity: 1;
+    width: 2em;
+    height: 0.2em;
+    margin: -0.1em 0 0 -1em;
+}
+
+    .window-front .tp, .window-front .bm {
+        width: 2em;
+        height: 2em;
+    }
+
+    .window-front .side {
+        width: 0.4501131233400442em;
+        height: 0.2em;
+    }
+
+    .window-front .s0 {
+        transform: rotateY(12deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s1 {
+        transform: rotateY(36deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s2 {
+        transform: rotateY(60deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s3 {
+        transform: rotateY(84deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s4 {
+        transform: rotateY(108deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s5 {
+        transform: rotateY(132deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s6 {
+        transform: rotateY(156deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s7 {
+        transform: rotateY(180deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s8 {
+        transform: rotateY(204deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s9 {
+        transform: rotateY(228deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s10 {
+        transform: rotateY(252deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s11 {
+        transform: rotateY(276deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s12 {
+        transform: rotateY(300deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s13 {
+        transform: rotateY(324deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .s14 {
+        transform: rotateY(348deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .window-front .tp {
+        background: url(../images/house/window/texture-circular-default.png) #FFFFFF;
+    }
+
+/* .window-right styles */
+.window-right {
+    transform: translate3D(0em, 1.2em, 5.1em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 4em;
+    height: 3em;
+    margin: -1.5em 0 0 -2em;
+}
+
+    .window-right .ft {
+        transform: translateZ(0.1em);
+    }
+
+    .window-right .bk {
+        transform: translateZ(-0.1em) rotateY(180deg);
+    }
+
+    .window-right .rt, .window-right .lt {
+        width: 0.2em;
+        height: 3em;
+    }
+
+    .window-right .tp, .window-right .bm {
+        width: 4em;
+        height: 0.2em;
+    }
+
+    .window-right .ft {
+        background: url(../images/house/window/texture-default.jpg) #FFFFFF;
+    }
+
+/* .window-left styles */
+.window-left {
+    transform: translate3D(0em, 1.20em, -5.1em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 4em;
+    height: 3em;
+    margin: -1.5em 0 0 -2em;
+}
+
+    .window-left .ft {
+        transform: translateZ(0.1em);
+    }
+
+    .window-left .bk {
+        transform: translateZ(-0.1em) rotateY(180deg);
+    }
+
+    .window-left .rt, .window-left-1 .lt {
+        width: 0.2em;
+        height: 3em;
+    }
+
+    .window-left .tp, .window-left-1 .bm {
+        width: 4em;
+        height: 0.2em;
+    }
+
+    .window-left .bk {
+        background: url(../images/house/window/texture-default.jpg) #FFFFFF;
+    }
+/* .lamppost-base styles */
+.lamppost-base {
+    transform: translate3D(8em, 0.1em, 8em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 0.5em;
+    height: 10em;
+    margin: -5em 0 0 -0.25em;
+}
+
+    .lamppost-base .tp, .lamppost-base .bm {
+        width: 0.5em;
+        height: 0.5em;
+    }
+
+    .lamppost-base .side {
+        width: 0.2321067811865475em;
+        height: 10em;
+    }
+
+    .lamppost-base .s0 {
+        transform: rotateY(22.5deg) translate3D(-50%, 0, 0.225em);
+    }
+
+    .lamppost-base .s1 {
+        transform: rotateY(67.5deg) translate3D(-50%, 0, 0.225em);
+    }
+
+    .lamppost-base .s2 {
+        transform: rotateY(112.5deg) translate3D(-50%, 0, 0.225em);
+    }
+
+    .lamppost-base .s3 {
+        transform: rotateY(157.5deg) translate3D(-50%, 0, 0.225em);
+    }
+
+    .lamppost-base .s4 {
+        transform: rotateY(202.5deg) translate3D(-50%, 0, 0.225em);
+    }
+
+    .lamppost-base .s5 {
+        transform: rotateY(247.5deg) translate3D(-50%, 0, 0.225em);
+    }
+
+    .lamppost-base .s6 {
+        transform: rotateY(292.5deg) translate3D(-50%, 0, 0.225em);
+    }
+
+    .lamppost-base .s7 {
+        transform: rotateY(337.5deg) translate3D(-50%, 0, 0.225em);
+    }
+
+    .lamppost-base .face, .lamppost-base .side {
+        background-color: #804040;
+    }
+/* .lamppost-support styles */
+.lamppost-support {
+    transform: translate3D(8em, -4em, 7em) rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 0.2em;
+    height: 3em;
+    margin: -1.5em 0 0 -0.1em;
+}
+
+    .lamppost-support .tp, .lamppost-support .bm {
+        width: 0.2em;
+        height: 0.2em;
+    }
+
+    .lamppost-support .side {
+        width: 0.14047005383792516em;
+        height: 3em;
+    }
+
+    .lamppost-support .s0 {
+        transform: rotateY(30deg) translate3D(-50%, 0, 0.07500000000000001em);
+    }
+
+    .lamppost-support .s1 {
+        transform: rotateY(90deg) translate3D(-50%, 0, 0.07500000000000001em);
+    }
+
+    .lamppost-support .s2 {
+        transform: rotateY(150deg) translate3D(-50%, 0, 0.07500000000000001em);
+    }
+
+    .lamppost-support .s3 {
+        transform: rotateY(210deg) translate3D(-50%, 0, 0.07500000000000001em);
+    }
+
+    .lamppost-support .s4 {
+        transform: rotateY(270deg) translate3D(-50%, 0, 0.07500000000000001em);
+    }
+
+    .lamppost-support .s5 {
+        transform: rotateY(330deg) translate3D(-50%, 0, 0.07500000000000001em);
+    }
+
+    .lamppost-support .face, .lamppost-support .side {
+        background-color: #804040;
+    }
+/* .lamppost-lamp styles */
+.lamppost-lamp {
+    transform: translate3D(7.95em, -3.75em, 5.8em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 0.8em;
+    height: 0.4em;
+    margin: -0.2em 0 0 -0.4em;
+}
+
+    .lamppost-lamp .face-wrapper {
+        width: 0.8em;
+        height: 0.4em;
+    }
+
+        .lamppost-lamp .face-wrapper .face {
+            width: 0.8em;
+            height: 0.8em;
+        }
+
+    .lamppost-lamp .ft {
+        transform: scaleZ(1.4142135623730951) scaleY(1.4142135623730951) rotateX(45.00000000000001deg);
+    }
+
+    .lamppost-lamp .bk {
+        transform: scaleZ(1.4142135623730951) scaleY(1.4142135623730951) rotateX(-45.00000000000001deg) rotateY(180deg);
+    }
+
+    .lamppost-lamp .rt {
+        transform: scaleX(1.4142135623730951) scaleY(1.4142135623730951) rotateZ(45.00000000000001deg) rotateY(-90deg);
+    }
+
+    .lamppost-lamp .lt {
+        transform: scaleX(1.4142135623730951) scaleY(1.4142135623730951) rotateZ(-45.00000000000001deg) rotateY(90deg);
+    }
+
+    .lamppost-lamp .bm {
+        width: 0.8em;
+        height: 0.8em;
+    }
+
+    .lamppost-lamp .face {
+        background-color: #cdcdcd;
+    }
+/* .trash styles */
+.trash {
+    transform: translate3D(8em, 3.6em, -8em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 2.8em;
+    margin: -1.4em 0 0 -1em;
+}
+
+    .trash .tp, .trash .bm {
+        width: 2em;
+        height: 2em;
+    }
+
+    .trash .side {
+        width: 0.37765396141693em;
+        height: 2.8em;
+    }
+
+    .trash .s0 {
+        transform: rotateY(10deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s1 {
+        transform: rotateY(30deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s2 {
+        transform: rotateY(50deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s3 {
+        transform: rotateY(70deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s4 {
+        transform: rotateY(90deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s5 {
+        transform: rotateY(110deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s6 {
+        transform: rotateY(130deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s7 {
+        transform: rotateY(150deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s8 {
+        transform: rotateY(170deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s9 {
+        transform: rotateY(190deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s10 {
+        transform: rotateY(210deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s11 {
+        transform: rotateY(230deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s12 {
+        transform: rotateY(250deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s13 {
+        transform: rotateY(270deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s14 {
+        transform: rotateY(290deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s15 {
+        transform: rotateY(310deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s16 {
+        transform: rotateY(330deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .s17 {
+        transform: rotateY(350deg) translate3D(-50%, 0, 0.975em);
+    }
+
+    .trash .face, .trash .side {
+        background-color: #e9e9e9;
+    }
+
+    .trash .tp {
+        background-color: #c8c8c8;
+    }
+/* .carpet styles */
+.carpet {
+    transform: translate3D(6.2em, 5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 0.2em;
+    margin: -0.1em 0 0 -1em;
+}
+
+    .carpet .ft {
+        transform: translateZ(1.5em);
+    }
+
+    .carpet .bk {
+        transform: translateZ(-1.5em) rotateY(180deg);
+    }
+
+    .carpet .rt, .carpet .lt {
+        width: 3em;
+        height: 0.2em;
+    }
+
+    .carpet .tp, .carpet .bm {
+        width: 2em;
+        height: 3em;
+    }
+
+    .carpet .face {
+        background-color: #dfdfdf;
+    }
+/* .chimney-base styles */
+.chimney-base {
+    transform: translate3D(-3em, -5.5em, -3em) rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 2em;
+    margin: -1em 0 0 -1em;
+    display: none;
+}
+
+    .chimney-base .rt .face {
+        transform: rotateZ(-45.00000000000001deg);
+    }
+
+    .chimney-base .lt .face {
+        transform: rotateZ(45.00000000000001deg);
+    }
+
+    .chimney-base .ft {
+        height: 2.8284271247461903em;
+        transform: translateZ(-1em) rotateX(45.00000000000001deg);
+    }
+
+    .chimney-base .bk {
+        transform: translateZ(-1em) rotateY(180deg);
+    }
+
+    .chimney-base .rt, .chimney-base .lt {
+        width: 2em;
+        height: 2em;
+    }
+
+        .chimney-base .rt .face, .chimney-base .lt .face {
+            height: 2.8284271247461903em;
+        }
+
+    .chimney-base .bm {
+        width: 2em;
+        height: 2em;
+    }
+
+    .chimney-base .face {
+        background: url(../images/house/wall/texture-default.jpg) #faf8f8;
+        background-size: 50% !important;
+    }
+/* .chimney-head styles */
+.chimney-head {
+    transform: translate3D(-3em, -7em, -3em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 1em;
+    margin: -0.5em 0 0 -1em;
+    display: none;
+}
+
+    .chimney-head .ft {
+        transform: translateZ(1em);
+    }
+
+    .chimney-head .bk {
+        transform: translateZ(-1em) rotateY(180deg);
+    }
+
+    .chimney-head .rt, .chimney-head .lt {
+        width: 2em;
+        height: 1em;
+    }
+
+    .chimney-head .tp, .chimney-head .bm {
+        width: 2em;
+        height: 2em;
+    }
+
+    .chimney-head .face {
+        background: url(../images/house/wall/texture-default.jpg) #faf8f8;
+        background-size: 50% !important;
+    }
+
+@keyframes rotate {
+    from {
+        transform: rotateY(15deg);
+    }
+
+    to {
+        transform: rotateY(375deg);
+    }
+}

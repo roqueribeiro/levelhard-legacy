@@ -1,0 +1,21 @@
+{
+	"name": "WebDesk",
+	"version": "1.3.4",
+	"manifest_version": 2,
+	"description": "Desktop em Nuvens, Navegue em seus arquivos de qualquer dispositivo em qualquer lugar!",
+	"app": {
+		"urls": [ "http://webdesk.levelhard.com/", "http://webdesk.levelhard.com.br/" ],
+		"launch": {	"web_url": "http://webdesk.levelhard.com/" }
+	},
+	"icons": { 
+		"32": "favicon32.png", 
+		"48": "favicon48.png", 
+		"64": "favicon64.png", 
+		"128": "favicon128.png" 
+	},
+	"homepage_url": "http://www.levelhard.com/",
+	"permissions": [
+		"unlimitedStorage",
+		"notifications"
+	]
+}

@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+#plizz-body													{ }
+#theme-container											{ position:absolute; width:100%; height:100%; overflow-x:auto; overflow-y:scroll; }
+#theme-container #centralize								{ position:relative; width:960px; height:auto; margin:0 auto; box-shadow:0 0 8px rgba(0,0,0,0.6); }
+#theme-container #centralize								{ background:#444 url(images/background-cont.png); border-bottom-left-radius:10px; border-bottom-right-radius:10px; }
+/* ======== Cabecalho ======== */
+#theme-container #header									{ position:absolute; width:100%; height:160px; background:url(images/background-top.png); }
+#theme-container #cont-top									{ position:relative; width:100%; height:auto; background:#454545 url(images/background-cab.png); z-index:10; }
+#theme-container #cont-top #container						{ position:relative; width:100%; }
+#theme-container #cont-top #container #logo					{ position:relative; width:425px; height:150px; background:url(images/logo.png) no-repeat center 70%; background-size:80%; cursor:pointer; }
+#theme-container #cont-top #container #search				{ position:absolute; width:auto; height:auto; top:20px; right:20px; z-index:10; }
+/* ======== Perfil ======== */
+#theme-container #cont-top #container #perfil				{ position:absolute; width:220px; height:75px; right:20px; top:65px; background:rgba(0,0,0,0.2); border-radius:10px; z-index:15; }
+#theme-container #cont-top #container #perfil				{ box-shadow:inset 0 45px 0 rgba(255,255,255,0.1),0 2px 4px rgba(0,0,0,0.8); }
+#theme-container #cont-top #container #perfil #image		{ position:relative; width:60px; height:60px; background:#DDD url(images/icon-user.png) center no-repeat; background-size:90%; top:7.5px; left:7.5px; }
+#theme-container #cont-top #container #perfil #image		{ border-radius:5px; box-shadow:inset 0 30px 0 rgba(255,255,255,0.3),0 2px 4px rgba(0,0,0,0.8); }
+#theme-container #cont-top #container #perfil #options		{ position:absolute; width:145px; height:65px; top:5px; right:5px; }
+#theme-container #cont-top #container #perfil #options #id	{ margin:5px 8px 5px 8px; color:#FFF; }
+#theme-container #cont-top #container #perfil #id-type		{ margin:5px 8px 5px 8px; color:#FF0; font-size:9px; }
+#theme-container #cont-top #container #perfil #actions		{ position:absolute; bottom:0px; right:5px; }
+#theme-container #cont-top #container #perfil #actions img	{ padding:0 2px 0 2px; cursor:pointer; }
+#theme-container #cont-top #container #advertisement		{ position:absolute; width:700px; height:100px; top:20px; right:20px; cursor:pointer; }
+/* ======== Navegacao ======== */
+#theme-container #cont-top #menu							{ position:relative; width:100%; height:40px; background:#FFF url(images/background-menu.jpg); box-shadow:0 2px 5px rgba(0,0,0,0.4); text-align:center; }
+#theme-container #cont-top #menu ul							{ color:#a74045; }
+#theme-container #cont-top #menu ul li						{ display:inline-block; padding:13px 60px 13px 60px; cursor:pointer; }
+#theme-container #cont-top #menu ul li:hover				{ }
+/*#theme-container #cont-top #menu ul li:hover > ul			{ display:block; }*/
+#theme-container #cont-top #menu ul li ul					{ position:absolute; background:#FFF; margin-top:12px; margin-left:-55px; box-shadow:0 1px 2px rgba(0,0,0,0.6); display:none; }
+#theme-container #cont-top #menu ul li ul li				{ display:block; padding-left:35px; padding-right:90px; text-indent:0px; text-align:left; }
+#theme-container #cont-top #menu ul li ul li:hover			{ background:#EEE; }
+#theme-container #cont-top #menu ul li ul img				{ position:absolute; margin:-1px 0 0 -24px; }
+/* ======== Conteudo ======== */
+#theme-container #cont-center								{ position:relative; width:auto; height:auto; padding:20px; }
+/* ======== Tela Principal ======== */
+#theme-container #cont-center #home							{ position:relative; text-align:center; }
+#theme-container #cont-center #home #image-slider			{ position:relative; width:960px; height:340px; background:#222; margin-left:-20px; padding:1px 0 1px 0; }
+#theme-container #cont-center #home	#content				{ position:relative; width:100%; height:auto; }
+#theme-container #cont-center #home	#content div			{ display:inline-block; vertical-align:top; }
+#theme-container #cont-center #home	#content #horizontal	{ position:relative; width:650px; height:auto; margin:50px 15px -30px 15px; }
+#theme-container #cont-center #home	#content #vertical		{ position:relative; width:200px; height:auto; margin:50px 15px -30px 15px; }
+/* ======== Galerias Horizontais ======== */
+#horizontal #gallery-more									{ position:relative; width:100%; background:#FFF; margin-bottom:45px; box-shadow:0 1px 2px rgba(0,0,0,0.6); }
+#horizontal #gallery-more #title							{ position:absolute; width:160px; height:30px; background:#FFF; top:-30px; left:5px; color:#a74045; z-index:10; }
+#horizontal #gallery-more #title							{ border-top-left-radius:5px; border-top-right-radius:5px; box-shadow:0 -1px 2px rgba(0,0,0,0.6); }
+#horizontal #gallery-more #title							{ line-height:30px; text-align:left; text-indent:10px; }
+#horizontal #gallery-more #thumbs							{ padding:10px; }
+#horizontal #gallery-more #thumbs ul						{}
+#horizontal #gallery-more #thumbs li						{ display:inline-block; width:112px; height:80px; margin:5px; cursor:pointer; }
+#horizontal #gallery-more #thumbs li						{ background:url(images/icon-movie.png) center no-repeat #111; background-size:70%; box-shadow:inset 0 41px 0 rgba(255,255,255,0.1),0 2px 4px rgba(0,0,0,0.6); }
+/* ======== Galerias Verticais ======== */
+#vertical #gallery-more										{ position:relative; width:100%; background:#FFF; margin-bottom:20px; box-shadow:0 1px 2px rgba(0,0,0,0.6); }
+#vertical #gallery-more #title								{ position:absolute; width:160px; height:30px; background:#FFF; top:-30px; left:20px; color:#a74045; z-index:10;  }
+#vertical #gallery-more #title								{ border-top-left-radius:5px; border-top-right-radius:5px; box-shadow:0 -1px 2px rgba(0,0,0,0.6); }
+#vertical #gallery-more #title								{ line-height:30px; text-align:center; }
+#vertical #gallery-more #thumbs								{}
+#vertical #gallery-more #thumbs ul							{}
+#vertical #gallery-more #thumbs li							{ display:inline-block; width:175px; height:120px; margin-top:17px; cursor:pointer; }
+#vertical #gallery-more #thumbs li							{ background:url(images/icon-movie.png) center no-repeat #111; background-size:60%; box-shadow:inset 0 62px 0 rgba(255,255,255,0.1),0 2px 4px rgba(0,0,0,0.6); }
+#vertical #gallery-more #thumbs li:last-child				{ margin-bottom:10px; }
+/* ======== Rodape ======== */
+#theme-container #cont-foot									{ position:relative; width:100%; height:280px; margin-top:25px; background:#111 url(images/background-foot.jpg); }
+#theme-container #cont-foot									{ box-shadow:inset 0 5px 20px rgba(0,0,0,0.6); text-align:center; }
+#theme-container #cont-foot #foot-center					{ position:relative; width:960px; height:auto; color:#FFF; margin:0 auto; padding:20px 0 20px 0; }
+#theme-container #cont-foot #foot-center div				{ display:inline-block; vertical-align:top; }
+#theme-container #cont-foot #foot-center fieldset			{ background:#444 url(images/background-foot-win.png); padding:20px; height:190px; margin:5px 30px 0 30px; border:none; box-shadow:0 1px 5px rgba(0,0,0,0.8) }
+#theme-container #cont-foot #foot-center fieldset legend	{ background:#444 url(images/background-foot-win.png); padding:5px 15px 0 15px; color:#FFF; border-top-left-radius:5px; border-top-right-radius:5px; }
+#theme-container #cont-foot #foot-center #mapa li			{ padding:5px; text-align:left; }
+#theme-container #cont-foot #foot-center #pagamento li		{ display: inline-block; padding:5px; }
+#theme-container #cont-foot #foot-center #contato 			{ width:280px; text-align:center; }
+#theme-container #cont-foot #foot-center #contato li		{ padding-top:20px;}
+/* ======== Player ======== */
+#player														{ position:relative; width:auto; padding:10px; }
+#player #comments											{ position:relative; width:100%; height:200px; display:none; }
+/* ======== Acessorios ======== */
+#components													{ position:absolute; bottom:0px; right:42px; z-index:100; }
+#components #chat											{ position:relative; width:322px; height:403px; background:#FFF; box-shadow:0 0 10px rgba(0,0,0,0.8); }

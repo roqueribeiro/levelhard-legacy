@@ -1,0 +1,35 @@
+	
+	Instalação do Software APS2010 em um servidor PHP
+
+	Requisitos
+	{
+		Apache2
+		PHP5
+		MySQL5 ou Superior
+	}
+	
+	Processo de instalação
+	{
+		1 - Crie um banco de dados com o nome APS2010 no servidor MySQL;
+		2 - Importe o arquivo APS2010.sql para o servidor MySQL;
+		3 - Configure a conexão do software com o banco de dados no arquivo config/db_connect.php;
+		{
+			3.1 - $bd_server 		= "localhost"; 	-> Caminho do Servidor MySQL
+			3.2 - $bd_usuario 		= "root";		-> Usuario com acesso administrador para o MySQL
+			3.3 - $bd_senha 		= "123456";		-> Senha do Usuario
+			3.4 - $bd_name			= "APS2010";	-> Nome do Banco de Dados Usado
+		}
+		4 - Copie todo conteúdo da pasta APS2010 para o diretório raiz do seu servidor Apache;
+		5 - Confira a execução do software com o navegador Google Chrome ( Browser utilizado no desenvolvimento );
+	}
+	
+	Suporte
+	{
+		E-mail dos desenvolvedores
+		{
+			Roque Ribeiro da Silva 	-> roque.ribeiro@webrocky.com.br
+			Milton Murat Tagliani	-> tiito-@hotmail.com
+			Adriano Kiel			-> adrianokiel@bol.com.br
+		}
+		Visite o site http://www.webrocky.com.br
+	}

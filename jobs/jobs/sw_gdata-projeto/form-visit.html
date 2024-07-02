@@ -1,0 +1,38 @@
+﻿<form role="form">
+    <div class="form-group">
+        <label for="">Selecione o tipo de visita:</label>
+        <div id="owl-gdata-visit" class="owl-carousel">
+            <div class="item">
+                <a class="gdata-nav-link" href="javascript:void();" data-function="gdata-3dhouse" data-houseid="1">
+                    <img class="lazyOwl" data-src="images/house/static/house-small-red.png" data-action="house" data-desc="Realizar visita em Residência" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a class="gdata-nav-link" href="javascript:void();" data-function="gdata-3dhouse" data-houseid="2">
+                    <img class="lazyOwl" data-src="images/family/family-default.png" data-action="family" data-desc="Realizar visita a uma Família" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a class="gdata-nav-link" href="javascript:void();" data-function="gdata-3dhouse" data-houseid="3">
+                    <img class="lazyOwl" data-src="images/animal/dog_cat.png" data-action="pet" data-desc="Realizar visita a um Animal" alt="">
+                </a>
+            </div>
+        </div>
+        <p class="help-block text-center">Realizar visita em Residência</p>
+    </div>
+    <div class="form-group">
+        <input type="hidden" name="visit-action" value="house" />
+    </div>
+    <div class="form-group">
+        <label for="">Situação</label>
+        <select class="form-control">
+            <option>Selecione</option>
+            <option>Presente</option>
+            <option>Ausente</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="">Observações</label>
+        <textarea class="form-control" placeholder="Descreva algumas observações..."></textarea>
+    </div>
+</form>

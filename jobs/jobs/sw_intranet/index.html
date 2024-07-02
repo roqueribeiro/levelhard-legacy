@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <title>PLM-CATIA - Tools</title>
+    <link rel="icon" href="favicon.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
+    <script src="js/jquery-2.0.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.js" type="text/javascript"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="js/jquery.transform-0.9.3.min.js" type="text/javascript"></script>
+    <script src="js/jquery.animate-shadow-min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.overall').css('opacity', '0').show();
+            $('body').disableSelection();
+            $('#content, .logo-normal, .navigation').hide();
+            window.onload = function () {
+                $('#content').fadeIn(800);
+                $('.navigation').show('blind', {
+                    duration: 800,
+                    easing: 'easeOutBack',
+                    complete: function () {
+                        $('p', this).fadeIn(800);
+                        $('.logo-normal').fadeIn(800, function () {
+                            $('.overall').hide().css('opacity', '1');
+                        });
+                    }
+                });
+                $('.modal .modal-body').niceScroll({
+                    touchbehavior: true,
+                    cursorcolor: '#111',
+                    hwacceleration: true,
+                    cursoropacitymax: 0.6,
+                    cursorwidth: 8,
+                    cursorborder: 'none',
+                });
+                $('.navigation .item').hover(function () {
+                    $('p', this).stop(true, true).animate({ color: '#FFF' }, 300);
+                }, function () {
+                    $('p', this).stop(true, true).animate({ color: '#CCC' }, 300);
+                });
+                $('.modal .modal-body ul li').hover(function () {
+                    $(this).stop(true, true).animate({ backgroundColor: 'rgba(255,255,255,0.2)' }, 0);
+                }, function () {
+                    $(this).stop(true, true).animate({ backgroundColor: 'rgba(255,255,255,0)' }, 600);
+                });
+                $('.navigation .item').click(function () {
+                    $('.navigation').fadeOut(600);
+                    $('.overall').fadeIn(600);
+                    $('.logo-normal, .bg-normal').fadeOut(600);
+                    $('.logo-blur, .bg-blur').fadeIn(600);
+                    $('.modal-header p i').text($(this).attr('data-header'));
+                    $('.modal-body ul#' + $(this).attr('data-content')).show();
+                    $('.modal').show().animate({
+                        width: '800px',
+                        height: '560px',
+                        marginTop: '-280px',
+                        marginLeft: '-400px',
+                        backgroundColor: 'rgba(255,255,255,0.2)'
+                    }, {
+                        specialEasing: {
+                            height: 'easeOutBack',
+                            marginTop: 'easeOutBack',
+                        },
+                        duration: 1000,
+                        complete: function () {
+                            $('.modal-header, .modal-body, .modal-footer').fadeIn();
+                        }
+                    });
+                });
+                $('.btnclose').click(function () {
+                    $('.modal-header, .modal-body, .modal-body ul').hide();
+                    $('.modal').animate({
+                        width: '0px',
+                        height: '0px',
+                        marginTop: '0px',
+                        marginLeft: '0px',
+                        backgroundColor: 'rgba(0,0,0,1)'
+                    }, {
+                        specialEasing: {
+                            height: 'easeInBack',
+                            marginTop: 'easeInBack',
+                        },
+                        duration: 600,
+                        complete: function () {
+                            $(this).hide();
+                        }
+                    });
+                    $('.navigation').fadeIn(600);
+                    $('.overall').fadeOut(600);
+                    $('.logo-normal, .bg-normal').fadeIn(600);
+                    $('.logo-blur, .bg-blur').fadeOut(600);
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div class="logo-normal"></div>
+        <div class="logo-blur"></div>
+        <div class="bg-normal"></div>
+        <div class="bg-blur"></div>
+        <div class="overall"></div>
+        <div class="modal">
+            <div class="modal-header">
+                <p><b>PLM-Catia</b> - <i>Ferramentas</i></p>
+                <div class="btnclose"></div>
+            </div>
+            <div class="modal-body">
+                <ul id="ferramentas">
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\7-INDICADORES\FERRAMENTAS\Gerar%20txt%20para%20PLM.xlsm">
+                            <img src="img/icons/default/txt.png" alt="" />
+                            <p>Gerar TXT</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\3-CADASTRO%20CONECTORES%20COM%20ÂNGULO\Solicitação%20de%20cadastro%20de%20conectores%20com%20ângulo.xlsm">
+                            <img src="img/icons/default/network.png" alt="" />
+                            <p>S.C. Conectores com ângulo</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\7-INDICADORES\REPORTE%20DE%20COMPONENTES">
+                            <img src="img/icons/default/folder data.png" alt="" />
+                            <p>S.U.C.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\5-CASO%20DE%20USO\CASOS%20DE%20USO%20-%20GERAL.xlsx">
+                            <img src="img/icons/default/folder documents 2.png" alt="" />
+                            <p>PLM-Catia - Casos de Uso</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="manuais">
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\1-DOCUMENTOS%20E%20PROCESSOS\3-MANUAIS\2-USUÁRIOS">
+                            <img src="img/icons/default/library documents.png" alt="" />
+                            <p>PLM-Catia - Usuários</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="relatorios">
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\7-INDICADORES\INDICADOR%20-%20AVANÇO%20DE%20IMPLEMENTAÇÃO%20PLM%20CATIA%20-%20PENDÊNCIAS.xlsx">
+                            <img src="img/icons/default/auslogics.png" alt="" />
+                            <p>Cronograma Geral</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\7-INDICADORES\FORD-T\CRONOGRAMA-FORD-T.xlsm">
+                            <img src="img/icons/default/folder contacts.png" alt="" />
+                            <p>Cron - Ford Trucks</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\7-INDICADORES\FORD-C\CRONOGRAMA_FORD-C.xlsx">
+                            <img src="img/icons/default/folder contacts.png" alt="" />
+                            <p>Cron - Ford Cars</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\7-INDICADORES\APRESENTAÇÃO%20INDICADORES\CRONOGRAMA-GMB.lnk">
+                            <img src="img/icons/default/folder contacts.png" alt="" />
+                            <p>Cron - General Motors</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\7-INDICADORES\APRESENTAÇÃO%20INDICADORES">
+                            <img src="img/icons/default/control panel.png" alt="" />
+                            <p>Indicadores Geral</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\7-INDICADORES\APRESENTAÇÃO%20INDICADORES\FORD-T-STF%2072.lnk">
+                            <img src="img/icons/default/folder contacts.png" alt="" />
+                            <p>Ind - Ford Trucks</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\7-INDICADORES\APRESENTAÇÃO%20INDICADORES\FORD-C-STF%2072.lnk">
+                            <img src="img/icons/default/folder contacts.png" alt="" />
+                            <p>Ind - Ford Cars</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///\\YMTATBRFILES2\dados\ENGENHARIA\Desenhos\1%20-%20PLM%20Catia\2-DADOS\7-INDICADORES\APRESENTAÇÃO%20INDICADORES\GM-STF%2072.lnk">
+                            <img src="img/icons/default/folder contacts.png" alt="" />
+                            <p>Ind - General Motors</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="item" data-header="Ferramentas" data-content="ferramentas">
+                <a class="icon" style="background: url('img/icons/white/tools48.png') center no-repeat" href="#"></a>
+                <p>Ferramentas</p>
+            </div>
+            <div class="item" data-header="Manuais" data-content="manuais">
+                <a class="icon" style="background: url('img/icons/white/tutorial48.png') center no-repeat" href="#"></a>
+                <p>Manuais</p>
+            </div>
+            <div class="item" data-header="Relatórios" data-content="relatorios">
+                <a class="icon" style="background: url('img/icons/white/charts48.png') center no-repeat" href="#"></a>
+                <p>Relatórios</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge, chrome=1" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta name="description" content="Desenvolvimento protótipo de aplicação mobile">
+    <meta name="author" content="Roque Ribeiro da Silva">
+    <title></title>
+    <link rel="stylesheet" href="css/sw-preloader.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-paper.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/sw-structure.css" />
+    <link rel="stylesheet" href="css/sw-starrate.css" />
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="js/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="js/jquery.waitforimages.min.js"></script>
+    <script type="text/javascript" src="js/sw-default.js"></script>
+    <script type="text/javascript" src="js/sw-notification.js"></script>
+</head>
+<body>
+    <div class="sw-notification notify-wrapper"></div>
+    <login>
+        <header>
+            <a href="console.html"><img src="img/theme/logo.png" alt=""></a>
+        </header>
+        <div id="login">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form name="form-login" action="" method="post">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Usuário">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-lock"></i>
+                                    </span>
+                                    <input type="password" class="form-control" placeholder="Senha">
+                                </div>
+                                <button type="submit" class="btn btn-success">Entrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <button>
+                Esqueceu a senha?
+            </button>
+            <button>
+                Novo usuário?
+            </button>
+        </footer>
+    </login>
+    <content>
+        <div class="sw-theme-overlay"></div>
+        <header class="sw-theme-header">
+            <span>
+                <a href="javascript:void();" id="active-menu" class="btn btn-link btn-lg">
+                    <i class="fa fa-bars"></i>
+                    <img src="img/theme/logo.png" alt="" style="position: relative; height: 28px; margin-top: -3px;">
+                </a>
+            </span>
+            <nav>
+                <a href="#active-scan" class="btn btn-link btn-lg">
+                    <i class="fa fa-qrcode"></i>
+                </a>
+                <a href="javascript:void();" class="btn btn-link btn-lg" data-toggle="modal" data-target="#active-cart">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+            </nav>
+        </header>
+        <nav class="sw-theme-nav">
+            <div class="sw-theme-user">
+                <img src="img/theme/usuario.jpg" alt="" class="sw-theme-user-logo">
+                <div class="sw-theme-user-bg"></div>
+                <div class="sw-theme-user-info">
+                    <h5>Roque Ribeiro <br /><small>Tatuí, São Paulo</small></h5>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#estab-lista">
+                        <i class="fa fa-star"></i>Estabelecimentos<b class="fa fa-caret-right"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#opcao-ofertas">
+                        <i class="fa fa-star"></i>Ofertas<b class="fa fa-caret-right"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#opcao-pedidos">
+                        <i class="fa fa-inbox"></i>Meus Pedidos<b class="fa fa-caret-right"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#opcao-enderecos">
+                        <i class="fa fa-street-view"></i>Meus Endereços<b class="fa fa-caret-right"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#opcao-perfil">
+                        <i class="fa fa-user"></i>Meu Perfil<b class="fa fa-caret-right"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#opcao-config">
+                        <i class="fa fa-wrench"></i>Configurações<b class="fa fa-caret-right"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#opcao-sair">
+                        <i class="fa fa-power-off"></i>Sair<b class="fa fa-caret-right"></b>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main class="sw-theme-main">
+            <div class="preloader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="sw-theme-content"></div>
+        </main>
+        <footer class="sw-theme-footer"></footer>
+    </content>
+    <div class="modal fade" id="active-cart" tabindex="-1" role="dialog" aria-labelledby="cart-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" id="cart-label">
+                        <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;Carrinho
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <i class="fa fa-caret-right"></i> Pizzaria Exemplo
+                            </h4>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>Quantidade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">
+                                                    Pizza de Calabresa
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">
+                                                    Pizza de Quatro Queijos
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <i class="fa fa-caret-right"></i> Lanchonete Exemplo
+                            </h4>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>Quantidade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">
+                                                    Fiapão Bacon
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">
+                                                    Cachorro Especial
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

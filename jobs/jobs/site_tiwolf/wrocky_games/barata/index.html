@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+			
+	var optConsole 	= false;
+	var Moviment	= 0;
+	var MoveVel 	= 10;
+	var MoveEff 	= 60;
+	var MoveAutoEff	= 500;
+	var nTop		= 0;
+		
+	$('body').keyup(function(e){
+		
+		var xSize 	= $("div#objeto").css('width');
+		var ySize 	= $("div#objeto").css('height');
+		
+		var ObjTop 	= $("div#objeto").css('top');
+		var ObjLeft = $("div#objeto").css('left');
+		
+		if(e.which == 49){ MoveAutoEff = 3000; } 	//Velocidade Level 1
+		if(e.which == 50){ MoveAutoEff = 2000; } 	//Velocidade Level 2
+		if(e.which == 51){ MoveAutoEff = 1000; } 	//Velocidade Level 3
+		if(e.which == 52){ MoveAutoEff = 800; } 	//Velocidade Level 4
+		if(e.which == 53){ MoveAutoEff = 500; } 	//Velocidade Level 5
+		if(e.which == 54){ MoveAutoEff = 300; } 	//Velocidade Level 6
+		if(e.which == 55){ MoveAutoEff = 100; } 	//Velocidade Level 7
+		if(e.which == 48){ $.fx.off = !$.fx.off; } 	//Disabilita Fx
+										
+		//============================Controles
+		if(e.which == 38 || e.which == 87)
+		{//Cima
+			if(ObjTop == '0%')
+			{
+				return false;
+			}
+			else
+			{
+				$("div#objeto").animate({'top':'-='+MoveVel+'%'},MoveEff);
+			}
+		}
+		else if(e.which == 40 || e.which == 83)
+		{//Baixo
+			if(ObjTop == '80%')
+			{
+				$('#msg').fadeIn(MoveAutoEff);
+			}
+			
+			if(ObjTop == '90%')
+			{
+				return false;
+			}
+			else
+			{
+				$("div#objeto").animate({'top':'+='+MoveVel+'%'},MoveEff);
+			}
+		}
+		else if(e.which == 37 || e.which == 65)
+		{//Esquerda
+			if(ObjLeft == '0%')
+			{
+				return false;
+			}
+			else
+			{
+				$("div#objeto").animate({'left':'-='+MoveVel+'%'},MoveEff);
+			}
+		}
+		else if(e.which == 39 || e.which == 68)
+		{//Direita
+			if(ObjLeft == '90%')
+			{
+				return false;
+			}
+			else
+			{
+				$("div#objeto").animate({'left':'+='+MoveVel+'%'},MoveEff);
+			}
+		}
+		else if(e.which == 107)
+		{//Maior
+			$("div#objeto").animate({'width':'+=100','height':'+=100'},0);
+			$("div#objetoAuto").animate({'width':'+=100','height':'+=100'},0);
+		}
+		else if(e.which == 109)
+		{//Menor
+			$("div#objeto").animate({'width':'-=100','height':'-=100'},0);
+			$("div#objetoAuto").animate({'width':'-=100','height':'-=100'},0);
+		}
+		else if(e.which == 192)
+		{//Console
+				
+			if(optConsole == false)
+			{		
+				$("div#console").fadeIn(100);
+				optConsole = true;
+			}
+			else
+			{
+				$("div#console").fadeOut(100);
+				optConsole = false;
+			}
+		}	
+		else if(e.which == 82)
+		{//Reiniciar Jogo
+			$('#msg').fadeOut(1000);
+			$("div#objeto").animate({'top':'0%','left':'40%'},{
+				'duration':MoveAutoEff,
+				'step':function(){
+					$('#objeto img').css({
+						'width':'150%',
+						'height':'150%',
+						'margin-top':'-20%',
+						'margin-left':'-20%'
+					}).attr('src','images/error.png').fadeOut();
+				},
+				'complete':function(){
+					$('#objeto img').css({
+						'width':'120%',
+						'height':'80%',
+						'margin-top':'10%',
+						'margin-left':'-10%',
+					}).attr('src','images/barata.gif').fadeIn();
+				}
+			});
+			length = $('div#objetoAuto').length;
+			nTop = nTop - (length*10);
+			$('div#objetoAuto').remove();
+		}	
+		
+		//============================Animação
+		if(e.which == 32)
+		{//ObjetoAutomatico
+			
+			nTop = nTop+10;
+			
+			if(nTop <= 80)
+			{
+				html = '<div id="objetoAuto" style="top:'+nTop+'%"><img src="images/vassoura.png" /></div>';
+				$('body').append(html);
+			}
+			else
+			{
+				return false;
+			}
+		
+			function runIt() 
+			{
+				$("div#objetoAuto").animate({'left':'90%','padding-right':'1000px'},{
+					'duration':MoveAutoEff-300,
+					'step':function(){
+						yPosAuto 	= $(this).css('top');
+						xPosAuto 	= $(this).css('left');
+						ObjTop 		= $("div#objeto").css('top');
+						ObjLeft 	= $("div#objeto").css('left');
+						
+						n_yPosAuto 	= yPosAuto.substring(0,(yPosAuto.length - 1));
+						n_xPosAuto 	= xPosAuto.substring(0,(xPosAuto.length - 1));
+						n_ObjTop 	= ObjTop.substring(0,(ObjTop.length - 1));
+						n_ObjLeft 	= ObjLeft.substring(0,(ObjLeft.length - 1));
+																				
+						if(optConsole)
+						{																		
+							$(this).html('Top: '+yPosAuto+' Left: '+xPosAuto+' ObjTop: '+ObjTop+' ObjLeft '+ObjLeft);
+							$("div#objeto").html(n_ObjLeft+' < '+n_xPosAuto+' || '+((n_ObjLeft*1)+10)+' > '+((n_xPosAuto*1)+10));
+						}
+						
+						if(n_yPosAuto == n_ObjTop)
+						{
+							if(n_ObjLeft < n_xPosAuto || ((n_ObjLeft*1)+200) < ((n_xPosAuto*1)+200))
+							{
+							}
+							else
+							{
+								$("div#objeto").animate({'top':'0%','left':'40%'},{
+									'duration':MoveAutoEff,
+									'step':function(){
+										$('#objeto img').css({
+											'width':'150%',
+											'height':'150%',
+											'margin-top':'-20%',
+											'margin-left':'-20%'
+										}).attr('src','images/error.png').fadeOut();
+									},
+									'complete':function(){
+										$('#objeto img').css({
+											'width':'120%',
+											'height':'80%',
+											'margin-top':'10%',
+											'margin-left':'-10%',
+										}).attr('src','images/barata.gif').fadeIn();
+									}
+								});
+							}
+						}
+						else
+						{
+						}
+					},
+					'complete':function(){
+						$(this).animate({'left':'-10%'},{
+							'duration':MoveAutoEff,
+							'step':function(){ 
+								yPosAuto 	= $(this).css('top');
+								xPosAuto 	= $(this).css('left');
+								ObjTop 		= $("div#objeto").css('top');
+								ObjLeft 	= $("div#objeto").css('left');
+																
+								n_yPosAuto 	= yPosAuto.substring(0,(yPosAuto.length - 1));
+								n_xPosAuto 	= xPosAuto.substring(0,(xPosAuto.length - 1));
+								n_ObjTop 	= ObjTop.substring(0,(ObjTop.length - 1));
+								n_ObjLeft 	= ObjLeft.substring(0,(ObjLeft.length - 1));
+								
+								if(optConsole)
+								{																		
+									$(this).html('Top: '+yPosAuto+' Left: '+xPosAuto+' ObjTop: '+ObjTop+' ObjLeft '+ObjLeft);
+									$("div#objeto").html(n_ObjLeft+' < '+n_xPosAuto+' || '+((n_ObjLeft*1)+10)+' > '+((n_xPosAuto*1)+10));
+								}
+						
+								if(n_yPosAuto == n_ObjTop)
+								{
+									if(n_ObjLeft < n_xPosAuto || ((n_ObjLeft*1)+200) < ((n_xPosAuto*1)+200))
+									{
+									}
+									else
+									{
+										$("div#objeto").animate({'top':'0%','left':'40%'},{
+											'duration':MoveAutoEff,
+											'step':function(){
+												$('#objeto img').css({
+													'width':'150%',
+													'height':'150%',
+													'margin-top':'-20%',
+													'margin-left':'-20%'
+												}).attr('src','images/error.png').fadeOut();
+											},
+											'complete':function(){
+												$('#objeto img').css({
+													'width':'120%',
+													'height':'80%',
+													'margin-top':'10%',
+													'margin-left':'-10%',
+												}).attr('src','images/barata.gif').fadeIn();
+											}
+										});
+									}
+								}
+								else
+								{
+								}
+								
+								
+							},
+							'complete':function(){
+								runIt();
+							}
+						});
+					}
+				});
+			}
+			runIt();
+			
+		}
+				
+		$("div#console").html(e.type+'='+e.which+' - '+ObjTop+ObjLeft+' - '+xSize+ySize+nTop);
+						
+	});
+					
+});
+</script>
+
+<style type="text/css">
+body
+{
+	font-family:verdana;
+	font-size:10px;
+	color:#F00;
+	margin:0px;
+	overflow:hidden;
+	background:url(images/piso.jpg) repeat;
+}
+#background
+{
+	position:absolute;
+	width:10%;
+	height:10%;
+	background:rgba(0,0,0,0.1);
+	-webkit-box-shadow:inset 0 0 10px rgba(255,255,255,0.8),0 0 4px rgba(0,0,0,0.5);
+	z-index:1;
+}
+#objeto
+{
+	position:absolute;
+	width:10%;
+	height:10%;
+	top:0%;
+	left:40%;
+	z-index:2;
+	-webkit-transform:rotate(300deg);
+}
+#objeto img
+{
+	margin-top:10%;
+	margin-left:-10%;
+	width:120%;
+	height:80%;
+}
+#objetoAuto
+{
+	position:absolute;
+	width:10%;
+	height:10%;
+	top:0%;
+	left:0%;
+	background-size:5%;
+	-webkit-border-radius:10px;
+	z-index:3;
+}
+#objetoAuto img
+{
+	margin-top:-25%;
+	margin-left:20%;
+	width:750%;
+	height:150%;
+}
+
+#msg
+{
+	display:none;
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	padding:10px;
+	width:35%;
+	height:25%;
+	background:rgba(255,255,255,0.8);
+	border:5px solid rgba(255,255,255,0.9);
+	-webkit-box-shadow:inset 0 0 100px rgba(0,0,0,0.2),0 0 200px rgba(0,0,0,0.5);
+	-webkit-border-radius:5px;
+	
+	color:#000;
+	
+	font-size:12px;
+	text-align:center;
+	text-shadow:0 1px 1px #FFF;
+	
+	z-index:10;
+}
+
+#console
+{
+	position:absolute;
+	width:100%;
+	top:0px;
+	left:0px;
+	height:auto;
+	background:rgba(0,0,0,0.05);
+	display:none;
+	z-index:4;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="msg"><h1>Parabéns</h1><h3>Você Venceu!</h3><br /><p><b>Acesse WebRoCkY</b></p></div>
+
+<div id="console"></div>
+
+<div id="objeto"><img src="images/barata.gif" /></div>
+
+</body>
+</html>

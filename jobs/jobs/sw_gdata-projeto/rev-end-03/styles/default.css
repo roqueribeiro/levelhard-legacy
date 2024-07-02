@@ -1,0 +1,532 @@
+﻿/*@import url(http://fonts.googleapis.com/css?family=Cabin:400,700);*/
+
+/* ==== Styles Default ==== */
+html,
+body {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-family: sans-serif;
+    font-size: 14px;
+    overflow: hidden !important;
+}
+
+.table-responsive {
+    border: none;
+    margin-bottom: 0px;
+}
+
+#wrap {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+}
+
+#footer {
+    height: 60px;
+    background-color: #E4E4E4;
+}
+
+#wrap > .navbar {
+    z-index: 99999;
+    border: none;
+    box-shadow: none;
+}
+
+#wrap > .container {
+    width: 100%;
+    padding: 0 0 85px 0;
+    margin: -20px 0 -60px 0;
+    z-index: 100;
+}
+
+#footer > .container {
+    padding: 10px;
+}
+
+.container .text-left {
+    margin: 0px 0;
+    text-shadow: 0 1px #FFF;
+    color: #888;
+}
+
+#footer > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+    #footer > .container img {
+        width: 175px;
+        margin-top: 0px;
+    }
+
+.modal .table {
+    margin-bottom: -15px;
+}
+
+    .modal .table td {
+        vertical-align: middle;
+    }
+
+.gdata-login-logo, .gdata-brand-logo {
+    display: block;
+}
+
+/* ==== Styles Tela de Login ==== */
+.gdata-login {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #E4E4E4;
+    background: radial-gradient(#E4E4E4,#DDD);
+    font-family: Arial;
+    font-size: 12px;
+    z-index: 1;
+}
+
+    .gdata-login input {
+        border: none;
+        font-size: 14px;
+        line-height: 1.5em;
+        padding: 0;
+        outline: none;
+    }
+
+    .gdata-login .gdata-login-logo {
+        position: absolute;
+        width: 260px;
+        height: 60px;
+        top: 50%;
+        left: 50%;
+        margin: -170px 0 0 -130px;
+        background: url(../images/logo.png) center no-repeat;
+        background-size: 40%;
+    }
+
+    .gdata-login .gdata-login-container {
+        position: absolute;
+        width: 260px;
+        top: 50%;
+        left: 50%;
+        margin: -100px 0 0 -130px;
+        text-align: left;
+    }
+
+        .gdata-login .gdata-login-container span {
+            background-color: #EEE;
+            border-radius: 3px 0px 0px 3px;
+            color: #FFF;
+            display: block;
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            text-shadow: 0 -1px #CCC;
+            width: 50px;
+        }
+
+        .gdata-login .gdata-login-container form input {
+            height: 50px;
+        }
+
+            .gdata-login .gdata-login-container form input[type="text"], input[type="password"] {
+                background-color: #FFF;
+                border-radius: 0px 3px 3px 0px;
+                color: #606468;
+                margin-bottom: 1em;
+                padding: 0 16px;
+                width: 210px;
+            }
+
+            .gdata-login .gdata-login-container form input[type="submit"] {
+                border-radius: 3px;
+                background-color: #99CC33;
+                color: #eee;
+                font-weight: bold;
+                margin-bottom: 2em;
+                text-transform: uppercase;
+                width: 260px;
+                text-shadow: 0 -1px #80A92C;
+                box-shadow: 0 2px #80A92C;
+            }
+
+                .gdata-login .gdata-login-container form input[type="submit"]:hover {
+                    background-color: #a3d047;
+                }
+
+    .gdata-login .gdata-login-footer {
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        bottom: 0px;
+        background: #EEE;
+        line-height: 50px;
+        padding: 0 20px;
+    }
+
+/* ==== Styles Tela de Base ==== */
+.gdata-home {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #FFF;
+    display: none;
+    overflow-y: scroll;
+    z-index: 2;
+}
+
+#wrap > .gdata-content {
+    position: relative;
+}
+
+.gdata-home .navbar-brand {
+    width: 100px;
+}
+
+.gdata-home .gdata-brand-logo {
+    position: absolute;
+    height: 28px;
+    top: 10px;
+}
+
+.gdata-home .jumbotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    background: url(../images/bg-title.png) #99CC33 right bottom no-repeat;
+    color: #FFF;
+    text-shadow: 0 2px #87B42D;
+    border-radius: 0px;
+}
+
+    .gdata-home .jumbotron small {
+        color: #FFF;
+        font-size: 12px;
+    }
+
+/* ==== Styles Tela de Informacoes ==== */
+.gdata-home .gdata-info {
+    display: none;
+    z-index: 1;
+}
+
+    .gdata-home .gdata-info .gdata-medal {
+        position: relative;
+        background: #99CC33 url(../images/bg-title.png) right bottom no-repeat;
+        color: #FFF;
+        padding: 15px 15px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+        .gdata-home .gdata-info .gdata-medal div {
+            display: inline-block;
+            margin: -1px;
+            vertical-align: middle;
+        }
+
+        .gdata-home .gdata-info .gdata-medal .gdata-medal-header {
+            position: relative;
+            width: 120px;
+            text-align: left;
+        }
+
+            .gdata-home .gdata-info .gdata-medal .gdata-medal-header p {
+                margin: 0px;
+                padding: 0px;
+                font-size: 22px;
+                font-weight: 700;
+                text-shadow: 0 2px #87B42D;
+            }
+
+        .gdata-home .gdata-info .gdata-medal .gdata-medal-list img {
+            padding: 0 10px;
+            height: 64px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .gdata-home .gdata-info .gdata-medal .gdata-medal-list {
+            position: relative;
+            width: auto;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+
+            .gdata-home .gdata-info .gdata-medal .gdata-medal-list .gdata-medal-disabled {
+                transition: 600ms ease;
+                -webkit-filter: grayscale(100%);
+                opacity: 0.3;
+            }
+
+                .gdata-home .gdata-info .gdata-medal .gdata-medal-list .gdata-medal-disabled:hover {
+                    -webkit-filter: grayscale(0%);
+                    opacity: 1;
+                }
+
+    .gdata-home .gdata-info .gdata-progress {
+        height: 10px;
+    }
+
+    .gdata-home .gdata-info .gdata-rating {
+        position: relative;
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        text-align: left;
+        font-size: 32px;
+        font-weight: bold;
+        margin: -6px 0 0 0;
+        padding: 0px;
+        text-shadow: 0 1px #AAA;
+    }
+
+        .gdata-home .gdata-info .gdata-rating > span {
+            display: inline-block;
+            position: relative;
+            width: 32px;
+            height: 32px;
+            color: transparent;
+            cursor: pointer;
+        }
+
+            .gdata-home .gdata-info .gdata-rating > span:before {
+                content: "\2605";
+                position: absolute;
+                left: 0;
+                color: #CCC;
+                transition: 300ms ease;
+            }
+
+            .gdata-home .gdata-info .gdata-rating > span:hover:before,
+            .gdata-home .gdata-info .gdata-rating > span:hover ~ span:before {
+                content: "\2605";
+                position: absolute;
+                left: 0;
+                color: gold;
+            }
+
+    .gdata-home .gdata-info .gdata-rating-active ~ span:before {
+        content: "\2605";
+        position: absolute;
+        left: 0;
+        color: gold;
+    }
+
+/* ==== Styles Tela de Agendamento ==== */
+.gdata-home .gdata-calendar {
+    display: none;
+    z-index: 1;
+}
+
+    .gdata-home .gdata-calendar .panel {
+        margin-top: 15px;
+    }
+
+        .gdata-home .gdata-calendar .panel:last-child {
+            margin-bottom: 15px;
+        }
+
+        .gdata-home .gdata-calendar .panel .table {
+            margin-bottom: 0px;
+        }
+
+/* ==== Styles Tela de Visitas ==== */
+.gdata-home .gdata-visited {
+    display: block;
+    z-index: 1;
+}
+
+#owl-gdata-visit {
+    display: none;
+    width: 100%;
+    height: auto;
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+
+    #owl-gdata-visit img {
+        height: 180px;
+    }
+
+/* ==== Styles Tela de Residencias ==== */
+.gdata-home .gdata-house {
+    display: none;
+    z-index: 1;
+}
+
+    .gdata-home .gdata-house .tab-content {
+        padding: 20px 20px 0 20px;
+    }
+
+        .gdata-home .gdata-house .tab-content #owl-gdata-house .item {
+            display: block;
+            width: 100%;
+            height: auto;
+            padding: 30px 0 20px 0;
+            text-align: center;
+        }
+
+            .gdata-home .gdata-house .tab-content #owl-gdata-house .item img {
+                height: 200px;
+            }
+
+/* ==== Styles Tela de Famílias ==== */
+.gdata-home .gdata-family {
+    display: none;
+    z-index: 1;
+}
+
+    .gdata-home .gdata-family .tab-content {
+        padding: 20px 20px 0 20px;
+    }
+
+        .gdata-home .gdata-family .tab-content #owl-gdata-family .item {
+            display: block;
+            width: 100%;
+            height: auto;
+            padding: 30px 0 20px 0;
+            text-align: center;
+        }
+
+            .gdata-home .gdata-family .tab-content #owl-gdata-family .item img {
+                height: 200px;
+            }
+
+/* ==== Styles Tela de Sobre o Sistema ==== */
+.gdata-about {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: radial-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+    display: none;
+    cursor: pointer;
+    z-index: 800;
+}
+
+    .gdata-about .gdata-about-content {
+        position: absolute;
+        width: 500px;
+        height: 300px;
+        top: 50%;
+        left: 50%;
+        margin: -150px 0 0 -250px;
+        background: #FFF;
+        box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    }
+
+        .gdata-about .gdata-about-content:before, .gdata-about .gdata-about-content:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #F5F5F5;
+            box-shadow: 0 0 3px rgba(0,0,0,0.2);
+            z-index: -1;
+        }
+
+        .gdata-about .gdata-about-content:before {
+            transform: rotate(2deg);
+        }
+
+        .gdata-about .gdata-about-content:after {
+            transform: rotate(-2deg);
+        }
+
+        .gdata-about .gdata-about-content .gdata-about-header {
+            position: absolute;
+            top: 0px;
+            left: 20px;
+            right: 20px;
+            bottom: 250px;
+            line-height: 50px;
+            text-indent: 0px;
+            font-size: 16px;
+            color: #888;
+            box-shadow: 0 1px #EEE;
+        }
+
+            .gdata-about .gdata-about-content .gdata-about-header img {
+                float: right;
+                height: 25px;
+                margin-top: 10px;
+            }
+
+        .gdata-about .gdata-about-content .gdata-about-main {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            right: 100px;
+            bottom: 50px;
+            line-height: 20px;
+            text-indent: 0px;
+            text-align: center;
+            font-size: 16px;
+            color: #888;
+            box-shadow: 0 1px #EEE;
+        }
+
+            .gdata-about .gdata-about-content .gdata-about-main img {
+                margin-top: 30px;
+            }
+
+            .gdata-about .gdata-about-content .gdata-about-main p {
+                font-size: 12px;
+            }
+
+        .gdata-about .gdata-about-content .gdata-about-footer {
+            position: absolute;
+            top: 250px;
+            left: 20px;
+            right: 20px;
+            bottom: 0px;
+            line-height: 50px;
+            text-indent: 0px;
+            font-size: 12px;
+            color: #444;
+        }
+
+/* ==== Styles Redimencionamento de Tela ==== */
+@media (max-width: 767px) {
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .gdata-home .gdata-info .gdata-medal div:first-child {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    .gdata-home .gdata-info .gdata-medal div:last-child {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gdata-home .gdata-house .tab-content #owl-gdata-house .item img {
+        height: 160px;
+    }
+
+    .gdata-about .gdata-about-content {
+        width: 100%;
+        margin-left: 0px;
+        left: 0%;
+    }
+
+        .gdata-about .gdata-about-content .gdata-about-main {
+            left: 40px;
+            right: 40px;
+        }
+}

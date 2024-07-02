@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/select2.min.css" />
+    <link rel="stylesheet" href="styles/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="styles/bootstrap-datepicker3.standalone.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="scripts/prefixfree.min.js"></script>
+    <script type="text/javascript" src="scripts/select2.full.min.js"></script>
+    <script type="text/javascript" src="scripts/i18n/pt-BR.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-datepicker.pt-BR.js"></script>
+    <script type="text/javascript" src="scripts/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="scripts/jnotify.js"></script>
+    <script type="text/javascript" src="scripts/init-default.js"></script>
+    <script type="text/javascript">
+        //BlockIE
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+        if (msie > 0) {
+            window.onload = function () {
+                document.body.innerHTML = "";
+                alert("O navegador que está utilizando não possuí tecnologia suficiente para mostrar o conteúdo desta pagina.");
+                window.location.href = "http://browser.levelhard.com/?a[]=1&a[]=2&a[]=4";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="notification notify-wrapper notify-wrapper-prepend"></div>
+
+    <div class="formulario">
+        <img class="img-cofee" src="images/coffee.png" alt="" />
+        <img class="img-pencil" src="images/pencil.png" alt="" />
+        <img class="img-clips" src="images/clips.png" alt=""/>
+        <img class="img-eraser" src="images/eraser.png" alt="" />
+        <form name="cadastro" action="" method="POST">
+            <div class="titulo">Formulário de Cadastro</div>
+            <ul>
+                <li>Nome Completo</li>
+                <li><input type="text" name="cadastro_nome" placeholder="Nome e Sobrenome" /></li>
+            </ul>
+            <ul>
+                <li>Sexo</li>
+                <li>
+                    <select name="cadastro_genero">
+                        <option>Selecione</option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+                </li>
+            </ul>
+            <ul>
+                <li>Est. Civil</li>
+                <li>
+                    <select name="cadastro_estado_civil">
+                        <option>Selecione</option>
+                        <option>Casado(a)</option>
+                        <option>Divorciado(a)</option>
+                        <option>Viúvo(a)</option>
+                        <option>Separado(a)</option>
+                        <option>Companheiro(a)</option>
+                    </select>
+                </li>
+            </ul>
+            <ul>
+                <li>Data Nascimento</li>
+                <li><input type="text" name="cadastro_nascimento" placeholder="01/01/1980" /></li>
+            </ul>
+            <ul>
+                <li>CPF</li>
+                <li><input type="text" name="cadastro_cpf" placeholder="999.999.999-99" /></li>
+            </ul>
+            <ul>
+                <li>RG</li>
+                <li><input type="text" name="cadastro_rg" placeholder="99.999.999-9" /></li>
+            </ul>
+            <ul>
+                <li>Tel. Residencial</li>
+                <li><input type="text" name="cadastro_telefone" placeholder="(99) 9999-9999" /></li>
+            </ul>
+            <ul>
+                <li>Celular</li>
+                <li><input type="text" name="cadastro_celular" placeholder="(99) 99999-9999" /></li>
+            </ul>
+            <ul>
+                <li>Email</li>
+                <li><input type="text" name="cadastro_email" placeholder="email@host.com.br" /></li>
+            </ul>
+            <ul>
+                <li>Profissão</li>
+                <li><input type="text" name="cadastro_profissao" placeholder="Estudante, Programador, Analista, DBA etc." /></li>
+            </ul>
+            <ul>
+                <li>Empresa</li>
+                <li><input type="text" name="cadastro_empresa" placeholder="Empresa na qual trabalha atualmente." /></li>
+            </ul>
+            <ul>
+                <li>Curso</li>
+                <li>
+                    <select name="cadastro_curso">
+                        <option>Selecione</option>
+                        <option>Gestão de TI</option>
+                        <option>Automação Industrial</option>
+                        <option>Manutenção Industrial</option>
+                        <option>Gestão Empresarial</option>
+                    </select>
+                </li>
+            </ul>
+            <ul>
+                <li>CEP</li>
+                <li><input type="text" name="cadastro_cep" placeholder="99999-999" /></li>
+            </ul>
+            <ul>
+                <li>Rua</li>
+                <li><input type="text" name="cadastro_rua" /></li>
+            </ul>
+            <ul>
+                <li>Nº da Casa</li>
+                <li><input type="text" name="cadastro_numero" /></li>
+            </ul>
+            <ul>
+                <li>Complemento</li>
+                <li><input type="text" name="cadastro_complemento" placeholder="Apartamento 999" /></li>
+            </ul>
+            <ul>
+                <li>Bairro</li>
+                <li><input type="text" name="cadastro_bairro" /></li>
+            </ul>
+            <ul>
+                <li>Cidade</li>
+                <li><input type="text" name="cadastro_cidade" /></li>
+            </ul>
+            <ul>
+                <li>Estado</li>
+                <li>
+                    <select name="cadastro_estado">
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AM">AM</option>
+                        <option value="AP">AP</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MG">MG</option>
+                        <option value="MS">MS</option>
+                        <option value="MT">MT</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="PR">PR</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="RS">RS</option>
+                        <option value="SC">SC</option>
+                        <option value="SE">SE</option>
+                        <option value="SP" selected="selected">SP</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </li>
+            </ul>
+            <ul>
+                <li>Hobbies</li>
+                <li><input type="text" name="cadastro_hobbies" placeholder="Música, Filmes, Séries etc." /></li>
+            </ul>
+            <ul>
+                <li>Em TI, qual suas áreas de preferência?</li>
+                <li><textarea name="cadastro_areas" placeholder="Desenvolvimento de sistemas, Gerência de Projetos, Gestão de TI etc."></textarea></li>
+            </ul>
+            <ul>
+                <li>Possuí experiência com programação? quais linguagens?</li>
+                <li><textarea name="cadastro_experiencia" placeholder="Sim, C#, PHP, NodeJS etc."></textarea></li>
+            </ul>
+            <ul>
+                <li>O que você mais valoriza ao comprar algo?</li>
+                <li><textarea name="cadastro_comprar"></textarea></li>
+            </ul>
+            <ul>
+                <li>Qual é o seu maior sonho?</li>
+                <li><textarea name="cadastro_sonho"></textarea></li>
+            </ul>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <footer>
+        Desenvolvido por LevelHard WebSolutions 2015
+    </footer>
+
+</body>
+</html>

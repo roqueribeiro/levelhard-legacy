@@ -1,0 +1,332 @@
+@import '../fonts/hand-drawn/flaticon.css';
+@import '../fonts/hand-drawn-arrows/flaticon.css';
+
+@font-face {
+    font-family: EraserDust;
+    src: url(../fonts/EraserDust.ttf);
+}
+
+@font-face {
+    font-family: EraserRegular;
+    src: url(../fonts/EraserRegular.ttf);
+}
+
+* {
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    font-family: EraserRegular;
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/wall_brick_texture_2.jpg);
+    background-color: #000;
+    background-attachment: fixed;
+    background-size: 450px;
+    background-repeat: repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(transparent 60%, rgba(0,0,0,0.8));
+        z-index: 1;
+    }
+
+    body > preloader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+    }
+
+        body > preloader p {
+            position: absolute;
+            width: 400px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            margin: -50px 0 0 -200px;
+            opacity: 0.8;
+            text-align: center;
+            text-shadow: 0 5px 10px rgba(0,0,0,1);
+            line-height: 100px;
+            font-size: 30px;
+        }
+
+    body > main {
+        position: relative;
+        min-height: calc(100% - 50px);
+        z-index: 2;
+    }
+
+        body > main > header {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        body > main > content {
+            position: absolute;
+            top: 70px;
+            left: 70px;
+            right: 70px;
+            bottom: 20px;
+            background-image: url(../images/blackboard_texture.jpg);
+            background-color: #000;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            box-shadow: inset 0 -2px 4px rgba(0,0,0,0.4), inset 0 2px 10px rgba(0,0,0,1), 0 1px rgba(255,255,255,0.2);
+        }
+
+            body > main > content::before {
+                content: "";
+                position: absolute;
+                top: -25px;
+                left: -25px;
+                right: -25px;
+                bottom: -25px;
+                background-image: url(../images/footer_wood_texture.jpg);
+                background-size: cover !important;
+                box-shadow: inset 0 1px rgba(255,255,255,0.3), inset 0 -1px 2px rgba(0,0,0,1);
+                z-index: -2;
+            }
+
+            body > main > content::after {
+                content: "";
+                position: absolute;
+                top: -25px;
+                left: -25px;
+                right: -25px;
+                bottom: -25px;
+                border: 25px transparent solid;
+                border-top-color: rgba(255,255,255,0.2);
+                border-left-color: rgba(255,255,255,0.1);
+                border-right-color: rgba(255,255,255,0.2);
+                border-bottom-color: rgba(255,255,255,0.1);
+                box-shadow: 0 8px 4px rgba(0,0,0,0.6), 0 45px 40px rgba(0,0,0,0.8), -15px 25px 10px rgba(0,0,0,0.2), 15px 25px 10px rgba(0,0,0,0.2);
+                z-index: -1;
+            }
+
+            body > main > content > div > header {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 20px 10px 35px 10px;
+                font-size: 30px;
+                text-align: center;
+                box-sizing: border-box;
+            }
+
+                body > main > content > div > header ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                }
+
+                    body > main > content > div > header ul li {
+                        margin: 0;
+                        padding: 0;
+                        display: block;
+                    }
+
+                        body > main > content > div > header ul li:first-child {
+                            position: absolute;
+                        }
+
+                            body > main > content > div > header ul li:first-child a {
+                                position: relative;
+                                width: auto;
+                                height: 28px;
+                                line-height: 28px;
+                                padding-left: 48px;
+                                text-decoration: none;
+                                color: rgba(255,255,255,0.8);
+                                font-size: 16px;
+                                text-align: left;
+                                display: block;
+                            }
+
+                            body > main > content > div > header ul li:first-child img {
+                                position: absolute;
+                                left: 0;
+                                width: 28px;
+                                height: 28px;
+                                padding: 0 0 0 10px;
+                                cursor: pointer;
+                            }
+
+    body > footer {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        background: #000;
+        clear: both;
+        display: none;
+    }
+
+@media only screen and (min-width: 1200px) {
+    body > main > content {
+        max-width: 1024px;
+        left: 50%;
+        margin-left: -512px;
+    }
+}
+
+@media only screen and (min-height: 800px) {
+    body > main > content {
+        max-height: 700px;
+        top: 50%;
+        margin-top: -350px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body > main > content > div > header ul li:first-child {
+        position: relative;
+        padding: 10px 0 40px 0;
+        text-align: center;
+    }
+
+        body > main > content > div > header ul li:first-child a {
+            width: 80px;
+            margin: 0 auto;
+        }
+}
+
+@media only screen and (max-width: 400px) {
+    body > main {
+        min-height: 100%;
+    }
+
+        body > main > content {
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+        }
+
+            body > main > content::before {
+                top: -15px;
+                left: -15px;
+                right: -15px;
+                bottom: -15px;
+            }
+
+            body > main > content::after {
+                top: -15px;
+                left: -15px;
+                right: -15px;
+                bottom: -15px;
+            }
+
+            body > main > content::before {
+                background-size: 240px;
+            }
+
+    body > footer {
+        display: none;
+    }
+}
+
+/* =========== FORMS */
+
+fieldset {
+    position: relative;
+    margin: 0;
+    padding: 15px;
+    border: 2px dashed rgba(255,255,255,0.1);
+}
+
+    fieldset legend {
+        padding: 10px;
+    }
+
+    fieldset input, fieldset textarea {
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 16px;
+        width: 100%;
+        background: rgba(0,0,0,0.2);
+        border: none;
+        border-radius: 2px;
+        padding: 10px;
+        color: rgba(255,255,255,0.8);
+        resize: none;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    fieldset button {
+        margin: 0 auto;
+        display: block;
+        font-family: EraserRegular;
+        text-transform: uppercase;
+        font-size: 16px;
+        width: 100%;
+        background: none;
+        border: none;
+        color: rgba(255,255,255,0.8);
+        padding: 10px 0;
+        cursor: pointer;
+    }
+
+/* =========== PLUGINS */
+.fancybox_modal {
+    max-width: 550px;
+    margin: 0 35px !important;
+    padding: 20px !important;
+    box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 13px 19px 2px rgba(0,0,0,.14), 0 5px 24px 4px rgba(0,0,0,.12);
+    border-radius: 4px;
+    opacity: 0;
+    transition: all .3s ease;
+    transform: translateY(20px);
+    color: #444;
+}
+
+.fancybox-slide--complete .fancybox_modal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fancybox_modal .tright {
+    position: relative;
+    padding: 0;
+    margin: 40px 0 0 0;
+    text-align: right;
+}
+
+.fancybox_modal button {
+    position: relative;
+    margin: 10px;
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    font-family: EraserRegular;
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+    cursor: pointer;
+}

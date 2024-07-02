@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* ============== CSS Default - HTML ============== */
+
+*			{ margin:0px; padding:0px; list-style:none; outline:none; }
+img			{ border:0px; }
+
+a 			{ color:#444; text-decoration:none; }
+a:hover		{ color:#666; text-decoration:none; }
+a:active 	{ color:#444; text-decoration:none; }
+a:visited 	{ color:#444; text-decoration:none; }
+
+input[type=text]
+{
+	padding:0 5px 0 5px;
+	width:220px;
+	height:25px;
+	border: none;
+	box-shadow: inset 1px 1px 1px #DDD;
+}

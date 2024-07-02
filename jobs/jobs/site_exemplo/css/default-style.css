@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Default Styles */
+
+#header-sub									{ position:absolute; width:100%; height:240px; z-index:0; }
+#content-sub								{ }
+#footer-sub									{ }
+
+#preloader									{ position:fixed; width:100%; height:100%; display:none; z-index:9999; }
+#preloader img								{ position:absolute; bottom:15px; right:15px; background:rgba(0,0,0,0.8); padding:10px; }
+
+#container									{ position:relative; width:960px; height:auto; margin:0 auto; }
+#container #header							{ position:relative; width:100%; height:240px; z-index:5; }
+#container #header div						{ position:absolute; }
+#container #header #effect					{ position:absolute; width:100%; height:52px; }
+#container #header #logo					{ width:250px; height:180px; top:10px; left:10px; cursor:pointer; }
+#container #header #menu					{ width:960px; height:40px; bottom:0px; }
+#container #header #banner					{ width:680px; height:125px; top:64px; right:10px; border-radius:10px; }
+#container #header #social					{ width:auto; height:auto; top:10px; right:10px; }
+#container #header #social img				{ width:32px; }
+#container #content							{ position:relative; width:100%; height:100%; min-height:300px; z-index:4; }
+#container #content #ajax					{ position:relative; margin:0 10px 0 10px; padding:10px 0 0 0; }
+#container #footer							{ position:relative; width:100%; height:auto; z-index:3; }
+#container #copyright						{ position:relative; text-align:right; padding:10px; }
+#container #header #menu ul					{ position:relative; width:100%; text-align:center; }
+#container #header #menu ul li				{ position:relative; height:100%; padding:0 60px 0 60px; line-height:40px; cursor:pointer; display:inline-block; }
+#container #header #menu ul ul				{ position:absolute; display:none; margin-left:-61px; background:#FFF; }
+#container #header #menu ul ul li			{ position:relative; display:block; padding:0px; text-align:left; text-indent:15px; opacity:0; }
+
+#container #ajax #uniquecol					{ position:relative; width:100%; height:auto; }
+#container #ajax #multicol					{ position:relative; width:100%; height:auto; text-align:center; }
+
+#container #ajax #uniquecol #ajax-box		{ position:relative; width:100%; }
+#container #ajax #multicol #ajax-box		{ position:relative; width:465px; text-align:left; display:inline-block; vertical-align:top; }
+
+#container #ajax #multicol #ajax-box #cont	{ min-height:150px; }
+
+#container #ajax #ajax-box					{ background:#FFF; margin-bottom:10px; }
+#container #ajax #ajax-box input[name=more]	{ padding:4px 12px 4px 12px; font-size:10px; }
+
+#container #ajax #cab						{ position:relative; width:100%; height:35px; line-height:35px; text-indent:32px; }
+#container #ajax #cab img					{ position:absolute; top:9px; left:10px; }
+#container #ajax #cont						{ position:relative; width:auto; height:auto; margin:0 10px 0 10px; padding:10px 0 10px 0; }
+#container #ajax #more						{ position:relative; width:100%; text-align:right; margin:10px 0 10px 0; right:10px; }
+
+#contato									{ position:relative; padding:18px 35px 18px 35px; }
+#contato ul									{ position:relative; }
+#contato ul li								{ display:inline-block; padding:2px; vertical-align:middle; }
+#contato ul li:nth-child(1)					{ width:135px; }
+#contato form ul:last-child					{ text-align:center; padding-top:3px; }
+
+#container #footer ul						{ display:inline-block; padding:10px; vertical-align:middle; }
+#container #footer ul img					{ padding-left:10px; }
+#container #footer ul li					{ font-size:10px; color:#888; }
+#container #footer #social					{ float:right; margin-top:10.5px; margin-right:10px; }
+#container #footer #social li				{ display:inline-block;  }
+#container #footer #social img				{ height:42px; }
+
+#tooltip 									{ position:absolute; background:#FFFAF4; border:1px #CCC solid; border-radius:2px; padding:5px 10px 5px 10px; z-index:3000; }
+#tooltip p									{ font-size:11px; font-weight:normal; color:#666; }

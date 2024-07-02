@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="jquery.jnotify.css" />
+    <script type="text/ecmascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.jnotify.js"></script>
+</head>
+<body>
+
+    <button id="alert">Alerta</button>
+    <button id="success">Sucesso</button>
+    <button id="error">Erro</button>
+    <button id="permanent">Permanent</button>
+
+    <div class="notification"></div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.notification').jnotifyInizialize({
+                oneAtTime: false,
+                appendType: 'prepend'
+            });
+
+            $('#alert').click(function () {
+                $('.notification').jnotifyAddMessage({
+                    text: 'Teste de mensagem de Alerta!.',
+                    permanent: false,
+                });
+            });
+
+            $('#error').click(function () {
+                $('.notification').jnotifyAddMessage({
+                    text: 'Teste de mensagem de Erro!.',
+                    type: 'error',
+                    permanent: false
+                });
+            });
+
+            $('#success').click(function () {
+                $('.notification').jnotifyAddMessage({
+                    text: 'Teste de mensagem de Erro!.',
+                    type: 'success'
+                });
+            });
+
+            $('#permanent').click(function () {
+                $('.notification').jnotifyAddMessage({
+                    text: 'Teste de mensagem de Erro!.',
+                    type: 'error',
+                    permanent: true
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>

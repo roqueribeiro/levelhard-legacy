@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Roque Ribeiro da Silva">
+    <title>Post It's</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/jquery.jnotify.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jnotify.js"></script>
+    <script type="text/javascript" src="js/default.js"></script>
+</head>
+<body>
+    <div class="hds-bg"></div>
+    <div class="hds-bg-gradient"></div>
+    <div class="hds-notification"></div>
+    <div class="hds-modal">
+        <div class="box">
+            <div class="tape"></div>
+            <div class="nav">
+                <ul>
+                    <li class=""><button type="button" id="logon"><img src="img/logon.svg" /></button></li>
+                    <li class="visible active"><button type="button" id="user"><img src="img/user.svg" /></button></li>
+                    <li class="visible"><button type="button" id="photo"><img src="img/photo.svg" /></button></li>
+                    <li class=""><button type="button" id="message"><img src="img/message.svg" /></button></li>
+                    <li class=""><button type="button" id="option"><img src="img/option.svg" /></button></li>
+                    <li class=""><button type="button" id="book"><img src="img/book.svg" /></button></li>
+                    <li class="visible"><button type="button" id="feedback"><img src="img/feedback.svg" /></button></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div id="user" class="active">
+                    <div class="header">
+                        <div class="title">&rsaquo;&rsaquo; Cadastre suas informações para acesso</div>
+                        <div class="control"><input id="close" type="button" value="&#x2715" /></div>
+                    </div>
+                    <div class="content">
+                        <form name="novousuario" action="core.php" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="acao" value="novousuario" />
+                            <input type="text" name="nome" placeholder="Nome" maxlength="150" />
+                            <input type="text" name="sobrenome" placeholder="Sobrenome" maxlength="255" />
+                            <input type="text" name="email" placeholder="E-Mail" maxlength="150" />
+                            <input type="text" name="apelido" placeholder="Apelido" maxlength="14" />
+                            <input type="password" name="senha" placeholder="Senha" maxlength="14" />
+                            <input type="password" name="verifica-senha" placeholder="Confirme sua Senha" maxlength="14" />
+                            <input type="file" name="foto" accept="image/jpeg" />
+                            <input type="submit" value="Continuar" />
+                        </form>
+                    </div>
+                </div>
+                <div id="photo" class="">
+                    <div class=" header">
+                        <div class="title">&rsaquo;&rsaquo; Inclua uma foto ao seu perfil</div>
+                        <div class="control"><input id="close" type="button" value="&#x2715" /></div>
+                    </div>
+                    <div class="content">
+                        <div class="photo" onclick="$('form[name=novousuario] input[name=foto]').click();">
+                            <p>Selecionar uma imagem do meu computador</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="feedback" class="">
+                    <div class=" header">
+                        <div class="title">&rsaquo;&rsaquo; Inclua uma foto ao seu perfil</div>
+                        <div class="control"><input id="close" type="button" value="&#x2715" /></div>
+                    </div>
+                    <div class="content">
+                        Informações
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hds-preloader">
+        <div class="preloader">
+            <div class="pre-anime">L</div>
+            <div class="pre-anime">O</div>
+            <div class="pre-anime">A</div>
+            <div class="pre-anime">D</div>
+            <div class="pre-anime">I</div>
+            <div class="pre-anime">N</div>
+            <div class="pre-anime">G</div>
+        </div>
+    </div>
+    <div class="hds-logon">
+        <div class="box">
+            <div class="fixe"></div>
+            <div class="logo">Post It's!</div>
+            <div class="slogan">Anote, organize, lembre...</div>
+            <form name="autenticacao" action="core.php" method="post">
+                <input type="hidden" name="acao" value="autenticacao" />
+                <input type="text" name="apelido" placeholder="Apelido" maxlength="14" />
+                <input type="password" name="senha" placeholder="Senha" maxlength="14" />
+                <input type="submit" value="Entrar" />
+            </form>
+            <a href="javascrip:void(0);" id="novousuario">Novo usuário?</a>
+        </div>
+    </div>
+    <div class="hds-content">
+        <div id="new" class="new-postit"></div>
+        <div id="menu" class="open-menu"></div>
+        <div class="menu">
+            <ul>
+                <li><a id="amigos" href="javascript:void();">Amigos</a></li>
+                <li><a id="historico" href="javascript:void();">Histórico</a></li>
+                <li><a id="config" href="javascript:void();">Configurações</a></li>
+                <li><a id="sobre" href="javascript:void();">Sobre</a></li>
+                <li><a id="sair" href="javascript:void();">Sair</a></li>
+            </ul>
+        </div>
+        <div class="hds-postit-model">
+            <div class="hds-postit">
+                <div class="fixe"></div>
+                <div class="box">
+                    <div class="header">
+                        <div class="title">
+                            <input type="text" />
+                        </div>
+                        <div class="control">
+                            <input id="close" type="button" value="&#x2715" />
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="textarea"></div>
+                    </div>
+                    <div class="footer">
+                        <ul>
+                            <li>
+                                <a href="javascript:void();"><span class="color" style="background: #f8ec52"></span></a>
+                                <ul>
+                                    <li><a href="javascript:void();"><span style="background: #c4ffa5"></span></a></li>
+                                    <li><a href="javascript:void();"><span style="background: #ffd3d3"></span></a></li>
+                                    <li><a href="javascript:void();"><span style="background: #9ab4f1"></span></a></li>
+                                    <li><a href="javascript:void();"><span style="background: #fafafa"></span></a></li>
+                                    <li><a href="javascript:void();"><span style="background: #f8ec52"></span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hds-postit-area"></div>
+    </div>
+</body>
+</html>

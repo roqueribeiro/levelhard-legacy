@@ -1,0 +1,41 @@
+#tooltip 	
+{ 
+	position: absolute; 
+	
+	background:#FFF;
+	
+	padding:10px;
+	
+	max-width:auto;
+		
+	color:#333;
+	font-size:9px; 
+	
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+
+	-webkit-box-shadow:2px 2px 10px rgba(0,0,0,0.3);
+	-moz-box-shadow:2px 2px 10px rgba(0,0,0,0.3);
+	box-shadow:2px 2px 10px rgba(0,0,0,0.3);
+	
+	z-index:3000;
+}
+#tooltip div
+{
+	font-weight:normal;
+}
+#tooltip ul
+{
+	padding:3px;
+}
+#tooltip li
+{
+	display:inline-block;
+	position:relative;
+	vertical-align:top;
+}
+#tooltip ul li:first-child
+{
+	width:65px;
+}

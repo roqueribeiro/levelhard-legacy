@@ -1,0 +1,666 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Internação Data Health</title>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/jquery-ui.theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap-datepicker3.standalone.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/gdata-template.css" />
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/select2.full.min.js"></script>
+    <script type="text/javascript" src="scripts/i18n/pt-BR.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-datepicker.pt-BR.js"></script>
+    <script type="text/javascript" src="scripts/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="scripts/bootbox.js"></script>
+    <script type="text/javascript" src="scripts/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('body').niceScroll({
+                cursorcolor: '#CCC',
+                cursoropacitymax: 0.6,
+                cursorwidth: 10,
+                cursorborder: 'none',
+                cursorborderradius: '0px',
+                boxzoom: true,
+                dblclickzoom: true,
+                gesturezoom: true,
+                bouncescroll: true,
+                railpadding: { top: 5, right: 5, left: 5, bottom: 5 },
+                zindex: 9999
+            });
+
+            //$("select").select2();
+            $(".datepicker").datepicker({ format: 'dd/mm/yyyy', language: 'pt-BR' });
+
+            var $pacEspera = $(".gdata-pacientes").find("p.text-warning").parent();
+
+            $(".gdata-pacientes").disableSelection();
+
+            $pacEspera.draggable({
+                revert: "invalid",
+                containment: $(".tab-content"),
+                appendTo: 'body',
+                helper: "clone",
+                cursor: "move"
+            });
+
+            $("#leitos .leitos div").droppable({
+                accept: $pacEspera,
+                activeClass: "gdata-leitos-ativo",
+                hoverClass: "gdata-leitos-acima",
+                drop: function (event, ui) {
+
+                    var $leito = $(this);
+                    var $paciente = ui.draggable;
+
+                    bootbox.confirm("Você deseja realmente alocar o paciente <b>" + $("p", $paciente).first().text() + "</b> no leito <b>" + $("p", $leito).first().text() + "</b>?", function (result) {
+                        if (result) {
+
+                            $paciente.find("p.text-warning").text("Alocado");
+                            $paciente.find("p.text-warning").addClass("text-success");
+                            $paciente.find("p.text-success").removeClass("text-warning");
+                            $paciente.find("p.text-success").hide().fadeIn(1000);
+
+                            $leito.animate({ opacity: 0 }, 300, function () {
+                                $(this).css({ "margin": 0, "border": "none" });
+                                $(this).animate({ width: "0px" }, {
+                                    duration: 300,
+                                    complete: function () {
+                                        $(this).remove();
+                                    }
+                                });
+                            });
+                        }
+                    });
+
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="page-header">
+            <h4>Bem-Vindo(a) Usuário. <small>Clique abaixo na atividade que deseja realizar.</small></h4>
+        </div>
+        <div>
+            <ul id="myTabs" class="nav nav-pills nav-justified">
+                <li role="presentation" class="active">
+                    <a href="#internacao" data-toggle="tab">Internação</a>
+                </li>
+                <li role="presentation">
+                    <a href="#leitos" data-toggle="tab">Leitos</a>
+                </li>
+                <li role="presentation">
+                    <a href="#setores" data-toggle="tab">Administração</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="internacao">
+                    <h5 class="page-header">Formulário de Internação <small>Os campos com * são obrigatórios.</small></h5>
+                    <form name="cadastro_paciente" action="#" method="POST">
+                        <ol class="breadcrumb">
+                            <li class="active">Informações do Paciente</li>
+                            <li><a href="#">Profissional Solicitante</a></li>
+                            <li><a href="#">Autorização</a></li>
+                        </ol>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <div class="form-group col-md-12">
+                                    <h6 class="page-header" style="margin: 0;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Convênios</h6>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Convênio:</label>
+                                    <select class="form-control input-sm">
+                                        <option>Selecione</option>
+                                        <option>Unimed</option>
+                                        <option>Teste</option>
+                                        <option>Teste</option>
+                                        <option>Teste</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
+                                    <h6 class="page-header" style="margin: 0;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Leitos Disponíveis</h6>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Leitos:</label>
+                                    <select class="form-control input-sm">
+                                        <option>Selecione</option>
+                                        <option>Temporariamente sem locação</option>
+                                        <option>Leito Exemplo 1</option>
+                                        <option>Leito Exemplo 2</option>
+                                        <option>Leito Exemplo 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
+                                    <h6 class="page-header" style="margin: 0;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Estabelecimento Solicitante</h6>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Nome:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>CNES:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
+                                    <h6 class="page-header" style="margin: 0;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Dados do Paciente</h6>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Nome Completo:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Sexo:</label>
+                                    <select class="form-control input-sm">
+                                        <option>Selecione</option>
+                                        <option>Masculino</option>
+                                        <option>Feminino</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Nacimento:</label>
+                                    <input type="text" class="form-control input-sm datepicker" placeholder="01/01/1980">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Raça / Etnia:</label>
+                                    <select class="form-control input-sm">
+                                        <option>Selecione</option>
+                                        <option>Branco</option>
+                                        <option>Negro</option>
+                                        <option>Pardo</option>
+                                        <option>Mulato</option>
+                                        <option>Caboclo</option>
+                                        <option>Cafuzos</option>
+                                        <option>Indígena</option>
+                                        <option>Amarela</option>
+                                        <option>Não Declarada</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Cartão SUS:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Nome da Mãe:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Telefone:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="(15) 9999 9999">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Celular:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="(15) 99999 9999">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
+                                    <h6 class="page-header" style="margin: 0;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Dados do Responsável</h6>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Nome Completo:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Sexo:</label>
+                                    <select class="form-control input-sm">
+                                        <option>Selecione</option>
+                                        <option>Masculino</option>
+                                        <option>Feminino</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Nacimento:</label>
+                                    <input type="text" class="form-control input-sm datepicker" placeholder="01/01/1980">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Cep:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="18270-000">
+                                </div>
+                                <div class="form-group col-md-10">
+                                    <label>Rua:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="Rua Nome Exemplo">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label>Nº:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="999">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Bairro:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="Centro">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Cidade:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="Tatuí">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label>Estado:</label>
+                                    <select class="form-control input-sm">
+                                        <option value="AC">AC</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AM">AM</option>
+                                        <option value="AP">AP</option>
+                                        <option value="BA">BA</option>
+                                        <option value="CE">CE</option>
+                                        <option value="DF">DF</option>
+                                        <option value="ES">ES</option>
+                                        <option value="GO">GO</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MG">MG</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MT">MT</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PB">PB</option>
+                                        <option value="PE">PE</option>
+                                        <option value="PI">PI</option>
+                                        <option value="PR">PR</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="RN">RN</option>
+                                        <option value="RO">RO</option>
+                                        <option value="RR">RR</option>
+                                        <option value="RS">RS</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SE">SE</option>
+                                        <option value="SP" selected="selected">SP</option>
+                                        <option value="TO">TO</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Telefone:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="(15) 9999 9999">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Celular:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="(15) 99999 9999">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Cod. IBGE:</label>
+                                    <input type="text" class="form-control input-sm" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" style="text-align: right;">
+                                <button type="submit" class="btn btn-primary btn-sm">Continuar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="leitos">
+                    <div class="row">
+                        <h6 class="page-header">
+                            <span class="glyphicon glyphicon-chevron-right"></span> Pacientes
+                        </h6>
+                        <div class="form-group col-md-2">
+                            <label>Sitação:</label>
+                            <select class="form-control input-sm">
+                                <option>Selecione</option>
+                                <option>Alocado</option>
+                                <option>Aguardando Leito</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-10">
+                            <label><span class="glyphicon glyphicon-search"></span> Nome do Paciente / Cartão SUS:</label>
+                            <input type="text" class="form-control input-sm" placeholder="Digite o nome do paciente ou o nº do cartão SUS">
+                        </div>
+                        <div class="pacientes form-group col-md-12">
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-success">Alocado</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-warning">Aguardando</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-warning">Aguardando</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-warning">Aguardando</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-warning">Aguardando</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-warning">Aguardando</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-success">Alocado</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-success">Alocado</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-warning">Aguardando</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-success">Alocado</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-success">Alocado</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-warning">Aguardando</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-success">Alocado</p>
+                            </div>
+                            <div class="gdata-pacientes" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <p>Nome Exemplo do Paciente</p>
+                                <p>Nº Cartão SUS</p>
+                                <p class="text-success">Alocado</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h6 class="page-header">
+                            <span class="glyphicon glyphicon-chevron-right"></span> Leitos Disponíveis
+                        </h6>
+                        <div class="form-group col-md-2">
+                            <label>Setor:</label>
+                            <select class="form-control input-sm">
+                                <option>Selecione</option>
+                                <option>UTI</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-10">
+                            <label><span class="glyphicon glyphicon-search"></span> Nº do Leito:</label>
+                            <input type="text" class="form-control input-sm" placeholder="Digite o nº do leito">
+                        </div>
+                        <div class="leitos form-group col-md-12">
+                            <div>
+                                <span class="glyphicon glyphicon-home"></span>
+                                <p>1355</p>
+                                <p>UTI</p>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-home"></span>
+                                <p>1356</p>
+                                <p>UTI</p>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-home"></span>
+                                <p>1357</p>
+                                <p>UTI</p>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-home"></span>
+                                <p>1358</p>
+                                <p>UTI</p>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-home"></span>
+                                <p>1359</p>
+                                <p>UTI</p>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-home"></span>
+                                <p>1360</p>
+                                <p>UTI</p>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-home"></span>
+                                <p>1361</p>
+                                <p>UTI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="setores">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div style=""></div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Informações do Paciente</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container col-md-12">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
+                                    <h6 class="page-header" style="margin: 0;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Leitos Disponíveis</h6>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Leitos:</label>
+                                    <select class="form-control input-sm">
+                                        <option>Selecione</option>
+                                        <option>Temporariamente sem locação</option>
+                                        <option>Leito Exemplo 1</option>
+                                        <option selected="selected">Leito Exemplo 2</option>
+                                        <option>Leito Exemplo 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
+                                    <h6 class="page-header" style="margin: 0;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Estabelecimento Solicitante</h6>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Nome:</label>
+                                    <input type="text" class="form-control input-sm" value="Nome do Estabelecimento" placeholder="" disabled="disabled">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>CNES:</label>
+                                    <input type="text" class="form-control input-sm" value="CNES do Estabelecimento" placeholder="" disabled="disabled">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
+                                    <h6 class="page-header" style="margin: 0;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Dados do Paciente</h6>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Nome Completo:</label>
+                                    <input type="text" class="form-control input-sm" value="Nome Exemplo do Paciente" placeholder="" disabled="disabled">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Sexo:</label>
+                                    <select class="form-control input-sm" disabled="disabled">
+                                        <option>Selecione</option>
+                                        <option selected="">Masculino</option>
+                                        <option>Feminino</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Nacimento:</label>
+                                    <input type="text" class="form-control input-sm datepicker" value="20/01/1988" disabled="disabled">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Raça / Etnia:</label>
+                                    <select class="form-control input-sm">
+                                        <option>Selecione</option>
+                                        <option selected="selected">Branco</option>
+                                        <option>Negro</option>
+                                        <option>Pardo</option>
+                                        <option>Mulato</option>
+                                        <option>Caboclo</option>
+                                        <option>Cafuzos</option>
+                                        <option>Indígena</option>
+                                        <option>Amarela</option>
+                                        <option>Não Declarada</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Cartão SUS:</label>
+                                    <input type="text" class="form-control input-sm" value="Numero do Cartão SUS" placeholder="" disabled="disabled">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Nome da Mãe:</label>
+                                    <input type="text" class="form-control input-sm" value="Nome Exemplo da Mãe" placeholder="" disabled="disabled">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Telefone:</label>
+                                    <input type="text" class="form-control input-sm" value="(15) 3322 1000">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Celular:</label>
+                                    <input type="text" class="form-control input-sm" value="(15) 99700 1000">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
+                                    <h6 class="page-header" style="margin: 0;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Dados do Responsável</h6>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Nome Completo:</label>
+                                    <input type="text" class="form-control input-sm" value="Nome Exemplo do Responsável" placeholder="">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Sexo:</label>
+                                    <select class="form-control input-sm">
+                                        <option>Selecione</option>
+                                        <option>Masculino</option>
+                                        <option selected="selected">Feminino</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Nacimento:</label>
+                                    <input type="text" class="form-control input-sm datepicker" value="01/01/1990" placeholder="01/01/1980">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Cep:</label>
+                                    <input type="text" class="form-control input-sm" value="18271-300" placeholder="18270-000">
+                                </div>
+                                <div class="form-group col-md-10">
+                                    <label>Rua:</label>
+                                    <input type="text" class="form-control input-sm" value="Rua Nome Exemplo" placeholder="Rua Nome Exemplo">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label>Nº:</label>
+                                    <input type="text" class="form-control input-sm" value="999" placeholder="999">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Bairro:</label>
+                                    <input type="text" class="form-control input-sm" value="Centro" placeholder="Centro">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Cidade:</label>
+                                    <input type="text" class="form-control input-sm" value="Tatuí" placeholder="Tatuí">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label>Estado:</label>
+                                    <select class="form-control input-sm">
+                                        <option value="AC">AC</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AM">AM</option>
+                                        <option value="AP">AP</option>
+                                        <option value="BA">BA</option>
+                                        <option value="CE">CE</option>
+                                        <option value="DF">DF</option>
+                                        <option value="ES">ES</option>
+                                        <option value="GO">GO</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MG">MG</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MT">MT</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PB">PB</option>
+                                        <option value="PE">PE</option>
+                                        <option value="PI">PI</option>
+                                        <option value="PR">PR</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="RN">RN</option>
+                                        <option value="RO">RO</option>
+                                        <option value="RR">RR</option>
+                                        <option value="RS">RS</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SE">SE</option>
+                                        <option value="SP" selected="selected">SP</option>
+                                        <option value="TO">TO</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Telefone:</label>
+                                    <input type="text" class="form-control input-sm" value="(15) 3322 1000">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Celular:</label>
+                                    <input type="text" class="form-control input-sm" value="(15) 99700 1000">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Cod. IBGE:</label>
+                                    <input type="text" class="form-control input-sm" value="Codigo IBGE" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

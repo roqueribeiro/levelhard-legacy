@@ -1,0 +1,131 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 22/06/2016 15:13
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-3d-forward-arrow:before { content: "\f100"; }
+.flaticon-3d-turn-right-arrow:before { content: "\f101"; }
+.flaticon-3d-up-arrow:before { content: "\f102"; }
+.flaticon-3d-up-arrow-1:before { content: "\f103"; }
+.flaticon-arrow-with-scribble:before { content: "\f104"; }
+.flaticon-arrow-with-scribble-1:before { content: "\f105"; }
+.flaticon-arrow-with-scribble-2:before { content: "\f106"; }
+.flaticon-arrow-with-scribble-3:before { content: "\f107"; }
+.flaticon-arrowheads:before { content: "\f108"; }
+.flaticon-back-drawn-arrow:before { content: "\f109"; }
+.flaticon-check-mark-arrow:before { content: "\f10a"; }
+.flaticon-clockwise-angled-arrows:before { content: "\f10b"; }
+.flaticon-clockwise-drawn-arrow:before { content: "\f10c"; }
+.flaticon-curly-dotted-arrow:before { content: "\f10d"; }
+.flaticon-curved-arrow:before { content: "\f10e"; }
+.flaticon-curved-arrow-1:before { content: "\f10f"; }
+.flaticon-curved-arrow-2:before { content: "\f110"; }
+.flaticon-curved-arrow-with-broken-line:before { content: "\f111"; }
+.flaticon-curved-downward-arrow:before { content: "\f112"; }
+.flaticon-curved-downward-arrow-1:before { content: "\f113"; }
+.flaticon-curved-downward-arrow-2:before { content: "\f114"; }
+.flaticon-curved-right-arrow:before { content: "\f115"; }
+.flaticon-curved-up-arrow:before { content: "\f116"; }
+.flaticon-curved-up-arrow-1:before { content: "\f117"; }
+.flaticon-curved-up-arrow-with-broken-line:before { content: "\f118"; }
+.flaticon-dotted-up-arrow:before { content: "\f119"; }
+.flaticon-down-arrow-with-broken-lines:before { content: "\f11a"; }
+.flaticon-down-right-arrow:before { content: "\f11b"; }
+.flaticon-downward-rotation:before { content: "\f11c"; }
+.flaticon-downward-rotation-1:before { content: "\f11d"; }
+.flaticon-forward-arrow-with-broken-line:before { content: "\f11e"; }
+.flaticon-loop-arrow:before { content: "\f11f"; }
+.flaticon-loop-arrows:before { content: "\f120"; }
+.flaticon-loop-arrows-1:before { content: "\f121"; }
+.flaticon-loop-arrows-2:before { content: "\f122"; }
+.flaticon-loop-right-arrow-outline:before { content: "\f123"; }
+.flaticon-looping-arrows:before { content: "\f124"; }
+.flaticon-looping-arrows-1:before { content: "\f125"; }
+.flaticon-looping-arrows-2:before { content: "\f126"; }
+.flaticon-looping-arrows-with-broken-line:before { content: "\f127"; }
+.flaticon-navigation-arrow:before { content: "\f128"; }
+.flaticon-navigation-arrow-with-broken-line:before { content: "\f129"; }
+.flaticon-play-button:before { content: "\f12a"; }
+.flaticon-play-button-in-broken-line:before { content: "\f12b"; }
+.flaticon-right-arrow:before { content: "\f12c"; }
+.flaticon-right-arrow-1:before { content: "\f12d"; }
+.flaticon-right-arrow-2:before { content: "\f12e"; }
+.flaticon-right-arrow-outline:before { content: "\f12f"; }
+.flaticon-right-arrow-with-turn:before { content: "\f130"; }
+.flaticon-right-drawn-arrow:before { content: "\f131"; }
+.flaticon-right-loop-arrow:before { content: "\f132"; }
+.flaticon-right-up-arrow:before { content: "\f133"; }
+.flaticon-rotate-arrow:before { content: "\f134"; }
+.flaticon-rotated-right-arrow:before { content: "\f135"; }
+.flaticon-rotated-right-arrow-with-broken-line:before { content: "\f136"; }
+.flaticon-rotated-right-arrow-with-broken-line-1:before { content: "\f137"; }
+.flaticon-rotating-arrows:before { content: "\f138"; }
+.flaticon-scribble:before { content: "\f139"; }
+.flaticon-scribble-1:before { content: "\f13a"; }
+.flaticon-scribble-broken-line:before { content: "\f13b"; }
+.flaticon-scribble-right-arrow:before { content: "\f13c"; }
+.flaticon-semicircular-up-arrow:before { content: "\f13d"; }
+.flaticon-semicircular-upward-arrow:before { content: "\f13e"; }
+.flaticon-sketch-loop-arrow:before { content: "\f13f"; }
+.flaticon-spinning-arrows:before { content: "\f140"; }
+.flaticon-spinning-left-arrow:before { content: "\f141"; }
+.flaticon-squiggly-arrow:before { content: "\f142"; }
+.flaticon-swirly-arrow:before { content: "\f143"; }
+.flaticon-swirly-arrow-pointing-upwards:before { content: "\f144"; }
+.flaticon-swirly-scribbled-arrow:before { content: "\f145"; }
+.flaticon-turn-right-arrow:before { content: "\f146"; }
+.flaticon-turn-right-arrow-1:before { content: "\f147"; }
+.flaticon-turn-right-arrow-2:before { content: "\f148"; }
+.flaticon-turn-right-arrow-3:before { content: "\f149"; }
+.flaticon-turn-right-arrow-with-broken-line:before { content: "\f14a"; }
+.flaticon-turn-right-arrow-with-broken-line-1:before { content: "\f14b"; }
+.flaticon-turn-right-with-broken-line:before { content: "\f14c"; }
+.flaticon-turn-up-arrow:before { content: "\f14d"; }
+.flaticon-two-way-arrows:before { content: "\f14e"; }
+.flaticon-undulating-arrow:before { content: "\f14f"; }
+.flaticon-up-and-down-arrows:before { content: "\f150"; }
+.flaticon-up-arrow:before { content: "\f151"; }
+.flaticon-up-arrow-1:before { content: "\f152"; }
+.flaticon-up-arrow-2:before { content: "\f153"; }
+.flaticon-up-arrow-3:before { content: "\f154"; }
+.flaticon-up-arrow-4:before { content: "\f155"; }
+.flaticon-up-arrow-5:before { content: "\f156"; }
+.flaticon-up-arrow-with-broken-line:before { content: "\f157"; }
+.flaticon-up-arrow-with-broken-lines:before { content: "\f158"; }
+.flaticon-up-arrow-with-ray-tracing:before { content: "\f159"; }
+.flaticon-up-arrow-with-scribble:before { content: "\f15a"; }
+.flaticon-up-broken-line-arrow:before { content: "\f15b"; }
+.flaticon-up-broken-line-arrow-1:before { content: "\f15c"; }
+.flaticon-update-arrow:before { content: "\f15d"; }
+.flaticon-update-arrow-with-broken-line:before { content: "\f15e"; }
+.flaticon-updating-arrow:before { content: "\f15f"; }
+.flaticon-updating-arrow-1:before { content: "\f160"; }
+.flaticon-updating-arrow-2:before { content: "\f161"; }
+.flaticon-updating-arrow-3:before { content: "\f162"; }
+.flaticon-upward-rotation-with-broken-line:before { content: "\f163"; }

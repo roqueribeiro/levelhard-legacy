@@ -1,0 +1,119 @@
+﻿fieldset
+{
+    position: relative;
+    font-family: Arial;
+    font-size: 12px;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 25px 10px 25px;
+    border: 1px #CCC solid;
+    box-shadow: inset 1px 1px 0 #FFF, 1px 1px 0 #FFF;
+    display: block;
+}
+
+    fieldset legend
+    {
+        padding: 0 10px 0 10px;
+        font-size: 14px;
+        background: #EEE;
+        text-align: left;
+    }
+
+    fieldset ul
+    {
+        padding: 2px;
+        text-align: left;
+    }
+
+        fieldset ul li
+        {
+            display: inline-block;
+            min-height: 35px;
+            line-height: 35px;
+            vertical-align: top;
+        }
+
+            fieldset ul li:first-child
+            {
+                min-width: 120px;
+            }
+
+        fieldset ul:last-child li
+        {
+            min-width: initial;
+        }
+
+        fieldset ul li label
+        {
+            color: #444;
+        }
+
+        fieldset ul li span
+        {
+            font-size: 10px;
+        }
+
+input[type=text],
+input[type=password],
+textarea,
+select
+{
+    font-family: Arial;
+    font-size: 12px;
+    min-width: 200px;
+    padding: 5px;
+    border: 1px #BBB solid;
+    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1), 1px 1px 0 #FFF;
+}
+
+input[type=radio],
+input[type=checkbox]
+{
+    position: relative;
+    top: 2.5px;
+    margin: 0 5px 0 5px;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset]
+{
+    background-color: #444;
+    background-image: -webkit-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+    background-image: -moz-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+    background-image: -ms-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+    background-image: -o-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+    background-image: linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+    border: 1px solid #111;
+    color: #EEE;
+    cursor: pointer;
+    display: inline-block;
+    font: normal 14px/10px Verdana;
+    padding: 8px 15px;
+    margin: 10px 0;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px hsla(0,0%,0%,.8);
+    vertical-align: top;
+    box-shadow: 0 1px 4px hsla(0,0%,0%,.4), inset 0 1px 0 hsla(0,0%,100%,.2);
+}
+
+    input[type=button]:not(:disabled):hover,
+    input[type=submit]:not(:disabled):hover,
+    input[type=reset]:not(:disabled):hover,
+    input[type=button]:not(:disabled):focus,
+    input[type=submit]:not(:disabled):focus,
+    input[type=reset]:not(:disabled):focus
+    {
+        background-color: #222;
+    }
+
+    input[type=button]:not(:disabled):active,
+    input[type=submit]:not(:disabled):active,
+    input[type=reset]:not(:disabled):active
+    {
+        background-color: #202020;
+        color: #b6b6b6;
+        padding: 9px 15px 7px;
+        box-shadow: 0 1px 0 hsla(0,0%,100%,.1), inset 0 1px 4px hsla(0,0%,0%,.8);
+    }

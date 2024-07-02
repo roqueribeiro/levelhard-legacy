@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon/favicon_32x32.png" sizes="32x32" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon/favicon_64x64.png" sizes="64x64" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon/favicon_128x128.png" sizes="128x128" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon/favicon_256x256.png" sizes="256x256" />
+    <title>Yazaki Meetings</title>
+    <link rel="stylesheet" href="styles/default.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/bootstrap-theme.min.css" />
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.monthpicker.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.list-files a').tooltip();
+
+            $('#input-monthpicker').monthpicker({
+                pattern: 'mm/yyyy',
+                selectedYear: 2013,
+                startYear: 2013,
+                finalYear: 2020,
+                monthNames: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                openOnFocus: false
+            }).bind('monthpicker-click-month', function (e, month) {
+            });
+
+            $('#btn-monthpicker').click(function () {
+                if ($('.monthpicker').is(':visible')) {
+                    $('#input-monthpicker').monthpicker('hide');
+                }
+                else {
+                    $('#input-monthpicker').monthpicker('show');
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="cab">
+            <div id="setor"><b>Business Management - YM</b></div>
+            <div id="flag">
+                <ul>
+                    <li class="flag-state-active">
+                        <a href="javascript:void(0);">
+                            <img src="images/flags/Brazil.png" alt="Português" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <img src="images/flags/United-States.png" alt="Inglês" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <img src="images/flags/Mexico.png" alt="Espanhol" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <img src="images/flags/Japan.png" alt="Japonês" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#cab-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="cab-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="javascript:void(0);">Início</a></li>
+                        <li><a href="javascript:void(0);">Reuniões</a></li>
+                        <li><a href="javascript:void(0);">Projetos</a></li>
+                        <li><a href="javascript:void(0);">Relatórios</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Administração <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0);">Usuários</a></li>
+                                <li><a href="javascript:void(0);">Setores e Áreas</a></li>
+                                <li><a href="javascript:void(0);">Locais de Reunião</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Manutenção</li>
+                                <li><a href="javascript:void(0);">Plantas</a></li>
+                                <li><a href="javascript:void(0);">Configurações</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="page-header visible-md visible-lg">
+                <h3>Reuniões <small>Lista de reuniões</small></h3>
+            </div>
+
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-pesquisa">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="javascript:void(0);">Filtros de Pesquisa</a>
+                </div>
+                <div class="collapse navbar-collapse" id="nav-pesquisa">
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" id="input-monthpicker" name="pesquisa-mes" class="form-control" placeholder="Selecionar Mês" readonly="true">
+                        </div>
+                        <button type="button" id="btn-monthpicker" class="btn btn-default">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </button>
+                    </form>
+                </div>
+            </nav>
+
+            <ul class="nav nav-tabs nav-justified" style="margin-bottom: 20px;">
+                <li class="active"><a href="#meeting-mem" data-toggle="tab">MEM</a></li>
+                <li><a href="#meeting-eqr" data-toggle="tab">EQR</a></li>
+                <li class="disabled"><a href="javascript:void(0);">Hostin</a></li>
+                <li class="disabled"><a href="javascript:void(0);">KPI</a></li>
+                <li><a href="#meeting-semanal" data-toggle="tab">Reunião Semanal</a></li>
+            </ul>
+
+            <h4 class="text-info"><small>Lista de reuniões de</small> Novembro <small>de</small> 2013</h4>
+            <hr />
+
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="meeting-mem">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail" data-toggle="modal" data-target="#modal">
+                                <img data-src="holder.js/300x200" alt="" style="width: 250px; height: 200px;" src="images/icon/meeting-room.jpg">
+                                <div class="caption">
+                                    <h5 class="text-info"><span class="glyphicon glyphicon-calendar "></span>&nbsp;&nbsp;19 de Novembro</h5>
+                                    <small>Observações.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="meeting-eqr">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail" data-toggle="modal" data-target="#modal">
+                                <img data-src="holder.js/300x200" alt="" style="width: 250px; height: 200px;" src="images/icon/meeting-room.jpg">
+                                <div class="caption">
+                                    <h5 class="text-info"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;19 de Novembro</h5>
+                                    <small>Observações.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail" data-toggle="modal" data-target="#modal">
+                                <img data-src="holder.js/300x200" alt="" style="width: 250px; height: 200px;" src="images/icon/meeting-room.jpg">
+                                <div class="caption">
+                                    <h5 class="text-info"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;12 de Novembro</h5>
+                                    <small>Observações.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail" data-toggle="modal" data-target="#modal">
+                                <img data-src="holder.js/300x200" alt="" style="width: 250px; height: 200px;" src="images/icon/meeting-room.jpg">
+                                <div class="caption">
+                                    <h5 class="text-info"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;06 de Novembro</h5>
+                                    <small>Observações.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail" data-toggle="modal" data-target="#modal">
+                                <img data-src="holder.js/300x200" alt="" style="width: 250px; height: 200px;" src="images/icon/meeting-room.jpg">
+                                <div class="caption">
+                                    <h5 class="text-info"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;01 de Novembro</h5>
+                                    <small>Observações.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="meeting-semanal">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail" id="open-meeting" data-toggle="modal" data-target="#modal">
+                                <img data-src="holder.js/300x200" alt="" style="width: 250px; height: 200px;" src="images/icon/meeting-room.jpg">
+                                <div class="caption">
+                                    <h5 class="text-info"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;19 de Novembro</h5>
+                                    <small>Observações.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail" id="Div1" data-toggle="modal" data-target="#modal">
+                                <img data-src="holder.js/300x200" alt="" style="width: 250px; height: 200px;" src="images/icon/meeting-room.jpg">
+                                <div class="caption">
+                                    <h5 class="text-info"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;19 de Novembro</h5>
+                                    <small>Observações.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail" id="Div2" data-toggle="modal" data-target="#modal">
+                                <img data-src="holder.js/300x200" alt="" style="width: 250px; height: 200px;" src="images/icon/meeting-room.jpg">
+                                <div class="caption">
+                                    <h5 class="text-info"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;19 de Novembro</h5>
+                                    <small>Observações.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail" id="Div3" data-toggle="modal" data-target="#modal">
+                                <img data-src="holder.js/300x200" alt="" style="width: 250px; height: 200px;" src="images/icon/meeting-room.jpg">
+                                <div class="caption">
+                                    <h5 class="text-info"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;19 de Novembro</h5>
+                                    <small>Observações.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-header">
+                <h3>Calendários <small>Informações de Reuniões e Eventos previstos</small></h3>
+            </div>
+
+            <div class="row">
+                <div class="list-files">
+                    <ul>
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                            <img src="images/icon/files/excel.png" alt="" /><div class="clearfix"></div>
+                            <p>Primeiro Calendário</p>
+                        </a></li>
+                        <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                            <img src="images/icon/files/excel.png" alt="" /><div class="clearfix"></div>
+                            <p>Segundo Calendário</p>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#footer-menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="javascript:void(0);">Yazaki Meetings</a>
+        </div>
+        <div class="collapse navbar-collapse" id="footer-menu">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:void(0);"><span class="glyphicon glyphicon-refresh"></span>&nbsp;&nbsp;Recarregar</a></li>
+                <li><a href="javascript:void(0);"><span class="glyphicon glyphicon-resize-vertical"></span>&nbsp;&nbsp;Expandir</a></li>
+                <li><a href="javascript:void(0);"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;Sair</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h5 class="modal-title"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;Informações da Reunião</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="list-files list-files-sm">
+                        <ul>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/word.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/excel.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/image.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/music.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/text.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/compressed.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/word.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/excel.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/image.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/music.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/text.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/compressed.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/word.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/excel.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/image.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/music.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/text.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                            <li><a href="javascript:void(0);" data-toggle="tooltip" title="Informações Adicionais">
+                                <img src="images/icon/files/compressed.png" alt="" /><div class="clearfix"></div>
+                                <p>Descrição</p>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Fechar Janela</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

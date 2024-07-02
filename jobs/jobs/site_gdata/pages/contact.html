@@ -1,0 +1,159 @@
+<div id="gdata-transit">
+    <script type="text/javascript" src="//cdn.sublimevideo.net/js/9upsewll.js"></script>
+    <div id="gdata-carousel" class="carousel slide nocarousel" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="img" style="background-image: url('img/contact/bg_contact.jpg');"></div>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1 id="lang-contact-cl-title"></h1>
+                        <p id="lang-contact-cl-main"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container marketing">
+        <div class="page-header">
+            <h1>Global Data <small id="lang-contact-title-desc"></small></h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+                <form name="contato" action="core.php?action=sendmail" class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label id="lang-contact-label-nome" class="col-sm-3 control-label"></label>
+                        <div class="col-sm-9">
+                            <input type="text" name="nome" class="form-control" placeholder="" maxlength="150">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label id="lang-contact-label-telefone" class="col-sm-3 control-label"></label>
+                        <div class="col-sm-9">
+                            <input type="text" name="telefone" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label id="lang-contact-label-celular" class="col-sm-3 control-label"></label>
+                        <div class="col-sm-9">
+                            <input type="text" name="celular" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label id="lang-contact-label-email" class="col-sm-3 control-label"></label>
+                        <div class="col-sm-9">
+                            <input type="email" name="email" class="form-control" placeholder="" maxlength="150">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label id="lang-contact-label-texto" class="col-sm-3 control-label"></label>
+                        <div class="col-sm-9">
+                            <textarea name="texto" class="form-control" rows="3" style="resize: vertical;"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button id="lang-contact-btn-enviar" type="submit" class="btn btn-default"></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-5">
+                <img src="img/common/logo-gdata-medium.png" height="30" alt="" style="margin:0 0 20px 0;" />
+                <address>
+                    <p id="lang-contact-info-slogan"></p>
+                    <p id="lang-contact-info-end"></p>
+                    <p id="lang-contact-info-cep"></p>
+                    <p id="lang-contact-info-cidade"></p>
+                    <p id="lang-contact-info-tel"></p>
+                </address>
+                <address>
+                    <p id="lang-contact-info-email-title"></p>
+                    <a id="lang-contact-info-email-main" href="mailto:gdata@gdata.com.br"></a>
+                </address>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.0533073156457!2d-47.85061569999997!3d-23.3500832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5d92f331c68e5%3A0x2f82d5778b9ba35c!2sRua+Coronel+L%C3%BAcio+Seabra%2C+483+-+Centro!5e0!3m2!1spt-BR!2s!4v1400899815628" width="400" height="300" frameborder="0" style="border: 0"></iframe>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('input[name=telefone]').mask('(99) 9999-9999', { placeholder: '' });
+        $('input[name=celular]').mask('(99) 99999-999?9', { placeholder: '' });
+
+        $('form[name=contato]').ajaxForm({
+            beforeSubmit: function () {
+                if ($('input[name=nome]').val() == '') {
+                    $('input[name=nome]').focus();
+                    $('.notification').jnotifyAddMessage({
+                        text: 'Digite seu nome completo',
+                        type: 'info'
+                    });
+                    return false;
+                }
+                else if ($('input[name=nome]').val().length < 3) {
+                    $('input[name=nome]').focus();
+                    $('.notification').jnotifyAddMessage({
+                        text: 'Seu nome tem que possuir mais que três caracteres',
+                        type: 'info'
+                    });
+                    return false;
+                }
+                else if ($('input[name=telefone]').val() == '') {
+                    $('input[name=telefone]').focus();
+                    $('.notification').jnotifyAddMessage({
+                        text: 'Digite seu telefone para contato',
+                        type: 'info'
+                    });
+                    return false;
+                }
+                else if ($('input[name=email]').val() == '') {
+                    $('input[name=email]').focus();
+                    $('.notification').jnotifyAddMessage({
+                        text: 'Digite seu email para contato',
+                        type: 'info'
+                    });
+                    return false;
+                }
+                else if ($('input[name=email]').val().length < 3) {
+                    $('input[name=email]').focus();
+                    $('.notification').jnotifyAddMessage({
+                        text: 'Digite seu email tem que possuir mais que três caracteres',
+                        type: 'info'
+                    });
+                    return false;
+                }
+                else if ($('textarea[name=texto]').val() == '') {
+                    $('textarea[name=texto]').focus();
+                    $('.notification').jnotifyAddMessage({
+                        text: 'Digite o texto que deseja nos mandar',
+                        type: 'info'
+                    });
+                    return false;
+                }
+                else if ($('textarea[name=texto]').val().length < 20) {
+                    $('textarea[name=texto]').focus();
+                    $('.notification').jnotifyAddMessage({
+                        text: 'Seu texto tem que possuir mais que vinte caracteres',
+                        type: 'info'
+                    });
+                    return false;
+                }
+            },
+            success: function (data) {
+                $('.notification').jnotifyAddMessage({
+                    text: data,
+                    type: 'success'
+                });
+            },
+            error: function () {
+                $('.notification').jnotifyAddMessage({
+                    text: 'Ocorreu um erro ao encaminhar o formulário! Tente novamente mais tarde.',
+                    type: 'error'
+                });
+            }
+        });
+
+    });
+</script>

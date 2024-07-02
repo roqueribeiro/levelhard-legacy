@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
+    <meta name="description" content="Chronometer Dev">
+    <meta name="author" content="Roque Ribeiro da Silva">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-chron.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+		
+			var browser = {
+				chrome: false,
+				mozilla: false,
+				opera: false,
+				msie: false,
+				safari: false
+			};
+			var sUsrAg = navigator.userAgent;
+			if(sUsrAg.indexOf("Chrome") > -1) {
+				browser.chrome = true;
+			} else if (sUsrAg.indexOf("Safari") > -1) {
+				browser.safari = true;
+			} else if (sUsrAg.indexOf("Opera") > -1) {
+				browser.opera = true;
+			} else if (sUsrAg.indexOf("Firefox") > -1) {
+				browser.mozilla = true;
+			} else if (sUsrAg.indexOf("MSIE") > -1) {
+				browser.msie = true;
+			}
+			
+			if(!browser.chrome)
+			{
+				$('#content').hide();
+				$('<div/>',{
+					html: '<p>=/</p> Navegador não suporta as tecnologias necessárias para executar este programa. <br />Utilize o Google Chrome.',
+					'class': 'browsererror'
+				}).appendTo('body');
+			}
+		
+            $("#chronometer").Chron({
+                start_chron: start_chron,
+                stop_chron: stop_chron,
+                pause_chron: pause_chron
+            });
+            function start_chron() {
+                $("#message").html("Iniciado").stop(true, true).slideDown(100).delay(1000).fadeOut(600);
+            }
+            function stop_chron() {
+                $("#message").html("Parado").stop(true, true).slideDown(100).delay(1000).fadeOut(600);
+            }
+            function pause_chron() {
+                $("#message").html("Parado").stop(true, true).slideDown(100).delay(1000).fadeOut(600);
+            }
+			
+			$('input[name=chron-size]').on('change mousemove', function(){
+				// $('#chronometer').css('font-size',$(this).val() + 'px');
+				$('#chronometer').css('transform','scale(' + $(this).val() + ')');
+			});
+			
+			$('#config').click(function(){
+				$('.popup').stop(true,true).fadeIn(300);
+				$('.popup .box').stop(true,true).slideDown(300);
+				$('.popup .box div').stop(true,true).delay(300).slideDown(200);
+			});
+			$('.popup').click(function(){
+				$('.popup .box div').hide();
+				$('.popup .box').stop(true,true).slideUp(300,function(){
+					$('.popup').fadeOut(300);					
+				});
+			});
+			$('.popup .box').click(function(){
+				return false;
+			});
+			
+			$('#fullscreen').on('click', function() {
+				var docElement, request;
+				if($(this).hasClass('fullscreen'))
+				{
+					$(this).removeClass('fullscreen');
+					$('i',this).removeClass('fa-compress').addClass('fa-expand');
+					
+					docElement = document;
+					request = docElement.cancelFullScreen|| docElement.webkitCancelFullScreen || docElement.mozCancelFullScreen || docElement.msCancelFullScreen || docElement.exitFullscreen;
+					if(typeof request!="undefined" && request){
+						request.call(docElement);
+					}
+				}
+				else
+				{
+					$(this).addClass('fullscreen');
+					$('i',this).removeClass('fa-expand').addClass('fa-compress');
+
+					docElement = document.documentElement;
+					request = docElement.requestFullScreen || docElement.webkitRequestFullScreen || docElement.mozRequestFullScreen || docElement.msRequestFullScreen;
+
+					if(typeof request!="undefined" && request){
+						request.call(docElement);
+					}
+				}
+			});
+        });
+    </script>
+</head>
+<body>
+	<div id="content">
+		<div class="popup">
+			<div class="box">
+				<form action="#">
+					<div>Tamanho do Chronometer</div>
+					<input name="chron-size" type="range" min="0.5" max="10.0" step="0.1" value="1.0">
+				</form>
+			</div>
+		</div>
+		<div class="chron">
+			<div id="chronometer"></div>
+			<div class="commands">
+				<button id="start" type="button"><i class="fa fa-play"></i></button>
+				<button id="stop" type="button"><i class="fa fa-stop"></i></button>
+				<button id="pause" type="button"><i class="fa fa-pause"></i></button>
+				<button id="config" type="button"><i class="fa fa-sliders"></i></button>
+				<button id="fullscreen" type="button"><i class="fa fa-expand"></i></button>
+			</div>
+		</div>
+		<div id="message"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+#navegador_html {
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    right: -2px;
+    left: -2px;
+}
+
+    #navegador_html #guia_add {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        padding: 10px;
+        background: #EEE;
+        border-top-right-radius: 10px;
+        box-shadow: 1px -1px #CCC;
+        cursor:pointer;
+        z-index: 10;
+    }
+
+    #navegador_html #tabs {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        border: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+        #navegador_html #tabs div {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #navegador_html #tabs li .ui-icon-close {
+            float: right;
+            margin: 4px 4px;
+            cursor: pointer;
+        }
+
+    #navegador_html #navegacao {
+        position: relative;
+        width: 100%;
+        height: 38px;
+        background: #E5E5E5;
+        box-shadow: 0 -1px #FFF, 0 1px #CCC;
+		z-index:1;
+    }
+
+        #navegador_html #navegacao ul {
+            width: 600px;
+			margin-left:5px;
+        }
+
+        #navegador_html #navegacao li {
+            float: left;
+            padding: 5px;
+        }
+
+            #navegador_html #navegacao li img {
+                position: relative;
+                width: 18px;
+                height: 18px;
+                top: 5px;
+                cursor:pointer;
+            }
+			
+			#navegador_html #navegacao li img:hover {
+                opacity:0.6;
+            }
+
+    #navegador_html input {
+        width: 400px;
+    }
+
+    #navegador_html #carregamento {
+        position: absolute;
+        top: 74px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+    }
+
+    #navegador_html #carregamento iframe {
+        position:relative;
+        width:100%;
+        height:100%;
+        background: #FFF;
+        border: none;
+        display: block !important;
+    }

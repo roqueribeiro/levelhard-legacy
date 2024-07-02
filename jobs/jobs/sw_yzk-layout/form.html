@@ -1,0 +1,128 @@
+﻿<script type="text/javascript">
+    $(document).ready(function () {
+
+        //Mascaras de Formulario
+        $('fieldset input[name=texto]').mask('******?******', { placeholder: '' });
+        $('fieldset input[name=telefone]').mask('(99) 9999-9999', { placeholder: '' });
+
+        //Ativa Funções input[type=file]
+        $('fieldset .filefalse').click(function () {
+            $(this).prev('fieldset input[type=file]').click();
+            $(this).prev('fieldset input[type=file]').change(function () {
+                if ($(this).val()) {
+                    $('.fileinput .filelist').hide();
+                    $('.fileinput .filelist li').remove();
+                    $.each(this.files, function (index, file) {
+                        $('.fileinput .filelist ul').append('<li title="' + file.name + '"><p><img src="images/icons/black/document_alt_stroke_12x16.png" />' + file.name + '</p></li>');
+                    });
+                    $('.fileinput .filelist').show('blind', function () {
+                        $('#main.default article').getNiceScroll().resize();
+                        $('.fileinput .filelist ul li').qtip({
+                            position: {
+                                my: 'bottom center',
+                                at: 'top center'
+                            },
+                            style: {
+                                width: 180
+                            },
+                        });
+                    });
+                } else {
+                    $('.fileinput .filelist').hide('blind', function () {
+                        $('li', this).remove();
+                    });
+                }
+            });
+        });
+
+        //Envia Formulario com Ajax
+        $('form[name=formulario]').ajaxForm({
+            beforeSubmit: function () {
+                alert('aaa');
+            },
+            success: function (data) {
+
+            }
+        });
+
+    });
+</script>
+<nav>
+    <ul>
+        <li><a href="#" class="fancybox-button"><img src="images/icons/white/check_16x13.png" alt="" /><span>Salvar</span></a></li>
+        <li><a href="#" class="fancybox-button"><img src="images/icons/white/brush_16x16.png" alt="" /><span>Editar</span></a></li>
+        <li><a href="#" class="fancybox-button"><img src="images/icons/white/trash_stroke_16x16.png" alt="" /><span>Excluir</span></a></li>
+        <li><a href="#" class="fancybox-button"><img src="images/icons/white/lightbulb_10x16.png" alt="" /><span>Informações</span></a></li>
+        <li><a href="#" class="fancybox-button"><img src="images/icons/white/question_mark_8x16.png" alt="" /><span>Ajuda</span></a></li>
+    </ul>
+</nav>
+<article class="form">
+    <header>
+        <hgroup>
+            <h1 id="home-title"></h1>
+            <h4 id="home-description"></h4>
+        </hgroup>
+    </header>
+    <section>
+        <form name="formulario" action="#" method="get" enctype="multipart/form-data">
+        <fieldset style="min-width:350px; width:350px;">
+            <legend>Formulario Padrão</legend>
+            <ul>
+                <li><label>Text:</label></li>
+                <li><input type="text" name="texto" maxlength="10" placeholder="Campo Obrigatório" title="Digite um texto com o maximo de 10 caracteres"></li>
+            </ul>
+            <ul>
+                <li><label>Telefone:</label></li>
+                <li><input type="text" name="telefone" maxlength="10" placeholder="Campo Obrigatório" title="Texto Explicativo"></li>
+            </ul>
+            <ul>
+                <li><label>Password:</label></li>
+                <li><input type="password" name="password" maxlength="10" placeholder="Digite a Senha" title="Texto Explicativo"></li>
+            </ul>
+            <ul>
+                <li><label>Textarea:</label></li>
+                <li><textarea name="text" placeholder="Digite o Texto" style="max-width:200px; max-height:200px;" title="Texto Explicativo"></textarea></li>
+            </ul>
+            <ul>
+                <li><label>Select:</label></li>
+                <li><select name="selectbuton" title="Texto Descritivo">
+                    <option value="1">Opção 1</option>
+                    <option value="2">Opção 2</option>
+                    <option value="3">Opção 3</option>
+                    <optgroup label="Grupo 1">
+                        <option value="1-1">Opção 1</option>
+                        <option value="1-2">Opção 2</option>
+                        <option value="1-3">Opção 3</option>
+                    </optgroup>
+                    <optgroup label="Grupo 2">
+                        <option value="2-1">Opção 1</option>
+                        <option value="2-2">Opção 2</option>
+                        <option value="2-3">Opção 3</option>
+                    </optgroup>
+                </select></li>
+            </ul>
+            <ul>
+                <li><label>Checkbox:</label></li>
+                <li><span><input type="checkbox" name="checkbutton" value="1" />Opção 1</span></li>
+                <li><span><input type="checkbox" name="checkbutton" value="2" />Opção 2</span></li>
+                <li><span><input type="checkbox" name="checkbutton" value="3" />Opção 3</span></li>
+            </ul>
+            <ul>
+                <li><label>Radio:</label></li>
+                <li><span><input type="radio" name="radiobutton" value="1" />Opção 1</span></li>
+                <li><span><input type="radio" name="radiobutton" value="2" />Opção 2</span></li>
+                <li><span><input type="radio" name="radiobutton" value="3" />Opção 3</span></li>
+            </ul>
+            <ul class="fileinput">
+                <li><label>Upload:</label></li>
+                <li>
+                    <input type="file" name="upload" multiple title="" />
+                    <div class="filefalse">Selecionar Arquivos <img src="images/icons/black/folder_stroke_16x16.png" alt="" /></div>
+                    <div class="filelist"><ul></ul></div>
+                </li>
+            </ul>
+            <input type="submit" value="Enviar" />
+        </fieldset>
+        </form>
+    </section>
+</article>

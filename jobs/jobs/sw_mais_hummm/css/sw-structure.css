@@ -1,0 +1,391 @@
+﻿button, a, input, select, textarea {
+    outline: none !important;
+}
+
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#phonegap-console {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FFF;
+    overflow: auto;
+    padding: 40px;
+    z-index: 9999;
+}
+
+    #phonegap-console button {
+        margin: 10px;
+    }
+
+#accelerometer-element {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    background: #F00;
+    border-radius: 25px;
+    display: none;
+    z-index: 9999;
+}
+
+.sw-notification {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+    .sw-notification .alert {
+        border-radius: 0;
+        margin: 0;
+        padding-right: 40px;
+    }
+
+        .sw-notification .alert .close {
+            margin: -15px -35px;
+            padding: 12px 15px;
+        }
+
+.sw-theme-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    overflow: auto;
+    z-index: 9999;
+}
+
+/* ========== Tela de Login ========== */
+login {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    text-align: center;
+    display: none;
+    box-shadow: inset 0 4px #a31717;
+    background: linear-gradient(to right, #ece8d9 50%, #dfdac9 50%);
+    z-index: 5;
+}
+
+    login > header {
+        position: relative;
+        padding: 80px 0;
+    }
+
+        login > header img {
+            width: 256px;
+        }
+
+    login > div {
+    }
+
+        login > div .panel {
+            position: absolute;
+            width: 80%;
+            left: 10%;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+            login > div .panel .input-group {
+                margin-bottom: 10px;
+                background: #FFF;
+            }
+
+            login > div .panel button {
+                margin-top: 10px;
+                width: 40%;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+    login .panel {
+        background-image: none;
+        box-shadow: none;
+    }
+
+    login footer {
+        position: absolute;
+        display: table;
+        width: 100%;
+        height: auto;
+        background-image: url(../img/theme/footer-bg.png);
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        bottom: 0;
+    }
+
+        login footer button {
+            float: none;
+            display: table-cell;
+            width: 50%;
+            border: none;
+            background: #ece8d9;
+            padding: 20px 0;
+            margin-top: 29px;
+        }
+
+/* ========== Tela de Conteudo ========== */
+content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #CCC;
+    display: none;
+    z-index: 3;
+}
+
+    /* ========== Cabecalho ========== */
+    content > header.sw-theme-header {
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        padding: 3px;
+        background: #FFF;
+        z-index: 2;
+    }
+
+        content > header.sw-theme-header span {
+            position: absolute;
+            display: block;
+            left: -25px;
+        }
+
+            content > header.sw-theme-header span i {
+                padding-right: 10px;
+            }
+
+        content > header.sw-theme-header nav {
+            float: right;
+        }
+
+        content > header.sw-theme-header a {
+            color: #444 !important;
+        }
+
+    /* ========== Menu Lateral ========== */
+    content > nav.sw-theme-nav {
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        bottom: 0;
+        background: #444;
+        box-shadow: inset 4px 0 #333, inset 0 1px 5px rgba(0,0,0,0.4);
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 3;
+    }
+
+        content > nav.sw-theme-nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            content > nav.sw-theme-nav ul li {
+            }
+
+                content > nav.sw-theme-nav ul li a {
+                    display: block;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    color: #FFF;
+                    box-shadow: 0 1px rgba(0,0,0,0.05);
+                    transition: none;
+                }
+
+                    content > nav.sw-theme-nav ul li a i {
+                        margin-right: 20px;
+                    }
+
+                    content > nav.sw-theme-nav ul li a b {
+                        float: right;
+                        line-height: 24px;
+                    }
+
+                    content > nav.sw-theme-nav ul li a:hover {
+                        background: rgba(0,0,0,0.05);
+                    }
+
+        content > nav.sw-theme-nav .sw-theme-user {
+        }
+
+            content > nav.sw-theme-nav .sw-theme-user .sw-theme-user-bg {
+                position: relative;
+                width: 100%;
+                min-height: 128px;
+                z-index: 1;
+            }
+
+            content > nav.sw-theme-nav .sw-theme-user .sw-theme-user-logo {
+                position: absolute;
+                width: 96px;
+                top: 16px;
+                left: 16px;
+                box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+                background: #FFF;
+                padding: 2px;
+                z-index: 5;
+            }
+
+            content > nav.sw-theme-nav .sw-theme-user .sw-theme-user-info {
+                position: absolute;
+                top: 30px;
+                left: 150px;
+                z-index: 3;
+            }
+
+                content > nav.sw-theme-nav .sw-theme-user .sw-theme-user-info h5 {
+                    color: #FFF;
+                    text-shadow: 0 2px rgba(0,0,0,0.2);
+                }
+
+                content > nav.sw-theme-nav .sw-theme-user .sw-theme-user-info small {
+                    color: #FFF;
+                }
+
+    /* ========== Conteudo ========== */
+    content > main.sw-theme-main {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #ece8d9;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 1;
+    }
+
+        content > main.sw-theme-main .sw-theme-content {
+            background: #F5F5F5;
+        }
+
+    /* ========== Rodape ========== */
+    content > footer.sw-theme-footer {
+        position: absolute;
+    }
+
+    /* ========== Conteudo - Estabelecimento Lista ========== */
+    content > main.sw-theme-main .input-group {
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    content > main.sw-theme-main #estab-lista > div {
+        min-height: 400px;
+        padding: 20px;
+    }
+
+    /* ========== Conteudo - Estabelecimento Perfil ========== */
+    content > main.sw-theme-main .sw-theme-title {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 120px;
+    }
+
+        content > main.sw-theme-main .sw-theme-title .sw-theme-title-bg {
+            position: relative;
+            width: 100%;
+            min-height: 128px;
+            background-position: center;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        content > main.sw-theme-main .sw-theme-title .sw-theme-title-logo {
+            position: absolute;
+            width: 128px;
+            left: 10px;
+            bottom: -64px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            background: #FFF;
+            padding: 2px;
+            z-index: 2;
+        }
+
+        content > main.sw-theme-main .sw-theme-title .sw-theme-title-info {
+            position: absolute;
+            top: 140px;
+            left: 160px;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        content > main.sw-theme-main .sw-theme-title .star-rating {
+            position: absolute;
+            top: 205px;
+            left: 160px;
+            z-index: 3;
+        }
+
+.sw-theme-btn-info {
+    position: absolute;
+    right: 15px;
+    margin: -26px 0 0 0;
+    color: #FFF;
+    z-index: 10;
+}
+
+/* ========== Bootstrap Mobile ========== */
+@media screen and (max-width: 768px) {
+
+    .modal-dialog {
+        margin: 0;
+        border: none;
+    }
+
+        .modal-dialog .modal-content {
+            margin: 0;
+            border-radius: 0;
+        }
+}
+
+table .checkbox {
+    margin: 7px 0 7px 0;
+    padding: 0;
+}
+
+table select {
+    box-shadow: none !important;
+}
+
+.panel-title i {
+    margin-right: 10px;
+}
+
+.full-width-tabs > ul.nav.nav-tabs {
+    display: table;
+    width: 100%;
+}
+
+    .full-width-tabs > ul.nav.nav-tabs > li {
+        float: none;
+        display: table-cell;
+    }
+
+        .full-width-tabs > ul.nav.nav-tabs > li > a {
+            text-align: center;
+            padding: 10px 0;
+        }

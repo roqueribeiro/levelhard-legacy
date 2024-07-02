@@ -1,0 +1,637 @@
+﻿@font-face {
+    font-family: 'Autumn';
+    src: url('../fonts/autumm.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Digital';
+    src: url('../fonts/digital.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#console {
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    font-size: 12px;
+    background: rgba(0,0,0,0.8);
+    color: #FFF;
+    z-index: 9999;
+    text-align: left;
+    line-height: 30px;
+    padding: 0 10px 0 10px;
+    display: none;
+}
+
+#cobertor {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+    z-index: 9990;
+    display: none;
+}
+
+#cobertor_2 {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: -webkit-radial-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+    background: -moz-radial-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+    background: -o-radial-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+    background: -ms-radial-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+    background: radial-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+    cursor: pointer;
+    display: none;
+}
+
+#corpo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* ================= Tela Login ================= */
+
+#tela_login {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../imagens/texturas/ceu.jpg) top center;
+}
+
+.loginErro {
+    color: #F00;
+}
+
+#nuvens {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: -webkit-radial-gradient(rgba(0,0,0,0) 20%,rgba(0,0,0,0.4));
+    background: -moz-radial-gradient(rgba(0,0,0,0) 20%,rgba(0,0,0,0.4));
+    background: -o-radial-gradient(rgba(0,0,0,0) 20%,rgba(0,0,0,0.4));
+    background: -ms-radial-gradient(rgba(0,0,0,0) 20%,rgba(0,0,0,0.4));
+    background: radial-gradient(rgba(0,0,0,0) 20%,rgba(0,0,0,0.4));
+}
+
+    #nuvens li {
+        width: 1920px;
+        height: 1080px;
+    }
+
+        #nuvens li img {
+            width: 100%;
+        }
+
+#tela_login #autentica {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -175px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 5px;
+    box-shadow: 0px 3px #CCC, 0px 4px 5px rgba(0, 0, 0, 0.3);
+    color: #444;
+}
+
+    #tela_login #autentica ul {
+        padding: 0px 0 20px 0;
+    }
+
+#autentica ul li {
+    padding: 5px 0 5px 0;
+    vertical-align: middle;
+}
+
+#tela_login #autentica .titulo {
+    padding: 30px 0 20px 0;
+    font-family: 'Autumn';
+    font-size: 54px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#tela_login #autentica .resultado {
+    font-size: 12px;
+    color: #AAA;
+    padding: 0 0 10px 0;
+}
+
+#tela_login #autentica .novo {
+    font-size: 10px;
+    color: #444;
+    padding: 20px 0 0 0;
+}
+
+#tela_login #autentica input[type=text], input[type=password] {
+    width: 250px;
+}
+
+#tela_login #copyright {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 10px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* ================= Tela Inicial - WebDesk Default Theme ================= */
+
+#tela_inicial {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-size: 100%;
+    display: none;
+}
+
+    #tela_inicial #navegacao #info {
+        position: relative;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        text-indent: 10px;
+        text-align: left;
+        background: #3b636e;
+        border-bottom: 1px #255562 solid;
+    }
+
+        #tela_inicial #navegacao #info ul {
+            float: left;
+            height: 35px;
+            cursor: pointer;
+        }
+
+            #tela_inicial #navegacao #info ul li {
+                float: left;
+                font-size: 12px;
+            }
+
+        #tela_inicial #navegacao #info .submenu li:nth-child(2) {
+            width: 155px;
+        }
+
+        #tela_inicial #navegacao #info ul li img {
+            position: relative;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+        }
+
+        #tela_inicial #navegacao #info .submenu ul {
+            border-left: 3px #FFF solid;
+        }
+
+        #tela_inicial #navegacao #info ul .submenu {
+            position: absolute;
+            margin-left: -30px;
+            background: #3b636e;
+            display: none;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+        }
+
+            #tela_inicial #navegacao #info ul .submenu ul {
+                width: 180px;
+                float: none;
+            }
+
+            #tela_inicial #navegacao #info ul .submenu img {
+                top: 2px;
+                width: 13px;
+                height: 13px;
+            }
+
+        #tela_inicial #navegacao #info .submenu .submenu {
+            margin-top: -35px;
+            margin-left: 155px;
+        }
+
+        #tela_inicial #navegacao #info #botao_sair {
+            float: right;
+        }
+
+    #tela_inicial #navegacao {
+        position: absolute;
+        width: 100%;
+        height: 135px;
+        background: #5c8a97;
+        padding: 0 0 6px 0;
+        margin: 0px;
+        box-shadow: 0px 4px #3b636e, 0px 4px 6px rgba(0, 0, 0, 0.4);
+        top: 0px;
+    }
+
+        #tela_inicial #navegacao #menu ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        #tela_inicial #navegacao #menu li {
+            position: relative;
+            margin: 10px 0 10px 0;
+            padding: 0px;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background: #FFF;
+            margin-left: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 3px #CCC, 0px 4px 5px rgba(0, 0, 0, 0.3);
+            -webkit-transition: all 0.1s ease;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+            #tela_inicial #navegacao #menu li img {
+                position: relative;
+                width: 48px;
+                margin: 16px;
+            }
+
+            #tela_inicial #navegacao #menu li:hover {
+                background: #EEE;
+            }
+
+            #tela_inicial #navegacao #menu li:active {
+                bottom: -4px;
+                box-shadow: 0px 0px #CCC, 0px 1px 3px rgba(0, 0, 0, 0.3);
+            }
+
+    #tela_inicial #conteudo {
+        position: absolute;
+        top: 145px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        text-align: left;
+        font-size: 14px;
+        overflow: auto;
+    }
+
+    #tela_inicial #icones {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 10px 0 10px 0;
+    }
+
+        #tela_inicial #icones li {
+            position: relative;
+            width: 102px;
+            text-align: center;
+            margin: 30px;
+            padding: 20px 10px;
+            cursor: pointer;
+            text-shadow: 0 1px 4px rgba(0,0,0,1);
+            font-size: 12px;
+            border-radius: 10px;
+            border: 1px dashed transparent;
+            -webkit-transition: 300ms;
+            -moz-transition: 300ms;
+            -o-transition: 300ms;
+            -ms-transition: 300ms;
+            transition: 300ms;
+        }
+
+            #tela_inicial #icones li:hover {
+                background: rgba(0,0,0,0.4);
+                border: 1px dashed #FFF;
+            }
+
+        #tela_inicial #icones img {
+            width: 72px;
+            height: 72px;
+        }
+
+    #tela_inicial #grade {
+        position: relative;
+        width: 900px;
+        margin: 0 auto;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        background: #FFF;
+        border-radius: 5px;
+        box-shadow: 0px 3px #CCC, 0px 4px 5px rgba(0, 0, 0, 0.3);
+        color: #333;
+    }
+
+    #tela_inicial #grade {
+        position: relative;
+        text-align: left;
+    }
+
+        #tela_inicial #grade ul {
+            margin: 1px 0 1px 0;
+            padding: 0px;
+            list-style: none;
+            padding: 5px;
+            border-radius: 5px;
+            height: 22px;
+        }
+
+        #tela_inicial #grade li {
+            position: relative;
+            display: inline-block;
+        }
+
+            #tela_inicial #grade li.col_1 {
+                width: auto;
+            }
+
+                #tela_inicial #grade li.col_1 img {
+                    position: relative;
+                    top: 3px;
+                    margin: 0 6px 0 6px;
+                    padding: 0px;
+                }
+
+            #tela_inicial #grade li.col_2 {
+                width: 200px;
+            }
+
+            #tela_inicial #grade li.col_3 {
+                width: 120px;
+            }
+
+            #tela_inicial #grade li.col_4 {
+                width: 120px;
+            }
+
+            #tela_inicial #grade li.col_5 {
+                width: 80px;
+            }
+
+            #tela_inicial #grade li.col_6 {
+                width: 150px;
+            }
+
+            #tela_inicial #grade li.col_7 {
+                width: auto;
+            }
+
+        #tela_inicial #grade #cabecalho li.col_1 img {
+            cursor: help;
+        }
+
+        #tela_inicial #grade #cabecalho {
+            margin-bottom: 13px;
+            background: #EEE;
+            box-shadow: 0px 3px #CCC;
+            border-radius: 5px;
+        }
+
+        #tela_inicial #grade #listagem ul {
+            cursor: pointer;
+        }
+
+            #tela_inicial #grade #listagem ul:nth-child(2n+1) {
+                background: #EEE;
+            }
+
+            #tela_inicial #grade #listagem ul:hover {
+                background: #CCC;
+            }
+
+        #tela_inicial #grade #listagem li.col_1 img {
+            cursor: pointer;
+        }
+
+        #tela_inicial #grade #paginacao {
+            position: relative;
+            height: 45px;
+            text-align: center;
+        }
+
+            #tela_inicial #grade #paginacao li {
+                position: relative;
+                margin: 8px 0 0 0;
+                padding: 0 12px;
+                display: inline-block;
+                width: auto;
+                height: 27px;
+                background: #EEE;
+                margin-left: 10px;
+                font: 12px / 27px Verdana, Arial, sans-serif;
+                border-radius: 5px;
+                box-shadow: 0 3px #CCC;
+                -webkit-transition: all 0.1s ease;
+                cursor: pointer;
+            }
+
+                #tela_inicial #grade #paginacao li:hover {
+                    background: #DDD;
+                }
+
+                #tela_inicial #grade #paginacao li:active {
+                    bottom: -4px;
+                    box-shadow: 0 0 #CCC;
+                }
+
+/* ================= Droppable e Janelas ================= */
+
+#drop {
+    position: fixed;
+    bottom: -100px;
+    width: 100%;
+    height: 140px;
+    padding: 10px 0 10px 0;
+    background: #5c8a97;
+
+    background: -webkit-linear-gradient(rgba(92,138,151,0), rgba(92,138,151,1) 100%);
+    background: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    background: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    background: -ms-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+
+    text-align: center;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+}
+
+    #drop ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        display: none;
+        -webkit-box-reflect:below 0px -webkit-linear-gradient(top, rgba(255,255,255,0) 60%, rgba(255,255,255,0.6) 100%);
+    }
+
+    #drop li {
+        position: relative;
+        margin: 15px 10px 0 10px;
+        padding: 0px;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background: #FFF;
+        margin-left: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 3px #CCC, 0px 4px 5px rgba(0, 0, 0, 0.3);
+        -webkit-transition: all 0.1s ease;
+        cursor: pointer;
+    }
+
+        #drop li img {
+            position: relative;
+            width: 48px;
+            margin: 16px;
+        }
+
+        #drop li:hover {
+            background: #EEE;
+        }
+
+        #drop li:active {
+            bottom: -4px;
+            box-shadow: 0px 0px #CCC, 0px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+#janela {
+    position: fixed;
+    width: 500px;
+    height: 350px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 5px;
+    color: #444;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    display: none;
+}
+
+    #janela #titulo {
+        position: absolute;
+        height: 16px;
+        padding: 10px 40px;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        background: #EEE;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-align: left;
+        border-bottom: 3px #CCC solid;
+    }
+
+        #janela #titulo img {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 6px;
+            left: 6px;
+        }
+
+        #janela #titulo p {
+            margin: 0px;
+            padding: 0px;
+        }
+
+    #janela #funcoes img {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 12px;
+        right: 12px;
+        cursor: pointer;
+    }
+
+    #janela #conteudo_j {
+        position: absolute;
+        top: 44px;
+        left: 5px;
+        bottom: 5px;
+        right: 5px;
+        background: #FFF;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+        #janela #conteudo_j iframe {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+/* ================= Plugins jQuery ================= */
+
+.ui-selecting {
+    background: rgba(92,138,151,0.3) !important;
+}
+
+.ui-selected {
+    background: rgba(0,0,0,0.2) !important;
+}
+
+.drop-hover {
+    background: rgba(92,138,151,0.3);
+}
+
+.drop-active {
+    height: 50%;
+}
+
+.jqclock {
+}
+
+.clockdate {
+    float: right;
+    font-size: 10px;
+}
+
+.clocktime {
+    font-family: 'Digital';
+    font-size: 18px;
+}
+
+#weather {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    margin-top: 0px;
+    right: 0px;
+    padding: 25px 0 30px 0;
+    text-shadow: 0 1px 2px #000;
+    text-align: right;
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    background: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    background: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    background: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    background: linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    font-family: 'Times New Roman';
+}
+
+    #weather h2 {
+        position: relative;
+        width: 200px;
+    }
+
+    #weather img {
+        position: absolute;
+        top: 5px;
+        left: 220px;
+    }
+
+    #weather p {
+        position: relative;
+        width: 200px;
+        font-size: 48px;
+        font-weight: bold;
+        color: #FFF;
+    }

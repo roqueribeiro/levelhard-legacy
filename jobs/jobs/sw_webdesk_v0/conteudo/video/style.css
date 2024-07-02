@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	background:url(images/bg.png);
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	overflow:hidden;
+}
+
+video, img
+{
+	width:100%;
+	height:100%;
+}
+
+input[type=button]
+{
+	margin:0px;
+	margin-left:-5px;
+	border:none; 
+	background:none;
+	color:#FFF;
+	padding:8px 12px 8px 12px;
+}
+
+#wrap
+{
+	position:absolute;
+	background:none;
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	z-index:999;
+	display:none;
+}
+
+#falsebody
+{
+	position:absolute;
+	background-image:-webkit-radial-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,1));
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+}
+
+#show_video
+{
+	position:absolute;
+	background:url(images/video.png) no-repeat center rgba(0,0,0,0.8);
+	width:50%;
+	height:50%;
+	top:15%;
+	left:25%;
+	box-shadow:0 0 15px rgba(0,0,0,0.8);	
+	text-align:center;
+	z-index:100;
+}
+
+#show_video #video
+{
+	position:relative;
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	top:0px;
+	left:0px;
+}
+
+#show_video video
+{
+	display:none;
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+#controls
+{
+	position:absolute;
+	width:100%;
+	top:0px;
+	padding:0px;
+	text-align:right;
+	background:rgba(0,0,0,0.5);
+	opacity:0;
+	z-index:1111;
+}
+
+#controls p
+{
+	position:absolute;
+	display:none;
+	margin:3px 3px 3px 10px;
+	font-size:16px;
+	font-weight:bold;color:#FFF;	
+}
+
+#icones_box
+{
+	position:absolute;
+	width:100%;
+	height:auto;
+	margin:0 auto;
+	padding:20px 0 20px 0;
+	bottom:20px;
+	border-top:1px #222 solid;
+	border-bottom:1px #333 solid;
+	background:rgba(0,0,0,0.2);
+	box-shadow:inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+#icones_center
+{
+	position:relative;
+	margin:0 auto;
+	width:630px;
+	height:90px;
+	text-align:center;
+}
+
+#icones
+{
+	position:relative;
+	background: url(images/preloader.gif) center no-repeat #111;
+	width:160px;
+	height:90px;
+	margin-left:25px;
+	margin-right:25px;
+	float:left;
+	padding:0px;
+	opacity:0.6;
+	z-index:1;
+	box-shadow:0 0 15px rgba(0,0,0,0.8);
+}

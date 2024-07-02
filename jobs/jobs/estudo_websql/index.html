@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>WebSQL</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <style type="text/css">
+        body {
+            font-family: Verdana;
+            font-size: 12px;
+            background: #696969;
+            margin-bottom: 100px;
+        }
+
+        fieldset {
+            border: none;
+            margin: 20px;
+            padding: 20px;
+            background: #CCC;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            box-shadow: 0 5px #AAA, 0 5px 6px rgba(0,0,0,0.6);
+        }
+
+            fieldset > div {
+                padding: 20px 0 0 0;
+            }
+
+        legend {
+            background: #CCC;
+            padding: 10px 20px;
+        }
+
+        input {
+            border: none;
+            padding: 8px 15px;
+            outline: none;
+        }
+
+            input[type=text] {
+                margin: 5px 5px 25px 5px;
+                border-radius: 3px;
+                box-shadow: 0 3px #DDD, 0 3px 5px rgba(0,0,0,0.4);
+            }
+
+            input[type=button] {
+                background: #444;
+                color: #FFF;
+                border-radius: 3px;
+                box-shadow: 0 3px #222, 0 3px 5px rgba(0,0,0,0.6);
+            }
+
+            input:disabled {
+                opacity: 0.2;
+            }
+
+        tr {
+            margin: 0;
+            padding: 0;
+            background: #FAFAFA;
+        }
+
+        table {
+            width: 100%;
+            border: 1px #CCC solid;
+        }
+
+        tr:nth-child(2n+1) {
+            background: #EEE;
+        }
+
+        td {
+            display: inline-block;
+            padding: 8px 20px;
+        }
+
+        #db-console {
+            margin: -10px;
+            padding: 20px;
+            height: 15px;
+            overflow-y: scroll;
+            overflow-x: hiddden;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (window.openDatabase) {
+
+                $('#remove-field, #db-drop, #db-add, #db-search, #db-create').attr('disabled', true);
+
+                $('#insert-field').click(function () {
+                    $('<input>', {
+                        type: 'text',
+                        name: $('#tbl-fields input').length
+                    }).appendTo('#tbl-fields');
+                    $('<input>', {
+                        type: 'text',
+                        name: $('#add-fields input').length
+                    }).appendTo('#add-fields');
+                    $('<input>', {
+                        type: 'text',
+                        name: $('#find-fields input').length
+                    }).appendTo('#find-fields');
+                    $('#tbl-fields input:last, #add-fields input:last, #find-fields input:last').hide().stop(true, true).fadeIn(300);
+                    $('#remove-field, #db-create').attr('disabled', false);
+                });
+
+                $('#remove-field').click(function () {
+                    $('#tbl-fields input:last, #add-fields input:last, #find-fields input:last').stop(true, true).fadeOut(300, function () {
+                        $(this).remove();
+                        if ($('#tbl-fields input').length == 0) {
+                            $('#remove-field, #db-create').attr('disabled', true);
+                        }
+                    });
+                });
+
+                $(document).on('keyup', '#tbl-fields input', function () {
+                    $('#add-fields input[name=' + $(this).attr('name') + ']').attr('placeholder', $(this).val());
+                    $('#find-fields input[name=' + $(this).attr('name') + ']').attr('placeholder', $(this).val());
+                });
+
+                var db = openDatabase('db_contact', '1.0', 'database description', 2 * 1024 * 1024);
+
+                db.transaction(function (tx) {
+                    tx.executeSql('SELECT * FROM temptable', [], function (tx, results) {
+                        if (results.rows.length > 0) {
+                            var columns = Object.keys(results.rows.item(0));
+                            $.each(columns, function (j, col) {
+                                $('#insert-field').click();
+                                $('#tbl-fields input').last().val(col).keyup();
+                            });
+                            $('#db-search').click();
+                            $('#insert-field, #tbl-fields input, #db-create, #remove-field').attr('disabled', true);
+                            $('#db-drop, #db-add, #db-search').attr('disabled', false);
+                        }
+                        else {
+                            tx.executeSql('DROP TABLE temptable', [], function (tx, results) {
+                                console.log(results);
+                            }, function (tx, error) {
+                                var formatted = moment().locale('pt-br').format('HH:mm:ss');
+                                $('#db-console').html($('#db-console').html() + formatted + ' -> ' + error.message + '<br />');
+                                $('#db-console').scrollTop($('#db-console')[0].scrollHeight);
+                            });
+                        }
+                    }, function (tx, error) {
+                        var formatted = moment().locale('pt-br').format('HH:mm:ss');
+                        $('#db-console').html($('#db-console').html() + formatted + ' -> ' + error.message + '<br />');
+                        $('#db-console').scrollTop($('#db-console')[0].scrollHeight);
+                    });
+                });
+
+                $('#db-create').click(function () {
+                    var tbl_fields = '';
+                    $.each($('#tbl-fields input'), function (i, element) {
+                        tbl_fields = (tbl_fields == '') ? $(element).val() : tbl_fields + ', ' + $(element).val();
+                    });
+                    var tbl_query = 'CREATE TABLE IF NOT EXISTS temptable (' + tbl_fields + ')';
+                    db.transaction(function (tx) {
+                        tx.executeSql(tbl_query, [], function () {
+                            $('#db-search').click();
+                            $('#insert-field, #remove-field, #tbl-fields input, #db-create').attr('disabled', true);
+                            $('#db-drop, #db-add, #db-search').attr('disabled', false);
+                        }, function (tx, error) {
+                            var formatted = moment().locale('pt-br').format('HH:mm:ss');
+                            $('#db-console').html($('#db-console').html() + formatted + ' -> ' + error.message + '<br />');
+                            $('#db-console').scrollTop($('#db-console')[0].scrollHeight);
+                        });
+                    });
+                });
+
+                $('#db-drop').click(function () {
+                    db.transaction(function (tx) {
+                        tx.executeSql('DROP TABLE temptable', [], function () {
+                            $('#tbl-fields input').remove();
+                            $('#add-fields input').remove();
+                            $('#find-fields input').remove();
+                            $('#insert-field').attr('disabled', false);
+                            $('#remove-field, #db-create, #db-drop, #db-add, #db-search').attr('disabled', true);
+                            $('#db-results table').remove();
+                        }, function (tx, error) {
+                            var formatted = moment().locale('pt-br').format('HH:mm:ss');
+                            $('#db-console').html($('#db-console').html() + formatted + ' -> ' + error.message + '<br />');
+                            $('#db-console').scrollTop($('#db-console')[0].scrollHeight);
+                        });
+                    });
+                });
+
+                $('#db-search').click(function () {
+                    var tmp_query = '';
+                    $.each($('#find-fields input'), function (i, element) {
+                        if ($(element).val() != '') {
+                            tmp_query = tmp_query + " AND " + $(element).attr('placeholder') + " LIKE '%" + $(element).val() + "%'";
+                        }
+                    });
+                    db.transaction(function (tx) {
+                        tx.executeSql('SELECT * FROM temptable WHERE 1=1 ' + tmp_query, [], function (tx, results) {
+                            $('#db-results table').remove();
+                            if (results.rows.length > 0) {
+                                $('<table>').appendTo('#db-results');
+                                var columns = Object.keys(results.rows.item(0));
+                                $.each(results.rows, function (i, row) {
+                                    $('<tr>').appendTo('#db-results table');
+                                    $.each(columns, function (j, col) {
+                                        $('<td>', { html: row[col] }).appendTo('#db-results table tr:last');
+                                    });
+                                });
+                            }
+                            else {
+                                ($('<table>').append($('<tr>').append($('<td>', { html: 'Nenhum Registro Encontrado...' })))).appendTo('#db-results');
+                            }
+                        }, function (tx, error) {
+                            var formatted = moment().locale('pt-br').format('HH:mm:ss');
+                            $('#db-console').html($('#db-console').html() + formatted + ' -> ' + error.message + '<br />');
+                            $('#db-console').scrollTop($('#db-console')[0].scrollHeight);
+                        });
+                    });
+                });
+
+                $('#db-add').click(function () {
+                    var tbl_fields = '';
+                    var fields_val = '';
+                    $.each($('#add-fields input'), function (i, element) {
+                        tbl_fields = (tbl_fields == '') ? $(element).attr('placeholder') : tbl_fields + ', ' + $(element).attr('placeholder');
+                        fields_val = (fields_val == '') ? '"' + $(element).val() + '"' : fields_val + ', ' + '"' + $(element).val() + '"';
+                    });
+                    var tbl_query = 'INSERT INTO temptable (' + tbl_fields + ') VALUES (' + fields_val + ')';
+                    db.transaction(function (tx) {
+                        tx.executeSql(tbl_query, [], function () {
+                            $('#db-search').click();
+                        }, function (tx, error) {
+                            var formatted = moment().locale('pt-br').format('HH:mm:ss');
+                            $('#db-console').html($('#db-console').html() + formatted + ' -> ' + error.message + '<br />');
+                            $('#db-console').scrollTop($('#db-console')[0].scrollHeight);
+                        });
+                    });
+                });
+            }
+            else {
+                alert("O navegador que você está usando não suporta Web SQL");
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <fieldset>
+        <legend>CONSOLE</legend>
+        <div id="db-console"></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>CREATE TABLE</legend>
+        <input id="insert-field" type="button" value="Adicionar Coluna" />
+        <input id="remove-field" type="button" value="Remover Coluna" />
+        <div id="tbl-fields"></div>
+        <input id="db-create" type="button" value="Criar Tabela" />
+        <input id="db-drop" type="button" value="Remover Tabela" />
+    </fieldset>
+
+    <fieldset>
+        <legend>INSERT</legend>
+        <div id="add-fields"></div>
+        <input id="db-add" type="button" value="Salvar" />
+    </fieldset>
+
+    <fieldset>
+        <legend>SELECT</legend>
+        <div id="find-fields"></div>
+        <input id="db-search" type="button" value="Buscar" />
+        <div id="db-results"></div>
+    </fieldset>
+
+</body>
+</html>

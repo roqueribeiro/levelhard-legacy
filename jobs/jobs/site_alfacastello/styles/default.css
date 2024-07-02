@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+html		{ margin:0px; padding:0px; }
+body		{ margin:0px; padding:0px; }
+div			{ margin:0px; padding:0px; }
+span		{ margin:0px; padding:0px; }
+ul			{ margin:0px; padding:0px; }
+li			{ margin:0px; padding:0px; list-style:none; }
+fieldset	{ margin:0px; padding:0px; }
+legend		{ margin:0px; padding:0px; }
+label		{ margin:0px; padding:0px; }
+form		{ margin:0px; padding:0px; }
+input		{ margin:0px; padding:0px; outline:none; }
+select		{ margin:0px; padding:0px; outline:none;}
+option		{ margin:0px; padding:0px; }
+textarea	{ margin:0px; padding:0px; outline:none;}
+table		{ margin:0px; padding:0px; }
+tr			{ margin:0px; padding:0px; }
+td			{ margin:0px; padding:0px; }
+a			{ margin:0px; padding:0px; }
+p			{ margin:0px; padding:0px; }
+h1			{ margin:0px; padding:0px; }
+h2			{ margin:0px; padding:0px; }
+h3			{ margin:0px; padding:0px; }
+img			{ margin:0px; padding:0px; border:0px; }
+
+a			{ -webkit-transition:300ms;	-moz-transition:300ms; -o-transition:300ms;	transition:300ms; }
+a 			{ color:#333; text-decoration:none; }
+a:hover		{ color:#999; text-decoration:none; }
+a:active 	{ color:#333; text-decoration:none; }
+a:visited 	{ color:#333; text-decoration:none; }
+
+/*=============== Default Theme ===============*/
+
+body 								{ background:url(../images/background.jpg) repeat; font-family:Verdana, Geneva, sans-serif; font-size:12px; overflow:hidden; }
+
+#wrap								{ position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.03); z-index:100; display:none; }
+#loading							{ position:absolute; width:200px; height:60px; bottom:-100px; left:50%; margin:0 0 0 -100px; box-shadow:0 0 20px rgba(0,0,0,0.1) } 
+#loading							{ background:rgba(255,255,255,0.9); border-radius:15px; z-index:100; text-align:center; }
+#loading img						{ position:relative; top:10px;}
+
+#container							{ position:absolute; width:100%; height:100%; background: url(../images/marca.png) no-repeat center rgba(0,0,0,0.2); }
+#container #tarja-p					{ position:absolute; width:100%; height:124px; top:40px; background: url(../images/tarja00.png) repeat-x; opacity:0.3 }
+
+#container #menu					{ position:absolute; width:200px; height:100%; background:url(../images/background.jpg); box-shadow:0 0 30px rgba(0,0,0,0.4); }
+#container #menu #logo				{ position:absolute; width:165px; height:190px; margin:19px; background:url(../images/logo.png) no-repeat; }
+#container #menu #tarja				{ position:absolute; width:100%; height:124px; top:40px; background: url(../images/tarja00.png) repeat-x; }
+
+#container #menu #nav				{ position:absolute; top:250px; font-size:14px; font-weight:bold; color:#555; }
+#container #menu #nav li			{ -webkit-transition:600ms; }
+#container #menu #nav li			{ padding:15px 15px 15px 55px; width:150px; text-shadow:-1px 1px 5px rgba(0,0,0,0.3); cursor:pointer; }
+#container #menu #nav li:hover		{ background:rgba(255,255,255,0.6); }
+#container #menu #nav li img		{ position:absolute; width:16px; left:30px; }
+
+#container #box						{ position:absolute; width:100%; height:100%; margin-left:200px; left:100%; z-index:5; }
+
+#container #box #borda				{ position:absolute; width:100px; height:100%; background:url(../images/background.jpg); box-shadow:0 0 100px rgba(0,0,0,0.4); z-index:4; }
+#container #box #borda #tarja		{ position:absolute; width:100%; height:124px; top:16px; background:url(../images/lateral.png) no-repeat; }
+#container #box #borda #sombra		{ position:absolute; width:100%; height:100%; top:0px; background:rgba(0,0,0,0.1); box-shadow:inset 0 0 50px rgba(0,0,0,0.3); }
+
+#container #box #conteudo			{ position:absolute; width:100%; height:100%; margin-left:25px; background:url(../images/background.jpg) rgba(255,255,255,0.5); z-index:5; }
+#container #box #conteudo #tarja	{ position:absolute; width:100%; height:124px; top:16px; background: url(../images/tarja01.png) repeat-x; }
+#container #box #conteudo #tarja h3	{ position:absolute; top:25px; left:315px; font-size:36px; text-shadow: 0 0 5px rgba(0,0,0,0.3); color:#FFF; }
+#container #box #conteudo #ajax		{ position:absolute; top:150px; left:10px; width:760px; height:500px; padding:10px; display:none; overflow-x:hidden; overflow-y:auto; }
+
+#conteudo #ajax #montador					{ position:relative; text-align:center; }
+#conteudo #ajax #montador ul				{ vertical-align:top; }
+#conteudo #ajax #montador li				{ vertical-align:top; }
+#conteudo #ajax #montador #cabecalho		{ padding:5px; font-size:12px; font-weight:bold; text-shadow:0 1px 1px rgba(0,0,0,0.3); }
+#conteudo #ajax #montador #cabecalho		{ border-radius:5px; background:rgba(0,0,0,0.05); }
+#conteudo #ajax #montador #cabecalho li		{ vertical-align:middle; padding-top:5px; padding-bottom:5px; padding-left:35px; }
+#conteudo #ajax #montador #escopo			{ background:rgba(255,255,255,0.3); padding:20px; font-size:13px; border-radius:5px; box-shadow:0 0 3px rgba(0,0,0,0.2); }
+#conteudo #ajax #montador #escopo li		{ display:inline-block; }
+#conteudo #ajax #montador ul p 				{ padding:5px; }
+
+#conteudo #ajax #galeria								{ }
+#conteudo #ajax #galeria li	img							{ -webkit-transition:300ms;	-moz-transition:300ms; -o-transition:300ms;	transition:300ms; }
+#conteudo #ajax #galeria li	img							{ width:140px; cursor:pointer; }
+#conteudo #ajax #galeria li img							{ padding:8px; margin:5px; background:rgba(255,255,255,0.5); border:1px #FFF solid; box-shadow:0 0 10px rgba(0,0,0,0.2); border-radius:5px; }
+#conteudo #ajax #galeria li img:hover					{ box-shadow:0 0 15px rgba(0,0,0,0.5); background:rgba(255,255,255,0.9); }
+
+#conteudo #ajax #formulario								{ text-align:center; vertical-align:top; }
+#conteudo #ajax #formulario #campos						{ display:inline-block; text-align:center; }
+#conteudo #ajax #formulario #campos	ul					{ text-align:left; padding:0 0 0 5px; }
+#conteudo #ajax #formulario #campos	li					{ display:inline-block; vertical-align:top; padding:5px 5px 5px 5px}
+#conteudo #ajax #formulario #campos	ul li:first-child	{ width:120px; }
+#conteudo #ajax #formulario #campos	#enviar				{ text-align:center; }
+#conteudo #ajax #formulario #campos textarea			{ min-width:200px; min-height:100px; resize:none; }
+
+#container #footer										{ position:absolute; bottom:25px; left:10px; z-index:4; text-shadow:0 2px 2px #AAA; font-size:9px; width:180px; color:#666; text-align:center; }

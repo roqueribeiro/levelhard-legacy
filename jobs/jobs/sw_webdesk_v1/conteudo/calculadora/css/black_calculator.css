@@ -1,0 +1,74 @@
+﻿.blackCalculator * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.blackCalculator {
+    position: relative;
+    width: 210px;
+    height: 300px;
+    padding: 15px;
+    color: #444;
+    font-size: 14px;
+    background: -webkit-linear-gradient(#DDD,#AAA);
+}
+
+    .blackCalculator label {
+        display: none;
+    }
+
+    .blackCalculator input[type=text] {
+        width: 180px;
+        height: 30px;
+        margin-bottom: 15px;
+        outline: none;
+    }
+
+    .blackCalculator a {
+        position: relative;
+        font-family: Verdana;
+        font-weight: normal;
+        display: block;
+        border-radius: 2px;
+        padding: 11px;
+        text-align: center;
+        text-decoration: none;
+        width: 16px;
+        height: 16px;
+        float: left;
+        margin-left: 5px;
+        margin-bottom: 12px;
+        color: #FFF;
+        text-shadow: 0 1px 1px #000;
+        background: -webkit-linear-gradient(#666,#444);
+        background: -moz-linear-gradient(#666,#444);
+        background: -o-linear-gradient(#666,#444);
+        background: -ms-linear-gradient(#666,#444);
+        background: linear-gradient(#666,#444);
+        box-shadow: 0 2px 1px #000;
+    }
+
+        .blackCalculator a:hover {
+            color: #6fbb05;
+            background: -webkit-linear-gradient(#555,#333);
+            background: -moz-linear-gradient(#555,#333);
+            background: -o-linear-gradient(#555,#333);
+            background: -ms-linear-gradient(#555,#333);
+            background: -linear-gradient(#555,#333);
+        }
+
+        .blackCalculator a:active {
+            bottom: -2px;
+            box-shadow: 0 0 1px #000;
+        }
+
+    .blackCalculator form input[type=text] {
+        box-shadow: inset 1px 1px 4px #555, 1px 1px #FFF;
+        border-radius: 8px;
+        color: #444;
+        padding: 10px 15px;
+        font-size: 36px;
+        font-family: 'Digital';
+        background: #a4b29b;
+    }

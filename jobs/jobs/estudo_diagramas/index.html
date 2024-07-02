@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Diagramas de Processos</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="kinetic-v4.4.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var strokeSize = 5;
+            var strokeType = 'round';
+            var strokeShadowColor = '#000';
+            var strokeShadowBlur = 5;
+            var strokeShadowOffset = 3;
+            var strokeShadowOpacity = 0.2;
+            var stage = new Kinetic.Stage({
+                container: 'container',
+                width: 1000,
+                height: 800
+            });
+            var layer = new Kinetic.Layer();
+
+            var diagramTitle = new Kinetic.Text({
+                text: 'DC46-14401-ED [010] / DC46-14401-GD [010] / DC46-14401-YD [010]',
+                fontFamily: 'Calibri',
+                fontSize: 28,
+                x: stage.getWidth() / 2,
+                y: 25,
+                fill: '#222',
+                stroke: '#FFF',
+                strokeWidth: 0.4,
+            });
+            diagramTitle.setOffset({
+                x: diagramTitle.getWidth() / 2
+            });
+
+            var motherGroup = new Kinetic.Group({
+                draggable: true,
+            });
+
+            var motherLine = new Kinetic.Line({
+                points: [200, 780, 980, 780],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineVertical_1 = new Kinetic.Line({
+                points: [200, 780, 200, 600],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_1_1 = new Kinetic.Line({
+                points: [100, 600, 200, 600],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_1_2 = new Kinetic.Line({
+                points: [100, 680, 200, 680],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineVertical_2 = new Kinetic.Line({
+                points: [210, 780, 210, 400],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_2_1 = new Kinetic.Line({
+                points: [210, 400, 310, 400],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_2_2 = new Kinetic.Line({
+                points: [210, 680, 510, 680],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineVertical_3 = new Kinetic.Line({
+                points: [510, 680, 510, 200],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_3_1 = new Kinetic.Line({
+                points: [510, 200, 610, 200],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_3_2 = new Kinetic.Line({
+                points: [510, 280, 610, 280],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_3_3 = new Kinetic.Line({
+                points: [510, 360, 610, 360],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_3_4 = new Kinetic.Line({
+                points: [510, 440, 610, 440],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_3_5 = new Kinetic.Line({
+                points: [510, 520, 610, 520],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_3_6 = new Kinetic.Line({
+                points: [510, 600, 610, 600],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineVertical_4 = new Kinetic.Line({
+                points: [500, 680, 500, 520],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_4_1 = new Kinetic.Line({
+                points: [400, 520, 500, 520],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            var lineHorizontal_4_2 = new Kinetic.Line({
+                points: [400, 600, 500, 600],
+                stroke: '#444',
+                strokeWidth: strokeSize,
+                lineCap: strokeType,
+                lineJoin: strokeType,
+                draggable: true,
+                shadowColor: strokeShadowColor,
+                shadowBlur: strokeShadowBlur,
+                shadowOffset: strokeShadowOffset,
+                shadowOpacity: strokeShadowOpacity
+            });
+
+            motherGroup.add(motherLine);
+            motherGroup.add(lineVertical_1);
+            motherGroup.add(lineHorizontal_1_1);
+            motherGroup.add(lineHorizontal_1_2);
+            motherGroup.add(lineVertical_2);
+            motherGroup.add(lineHorizontal_2_1);
+            motherGroup.add(lineHorizontal_2_2);
+            motherGroup.add(lineVertical_3);
+            motherGroup.add(lineHorizontal_3_1);
+            motherGroup.add(lineHorizontal_3_2);
+            motherGroup.add(lineHorizontal_3_3);
+            motherGroup.add(lineHorizontal_3_4);
+            motherGroup.add(lineHorizontal_3_5);
+            motherGroup.add(lineHorizontal_3_6);
+            motherGroup.add(lineVertical_4);
+            motherGroup.add(lineHorizontal_4_1);
+            motherGroup.add(lineHorizontal_4_2);
+            layer.add(motherGroup);
+            layer.add(diagramTitle);
+            stage.add(layer);
+
+            motherGroup.on('mouseover', function () {
+                document.body.style.cursor = 'pointer';
+            });
+
+            motherGroup.on('mouseout', function () {
+                document.body.style.cursor = 'default';
+            });
+
+            var posY = 1;
+            var posX = 1;
+            var pos3dY = 0;
+            var pos3dX = 0;
+            var movVel = 5;
+
+            var active = false;
+
+            $(this).mousedown(function () {
+                active = true;
+            });
+
+            $(this).mouseup(function () {
+                active = false;
+            });
+
+            $(this).mousemove(function (e) {
+
+                //if (active) {
+
+                    pos3dY = (e.pageX - ($(Window).width() / 2)) / 80;
+                    pos3dX = (e.pageY - ($(Window).height() / 2)) / 80;
+
+                    //$('#container').css({'-webkit-transform': 'rotateY( ' + pos3dY + 'deg ) rotateX( ' + pos3dX + 'deg )'});
+
+                //}
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+</body>
+</html>

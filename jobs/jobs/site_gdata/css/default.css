@@ -1,0 +1,216 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    color: #5a5a5a;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.2);
+    display: none;
+    z-index: 9999;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 9999;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #EEE;
+    line-height: 60px;
+    border-top: 1px #CCC solid;
+    overflow: hidden;
+}
+
+#content {
+    width: auto;
+}
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+}
+
+    .navbar-wrapper .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .navbar-wrapper .navbar {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+
+.carousel {
+    height: 400px;
+}
+
+.carousel-caption {
+    z-index: 10;
+}
+
+.carousel .item {
+    height: 400px;
+    background-color: #222;
+}
+
+.nocarousel {
+    height: 300px !important;
+}
+
+    .nocarousel .item {
+        height: 300px !important;
+    }
+
+
+.carousel-inner > .item > .img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+}
+
+.marketing {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+    .marketing .col-lg-4 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .marketing h2 {
+        font-weight: normal;
+    }
+
+    .marketing .col-lg-4 p {
+        text-align: justify;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+.page-header {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.featurette-divider {
+    margin: 40px 0;
+}
+
+.featurette-heading {
+}
+
+@media (min-width: 768px) {
+
+    .marketing {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+
+        .navbar-wrapper .container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .navbar-wrapper .navbar {
+            padding-right: 0;
+            padding-left: 0;
+            border-radius: 4px;
+        }
+
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .featurette-heading {
+        margin-top: 120px;
+    }
+}
+
+.bubblingG {
+    position: absolute;
+    text-align: center;
+    width: 80px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -40px;
+}
+
+    .bubblingG span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 10px;
+        height: 10px;
+        margin: 25px auto;
+        background: #000000;
+        border-radius: 50px;
+        animation: bubblingG 0.7s infinite alternate;
+    }
+
+#bubblingG_1 {
+    animation-delay: 0s;
+}
+
+#bubblingG_2 {
+    animation-delay: 0.21s;
+}
+
+#bubblingG_3 {
+    animation-delay: 0.42s;
+}
+
+@keyframes bubblingG {
+    0% {
+        width: 10px;
+        height: 10px;
+        background-color: #000000;
+        transform: translateY(0);
+    }
+
+    100% {
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        transform: translateY(-21px);
+    }
+}
+
+- See more at: http://cssload.net/#sthash.Zw0EcuOY.dpuf

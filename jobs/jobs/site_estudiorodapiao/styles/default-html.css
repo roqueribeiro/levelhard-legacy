@@ -1,0 +1,252 @@
+/* ============== CSS Default - HTML ============== */
+
+html		{ margin:0px; padding:0px; }
+body		{ margin:0px; padding:0px; }
+div			{ margin:0px; padding:0px; }
+span		{ margin:0px; padding:0px; }
+ul			{ margin:0px; padding:0px; }
+li			{ margin:0px; padding:0px; list-style:none; }
+fieldset	{ margin:0px; padding:0px; }
+legend		{ margin:0px; padding:0px; }
+label		{ margin:0px; padding:0px; }
+form		{ margin:0px; padding:0px; }
+input		{ margin:0px; padding:0px; outline:none; }
+select		{ margin:0px; padding:0px; outline:none;}
+option		{ margin:0px; padding:0px; }
+textarea	{ margin:0px; padding:0px; outline:none;}
+table		{ margin:0px; padding:0px; }
+tr			{ margin:0px; padding:0px; }
+td			{ margin:0px; padding:0px; }
+a			{ margin:0px; padding:0px; }
+p			{ margin:0px; padding:0px; }
+h1			{ margin:0px; padding:0px; }
+h2			{ margin:0px; padding:0px; }
+h3			{ margin:0px; padding:0px; }
+img			{ margin:0px; padding:0px; border:0px; }
+
+a 			{ -webkit-transition:300ms; -moz-transition:300ms; -o-transition:300ms; -ms-transition:300ms; transition:300ms; }
+a 			{ color:#FFF; text-decoration:none; }
+a:hover		{ color:#c67329; text-decoration:none; }
+a:active 	{ color:#c67329; text-decoration:none; }
+a:visited 	{ color:#FFF; text-decoration:none; }
+
+/* ============== CSS Default ============== */
+
+body
+{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; 
+	font-size:12px;
+	color:#333;
+	background:#3F0A3B url(../images/back.jpg);
+	font-family:Verdana, Geneva, sans-serif;
+	overflow:hidden;
+}
+
+input[type=submit], input[type=button]
+{
+	background:#c67329;
+	background:-webkit-linear-gradient(#f39a48, #c67329);
+	background:-moz-linear-gradient(#f39a48, #c67329);
+	background:-o-linear-gradient(#f39a48, #c67329);
+	
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	
+	border-top:1px rgba(255,255,255,0.3) solid;
+	border-left:1px rgba(255,255,255,0.3) solid;
+	border-bottom:1px rgba(0,0,0,0.4) solid;
+	border-right:1px rgba(0,0,0,0.4) solid;
+
+	color:#FFF;
+	text-shadow:0 1px 2px rgba(0,0,0,0.8);
+
+	border-radius:3px;
+	
+	padding:6px 16px 6px 16px;
+	
+	box-shadow:inset 1px 1px 1px rgba(255,255,255,0.2), 1px 1px 1px rgba(0,0,0,0.2);
+	
+}
+
+button, input[type=submit], input[type=button], #x:-moz-any-link, x:default 
+{
+	padding:4px 12px 4px 12px !important;
+}
+
+input[type=submit]:disabled, input[type=button]:disabled, 
+input[type=submit]:hover:disabled, input[type=button]:hover:disabled, 
+input[type=submit]:active:disabled, input[type=button]:active:disabled
+{
+	background:#CCC;
+	background:-webkit-linear-gradient(#FFF, #DDD);
+	background:-moz-linear-gradient(#FFF, #DDD);
+	background:-o-linear-gradient(#FFF, #DDD);
+	
+	box-shadow:1px 1px 1px rgba(0,0,0,0.1);
+	
+	cursor:not-allowed;
+
+	opacity:0.6;
+}
+
+input[type=submit]:hover, input[type=button]:hover
+{
+	background:#d7863c;
+	background:-webkit-linear-gradient(#eaa96d, #d7863c);
+	background:-moz-linear-gradient(#eaa96d, #d7863c);
+	background:-o-linear-gradient(#eaa96d, #d7863c);
+}
+
+input[type=submit]:active, input[type=button]:active
+{
+	background:#c67329;
+	background:-webkit-linear-gradient(#f39a48, #c67329);
+	background:-moz-linear-gradient(#f39a48, #c67329);
+	background:-o-linear-gradient(#f39a48, #c67329);
+	
+	border-top:1px rgba(0,0,0,0.4) solid;
+	border-left:1px rgba(0,0,0,0.4) solid;
+	border-bottom:1px rgba(255,255,255,0.3) solid;
+	border-right:1px rgba(255,255,255,0.3) solid;
+	
+	box-shadow:inset 1px 1px 1px rgba(0,0,0,0.3);
+	
+	text-shadow:none;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #FFF;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #FFF;
+}
+
+input[type=text], input[type=password]
+{
+	background:url(../images/back-rpb.png);
+	
+	border-top:1px rgba(0,0,0,0.2) solid;
+	border-left:1px rgba(0,0,0,0.2) solid;
+	border-bottom:1px rgba(255,255,255,0.2) solid;
+	border-right:1px rgba(255,255,255,0.2) solid;
+	
+	border-radius:3px;
+	
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	
+	width:140px;
+	
+	padding:6px 6px 6px 6px;
+	
+	color:#FFF;
+	text-shadow:0 1px 2px rgba(0,0,0,0.8);
+	
+	box-shadow:inset 1px 1px 3px rgba(0,0,0,0.2);
+	
+}
+
+input[type=text], input[type=password], #x:-moz-any-link, x:default 
+{
+	padding:5px !important;
+}
+
+input[type=text]:disabled, input[type=password]:disabled, 
+input[type=text]:hover:disabled, input[type=password]:hover:disabled, 
+input[type=text]:active:disabled, input[type=password]:active:disabled,
+select:disabled, textarea:disabled
+{
+	cursor:not-allowed;
+	opacity:0.6;
+}
+
+input:focus, select:focus, textarea:focus
+{
+	border:1px #FFF solid;
+}
+
+select
+{
+	border:1px #BBB solid;
+	border-radius:3px;
+	
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	
+	padding:3px 3px 3px 3px;		
+}
+
+select, #x:-moz-any-link, x:default 
+{
+	padding:2px !important;
+}
+
+option
+{
+}
+
+textarea
+{	
+	border-top:1px rgba(0,0,0,0.2) solid;
+	border-left:1px rgba(0,0,0,0.2) solid;
+	border-bottom:1px rgba(255,255,255,0.2) solid;
+	border-right:1px rgba(255,255,255,0.2) solid;
+	
+	border-radius:3px;
+	background:url(../images/back-rpb.png);
+	
+	min-height:80px;
+	max-height:120px;
+	
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	
+	resize:none;
+	
+	padding:6px;
+	
+	color:#FFF;
+	text-shadow:0 1px 2px rgba(0,0,0,0.8);
+	
+	box-shadow:inset 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+textarea, #x:-moz-any-link, x:default 
+{
+	padding:3px !important;
+}
+
+#false-button	
+{
+	position:relative;
+	background:#CCC;
+	background:-webkit-linear-gradient(#FFF, #DDD);
+	background:-moz-linear-gradient(#FFF, #DDD);
+	background:-o-linear-gradient(#FFF, #DDD);
+	
+	border:1px #BBB solid;
+	border-radius:3px;
+	
+	padding:4px 12px 4px 12px;
+	
+	box-shadow:1px 1px 1px rgba(0,0,0,0.1);
+	
+	cursor:default;
+}
+
+#false-button:hover
+{
+	background:#DDD;
+	background:-webkit-linear-gradient(#FFF, #EEE);
+	background:-moz-linear-gradient(#FFF, #EEE);
+	background:-o-linear-gradient(#FFF, #EEE);
+}
+
+#false-button:active	
+{
+	background:#CCC;
+	background:-webkit-linear-gradient(#EEE, #CCC);
+	background:-moz-linear-gradient(#EEE, #CCC);
+	background:-o-linear-gradient(#EEE, #CCC);
+	box-shadow:inset 1px 1px 1px rgba(0,0,0,0.3);
+}

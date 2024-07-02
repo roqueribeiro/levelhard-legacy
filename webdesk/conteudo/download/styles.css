@@ -1,0 +1,109 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana;
+    font-size: 12px;
+    outline: none;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #DDD;
+    text-align: center;
+}
+
+form
+{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto 40px auto;
+    background: #EEE;
+    background: -webkit-linear-gradient(#EEE,#DDD);
+    padding: 15px 0;
+    box-shadow: 0 2px #BBB;
+    z-index: 10;
+}
+
+input
+{
+    margin-right: -4px;
+}
+
+    input[type=text]
+    {
+        position: relative;
+        padding: 10px;
+        top: -1px;
+        border: none;
+        width: 550px;
+        box-shadow: 0 2px #BBB;
+    }
+
+    input[type=text]
+    {
+        border-bottom-left-radius: 10px;
+    }
+
+    input[type=submit], input[type=button]
+    {
+        position: relative;
+        padding: 10px 25px;
+        top: -1px;
+        border: none;
+        background: #888;
+        color: #FFF;
+        box-shadow: 0 2px #666;
+        -webkit-transition: 100ms;
+        -moz-transition: 100ms;
+        -o-transition: 100ms;
+        -ms-transition: 100ms;
+        transition: 100ms;
+    }
+
+#status
+{
+    position: relative;
+    display: none;
+}
+
+    #status p
+    {
+        margin: 15px 0 0 0;
+    }
+
+#iframe
+{
+    position: absolute;
+    top: 80px;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    background: #FFF;
+    border-radius: 15px;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3), 1px 1px #FFF;
+    padding: 20px;
+    z-index: 5;
+}
+
+    #iframe iframe
+    {
+        width: 100%;
+        height: 100%;
+        border: none;
+        overflow: auto;
+    }
+
+input[type=submit]:not(:disabled):hover, input[type=button]:not(:disabled):hover
+{
+    background: #777;
+}
+
+input[type=submit]:not(:disabled):active, input[type=button]:not(:disabled):active
+{
+    top: 1px;
+    box-shadow: none;
+}

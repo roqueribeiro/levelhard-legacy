@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+#tooltip 	
+{ 
+	position: absolute; 
+	
+	border:1px #FFF solid; 
+	
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
+	
+	padding:10px;
+		
+	color:#333;
+	font-size:10px; 
+	
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,0.3); 
+	-moz-box-shadow:0 0 10px rgba(0,0,0,0.3); 
+	box-shadow:0px 0px 10px rgba(0,0,0,0.3);
+	
+	z-index:3000;
+}
+#tooltip div
+{
+	font-weight:normal;
+}
+#tooltip ul
+{
+	padding:3px;
+}
+#tooltip li
+{
+	display:inline-block;
+	position:relative;
+	vertical-align:top;
+}
+#tooltip ul li:first-child
+{
+	width:250px;
+}

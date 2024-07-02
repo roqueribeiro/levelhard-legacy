@@ -1,0 +1,609 @@
+﻿*
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    outline: none;
+}
+
+body
+{
+    font-family: Verdana;
+    font-size: 11px;
+    overflow: hidden;
+}
+
+    body a
+    {
+        color: #444;
+    }
+
+div.wrapper
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    display: none;
+    z-index: 100;
+}
+
+div.preloader
+{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    margin: -40px 0 0 -40px;
+    background: url(../../images/preloader.gif) center no-repeat #222;
+    display: none;
+    z-index: 105;
+}
+
+/* Template Login */
+
+.login
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #E5E5E5;
+    /*
+    background: url(../../images/backgrounds/login_bg.jpg) center no-repeat #E5E5E5;
+    background-size: cover;
+    */
+}
+
+    .login a
+    {
+        text-decoration: none;
+        color: #F00;
+    }
+
+    .login fieldset
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -140px 0 0 -140px;
+        width: 280px;
+        text-align: center;
+        border: none;
+    }
+
+        .login fieldset legend
+        {
+            position: relative;
+            margin: 0 auto 25px auto;
+        }
+
+    .login form span
+    {
+        background-color: #AAA;
+        border-radius: 3px 0px 0px 3px;
+        color: #606468;
+        display: block;
+        float: left;
+        height: 50px;
+        line-height: 58px;
+        text-align: center;
+        width: 50px;
+        box-shadow: inset 0 1px 1px #888;
+    }
+
+    .login form input
+    {
+        border: none;
+        height: 50px;
+    }
+
+        .login form input[type="text"], .login input[type="password"]
+        {
+            background-color: #FFF;
+            border-radius: 0px 3px 3px 0px;
+            color: #222;
+            margin-bottom: 1em;
+            padding: 0 16px;
+            width: 198px;
+            box-shadow: inset 0 1px 1px #CCC;
+        }
+
+        .login form input[type="submit"]
+        {
+            color: #eee;
+            width: 280px;
+            font-family: Arial;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 3px;
+            background-color: #ca0a0a;
+            background-image: -webkit-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+            background-image: -moz-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+            background-image: -ms-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+            background-image: -o-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+            background-image: linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+            box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+            margin-bottom: 2em;
+        }
+
+            .login form input[type="submit"]:hover
+            {
+                background-color: #dc0000;
+            }
+
+    .login footer
+    {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        color: #666;
+        text-shadow: 0 1px #FFF;
+    }
+
+        .login footer div.browser
+        {
+            position: absolute;
+            left: 15px;
+            bottom: 10px;
+            text-align: left;
+            line-height: 18px;
+            z-index: 1;
+        }
+
+        .login footer div.information
+        {
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+            text-align: right;
+            line-height: 20px;
+            z-index: 1;
+        }
+
+/* Template Master */
+
+nav img
+{
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+}
+
+header.default
+{
+    position: absolute;
+    width: 100%;
+    height: 135px;
+    top: 0px;
+    background: url(../../images/backgrounds/logo_bg.jpg) center left no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+
+    header.default div.logo
+    {
+        margin: 34px 30px;
+    }
+
+    header.default div.language
+    {
+        position: absolute;
+        width: 400px;
+        height: 35px;
+        background: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1));
+        background: -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1));
+        background: -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1));
+        background: -ms-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1));
+        background: linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1));
+        top: 0px;
+        right: 0px;
+    }
+
+        header.default div.language img
+        {
+            float: right;
+            margin: 1px 8px 0 0;
+            cursor: pointer;
+        }
+
+    header.default div.information
+    {
+        position: absolute;
+        top: 40px;
+        right: 8px;
+        text-align: right;
+        font-family: Arial;
+        font-size: 9px;
+        color: #222;
+    }
+
+    header.default nav
+    {
+        position: absolute;
+        width: 100%;
+        min-width: 960px;
+        height: auto;
+        min-height: 35px;
+        background: #FFF;
+        background: -webkit-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
+        background: -moz-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
+        background: -o-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
+        background: -ms-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
+        background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
+        bottom: 0px;
+        box-shadow: 0 2px 1px rgba(0,0,0,0.8);
+    }
+
+        header.default nav ul
+        {
+            position: relative;
+        }
+
+            header.default nav ul li
+            {
+                float: left;
+            }
+
+                header.default nav ul li a
+                {
+                    display: block;
+                    line-height: 35px;
+                    text-decoration: none;
+                    padding: 0 25px;
+                }
+
+                header.default nav ul li:hover
+                {
+                    background: -webkit-linear-gradient(#EEE,#FFF);
+                    background: -moz-linear-gradient(#EEE,#FFF);
+                    background: -o-linear-gradient(#EEE,#FFF);
+                    background: -ms-linear-gradient(#EEE,#FFF);
+                    background: linear-gradient(#EEE,#FFF);
+                    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+                }
+
+                header.default nav ul li ul
+                {
+                    position: absolute;
+                    display: none;
+                    background: #FFF;
+                    box-shadow: 0 1px 2px rgba(0,0,0,0.6);
+                }
+
+                    header.default nav ul li ul li
+                    {
+                        float: none;
+                        border-left: 3px #222 solid;
+                    }
+
+                        header.default nav ul li ul li:nth-child(2n+1)
+                        {
+                            background: #F5F5F5;
+                        }
+
+                        header.default nav ul li ul li:hover
+                        {
+                            background: #E5E5E5;
+                            box-shadow: none;
+                            border-left: 3px #d90000 solid;
+                        }
+
+                        header.default nav ul li ul li ul
+                        {
+                            position: absolute;
+                            width: 280px;
+                            margin-top: -35px;
+                            left: 100%;
+                            display: none;
+                        }
+
+            header.default nav ul ul a[href="#"],
+            article.home section dd a[href="#"]
+            {
+                color: #CCC;
+            }
+
+#main.default
+{
+    position: absolute;
+    top: 135px;
+    bottom: 35px;
+    left: 0px;
+    right: 0px;
+    background: #EEE;
+    z-index: 1;
+}
+
+    #main.default nav
+    {
+        position: absolute;
+        width: 100%;
+        height: 35px;
+        background: #444;
+        background: -webkit-linear-gradient(#444,#555);
+        background: -moz-linear-gradient(#444,#555);
+        background: -o-linear-gradient(#444,#555);
+        background: -ms-linear-gradient(#444,#555);
+        background: linear-gradient(#444,#555);
+        top: 0px;
+        box-shadow: inset 0 -1px 1px rgba(0,0,0,0.4), 0 1px #FFF;
+        z-index: 2;
+    }
+
+        #main.default nav ul
+        {
+            position: relative;
+            float: right;
+        }
+
+            #main.default nav ul li
+            {
+                float: left;
+            }
+
+                #main.default nav ul li a
+                {
+                    display: block;
+                    text-decoration: none;
+                    padding: 0 35px;
+                    line-height: 35px;
+                    color: #FFF;
+                }
+
+                    #main.default nav ul li a:hover
+                    {
+                        background: #000;
+                    }
+
+                #main.default nav ul li ul
+                {
+                    position: absolute;
+                    display: none;
+                    background: #444;
+                    float: right;
+                }
+
+                    #main.default nav ul li ul li
+                    {
+                        float: none;
+                    }
+
+                        #main.default nav ul li ul li a
+                        {
+                        }
+
+                #main.default nav ul li:hover > ul
+                {
+                    display: block;
+                }
+
+    #main.default article
+    {
+        position: absolute;
+        top: 35px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        z-index: 1;
+    }
+
+        #main.default article div.wrapper-content
+        {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.1);
+            display: none;
+            z-index: 1000;
+        }
+
+        #main.default article header
+        {
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            background: #FFF;
+            box-shadow: 0 5px 15px #EEE;
+            z-index: 999;
+        }
+
+            #main.default article header hgroup
+            {
+                padding: 5px 20px;
+            }
+
+                #main.default article header hgroup h1
+                {
+                    font-family: Arial;
+                    font-size: 20px;
+                    text-shadow: 0 2px 1px #DDD;
+                    margin-bottom: -4px;
+                }
+
+                #main.default article header hgroup h4
+                {
+                    font-family: Arial;
+                    font-size: 14px;
+                    margin-top: 20px;
+                }
+
+                #main.default article header hgroup img
+                {
+                    position: relative;
+                    top: 2px;
+                    margin: 0 6px 0 2px;
+                }
+
+        #main.default article section
+        {
+            position: relative;
+            padding: 10px;
+            top: 100px;
+        }
+
+            #main.default article section dl
+            {
+            }
+
+                #main.default article section dl dt
+                {
+                    position: relative;
+                    width: 100%;
+                    border-bottom: 1px #CCC solid;
+                    box-shadow: 0 1px #FFF;
+                    padding: 10px 0;
+                    cursor: pointer;
+                }
+
+                    #main.default article section dl dt img:first-child
+                    {
+                        position: relative;
+                        top: 2px;
+                        margin: 0 10px 0 10px;
+                    }
+
+                    #main.default article section dl dt img.list-arrow
+                    {
+                        position: absolute;
+                        top: 14px;
+                        right: 0px;
+                        margin-right: 10px;
+                    }
+
+                    #main.default article section dl dt:hover
+                    {
+                        background: #DDD;
+                    }
+
+        /* ============ Inicio Pagina Home ============ */
+
+        #main.default article.home
+        {
+            position: absolute;
+            top: 35px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            z-index: 1;
+        }
+
+            #main.default article.home ul
+            {
+                position: relative;
+                width: auto;
+                height: auto;
+                margin: 10px 0px;
+            }
+
+                #main.default article.home ul li
+                {
+                    display: inline-block;
+                    margin: 10px;
+                    padding: 0px;
+                    background: #FFF;
+                    border-radius: 4px;
+                    border: 5px #FFF solid;
+                    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+                    cursor: pointer;
+                }
+
+                    #main.default article.home ul li a
+                    {
+                        text-decoration: none;
+                    }
+
+                        #main.default article.home ul li a img
+                        {
+                            position: relative;
+                            width: 48px;
+                            height: 48px;
+                            padding: 30px 50px 30px 50px;
+                        }
+
+                        #main.default article.home ul li a div
+                        {
+                            position: relative;
+                            padding: 10px 0 5px 0;
+                            border-top: 1px #CCC dotted;
+                            text-align: center;
+                        }
+
+                    #main.default article.home ul li:hover
+                    {
+                    }
+
+        /* ============ Inicio Pagina Grid ============ */
+
+        #main.default article.grid section dl dd
+        {
+            position: relative;
+            width: 100%;
+            height: auto;
+            background: #FFF;
+            display: none;
+        }
+
+footer.default
+{
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    bottom: 0px;
+    background: #222;
+    z-index: 2;
+}
+
+    footer.default nav ul
+    {
+        position: relative;
+        float: right;
+    }
+
+        footer.default nav ul li
+        {
+            float: left;
+        }
+
+            footer.default nav ul li a
+            {
+                display: block;
+                line-height: 35px;
+                text-decoration: none;
+                padding: 0 35px;
+                color: #FFF;
+            }
+
+                footer.default nav ul li a:hover
+                {
+                    background: #000;
+                }
+
+.ui-state-highlight
+{
+    width: 156px;
+    height: 125px;
+    background: none !important;
+    border: 1px dashed #AAA !important;
+    box-shadow: none !important;
+}
+
+.jqx-grid
+{
+    border: none !important;
+    border-radius: 0px !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    margin-bottom: 5px !important;
+}
+
+/* Definições para uso em Tablets */
+@media only screen and (max-width: 720px), only screen and (max-device-width: 720px)
+{
+}

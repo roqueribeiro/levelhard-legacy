@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+#menu						{ position:relative; width:100%; height:auto; color:#fff; }
+#menu ul,li 				{ padding: 0px; margin:0px; }
+#menu ul 					{ position:relative; margin:40px 8px 8px 8px; width:auto; }
+#menu ul li					{ background: #000066; }
+#menu ul li					{ background: -webkit-linear-gradient(#000099,#000066); }
+#menu ul li					{ background: -moz-linear-gradient(#000099,#000066); }
+#menu ul li					{ background: -o-linear-gradient(#000099,#000066); }
+#menu ul li					{ background: -ms-linear-gradient(#000099,#000066); }
+#menu ul li					{ background: linear-gradient(#000099,#000066); }
+#menu ul li					{ height:32px; line-height:32px; text-indent:10px; cursor:pointer; }
+#menu ul ul					{ position:relative; display:none; margin:0px; }
+#menu ul ul li				{ background:#FFF; color:#000066; height:30px; line-height:30px; text-indent:10px; }
+#menu ul ul li:hover		{ background-color:#000066; color:#fff; }

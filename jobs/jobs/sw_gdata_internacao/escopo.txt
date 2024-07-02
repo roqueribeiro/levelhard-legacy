@@ -1,0 +1,98 @@
+Dados Tela de Internação
+
+Internação:
+
+	Leitos disponíveis para selecionar na internação
+
+	Estabelecimento solicitante 
+		Nome
+		Cnes
+	
+	Dados do paciente 
+		nome
+		dt nascimento
+		sexo
+		raca
+		etinia
+		cartao SUS
+		nome mae
+		telefone
+
+	Responsável pela internacao
+		nome
+		endereço
+		num
+		rua 
+		bairro
+		cidade
+		cep
+		cod ibge
+		estado
+		telefone
+
+
+	tipo da internacao
+		clinica (obstetricia, etc...) ( tabela)
+
+	profissional solicitante
+		tipo da internação ( ex urgência/emergência)
+		documento utilizado cartao SUS ou CPF
+			convenio (se tiver)
+			numero do convenio
+		data/hora solicitação
+
+
+		Se motivos da internacao for (preencher)
+		acidente de transito
+			cnpj seguradora
+			num do bilhete
+			serie
+		acidente trabalho
+			cnpj empresa
+			cnae empresa
+			cbo
+			vinculo com a previdencia
+			  opcoes ( empregado )  (empregador)  (autonomo)  (desempregado) (aposentado)  (nao segurado)
+
+	autorizacao
+	
+		profissional autorizador
+		cod orgao emissor
+		documentos (CNS) (CPF)     
+		Numero da autorizacao internaçao hospitalar
+		
+
+	
+
+
+Setores
+	Cadastro de Setores
+	Alteração de setores
+	Exclusao de setores
+	
+
+	Dados dos setores
+	Codigo
+	Nome
+	Centro de Custo
+
+	o setor criado pode virar um subsetor
+
+leitos
+	Cadastro de leitos
+	Alteração de leitos
+	Exclusão de Leitos
+
+Relaçao de leitos pacientes
+
+	Local do Leito
+	Leito
+	Paciente
+	Status ( habilitado, desabilitado, ocupado, desocupado, quarentena)
+
+
+
+
+
+
+

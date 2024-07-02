@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<translations>
+	<translation id="version">Version:</translation>
+	<translation id="home_mod">Modules</translation>
+	<translation id="home_adm">Administration</translation>
+	<translation id="home_nav_home">Home</translation>
+	<translation id="home_nav_pres">Presentations</translation>
+	<translation id="home_nav_proj">Projects</translation>
+	<translation id="home_nav_subj">Relevant</translation>
+	<translation id="home_nav_admi">Administration</translation>
+	<translation id="home_nav_loca">Editing Plants</translation>
+	<translation id="home_nav_loca_new">New</translation>
+	<translation id="home_nav_loca_show">Show All</translation>
+	<translation id="home_nav_grou">Editing Groups</translation>
+	<translation id="home_nav_grou_new">New</translation>
+	<translation id="home_nav_grou_show">Show All</translation>
+	<translation id="home_nav_nive">Editing Levels</translation>
+	<translation id="home_nav_nive_new">New</translation>
+	<translation id="home_nav_nive_show">Show All</translation>
+	<translation id="home_nav_user">Editing Users</translation>
+	<translation id="home_nav_user_new">New</translation>
+	<translation id="home_nav_user_show">Show All</translation>
+	<translation id="master_hom">Home</translation>
+	<translation id="master_ref">Reload</translation>
+	<translation id="master_exp">Expand</translation>
+	<translation id="master_ext">Logout</translation>
+</translations>

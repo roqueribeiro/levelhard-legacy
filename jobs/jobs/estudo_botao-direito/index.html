@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jContextMenu</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-paper.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jcontext-menu.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //Itens escondidos
+            for (var i = 1; i <= 5; i++) {
+                $('<div>', {
+                    'data-id': i,
+                    'data-rename': 'hidden',
+                    'data-copy': 'hidden',
+                    'data-paste': 'hidden',
+                    'text': 'Line: ' + i
+                }).appendTo('.jcm-area-1');
+            }
+
+            //Itens desabilitados
+            for (var i = 6; i <= 10; i++) {
+                $('<div>', {
+                    'data-id': i,
+                    'data-rename': 'disabled',
+                    'data-copy': 'disabled',
+                    'data-paste': 'disabled',
+                    'text': 'Line: ' + i
+                }).appendTo('.jcm-area-1');
+            }
+
+            //Itens com todas funcionalidades
+            for (var i = 11; i <= 20; i++) {
+                $('<div>', {
+                    'data-id': i,
+                    'text': 'Line: ' + i
+                }).appendTo('.jcm-area-1');
+            }
+
+            //Plugin jcontextMenu
+            $('.jcm-area-1 div').jcontextMenu({
+                itens: {
+                    'header1': {
+                        type: 'header',
+                        title: 'Ações Específicas'
+                    },
+                    'view': {
+                        type: 'action',
+                        title: 'Visualizar',
+                        icon: 'fa fa-eye',
+                        callback: function (element) {
+                            alert('Line: ' + element.data('id') + ', Action: Visualizar');
+                        }
+                    },
+                    'rename': {
+                        type: 'action',
+                        title: 'Renomear',
+                        icon: 'fa fa-font',
+                        callback: function (element) {
+                            alert('Line: ' + element.data('id') + ', Action: Renomear');
+                        }
+                    },
+                    'copy': {
+                        type: 'action',
+                        title: 'Copiar',
+                        icon: 'fa fa-files-o',
+                        callback: function (element) {
+                            alert('Line: ' + element.data('id') + ', Action: Copiar');
+                        }
+                    },
+                    'paste': {
+                        type: 'action',
+                        title: 'Colar',
+                        icon: 'fa fa-clipboard',
+                        callback: function (element) {
+                            alert('Line: ' + element.data('id') + ', Action: Colar');
+                        }
+                    },
+                    'download': {
+                        type: 'action',
+                        title: 'Baixar',
+                        icon: 'fa fa-cloud-download',
+                        callback: function (element) {
+                            alert('Line: ' + element.data('id') + ', Action: Baixar');
+                        }
+                    },
+                    'divider': {
+                        type: 'divider'
+                    },
+                    'header2': {
+                        type: 'header',
+                        title: 'Ações Globais'
+                    },
+                    'refresh': {
+                        type: 'action',
+                        title: 'Atualizar Lista',
+                        icon: 'fa fa-refresh',
+                        callback: function (element) {
+                            alert(element.data('id'));
+                        }
+                    },
+                }
+            });
+
+        });
+    </script>
+    <style type="text/css">
+        body {
+            background: #EEE;
+        }
+
+        .jcm-area-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #EEE;
+            padding: 15px 15px 0 15px;
+            list-style: none;
+            overflow: auto;
+        }
+
+            .jcm-area-1 div {
+                position: relative;
+                width: 100%;
+                height: 40px;
+                background: #FFF;
+                margin-bottom: 15px;
+                line-height: 40px;
+                text-indent: 10px;
+                font-family: Verdana;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            }
+    </style>
+</head>
+<body>
+    <div class="jcm-area-1"></div>
+</body>
+</html>

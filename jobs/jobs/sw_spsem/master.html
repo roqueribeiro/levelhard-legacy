@@ -1,0 +1,158 @@
+<script type="text/javascript" src="scripts/pages/default.js"></script>
+<div class="notification"></div>
+<!-- Sobreposição e Preloader -->
+<div class="wrapper"></div>
+<div class="preloader"></div>
+<!-- Cabeçalho -->
+<header class="default">
+    <div class="logo">
+        <!-- Logo do Software -->
+        <a href="javascript:accessUrl('home.html');"><img src="images/logo.png" alt="" /></a>
+    </div>
+    <div class="language">
+        <!-- Linguagens Padrões -->
+        <img id="en" src="images/flags/United-States.png" alt="" onclick="activeLanguage($(this).attr('id'))" />
+        <img id="es" src="images/flags/Mexico.png" alt="" onclick="activeLanguage($(this).attr('id'))" />
+        <img id="pt-BR" src="images/flags/Brazil.png" alt="" onclick="activeLanguage($(this).attr('id'))" />
+    </div>
+    <div class="information">
+        <!-- Versão do Software -->
+        <p><span id="version"></span> 1.0 beta</p>
+        <!-- Nome do Software -->
+        <p><b>ApSem</b> [ Controle de Apresentações Semanais ]</p>
+    </div>
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <li>
+                <a href="#home" onclick="accessUrl($(this).attr('href'));">
+                    <span id="home_nav_home"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#apresentacoes" onclick="accessUrl($(this).attr('href'));">
+                    <span id="home_nav_pres"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="">
+                    <span id="home_nav_proj"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="">
+                    <span id="home_nav_subj"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <span id="home_nav_admi"></span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="#plantas" onclick="accessUrl($(this).attr('href'));">
+                            <span id="home_nav_loca"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#" class="fancybox-button">
+                                    <span id="home_nav_loca_new"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#plantas" onclick="accessUrl($(this).attr('href'));">
+                                    <span id="home_nav_loca_show"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#grupos" onclick="accessUrl($(this).attr('href'));">
+                            <span id="home_nav_grou">
+                            </span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#" class="fancybox-button">
+                                    <span id="home_nav_grou_new"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#grupos" onclick="accessUrl($(this).attr('href'));">
+                                    <span id="home_nav_grou_show"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#niveis" onclick="accessUrl($(this).attr('href'));">
+                            <span id="home_nav_nive"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#" class="fancybox-button">
+                                    <span id="home_nav_nive_new"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#niveis" onclick="accessUrl($(this).attr('href'));">
+                                    <span id="home_nav_nive_show"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#usuarios" onclick="accessUrl($(this).attr('href'));">
+                            <span id="home_nav_user"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#" class="fancybox-button">
+                                    <span id="home_nav_user_new"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#usuarios" onclick="accessUrl($(this).attr('href'));">
+                                    <span id="home_nav_user_show"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<!-- Conteúdo -->
+<div id="main" class="default"></div>
+<!-- Rodapé -->
+<footer class="default">
+    <nav>
+        <ul>
+            <li>
+                <a href="#home" onclick="accessUrl($(this).attr('href'));">
+                    <img src="images/icons/white/home_16x16.png" alt="" />
+                    <span id="master_hom"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="accessUrl($(this).attr('href'));" id="refresh">
+                    <img src="images/icons/white/spin_14x16.png" alt="" />
+                    <span id="master_ref"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" id="fit-height">
+                    <img src="images/icons/white/move_vertical_alt1_6x16.png" alt="" />
+                    <span id="master_exp"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" id="logout">
+                    <img src="images/icons/white/unlock_fill_12x16.png" alt="" />
+                    <span id="master_ext"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</footer>

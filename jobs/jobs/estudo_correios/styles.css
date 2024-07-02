@@ -1,0 +1,45 @@
+﻿body {
+    font-family: Arial;
+    font-size: 14px !important;
+    color: #444;
+}
+
+form {
+    padding: 10px;
+}
+
+#search_results {
+    margin: 10px 0;
+    padding: 0;
+}
+
+    #search_results a {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+#content_result {
+    margin: 10px 0;
+    padding: 0;
+    border: none;
+}
+
+table, th, td {
+    border: 1px solid #CCC !important;
+    margin: 0;
+}
+
+table {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+    table tr {
+    }
+
+        table tr td {
+            padding: 5px;
+        }

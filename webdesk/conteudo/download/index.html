@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SSDownloader</title>
+    <link rel="icon" href="images/favicon/favicon32.png" sizes="32x32" />
+    <link rel="icon" href="images/favicon/favicon48.png" sizes="48x48" />
+    <link rel="icon" href="images/favicon/favicon64.png" sizes="64x64" />
+    <link rel="icon" href="images/favicon/favicon128.png" sizes="128x128" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input[name=atualiza]').click(function () {
+                $('iframe').attr('src', $('iframe').attr('src'));
+            });
+            $('form').ajaxForm({
+                beforeSubmit: function () {
+                    $('form input[type=submit], form input[type=text]').attr('disabled', 'disabled');
+                    if (!$('input[type=text]').val()) {
+                        $('#status').html('<p style="color:#F00">Digite o Link para Download</p>').show(100, function () {
+                            $(this).delay(1000).hide(300, function () {
+                                $('form input[type=submit], form input[type=text]').removeAttr('disabled');
+                            });
+                        });
+                        return false;
+                    }
+                    else {
+                        $('#status').html('<p style="color:#00F">Fazendo Download do Arquivo...</p>').show(100);
+                    }
+                },
+                complete: function () {
+                    $('iframe').attr('src', $('iframe').attr('src'));
+                    $('#status').html('<p style="color:#000">Arquivo Baixado com Sucesso!</p>').show(100, function () {
+                        $(this).delay(1000).hide(300, function () {
+                            $('form input[type=submit], form input[type=text]').removeAttr('disabled');
+                        });
+                    });
+                }
+            });
+        });
+	</script>
+</head>
+<body>
+    <form action="download.php" method="post" enctype="multipart/form-data">
+        <input type="text" name="download" placeholder="Digite o Link do Arquivo" />
+        <input type="submit" value="Fazer Download" />
+        <input type="button" name="atualiza" value="Atualizar" />
+        <div id="status"></div>
+    </form>
+    <div id="iframe">
+        <iframe src="downloads/"></iframe>
+    </div>
+</body>
+</html>

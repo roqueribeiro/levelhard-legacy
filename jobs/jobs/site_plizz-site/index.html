@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Plizz Don't Leave Me</title>
+<link rel="stylesheet" href="themes/dontleaveme/default.css">
+<link rel="stylesheet" href="themes/dontleaveme/theme-style.css" media="all">
+<link rel="stylesheet" href="scripts/nivo-slider.css" media="all">
+<link rel="stylesheet" href="scripts/nivoslider/default/default.css" media="all">
+<link rel="stylesheet" href="scripts/fancybox/jquery.fancybox.css" media="all">
+<link rel="stylesheet" href="scripts/jQuery.jPlayer.2.1.0/skin/plizz-player/jplayer-plizz-theme.css" media="all">
+<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="scripts/fancybox/jquery.fancybox.js"></script>
+<script type="text/javascript" src="scripts/jQuery.jPlayer.2.1.0/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$('#components #chat').load('components/chat/index.php');
+	
+	$('#slider').nivoSlider({
+		effect				: 'fold',
+		animSpeed			: 600,
+		pauseTime			: 9000,
+		controlNavThumbs	: true
+	});
+	
+	$(".fancybox").fancybox({
+		href		: 'player.php',
+		type 		: 'ajax',
+		openEffect	: 'fade',
+		closeEffect	: 'fade',
+		padding		: 0,
+		scrolling	: 'no',
+		helpers:  {
+			overlay : null
+		}
+	});
+	
+	$('#menu ul li').hover(function(){
+		$('ul',this).stop().fadeIn(600);
+	},function(){
+		$('ul',this).stop().fadeOut(100);
+	});
+	
+});
+</script>
+</head>
+
+<body>
+
+<div id="plizz-body">
+    
+	<div id="theme-container">
+    
+    	<div id="header"></div>
+    
+    	<div id="centralize">
+        
+            <div id="cont-top">
+                <div id="container">
+                    <div id="logo"></div>
+                    <div id="search"><input type="text" name="search" placeholder="Pesquisar"></div>
+                    <div id="perfil">
+                    	<div id="image"></div>
+                        <div id="options">
+                        	<div id="id">Nome do Usuario</div>
+                            <div id="id-type">Plano Gold</div>
+                            <div id="actions">
+                            	<img src="themes/dontleaveme/images/icon-message.png" alt="">
+                                <img src="themes/dontleaveme/images/icon-perfil.png" alt="">
+                                <img src="themes/dontleaveme/images/icon-exit.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="advertisement"></div>
+                </div>
+                <div id="menu">
+                <ul>
+                	<li>Principal</li>
+                    <li>Videos
+                    <ul>
+                    	<li><img src="themes/dontleaveme/images/arrow-menu.png">Categoria 1</li>
+                        <li><img src="themes/dontleaveme/images/arrow-menu.png">Categoria 2</li>
+                        <li><img src="themes/dontleaveme/images/arrow-menu.png">Categoria 3</li>
+                        <li><img src="themes/dontleaveme/images/arrow-menu.png">Categoria 4</li>
+                    </ul>
+                    </li>
+                    <li>Social</li>
+                    <li>Loja</li>
+                    <li>Blog</li>
+                </ul>
+                </div>
+            </div>
+            
+            <div id="cont-center">
+                <div id="home">
+                    <div id="image-slider">
+                    
+                   	<div class="slider-wrapper theme-default">
+                        <div id="slider" class="nivoSlider">
+                            <img src="images/home-slider/img001.jpg" data-thumb="images/home-slider/img001_s.jpg" alt="" title="" />
+                            <img src="images/home-slider/img002.jpg" data-thumb="images/home-slider/img002_s.jpg" alt="" title="" />
+                            <img src="images/home-slider/img003.jpg" data-thumb="images/home-slider/img003_s.jpg" alt="" title="" />
+                            <img src="images/home-slider/img004.jpg" data-thumb="images/home-slider/img004_s.jpg" alt="" title="" />
+                        </div>
+                    </div> 
+                    
+                    </div>
+                    <div id="content">
+                        <div id="horizontal">
+                            <div id="gallery-more">
+                                <div id="title">Mais Visualizados</div>
+                                <div id="thumbs">
+                                    <ul>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="gallery-more">
+                                <div id="title">Recomendado</div>
+                                <div id="thumbs">
+                                    <ul>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="gallery-more">
+                                <div id="title">Mais Vistos por Você</div>
+                                <div id="thumbs">
+                                    <ul>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="vertical">
+                            <div id="gallery-more">
+                                <div id="title">Lançamentos</div>
+                                <div id="thumbs">
+                                    <ul>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                        <li class="fancybox"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div id="cont-foot">
+        
+        	<div id="foot-center">
+                <div id="mapa">
+                <fieldset>
+                    <legend>Mapa do Site</legend>
+                    <label>
+                    <ul>
+                        <li>Pricipal</li>
+                        <li>Videos</li>
+                        <li>Social</li>
+                        <li>Loja</li>
+                        <li>Blog</li>
+                        <li>Sobre</li>
+                        <li>Fale Conosco</li>
+                    </ul>
+                    </label>
+                </fieldset>
+                </div>
+                <div id="pagamento">
+                <fieldset>
+                    <legend>Formas de Pagamento</legend>
+                    <label>
+                    <ul>
+                        <li><img src="themes/dontleaveme/images/pay/american express_48.png" alt=""></li>
+                        <li><img src="themes/dontleaveme/images/pay/diners_48.png" alt=""></li>
+                        <li><img src="themes/dontleaveme/images/pay/mastercard_48.png" alt=""></li>
+                        <li><img src="themes/dontleaveme/images/pay/paypal_48.png" alt=""></li>
+                        <li><img src="themes/dontleaveme/images/pay/visa_48.png" alt=""></li>
+                    </ul>
+                    </label>
+                </fieldset>
+                </div>
+                <div id="contato">
+                    <fieldset>
+                    <legend>Sobre e Contato</legend>
+                    <label>
+                    <ul>
+                    	<li>A nível organizacional, o comprometimento entre as equipes estende o alcance e a importância das condições inegavelmente apropriadas.</li>
+                        <li>contato@plizz.com.br</li>
+                    </ul>
+                    </label>
+                </fieldset>
+                </div>
+            </div>
+        
+        </div>
+    
+    </div>
+    
+    <div id="components">
+    	<div id="chat"></div>
+    </div>
+
+</div>
+
+</body>
+</html>

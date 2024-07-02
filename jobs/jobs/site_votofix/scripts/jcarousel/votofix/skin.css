@@ -1,0 +1,124 @@
+.jcarousel-skin-votofix .jcarousel-container {
+	width:263px;
+	height:496px;
+	top:17px;
+	left:19px;
+}
+
+.jcarousel-skin-votofix .jcarousel-direction-rtl {
+}
+
+.jcarousel-skin-votofix .jcarousel-container-horizontal {
+}
+
+.jcarousel-skin-votofix .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-votofix .jcarousel-clip-horizontal {
+}
+
+.jcarousel-skin-votofix .jcarousel-item img {
+    width:263px;
+    height:496px;
+}
+
+.jcarousel-skin-votofix .jcarousel-item {
+    width:263px;
+    height:496px;
+	
+	-webkit-transition:600ms;
+	-moz-transition:600ms;
+	-o-transition:600ms;
+}
+
+.jcarousel-skin-votofix .jcarousel-item:hover,
+.jcarousel-skin-votofix .jcarousel-item:focus {
+	-webkit-transform:scale(1.15);
+	-moz-transform:scale(1.15);
+	-o-transform:scale(1.15);
+	transform:scale(1.15);
+}
+
+.jcarousel-skin-votofix .jcarousel-item-horizontal {
+    margin-left: 0;
+    margin-right: 7px;
+}
+
+.jcarousel-skin-votofix .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 7px;
+	margin-right: 0;
+}
+
+.jcarousel-skin-votofix .jcarousel-item-placeholder { }
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-votofix .jcarousel-next-horizontal {
+    position: absolute;
+    top:5px;
+    right:4px;
+    width:32px;
+    height:488px;
+    cursor:pointer;
+    background: url(proximo.png) no-repeat;
+	background-position: -96px 0;
+	
+	-webkit-transition:600ms;
+	-moz-transition:600ms;
+	-o-transition:600ms;
+}
+
+.jcarousel-skin-votofix .jcarousel-direction-rtl .jcarousel-next-horizontal {
+}
+
+.jcarousel-skin-votofix .jcarousel-next-horizontal:hover,
+.jcarousel-skin-votofix .jcarousel-next-horizontal:focus {
+	background-position: -64px 0;
+}
+
+.jcarousel-skin-votofix .jcarousel-next-horizontal:active {
+}
+
+.jcarousel-skin-votofix .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-votofix .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-votofix .jcarousel-next-disabled-horizontal:focus,
+.jcarousel-skin-votofix .jcarousel-next-disabled-horizontal:active {
+	background-position: 0 0;
+	cursor: default;
+}
+
+.jcarousel-skin-votofix .jcarousel-prev-horizontal {
+    position: absolute;
+    top:5px;
+    left:4px;
+    width:32px;
+    height:488px;
+    cursor:pointer;
+    background: url(anterior.png) no-repeat;
+	
+	-webkit-transition:600ms;
+	-moz-transition:600ms;
+	-o-transition:600ms;
+}
+
+.jcarousel-skin-votofix .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+}
+
+.jcarousel-skin-votofix .jcarousel-prev-horizontal:hover,
+.jcarousel-skin-votofix .jcarousel-prev-horizontal:focus {
+	background-position: -32px 0;
+}
+
+.jcarousel-skin-votofix .jcarousel-prev-horizontal:active {
+	background-position: -64px 0\9;
+}
+
+.jcarousel-skin-votofix .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-votofix .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-votofix .jcarousel-prev-disabled-horizontal:focus,
+.jcarousel-skin-votofix .jcarousel-prev-disabled-horizontal:active {
+	background-position: -96px 0;
+    cursor: default;
+}

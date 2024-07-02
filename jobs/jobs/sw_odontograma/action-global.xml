@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<global>
+	<action>
+		<cod>b1</cod>
+		<title>image/acoes/icone01.png</title>
+		<image>image/acoes-global/desenho1.png</image>
+		<comment>Comentário</comment>
+	</action>
+	<action>
+		<cod>b2</cod>
+		<title>image/acoes/icone02.png</title>
+		<image>image/acoes-global/desenho2.png</image>
+		<comment>Comentário</comment>
+	</action>
+	<action>
+		<cod>b3</cod>
+		<title>image/acoes/icone03.png</title>
+		<image>image/acoes-global/desenho3.png</image>
+		<comment>Comentário</comment>
+	</action>
+	<action>
+		<cod>b4</cod>
+		<title>image/acoes/icone04.png</title>
+		<image>image/acoes-global/desenho4.png</image>
+		<comment>Comentário</comment>
+	</action>
+	<action>
+		<cod>b5</cod>
+		<title>image/acoes/icone05.png</title>
+		<image>image/acoes-global/desenho5.png</image>
+		<comment>Comentário</comment>
+	</action>
+</global>

@@ -1,0 +1,47 @@
+.notification
+{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.jnotify-item
+{
+    position: relative;
+    font-family: Verdana;
+    font-size: 11px;
+    width: 260px;
+    height: auto;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    padding: 10px;
+    margin: 0 0 5px 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    cursor: default;
+}
+
+.jnotify-alert
+{
+    background: #fafb94;
+    color: #72661c;
+}
+
+.jnotify-success
+{
+    background: #bae5a9;
+    color: #046306;
+}
+
+.jnotify-error
+{
+    background: #f34d4d;
+    color: #FFF;
+}
+
+.jnotify-item-close
+{
+    font-weight: bold;
+    text-rendering: optimizelegibility;
+    float: right;
+    margin-left: 2px;
+    cursor: pointer;
+}

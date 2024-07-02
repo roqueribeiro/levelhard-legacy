@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+body				{ font-family:verdana; font-size:10px; margin:0px; overflow:hidden;	background:url(images/piso.jpg) repeat; }
+#corpo				{ position:absolute; width:100%; height:100%; background:#CCC; }
+
+#objeto				{ position:absolute; width:10%;	height:10%;	top:0%;	left:40%; z-index:2; }
+#objeto				{ -webkit-transform:rotate(300deg); }
+#objeto				{ -moz-transform:rotate(300deg); }
+#objeto				{ -o-transform:rotate(300deg); }
+#objeto img			{ margin-top:10%; margin-left:-10%;	width:120%;	height:80%; }
+
+#objetoAuto			{ position:absolute; width:100%; height:10%; top:0%; left:0%; z-index:3; }
+#objetoAuto img		{ margin-top:-2.5%; margin-left:0%; width:70%; height:150%; z-index:10; }
+
+#msg				{ display:none;	position:absolute; top:5%; left:5%; padding:0; width:90%; height:90%; background:rgba(235,235,235,0.8); }
+#msg				{ border:1px solid rgba(255,255,255,0.9); color:#000; font-size:12px; text-align:center; text-shadow:0 1px 1px #FFF; z-index:999; }	
+#msg				{ -webkit-border-radius:5px; -webkit-box-shadow:0 0 10px rgba(0,0,0,0.5); }
+#msg				{ -moz-border-radius:5px; -moz-box-shadow:0 0 10px rgba(0,0,0,0.5); }
+#msg				{ border-radius:5px; box-shadow:0 0 10px rgba(0,0,0,0.5); }
+
+#console			{ position:absolute; width:100%; top:0px; left:0px; padding:10px; height:auto; background:rgba(0,0,0,0.05); display:none; z-index:4; color:#F00; }
+#console div		{ padding:5px; }
+

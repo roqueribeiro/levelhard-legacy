@@ -1,0 +1,58 @@
+
+/* ============== Padrões ============== */
+
+#corpo											{ position:relative; width:900px; height:auto; margin:0 auto; }
+#corpo											{ border-top:5px #5D5D5D solid; box-shadow:0 -5px 30px rgba(0,0,0,0.2); }
+#corpo #logo									{ position:relative; width:256px; height:84px; padding:20px 40px 40px 40px; }
+#corpo #logo img								{ position:relative; width:225px; margin:15px 0 0 25px; z-index:200; }
+#corpo #cabecalho								{ position:relative; width:100%; height:auto; background:#F5F5F5; }
+#corpo #cabecalho #navegacao					{ position:absolute; width:100%; height:auto; top:0px; }
+#corpo #centro									{ position:relative; width:100%; height:auto; background:#FFF; }
+#corpo #rodape									{}
+#logo-full										{ margin:40px 60px 20px 60px; }
+
+#wrap											{ position:absolute; width:100%; height:100%; z-index:999; }
+
+#corpo #cabecalho #navegacao ul					{ position:relative; width:350px; height:150px; left:550px; }
+#corpo #cabecalho #navegacao ul li				{ position:absolute; width:140px; padding:10px 0 10px 45px; color:#FFF; }
+#corpo #cabecalho #navegacao ul li				{ font-size:18px; cursor:pointer; }
+#corpo #cabecalho #navegacao ul li				{ background:#5D5D5D; }
+#corpo #cabecalho #navegacao ul li img			{ position:absolute; margin-left:-35px; width:24px; margin-top:2px; }
+#corpo #cabecalho #navegacao ul li:nth-child(1)	{ border-left:4px #ec008c solid; margin-top:20px; margin-left:0px !important; }
+#corpo #cabecalho #navegacao ul li:nth-child(2)	{ border-left:4px #008abd solid; margin-top:20px; margin-left:60px !important; }
+#corpo #cabecalho #navegacao ul li:nth-child(3)	{ border-left:4px #fff200 solid; margin-top:20px; margin-left:120px !important; }
+#corpo #cabecalho #navegacao ul li:nth-child(4)	{ border-left:4px #ec008c solid; margin-top:20px; margin-left:180px !important; }
+.nav-active										{ background:#000 !important; }
+
+#corpo #centro #cabecalho						{ position:relative; width:870px; top:15px; left:15px; padding:5px 0 5px 0; }
+#corpo #centro #cabecalho						{ border-top-left-radius:10px; border-top-right-radius:10px; }
+#corpo #centro #cabecalho p						{ padding-left:50px; text-shadow:0 1px 0 rgba(0,0,0,0.2); font-weight:bold; }
+#corpo #centro #cabecalho img					{ position:absolute; top:-6px; left:8px; }
+#corpo #centro #conteudo						{ position:relative; width:870px; top:35px; left:15px; padding:5px 0 65px 0; text-align:center; }
+#corpo #centro #conteudo p						{ padding:0 25px 0 25px; line-height:30px; }
+
+#rodape											{ position:relative; width:100%; text-align:center; font-size:10px; }
+#rodape	p										{ padding:20px 0 20px 0; color:#666; text-shadow:0 2px 2px rgba(0,0,0,0.2); }
+
+#button-next									{ position:absolute; text-align:center; height:auto; width:auto; left:0px; background:#FFF; display:none; }
+#button-next									{ box-shadow:0 0 20px rgba(0,0,0,0.1); z-index:20; border-bottom-right-radius:30px; cursor:pointer; }
+#button-next img								{ width:30px; padding:20px 30px 20px 20px; }
+#button-prev									{ position:absolute; text-align:center; height:auto; width:auto; right:0px; background:#FFF; display:none; }
+#button-prev									{ box-shadow:0 0 20px rgba(0,0,0,0.1); z-index:20; border-bottom-left-radius:30px; cursor:pointer; }
+#button-prev img								{ width:30px; padding:20px 20px 20px 30px; }
+
+#pagination										{ position:absolute; bottom:0px; background:rgba(0,0,0,0.1); border-top-right-radius:30px; }
+#pagination										{ font-size:48px; text-shadow:0 2px 5px rgba(0,0,0,0.4); padding:30px; display:none; }
+
+#contato										{ position:relative; background:url(../../../images/background-cartao.jpg); }
+#contato										{ width:100%; height:120px; }
+#contato										{ border-top-left-radius:80px; border-top-right-radius:80px; margin-top:150px; margin-bottom:-15px; }
+#contato span									{ position:absolute; width:250px; padding:30px 25px 30px 20px; margin:-80px 0 0 25px; }
+#contato span									{ background:#EEE; box-shadow:0 15px 25px rgba(0,0,0,0.4); border-left:5px #5D5D5D solid; cursor:pointer; }
+#contato span									{ border-bottom-left-radius:20px; border-top-right-radius:20px; }
+#contato span p:first-child						{ font-weight:bold; font-size:14px; text-shadow:0 2px 2px rgba(0,0,0,0.2); margin-bottom:15px; }
+
+#contato span:nth-child(1)						{ left:100px; top:0px; }	
+#contato span:nth-child(2)						{ left:420px; top:0px; }										
+
+#impri-text										{ padding:10px 20px 0px 20px; text-align:justify; }

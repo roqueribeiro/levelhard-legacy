@@ -1,0 +1,149 @@
+/*
+Skin Name: levelhard Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: fixed
+Description: A nice, light skin for the Nivo Slider.
+Version: 1.0
+Author: Gilbert Pellegrom & levelhard Gartner
+Author URI: http://dev7studios.com
+*/
+
+.theme-levelhard.slider-wrapper {
+	position:relative;
+    width:100%;
+    height:auto;
+	background:url(../../../../image/background2.jpg) #FFF;
+	box-shadow:inset 0 5px 10px rgba(0,0,0,0.4);
+	
+	border-top:1px #fff solid;
+	border-bottom:1px #fff solid;
+	
+	padding:15px 0 15px 0;
+	
+	margin-bottom:10px;	
+}
+
+.theme-levelhard .nivoSlider {
+    position:relative;
+	margin:0 auto;
+    width:860px;
+    height:235px;
+    background:url(loading.gif) no-repeat 50% 50%;
+	box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+.theme-levelhard .nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+    width:860px; /* Make sure your images are the same size */
+    height:260px; /* Make sure your images are the same size */
+	
+}
+.theme-levelhard .nivoSlider a {
+    border:0;
+    display:block;
+}
+
+.theme-levelhard .nivo-controlNav {
+    width:251px;
+    height:40px;
+    position:absolute;
+    left:305px; /* Tweak this to center bullets */
+    bottom:-10px;
+    padding:8px 0 0 82px;
+    z-index:20;
+}
+.theme-levelhard .nivo-controlNav a {
+    display:block;
+    width:22px;
+    height:22px;
+    background:url(bullets.png) no-repeat;
+    text-indent:-9999px;
+    border:0;
+    margin-right:3px;
+    float:left;
+}
+.theme-levelhard .nivo-controlNav a.active {
+    background-position:0 -22px;
+}
+
+
+
+
+
+
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	display:block;
+	width:128px;
+	height:128px;
+	background:url(arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+
+
+a.nivo-nextNav {
+	position: absolute;
+	background:url(navigate-right-icon.png);
+	right:-130px;
+	top: 50%;
+	margin-top: -64px;
+	z-index: 9999;
+}
+a.nivo-prevNav {
+	position: absolute;
+	background:url(navigate-left-icon.png);
+	left:-130px;
+	top: 50%;
+	margin-top: -64px;
+	z-index: 9999;
+}
+
+
+
+
+
+
+
+
+
+/*.theme-levelhard .nivo-directionNav a {*/
+/*	display:none;*/
+/*}*/
+
+.theme-levelhard .nivo-caption {
+    bottom:40%;
+    left:auto;
+    right:0px;
+    width:auto;
+    max-width:630px;
+    overflow:hidden;
+    background:#000;
+    text-shadow:none;
+    font-family: arial, serif;
+    color:#FFF;
+}
+.theme-levelhard .nivo-caption p {
+    padding:15px 25px 15px 25px !important;
+    color:#FFF;
+    font-weight:bold;
+    font-size:14px;
+    text-transform:uppercase;	
+}
+.theme-levelhard .nivo-caption a { 
+    color:#333;
+    font-weight:bold;
+    font-size:27px;
+    text-transform:uppercase;
+}
+
+.theme-levelhard .ribbon {
+}

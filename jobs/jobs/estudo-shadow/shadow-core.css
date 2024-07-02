@@ -1,0 +1,242 @@
+/*==================================================
+ * sw-effect-1
+ * ===============================================*/
+.sw-effect-1 {
+    -webkit-box-shadow: 0 10px 6px -6px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 10px 6px -6px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 6px -6px rgba(0,0,0,0.2);
+}
+
+/*==================================================
+ * sw-effect-2
+ * ===============================================*/
+.sw-effect-2 {
+    position: relative;
+}
+
+    .sw-effect-2:before, .sw-effect-2:after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        left: 10px;
+        width: 50%;
+        top: 80%;
+        max-width: 300px;
+        background: rgba(0,0,0,0.2);
+        -webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+    }
+
+    .sw-effect-2:after {
+        -webkit-transform: rotate(3deg);
+        -moz-transform: rotate(3deg);
+        -o-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+        transform: rotate(3deg);
+        right: 10px;
+        left: auto;
+    }
+
+/*==================================================
+ * sw-effect-3
+ * ===============================================*/
+.sw-effect-3 {
+    position: relative;
+}
+
+    .sw-effect-3:before {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        left: 10px;
+        width: 50%;
+        top: 80%;
+        max-width: 300px;
+        background: rgba(0,0,0,0.2);
+        -webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+    }
+
+/*==================================================
+ * sw-effect-4
+ * ===============================================*/
+.sw-effect-4 {
+    position: relative;
+}
+
+    .sw-effect-4:after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        right: 10px;
+        left: auto;
+        width: 50%;
+        top: 80%;
+        max-width: 300px;
+        background: rgba(0,0,0,0.2);
+        -webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+        -webkit-transform: rotate(3deg);
+        -moz-transform: rotate(3deg);
+        -o-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+        transform: rotate(3deg);
+    }
+
+/*==================================================
+ * sw-effect-5
+ * ===============================================*/
+.sw-effect-5 {
+    position: relative;
+}
+
+    .sw-effect-5:before, .sw-effect-5:after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 25px;
+        left: 10px;
+        width: 50%;
+        top: 80%;
+        max-width: 300px;
+        background: rgba(0,0,0,0.2);
+        -webkit-box-shadow: 0 35px 20px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0 35px 20px rgba(0,0,0,0.2);
+        box-shadow: 0 35px 20px rgba(0,0,0,0.2);
+        -webkit-transform: rotate(-8deg);
+        -moz-transform: rotate(-8deg);
+        -o-transform: rotate(-8deg);
+        -ms-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+    }
+
+    .sw-effect-5:after {
+        -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+        transform: rotate(8deg);
+        right: 10px;
+        left: auto;
+    }
+
+/*==================================================
+ * sw-effect-6
+ * ===============================================*/
+.sw-effect-6 {
+    position: relative;
+}
+
+    .sw-effect-6:before, .sw-effect-6:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        top: 50%;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        -moz-border-radius: 100px / 10px;
+        border-radius: 100px / 10px;
+    }
+
+    .sw-effect-6:after {
+        right: 10px;
+        left: auto;
+        -webkit-transform: skew(8deg) rotate(3deg);
+        -moz-transform: skew(8deg) rotate(3deg);
+        -ms-transform: skew(8deg) rotate(3deg);
+        -o-transform: skew(8deg) rotate(3deg);
+        transform: skew(8deg) rotate(3deg);
+    }
+
+/*==================================================
+ * sw-effect-7
+ * ===============================================*/
+.sw-effect-7 {
+    position: relative;
+}
+
+    .sw-effect-7:before, .sw-effect-7:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        top: 0;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        -moz-border-radius: 100px / 10px;
+        border-radius: 100px / 10px;
+    }
+
+    .sw-effect-7:after {
+        right: 10px;
+        left: auto;
+        -webkit-transform: skew(8deg) rotate(3deg);
+        -moz-transform: skew(8deg) rotate(3deg);
+        -ms-transform: skew(8deg) rotate(3deg);
+        -o-transform: skew(8deg) rotate(3deg);
+        transform: skew(8deg) rotate(3deg);
+    }
+
+/*==================================================
+ * sw-effect-8
+ * ===============================================*/
+.sw-effect-8 {
+    position: relative;
+}
+
+    .sw-effect-8:before, .sw-effect-8:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        top: 10px;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        -moz-border-radius: 100px / 10px;
+        border-radius: 100px / 10px;
+    }
+
+    .sw-effect-8:after {
+        right: 10px;
+        left: auto;
+        -webkit-transform: skew(8deg) rotate(3deg);
+        -moz-transform: skew(8deg) rotate(3deg);
+        -ms-transform: skew(8deg) rotate(3deg);
+        -o-transform: skew(8deg) rotate(3deg);
+        transform: skew(8deg) rotate(3deg);
+    }
+
+/*==================================================
+ * sw-effect-9
+ * ===============================================*/
+.sw-effect-9 {
+    -webkit-box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}

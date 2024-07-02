@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AlfaCastello.com.br</title>
+<link rel="stylesheet" href="scripts/fancybox/jquery.fancybox-1.3.4.css" />
+<link rel="stylesheet" href="styles/default.css" />
+<link rel="stylesheet" href="styles/tooltip.css" />
+<link rel="stylesheet" href="styles/formulario.css" />
+<script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.8.12.custom.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-tooltip.js"></script>
+<script type="text/javascript" src="scripts/jquery.form.js"></script>
+<script type="text/javascript" src="scripts/jquery.maskedinput-1.3.min.js"></script>
+<script type="text/javascript" src="scripts/fancybox/jquery.fancybox-1.3.4.js"></script>
+<script type="text/javascript" src="scripts/fancybox/jquery.easing-1.3.pack.js"></script>
+<script type="text/javascript" src="scripts/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript">
+function formValid(input,color,len)
+{
+	$(input).css('background',color);
+	$(input).focus();
+	$(input).keyup(function(){
+		length = $(this).val().length;
+		if(length >= len) $(this).css('background','rgba(255,255,255,1)');
+	});
+}
+$(document).ready(function(){
+	
+	var ConfVel = 800;
+	
+	//============= Start =============
+	$('#wrap').fadeIn(0,function(){
+		$('#loading').animate({'bottom':'-20px'},200,'easeOutBack',function(){
+			$('#box').animate({'left':'0%'},ConfVel,'easeOutBack',function(){
+				$('#box #ajax').load('content/content.php?action=Principal',function(){
+					$('#wrap').fadeOut(0,function(){
+						$('#box #ajax').fadeIn(600);
+						$('#loading').animate({'bottom':'-100px'},200,'easeInBack');
+					});
+				});
+			});			
+		});		
+	});
+	
+	//============= Menu =============
+	$('#nav li').bind('click',function(){
+		url = $(this).attr('class');
+		nam = $(this).attr('id');
+		$('#wrap').fadeIn(0,function(){
+			$('#loading').animate({'bottom':'-20px'},200,'easeOutBack',function(){
+				$('#box #ajax').fadeOut(300,function(){
+					$('#box').animate({'left':'100%'},ConfVel,'easeInBack',function(){
+						$('h3',this).html(nam);
+						$(this).animate({'left':'0%'},ConfVel,'easeOutBack',function(){						
+							$('#box #ajax').load('content/content.php?action='+url,function(){
+								$('#wrap').fadeOut(0,function(){
+									$('#box #ajax').fadeIn(600);
+									$('#loading').animate({'bottom':'-100px'},200,'easeInBack');
+								});
+							});
+						});			
+					});
+				});
+			});
+		});
+	});
+	
+});
+</script>
+</head>
+
+<body>
+
+<div id="wrap"></div>
+
+<div id="loading"><img src="images/loading.gif" /></div>
+
+<div id="container">
+	<div id="tarja-p"></div>
+	<div id="menu">
+    	<div id="tarja"></div>
+    	<div id="logo"></div>
+        <div id="nav">
+        	<ul>
+            	<li class="Principal" id="Principal"><img src="images/list.png" /> Principal</li>
+                <li class="Construtora" id="Construtora"><img src="images/list.png" /> Construtora</li>
+                <li class="Servicos" id="Serviços"><img src="images/list.png" /> Serviços</li>
+                <li class="Novidade" id="Novidade"><img src="images/list.png" /> Novidade</li>
+                <li class="Portifolio" id="Portifólio"><img src="images/list.png" /> Portifólio</li>
+                <li class="Contato" id="Contato"><img src="images/list.png" /> Contato</li>
+            </ul>
+        </div>
+    </div>
+	<div id="box">
+    	<div id="borda">
+        	<div id="tarja"></div>
+            <div id="sombra"></div>
+        </div>
+        <div id="conteudo">
+    		<div id="tarja"><h3>Principal</h3></div>
+            <div id="ajax"></div>
+        </div>
+    </div>
+    <div id="footer">Desenvolvido por <br /><a href="http://www.webrocky.com.br" target="_blank">Levelhard Websolution 2011</a></div>
+</div>
+
+</body>
+</html>

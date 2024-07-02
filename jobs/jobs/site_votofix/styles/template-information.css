@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+body							{ font-family:Verdana, Geneva, sans-serif; font-size:12px; background:url(../images/background.jpg) repeat-x #FFF; }
+
+#corpo 							{ position:relative; width:960px; height:auto; margin:0 auto; }
+#corpo #cabecalho div			{ display:inline-block; vertical-align:middle; }
+#corpo #cabecalho #logo			{ background:url(../images/logo.png) no-repeat; background-size:100%; width:300px; height:95px; }
+#corpo #cabecalho #slogan		{ font-size:14px; font-weight:bold; }
+
+#corpo #comprar					{ display:none; position:absolute; width:285px; height:85px; background:url(../images/comprar.png) no-repeat; }
+#corpo #comprar					{ background-position: 0 0; right:70px; }
+#corpo #comprar:hover			{ background:url(../images/comprar.png); background-position: 0 86px; }
+#corpo #conteudo				{ position:relative; width:1000px; height:700px; margin:0 auto; top:-20px; padding:0; }
+#corpo #conteudo				{ background:url(../images/caixa.png) no-repeat top; }
+	
+#corpo #texto					{ position:relative; width:540px; height:auto; top:45px; left:43px; padding:40px; }
+#corpo #texto ul				{ }
+#corpo #texto li				{ }
+
+#corpo #texto .cabecalho		{ padding-bottom:20px; }
+#corpo #texto .cabecalho h1		{ font-size:36px; margin-bottom:20px !important; }
+#corpo #texto .marcador li		{ list-style-image:url(../images/votoico.png); margin-left:20px; padding:3px; }
+#corpo #texto .informacoes		{ padding:20px; }
+#corpo #texto .informacoes li	{ padding:3px; }
+#corpo #texto .informacoes p	{ padding:10px 0 10px 10px; font-style:italic; display:none; }
+#corpo #texto .download			{ padding:25px 20px 0px 20px; text-align:center; font-weight:bold; font-size:16px; }
+
+#formulario						{ padding:15px; width:380px; text-align:center } 
+#formulario						{ background: -moz-linear-gradient(top, #FFF 0%, #EEE 100%); }
+#formulario						{ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF), color-stop(100%,#EEE)); }
+#formulario	li					{ display:inline-block; padding:5px; text-align:left; }
+#formulario ul:last-child		{ text-align:center; padding-top:5px; }
+#formulario input[type=text]	{ padding:5px; }
+#formulario input[type=submit]	{ padding:15px; }
+
+#corpo #galeria					{ position:absolute; width:300px; height:540px; padding:0px; top:50px; right:55px; background:url(../images/galeria.png) no-repeat; }
+#corpo #rodape					{ position:relative; width:960px; height:auto; margin:0 auto; top:5px; text-align:center; font-size:9px; }

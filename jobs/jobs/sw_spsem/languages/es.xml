@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<translations>
+	<translation id="version">Versión:</translation>
+	<translation id="home_mod">Módulos</translation>
+	<translation id="home_adm">Administración</translation>
+	<translation id="home_nav_home">Principal</translation>
+	<translation id="home_nav_pres">Presentaciones</translation>
+	<translation id="home_nav_proj">Proyectos</translation>
+	<translation id="home_nav_subj">Pertinentes</translation>
+	<translation id="home_nav_admi">Administración</translation>
+	<translation id="home_nav_loca">Plantas Edición</translation>
+	<translation id="home_nav_loca_new">Nuevo</translation>
+	<translation id="home_nav_loca_show">Mostrar Todo</translation>
+	<translation id="home_nav_grou">Grupos Edición</translation>
+	<translation id="home_nav_grou_new">Nuevo</translation>
+	<translation id="home_nav_grou_show">Mostrar Todo</translation>
+	<translation id="home_nav_nive">Edición de Niveles</translation>
+	<translation id="home_nav_nive_new">Nuevo</translation>
+	<translation id="home_nav_nive_show">Mostrar Todo</translation>
+	<translation id="home_nav_user">Edición de Usuarios</translation>
+	<translation id="home_nav_user_new">Nuevo</translation>
+	<translation id="home_nav_user_show">Mostrar Todo</translation>
+	<translation id="master_hom">Inicio</translation>
+	<translation id="master_ref">Recargar</translation>
+	<translation id="master_exp">Expandir</translation>
+	<translation id="master_ext">Salir</translation>
+</translations>

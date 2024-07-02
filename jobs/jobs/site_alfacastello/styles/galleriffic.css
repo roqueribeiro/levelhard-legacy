@@ -1,0 +1,199 @@
+div.content {
+	position:absolute;
+	top:10px;
+	right:25px;
+	display: none;
+	width: 550px;
+	margin:10px;
+}
+div.content a, div.navigation a {
+	text-decoration: none;
+	color: #777;
+}
+div.content a:focus, div.content a:hover, div.content a:active {
+	text-decoration: underline;
+}
+div.controls {
+	margin-top: 5px;
+	height: 23px;
+}
+div.controls a {
+	padding: 5px;
+}
+div.ss-controls {
+	float: left;
+}
+div.nav-controls {
+	float: right;
+}
+div.slideshow-container {
+	position: relative;
+	clear: both;
+	height: 420px;
+}
+div.loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../images/loader.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 550px;
+	height: 420px; 
+}
+div.slideshow {
+}
+div.slideshow span.image-wrapper {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+div.slideshow a.advance-link {
+	display: block;
+	width: 550px;
+	height: 420px;
+	line-height: 420px;
+	text-align: center;
+}
+div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
+	text-decoration: none;
+}
+div.slideshow img {
+	position:absolute;
+	border: 5px solid #FFF;
+	top:25px;
+	left:25px;
+	
+	-webkit-box-shadow:0 0 5px rgba(0,0,0,0.3);
+	-moz-box-shadow:0 0 5px rgba(0,0,0,0.3);
+	box-shadow:0 0 5px rgba(0,0,0,0.3);
+	
+	-webkit-transition:1s;
+	-moz-transition:1s;
+	-o-transition:1s;
+	
+	z-index:999;
+}
+div.slideshow img:hover {
+	-webkit-transform:scale(1.2);
+	-moz-transform:scale(1.2);
+	-o-transform:scale(1.2);
+	transform:scale(1.2);
+	
+	top:50px;
+	left:-150px;
+}
+div.download {
+	float: right;
+}
+div.caption-container {
+	position: relative;
+	clear: left;
+	height: 75px;
+}
+span.image-caption {
+	display: block;
+	position: absolute;
+	width: 550px;
+	top: 0;
+	left: 0;
+}
+div.caption {
+	padding: 12px;
+}
+div.image-title {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+div.image-desc {
+	line-height: 1.3em;
+	padding-top: 12px;
+}
+div.navigation {
+	text-align:center;
+	margin:25px;	
+	border:1px #FFF solid;
+	
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.15) 100%);
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.15) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.15) 100%);
+	
+	-webkit-box-shadow:inset 3px 3px 10px rgba(0,0,0,0.3);
+	-moz-box-shadow:inset 3px 3px 10px rgba(0,0,0,0.3);
+	box-shadow:inset 3px 3px 10px rgba(0,0,0,0.3);
+	
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+ul.thumbs {
+	margin: 10px;
+	padding: 0px;
+}
+ul.thumbs li {
+	display:inline-block;
+	padding: 0;
+	list-style: none;
+}
+a.thumb {
+	display: block;
+	border: 2px solid #FFF;
+	
+	-webkit-box-shadow:0 0 5px rgba(0,0,0,0.3);
+	-moz-box-shadow:0 0 5px rgba(0,0,0,0.3);
+	box-shadow:0 0 5px rgba(0,0,0,0.3);
+}
+ul.thumbs li.selected a.thumb {
+	-webkit-transform:scale(1.05);
+	-moz-transform:scale(1.05);
+	-o-transform:scale(1.05);
+	transform:scale(1.05);
+	
+	box-shadow:0 0 25px rgba(0,0,0,0.5);
+}
+a.thumb:focus {
+	outline: none;
+}
+ul.thumbs img {
+	border: none;
+	display: block;
+}
+div.pagination {
+	clear: both;
+}
+div.navigation div.top {
+	position:absolute;
+	margin: 25px;
+	display:none;
+}
+div.navigation div.bottom {
+	position:absolute;
+	margin: 25px;
+}
+div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
+	display: block;
+	float: left;
+	margin-right: 2px;
+	padding: 4px 7px 4px 7px;
+	border: 1px solid #AAA;
+	
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	
+	background: -webkit-linear-gradient(top, rgba(245,245,245,1) 30%, rgba(215,215,215,1) 100%);
+	background: -moz-linear-gradient(top, rgba(245,245,245,1) 30%, rgba(215,215,215,1) 100%);
+	background: -o-linear-gradient(top, rgba(245,245,245,1) 30%, rgba(215,215,215,1) 100%);
+}
+div.pagination a:hover {
+	background-color: #eee;
+	text-decoration: none;
+}
+div.pagination span.current {
+	border: 1px solid #666;
+}
+div.pagination span.ellipsis {
+	border: none;
+	padding: 5px 0 3px 2px;
+}

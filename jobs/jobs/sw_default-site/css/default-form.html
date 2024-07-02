@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+<link rel="stylesheet" href="default-html.css" media="all">
+<style type="text/css">
+body	{ margin:20px; }
+ul		{ margin:10px; }
+li		{ margin:10px; }
+</style>
+</head>
+
+<body>
+
+    <h2>Text, Password, Button, Submit</h2>
+    <h3>Enabled</h3>
+    <ul>
+        <li><input type="button" value="Enviar"></li>
+        <li><input type="submit" value="Enviar"></li>
+        <li><input type="text"></li>
+        <li><input type="password"></li>
+        <li><textarea></textarea></li>
+    </ul>
+    <h3>Disabled</h3>
+    <ul>
+        <li><input type="button" value="Enviar" disabled></li>
+        <li><input type="submit" value="Enviar" disabled></li>
+        <li><input type="text" disabled></li>
+        <li><input type="password" disabled></li>
+        <li><textarea disabled></textarea></li>
+    </ul>
+    
+    <h2>Select</h2>
+    <h3>Enabled</h3>
+    <ul>
+        <li>
+        <select>
+            <option>Primeira Opção</option>
+            <option>Segunda Opção</option>
+            <option>Terceira Opção</option>
+            <option>Quarta Opção</option>
+            <option>Quinta Opção</option>
+        </select>
+        </li>
+    </ul>
+    <h3>Disabled</h3>
+    <ul>
+        <li>
+        <select disabled>
+            <option>Primeira Opção</option>
+            <option>Segunda Opção</option>
+            <option>Terceira Opção</option>
+            <option>Quarta Opção</option>
+            <option>Quinta Opção</option>
+        </select>
+        </li>
+    </ul>
+
+
+    <h2>Checkboxes</h2>
+    <h3>Enabled</h3>
+    <ul class="form-elements">
+        <li><label><input type="checkbox"><span>unchecked</span></label></li>
+        <li><label><input type="checkbox" checked="checked"><span>checked</span></label></li>
+    </ul>
+    <h3>Disabled</h3>
+    <ul class="form-elements">
+        <li><label><input type="checkbox" disabled="disabled"><span>unchecked</span></label></li>
+        <li><label><input type="checkbox" checked="checked" disabled="disabled"><span>checked</span></label></li>
+    </ul>
+    
+    <h2>Radio Buttons</h2>
+    <h3>Enabled</h3>
+    <ul class="form-elements">
+        <li><label><input type="radio" checked="checked" name="radio-button-group-0"><span>radio</span></label></li>
+        <li><label><input type="radio" name="radio-button-group-0"><span>radio</span></label></li>
+        <li><label><input type="radio" name="radio-button-group-0"><span>radio</span></label></li>
+    </ul>
+    <h3>Disabled</h3>
+    <ul class="form-elements">
+        <li><label><input type="radio" name="radio-button-group-1" disabled="disabled"><span>disabled radio</span></label></li>
+        <li><label><input type="radio" checked="checked" name="radio-button-group-1" disabled="disabled"><span>disabled radio</span></label></li>
+        <li><label><input type="radio" name="radio-button-group-1" disabled="disabled"><span>disabled radio</span></label></li>
+    </ul>
+
+</body>
+</html>

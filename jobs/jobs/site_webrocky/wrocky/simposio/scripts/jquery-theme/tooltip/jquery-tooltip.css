@@ -1,0 +1,4 @@
+#tooltip { position: absolute; z-index: 3000; border:1px #FFF solid; background: #F7F7F7; padding: 10px; opacity: 0.95; }
+#tooltip { -webkit-box-shadow:0 0 10px #333; -moz-box-shadow:0 0 10px #333; box-shadow:0px 0px 10px #333; color:#333; text-align:center; }
+#tooltip h3	{ margin: 0; }
+#tooltip p 	{ font-size:10px; font-weight:normal; margin-top:5px; }

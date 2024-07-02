@@ -1,0 +1,210 @@
+﻿html,
+body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 0 90px;
+}
+
+    #wrap > #cab {
+        position: relative;
+        width: 100%;
+        height: 105px;
+        background: #EEE url(../images/background/logo_bg.jpg) center no-repeat;
+        background-size: cover;
+        z-index: 1001;
+    }
+
+        #wrap > #cab:after {
+            content: "";
+            position: absolute;
+            width: 235px;
+            height: 45px;
+            top: 30px;
+            left: 70px;
+            background: url(../images/logo.png) center no-repeat;
+        }
+
+    #wrap #cab > #setor {
+        position: absolute;
+        right: 20px;
+        bottom: -35px;
+        color: #888;
+    }
+
+    #wrap #cab > #flag {
+        position: absolute;
+        top: 0px;
+        right: 5px;
+    }
+
+        #wrap #cab > #flag ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+            #wrap #cab > #flag ul li {
+                float: left;
+                margin: 2px;
+                opacity: 0.3;
+            }
+
+.flag-state-active {
+    opacity: 1 !important;
+}
+
+.nav-justified {
+    border-bottom: 1px #CCC solid;
+}
+
+#footer {
+    height: 60px;
+    background-color: #222;
+}
+
+#wrap > .container {
+    padding: 0 15px 0;
+}
+
+.container .credit {
+    margin: 20px 0;
+}
+
+#footer > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+.list-files {
+    text-align: left;
+}
+
+    .list-files ul, .list-files li {
+        margin: 0px;
+        padding: 0px;
+        vertical-align: top;
+    }
+
+    .list-files li {
+        display: inline-block;
+        width: 100px;
+        padding-bottom: 10px;
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+        .list-files li p {
+            padding: 8px 0;
+        }
+
+        .list-files li a img {
+            width: 82px;
+        }
+
+.list-files-sm {
+    text-align: center;
+}
+
+    .list-files-sm li {
+        width: 64px;
+        padding-bottom: 4px;
+    }
+
+        .list-files-sm li p {
+            padding: 4px 0;
+        }
+
+        .list-files-sm li a img {
+            width: 36px;
+        }
+
+.monthpicker {
+    position: relative;
+    background: #FFF;
+    padding: 0 10px;
+    border-bottom: 1px #CCC solid;
+    border-left: 1px #CCC solid;
+    border-right: 1px #CCC solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+    .monthpicker .monthpicker-header {
+        padding: 15px 0;
+    }
+
+    .monthpicker table {
+        font-size: 12px;
+        color: #999;
+    }
+
+        .monthpicker table td {
+            -webkit-transition: 200ms;
+            -moz-transition: 200ms;
+            -ms-transition: 200ms;
+            transition: 200ms;
+        }
+
+            .monthpicker table td:hover {
+                color: #000;
+                background: #E5E5E5;
+            }
+
+.mtz-state-default {
+}
+
+.mtz-state-disabled {
+    color: #CCC;
+}
+
+.mtz-state-active {
+    color: #000;
+    background: #EEE;
+}
+
+.tab-content .thumbnail {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #wrap #container .page-header {
+        display: none;
+    }
+
+    #wrap > #cab {
+        height: 140px;
+    }
+
+    #wrap > #cab:after {
+        top: 30px;
+        left: 30px;
+    }
+
+    #wrap #cab > #setor {
+        left: 20px;
+    }
+
+    #wrap > #cab:after {
+        top: 20px;
+        left: 50%;
+        margin-left: -117.50px;
+    }
+
+    #wrap #cab > #flag {
+        top: 95px;
+        right: 10px;
+    }
+
+}

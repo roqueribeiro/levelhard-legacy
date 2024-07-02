@@ -1,0 +1,156 @@
+#diretorio a {
+    color:#444;
+}
+
+#diretorio #loading {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px;
+    background: #FFF;
+    border-top-left-radius: 10px;
+    box-shadow: -1px -1px 10px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 2;
+}
+
+#diretorio #wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 1;
+}
+
+#diretorio #corpo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(images/background.jpg) right no-repeat #F5F5F5;
+}
+
+#diretorio #formulario {
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    margin: 0px;
+    background: -webkit-linear-gradient(#EEE, #DDD);
+    background: -moz-linear-gradient(#EEE, #DDD);
+    background: -o-linear-gradient(#EEE, #DDD);
+    background: -ms-linear-gradient(#EEE, #DDD);
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+#diretorio input[type="file"] {
+    position: relative;
+    width: 300px;
+    height: 30px;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity:0);
+}
+
+#diretorio input[type="submit"] {
+    position: absolute;
+    top:6px;
+    left:6px;
+}
+
+#diretorio #form-false {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: auto;
+    background: url(images/selecione.png) no-repeat 99% 51% #FFF;
+    border: 1px #CCC solid;
+    color: #CCC;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.15);
+}
+
+#diretorio #arquivo {
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-size: 12px;
+    overflow-y: scroll;
+}
+
+#diretorio #resultado img {
+}
+
+#diretorio #resultado ul {
+    font-size: 10px;
+    margin: 0px;
+    padding: 25px 25px 25px 25px;
+    text-align: center;
+}
+
+#diretorio #resultado li {
+    margin: 0 0 0 0;
+    list-style: none;
+    margin: 10px 10px 30px 10px;
+    padding: 0;
+    display: inline-block;
+}
+
+    #diretorio #resultado li #mini {
+        width: auto;
+        height: auto;
+        padding: 2px 2px 2px 2px;
+    }
+
+    #diretorio #resultado li p {
+        position: absolute;
+        text-align: left;
+        width: 85px;
+        padding: 4px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #diretorio #resultado li input {
+        display: none;
+    }
+
+#diretorio .progress {
+    position: relative;
+    width: 200px;
+    background: #FFF;
+    border: 1px solid #AAA;
+    padding: 1px;
+}
+
+#diretorio .bar {
+    background: #69F;
+    width: 0%;
+    height: 20px;
+}
+
+#diretorio .percent {
+    position: absolute;
+    display: inline-block;
+    top: 5px;
+    left: 45%;
+    font-size: 10px;
+}
+
+#diretorio .image_box {
+    background: #FFF;
+    box-shadow: 0 1px 1px #444;
+}
+
+#diretorio .file_box {
+    border-radius: 5px;
+}
+
+#diretorio .ui-selecting {
+    background: #FECA40;
+}
+
+#diretorio .ui-selected {
+    background: #F39814;
+}

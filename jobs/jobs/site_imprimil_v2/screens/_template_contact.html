@@ -1,0 +1,38 @@
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjwaf7ZMgchADso_-2iDrfTWaDb7LYo4g&callback=initMap"></script>
+<script type="text/javascript" src="scripts/_template_contact.js"></script>
+<div id="_template_contact">
+    <header>
+        <ul>
+            <li>
+                <a href="javascript:void(0);" id="_btn_return">
+                    <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMCAwIDQxNS4xNTQgNDE1LjE1NCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDE1LjE1NCA0MTUuMTU0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM4My42MDUsNjUuMTMzYy0wLjM0NS03LjMyLDEuNDg4LTIwLjI0NCwxLjQ0Mi0zMi42NTlDMzg0Ljk5NywxNS43NzcsMzgxLjUzNCwwLDM2NC43ODIsMCAgICBjLTAuNDgyLDAtMC45MzksMC4xMDktMS40MDcsMC4xNDVjLTEuODk4LTAuMTItMy44NzktMC4wNDYtNi4wMzIsMC41MDVDMjM4LjkwOSwzMC45ODYsMTMxLjM4Nyw5NS4zMzksMzYuMDI2LDE3MC40MjQgICAgYy01LjM2LDQuMjIzLTYuODg5LDkuMzcyLTYuMDI1LDE0LjIxMWMtMC4zNzEsMi41NzUtMC41OTksNS4xNDktMC42MDQsNy43NTljLTAuMDA1LDUuODYsMi45MjgsMTEuMSw3LjM0MywxNC40NDQgICAgYzAuNTc3LDAuNzg3LDEuMTQzLDEuNTcyLDEuODg3LDIuMzIzYzg1LjU2NCw4Ni4yOTYsMTg1LjIxNywxNjMuMzksMzAwLjUxOCwyMDQuODc2YzMuNzQ3LDEuMzQ2LDcuMDg5LDEuMzgyLDEwLjAxOSwwLjYwNCAgICBjNi44Ny0wLjExMSwxMy42Ni0wLjYzNSwyMC40NjktMS45MDRjOC41NzctMS41OTUsMTMuNzg3LTEwLjc4NSwxMy4yNDQtMTkuMDU4YzAuMDEtMC4zNywwLjEwNi0wLjcsMC4xMDYtMS4wOTIgICAgQzM4Mi45ODEsMjgzLjQwMiwzODguNzkxLDE3NC4yODksMzgzLjYwNSw2NS4xMzN6IE0zNDYuNjU4LDM3OC4xMTJjLTEwNS42MDYtMzguNTE3LTE5Ny4xNi0xMDkuOTU0LTI3Ni4yMDgtMTg4LjY2NSAgICBDMTUyLjkxOCwxMjUuNywyNDUuNTE1LDcxLjEyMywzNDUuODY2LDQxLjU3OUMzNTMuMjA4LDE1My42NiwzNDcuMzM4LDI2NS45MTQsMzQ2LjY1OCwzNzguMTEyeiIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" alt="" />
+                    Voltar
+                </a>
+            </li>
+            <li>Formas de Contato</li>
+        </ul>
+    </header>
+    <div class="_template_contact_content">
+        <section>
+            <form class="contact__form" method="post" action="scripts/mail.php">
+                <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                Your message was sent successfully.
+                </div>
+                <fieldset>
+                    <legend>Pelo Site</legend>
+                    <input name="name" class="form-control" type="text" placeholder="Nome Completo" required />
+                    <input name="email" class="form-control" type="email" placeholder="E-Mail" required />
+                    <input name="phone" class="form-control" type="tel" placeholder="Telefone" required />
+                    <textarea name="message" class="form-control" placeholder="Qual a sua duvida?" rows="10" required></textarea>
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <fieldset>
+                <legend>Pelo Local</legend>
+                <div id="map"></div>
+            </fieldset>
+        </section>
+    </div>
+</div>

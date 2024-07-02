@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'DroidSerif-Bold';
+    src:url(fonts/Droid-Serif/DroidSerif-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'DroidSerif-BoldItalic';
+    src:url(fonts/Droid-Serif/DroidSerif-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'DroidSerif-Italic';
+    src:url(fonts/Droid-Serif/DroidSerif-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'DroidSerif-Regular';
+    src:url(fonts/Droid-Serif/DroidSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'daniel';
+    src:url(fonts/Daniel/daniel.ttf);
+}
+
+@font-face {
+    font-family: 'danielbd';
+    src:url(fonts/Daniel/danielbd.ttf);
+}
+
+@font-face {
+    font-family: 'danielbk';
+    src:url(fonts/Daniel/danielbk.ttf);
+}
+
+@font-face {
+    font-family: 'GoodDog';
+    src:url(fonts/GoodDog/GoodDog.otf)
+}

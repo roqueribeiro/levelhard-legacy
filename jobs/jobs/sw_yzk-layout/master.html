@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>LayoutYZK</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon/favicon16.png" sizes="16x16" />
+    <link rel="icon" href="images/favicon/favicon64.png" sizes="64x64" />
+    <link rel="icon" href="images/favicon/favicon128.png" sizes="128x128" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/default/normalize.css" media="screen" />
+    <link rel="stylesheet" href="styles/default/form.css" media="screen" />
+    <link rel="stylesheet" href="styles/default/theme.css" media="screen" />
+    <link rel="stylesheet" href="styles/default/jquery.qtip.css" />
+    <link rel="stylesheet" href="styles/default/jquery-ui.min.css" />
+    <link rel="stylesheet" href="styles/default/jquery.fancybox.css" />
+    <link rel="stylesheet" href="scripts/jqwidgets/styles/jqx.base.css" />
+    <link rel="stylesheet" href="scripts/jqwidgets/styles/jqx.metro.css" />
+    <!-- jQuery -->
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.form.js"></script>
+    <script type="text/javascript" src="scripts/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="scripts/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.nicescroll.min.js"></script>
+    <!-- jQuery jqxGrid -->
+    <script type="text/javascript" src="scripts/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxgrid.edit.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="scripts/jqwidgets/jqxgrid.filter.js"></script>
+    <!-- jQuery Page Scripts -->
+    <script type="text/javascript" src="scripts/pages/default.js"></script>
+</head>
+<body>
+    <!-- Sobreposição e Preloader -->
+    <div class="wrapper"></div>
+    <div class="preloader"></div>
+    <!-- Cabeçalho -->
+    <header class="default">
+        <div class="logo">
+            <!-- Logo do Software -->
+            <a href="javascript:accessUrl('home.html');"><img src="images/logo.png" alt="" /></a>
+        </div>
+        <div class="language">
+            <!-- Linguagens Padrões -->
+            <img id="english" src="images/flags/United-States.png" alt="" onclick="activeLanguage($(this).attr('id'))" />
+            <img id="spanish" src="images/flags/Mexico.png" alt="" onclick="activeLanguage($(this).attr('id'))" />
+            <img id="portuguese" src="images/flags/Brazil.png" alt="" onclick="activeLanguage($(this).attr('id'))" />
+        </div>
+        <div class="information">
+            <!-- Versão do Software -->
+            <p><span id="versao"></span> 1.0 beta</p>
+            <!-- Nome do Software -->
+            <p><b>YZK</b> [ Yazaki ]</p>
+        </div>
+        <!-- Menu de Navegação -->
+        <nav>
+            <ul>
+                <li><a href="#" id="general"></a>
+                    <ul>
+                        <li><a href="javascript:accessUrl('form.html');" id="general-edidr"></a></li>
+                        <li><a href="#" id="general-repci"></a></li>
+                        <li><a href="#" id="general-repce"></a></li>
+                        <li><a href="#" id="general-repco"></a></li>
+                        <li><a href="#" id="general-reppe"></a></li>
+                        <li><a href="#" id="general-cardi"></a></li>
+                        <li><a href="#" id="general-cardv"></a></li>
+                        <li><a href="javascript:accessUrl('grid.html');" id="general-verdc"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="edbuilder"></li>
+                <li><a href="#" id="catalogos"></a>
+                    <ul>
+                        <li><a href="#" id="cat-princ">Principais</a>
+                            <ul>
+                                <li><a href="#" id="cat-princ-acces"></a></li>
+                                <li><a href="#" id="cat-princ-conec"></a></li>
+                                <li><a href="#" id="cat-princ-cinta"></a></li>
+                                <li><a href="#" id="cat-princ-cclin"></a></li>
+                                <li><a href="#" id="cat-princ-pitch"></a></li>
+                                <li><a href="#" id="cat-princ-pmedi"></a></li>
+                                <li><a href="#" id="cat-princ-regio"></a></li>
+                                <li><a href="#" id="cat-princ-ticac"></a></li>
+                                <li><a href="#" id="cat-princ-bcomp"></a></li>
+                                <li><a href="#" id="cat-princ-pmecl"></a></li>
+                                <li><a href="#" id="cat-princ-cimas"></a></li>
+                                <li><a href="#" id="cat-princ-tubos"></a></li>
+                                <li><a href="#" id="cat-princ-tubop"></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" id="cat-cross"></a>
+                            <ul>
+                                <li><a href="#" id="cat-cross-tipca">Cross Reference Tipo-Calibre</a></li>
+                                <li><a href="#" id="cat-cross-color">Cross Reference Color</a></li>
+                                <li><a href="#" id="cat-cross-comdv">Cross Reference Comp. DSI de Volvo</a></li>
+                                <li><a href="#" id="cat-cross-ticdv">Cross Reference TICACO DSI de Volvo</a></li>
+                                <li><a href="#" id="cat-cross-cynca">Cross Reference Componentes YNCA</a></li>
+                                <li><a href="#" id="cat-cross-sflux">Cross Reference Soldaduras y Flux</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" id="cat-tipos"></a>
+                            <ul>
+                                <li><a href="#" id="cat-tipos-tipoa">Tipo de Amarre</a></li>
+                                <li><a href="#" id="cat-tipos-tipos">Tipo de Arnes</a></li>
+                                <li><a href="#" id="cat-tipos-tipoc">Tipo de Componentes</a></li>
+                                <li><a href="#" id="cat-tipos-tipoe">Tipo de Encintado</a></li>
+                                <li><a href="#" id="cat-tipos-tipol">Tipo de Salida</a></li>
+                                <li><a href="#" id="cat-tipos-tipot">Tipo de Tubo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" id="cat-admin"></a>
+                            <ul>
+                                <li><a href="#" id="cat-admin-usuar">Usuarios</a></li>
+                                <li><a href="#" id="cat-admin-acusu">Accesos a usuarios</a></li>
+                                <li><a href="#" id="cat-admin-coplm">Configuracion PLM</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li><a href="#" id="ferramentas"></a></li>
+                <li><a href="#" id="cotacoes"></a></li>
+                <li><a href="#" id="feedback"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Conteúdo -->
+    <div id="main" class="default"></div>
+    <!-- Rodapé -->
+    <footer class="default">
+        <nav>
+            <ul>
+                <li><a href="javascript:accessUrl('home.html');"><img src="images/icons/white/home_16x16.png" alt="" /><span id="inicio"></span></a></li>
+                <li><a href="javascript:void(0);"><img src="images/icons/white/spin_14x16.png" alt="" /><span id="recarregar"></span></a></li>
+                <li><a href="javascript:void(0);" id="fit-height"><img src="images/icons/white/move_vertical_alt1_6x16.png" alt="" /><span id="expandir"></span></a></li>
+                <li><a href="javascript:$(document).toggleFullScreen();" id="fit-window"><img src="images/icons/white/fullscreen_16x16.png" alt="" /><span id="maximizar"></span></a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

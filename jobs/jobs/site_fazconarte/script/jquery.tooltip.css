@@ -1,0 +1,12 @@
+#tooltip {
+	position: absolute;
+	z-index: 3000;
+	background-color:#FFF;
+	padding: 10px;
+	border-radius:2px;
+	box-shadow:1px 1px 4px rgba(0,0,0,0.6);
+	
+	max-width:200px;
+}
+#tooltip h3, #tooltip div { margin: 0; }
+#tooltip p { font-size:10px; font-weight:normal; }

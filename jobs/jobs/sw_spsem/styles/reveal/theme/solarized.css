@@ -1,0 +1,204 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto; }
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: url(../../../images/backgrounds/slide_bg.jpg);
+  background-size:cover;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;}
+
+.reveal {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 36px;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  color: #222;
+  text-shadow: 0 2px 4px #BBB; }
+
+::selection {
+  color: white;
+  background: #FF5959;
+  text-shadow: none; }
+  
+.reveal section section {
+  text-align: left; }
+
+.reveal .logo {
+  position: relative; 
+  text-align: left;
+  margin: 0 30px;
+  border-bottom: 2px #F00 solid }
+  
+.reveal .logo img {
+  position: relative; 
+  margin: 32px 30px 20px 0; }
+
+.reveal .logo p {
+  position: absolute; 
+  right: 20px;
+  bottom: 22px;
+  font-size:28px;
+  font-weight:400; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #222;
+  line-height: 0.9em;
+  letter-spacing: 0em;
+   }
+
+.reveal h1 {
+  font-size: 106px;
+  font-weight:900;
+  color: #222;
+  text-shadow: 0 1px 3px #EEE, 0 4px #AAA, 0 5px 1px #444, 0 3px 10px rgba(0,0,0,0.4);
+  -webkit-mask-image: url(../../../images/textures/texture_first.png);
+  -o-mask-image: url(http://ahhh.co/files/ex1.png);
+  -moz-mask-image: url(http://ahhh.co/files/ex1.png);
+  mask-image: url(http://ahhh.co/files/ex1.png); }
+   
+.reveal small {
+  font-size: 24px; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a:not(.image) {
+  color: #F00;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  -ms-transition: color .15s ease;
+  -o-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:not(.image):hover {
+  color: #F00;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #F00; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section a img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear; }
+
+.reveal a:hover img {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  filter: grayscale(0%);  }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #444; }
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: #444; }
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #444; }
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: #444; }
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #222; }
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #222; }
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #222; }
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #222; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: #222; }
+
+.reveal .progress span {
+  background: #F00;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+  
+/*********************************************
+ * DATE DISPLAY
+ *********************************************/
+ 
+.date {
+  position: absolute;
+  top: 120px;
+  right: 0px;
+  width: 115px;
+  color: #222;
+  margin: 0 auto;
+  text-shadow: 0 1px 4px #BBB !important; }
+ 
+.day, .month, .year {
+  position: absolute; }
+ 
+.day { 
+  font-size: 40px !important;
+  top: 0px; }
+ 
+.month { 
+  top: 50px;
+  left: 0;  
+  font-size: 30px !important;
+  font-weight:600 !important; }
+ 
+.year { 
+  top: 22px;
+  right: 0;
+  font-size: 40px !important;
+  font-weight:300 !important;
+  color: #F00;
+  rotation: -90deg !important;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);  }
